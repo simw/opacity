@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classZposGenerator" kind="class" prot="public">
+    <compoundname>ZposGenerator</compoundname>
+    <includes refid="zcolldist_8h" local="no">zcolldist.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" prot="private" static="no" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long ZposGenerator::mSize</definition>
+        <argsstring></argsstring>
+        <name>mSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="20" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">FindRandomPositions</referencedby>
+        <referencedby refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" compoundref="zcolldist_8cpp" startline="86" endline="92">GetTempsMu2s</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ZposGenerator::mPositions</definition>
+        <argsstring></argsstring>
+        <name>mPositions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">FindRandomPositions</referencedby>
+        <referencedby refid="classZposGenerator_1ff9cfd493e73f5d711f755c496c462f0" compoundref="zcolldist_8cpp" startline="94" endline="100">GetDeltaZi</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_10c44c0025871a793c11a0459f0db343f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ZposGenerator::_loverlambda</definition>
+        <argsstring></argsstring>
+        <name>_loverlambda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">FindRandomPositions</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_113791204df3f02d883a309b880d11043" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ZposGenerator::_weight</definition>
+        <argsstring></argsstring>
+        <name>_weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="25" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">FindRandomPositions</referencedby>
+        <referencedby refid="classZposGenerator_14efcf84343b79a423e7dc356fd9d0261" compoundref="zcolldist_8cpp" startline="102" endline="105">GetZweight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ZposGenerator::_mu</definition>
+        <argsstring></argsstring>
+        <name>_mu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="27" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" compoundref="zcolldist_8cpp" startline="86" endline="92">GetTempsMu2s</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_161581d2b91282a426764210e1ba8fad1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ZposGenerator::_temp</definition>
+        <argsstring></argsstring>
+        <name>_temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="28" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" compoundref="zcolldist_8cpp" startline="86" endline="92">GetTempsMu2s</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classFunction" kindref="compound">Function</ref> &gt;</type>
+        <definition>Wrapper&lt;Function&gt; ZposGenerator::refFn</definition>
+        <argsstring></argsstring>
+        <name>refFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="31" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">FindRandomPositions</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classFunction" kindref="compound">Function</ref> &gt;</type>
+        <definition>Wrapper&lt;Function&gt; ZposGenerator::sampleFn</definition>
+        <argsstring></argsstring>
+        <name>sampleFn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="33" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">FindRandomPositions</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ZposGenerator::ZposGenerator</definition>
+        <argsstring>(Parameters &amp;params_, long opacity_)</argsstring>
+        <name>ZposGenerator</name>
+        <param>
+          <type><ref refid="classParameters" kindref="compound">Parameters</ref> &amp;</type>
+          <declname>params_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>opacity_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="36" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.cpp" bodystart="11" bodyend="65"/>
+        <references refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" compoundref="zcolldist_8h" startline="24">_loverlambda</references>
+        <references refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" compoundref="zcolldist_8h" startline="27">_mu</references>
+        <references refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" compoundref="zcolldist_8h" startline="28">_temp</references>
+        <references refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37">Parameters::GetParametersDouble</references>
+        <references refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" compoundref="zcolldist_8h" startline="22">mPositions</references>
+        <references refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" compoundref="zcolldist_8h" startline="20">mSize</references>
+        <references refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" compoundref="zcolldist_8h" startline="31">refFn</references>
+        <references refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" compoundref="zcolldist_8h" startline="33">sampleFn</references>
+        <references refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" compoundref="Function_8cpp" startline="14" endline="18">Function::SetLimits</references>
+        <references refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" compoundref="Function_8cpp" startline="178" endline="181">ExpDecayFunction::SetParams</references>
+      </memberdef>
+      <memberdef kind="function" id="classZposGenerator_1167471398a46f21d1013cf97e3606736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZposGenerator::FindRandomPositions</definition>
+        <argsstring>(MyArray &amp;Randoms)</argsstring>
+        <name>FindRandomPositions</name>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>Randoms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="38" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.cpp" bodystart="67" bodyend="84"/>
+        <references refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" compoundref="constants_8h" startline="14" endline="20">SwUtils::_factorial</references>
+        <references refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" compoundref="zcolldist_8h" startline="24">_loverlambda</references>
+        <references refid="classZposGenerator_113791204df3f02d883a309b880d11043" compoundref="zcolldist_8h" startline="25">_weight</references>
+        <references refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" compoundref="zcolldist_8h" startline="22">mPositions</references>
+        <references refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" compoundref="zcolldist_8h" startline="20">mSize</references>
+        <references refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" compoundref="zcolldist_8h" startline="31">refFn</references>
+        <references refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" compoundref="zcolldist_8h" startline="33">sampleFn</references>
+        <referencedby refid="classRadCalcer_1fbd62b63a05b0ee23a4a2fcb26b1ac6c" compoundref="radcalcer_8cpp" startline="106" endline="129">RadCalcer::DistributeRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ZposGenerator::GetTempsMu2s</definition>
+        <argsstring>(MyArray &amp;temps, MyArray &amp;mu2s)</argsstring>
+        <name>GetTempsMu2s</name>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>temps</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>mu2s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="40" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.cpp" bodystart="86" bodyend="92"/>
+        <references refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" compoundref="zcolldist_8h" startline="27">_mu</references>
+        <references refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" compoundref="zcolldist_8h" startline="28">_temp</references>
+        <references refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" compoundref="zcolldist_8h" startline="20">mSize</references>
+        <referencedby refid="classRadCalcer_1fbd62b63a05b0ee23a4a2fcb26b1ac6c" compoundref="radcalcer_8cpp" startline="106" endline="129">RadCalcer::DistributeRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classZposGenerator_1ff9cfd493e73f5d711f755c496c462f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ZposGenerator::GetDeltaZi</definition>
+        <argsstring>(int i) const </argsstring>
+        <name>GetDeltaZi</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="41" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.cpp" bodystart="94" bodyend="100"/>
+        <references refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" compoundref="zcolldist_8h" startline="22">mPositions</references>
+        <referencedby refid="classRadCalcer_1bd6b5fab0ce714f55b1d11776c02ba4d" compoundref="radcalcer_8cpp" startline="148" endline="162">RadCalcer::_interference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classZposGenerator_14efcf84343b79a423e7dc356fd9d0261" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ZposGenerator::GetZweight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetZweight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="42" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.cpp" bodystart="102" bodyend="105"/>
+        <references refid="classZposGenerator_113791204df3f02d883a309b880d11043" compoundref="zcolldist_8h" startline="25">_weight</references>
+        <referencedby refid="classRadCalcer_1ccc5f82826c691219a05e4cb277bcc45" compoundref="radcalcer_8cpp" startline="219" endline="370">RadCalcer::GetdNdk2dx</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Generates the z positions, the positions of the collisions along the path length These z positions can be correlated with each other </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="110">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="108">
+        <label>ZposGenerator</label>
+        <link refid="classZposGenerator"/>
+        <childnode refid="109" relation="usage">
+          <edgelabel>refFn
+sampleFn</edgelabel>
+        </childnode>
+      </node>
+      <node id="109">
+        <label>Wrapper&lt; Function &gt;</label>
+        <link refid="classWrapper"/>
+        <childnode refid="110" relation="usage">
+          <edgelabel>DataPtr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h" bodystart="17" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>_loverlambda</name></member>
+      <member refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>_mu</name></member>
+      <member refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>_temp</name></member>
+      <member refid="classZposGenerator_113791204df3f02d883a309b880d11043" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>_weight</name></member>
+      <member refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" prot="public" virt="non-virtual"><scope>ZposGenerator</scope><name>FindRandomPositions</name></member>
+      <member refid="classZposGenerator_1ff9cfd493e73f5d711f755c496c462f0" prot="public" virt="non-virtual"><scope>ZposGenerator</scope><name>GetDeltaZi</name></member>
+      <member refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" prot="public" virt="non-virtual"><scope>ZposGenerator</scope><name>GetTempsMu2s</name></member>
+      <member refid="classZposGenerator_14efcf84343b79a423e7dc356fd9d0261" prot="public" virt="non-virtual"><scope>ZposGenerator</scope><name>GetZweight</name></member>
+      <member refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>mPositions</name></member>
+      <member refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>mSize</name></member>
+      <member refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>refFn</name></member>
+      <member refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" prot="private" virt="non-virtual"><scope>ZposGenerator</scope><name>sampleFn</name></member>
+      <member refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" prot="public" virt="non-virtual"><scope>ZposGenerator</scope><name>ZposGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

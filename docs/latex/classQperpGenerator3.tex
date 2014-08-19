@@ -1,0 +1,172 @@
+\section{QperpGenerator3$<$ n $>$ Class Template Reference}
+\label{classQperpGenerator3}\index{QperpGenerator3@{QperpGenerator3}}
+{\tt \#include $<$qperpgenerator3.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpGenerator3} ()
+\item 
+void {\bf SetParameters} (double temp, double energy, double mu)
+\item 
+void {\bf GetQsThetas} (boost::array$<$ double, 2 $\ast$n $>$ \&randoms, boost::array$<$ double, n $>$ \&Qs, boost::array$<$ double, n $>$ \&Thetas)
+\item 
+double {\bf GetQsEventWeight} (long zeroes) const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+double {\bf qmax}
+\item 
+double {\bf mu2}
+\item 
+boost::array$<$ double, {\bf TPower}$<$ 2, n $>$::value $>$ {\bf weights}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std::size\_\-t n$>$ class QperpGenerator3$<$ n $>$}
+
+\begin{Desc}
+\item[Author:]\end{Desc}
+
+
+Definition at line 31 of file qperpgenerator3.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpGenerator3@{QperpGenerator3}!QperpGenerator3@{QperpGenerator3}}
+\index{QperpGenerator3@{QperpGenerator3}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ {\bf QperpGenerator3}$<$ n $>$::{\bf QperpGenerator3} ()\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator3_3aeef790166a41a08d7dc41ee1ec64d5}
+
+
+
+
+Definition at line 47 of file qperpgenerator3.h.
+
+\begin{Code}\begin{verbatim}48 {
+49 
+50 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpGenerator3@{QperpGenerator3}!SetParameters@{SetParameters}}
+\index{SetParameters@{SetParameters}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void {\bf QperpGenerator3}$<$ n $>$::SetParameters (double {\em temp}, double {\em energy}, double {\em mu})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator3_302275d11ca9e11bfbcde1d3e9167d1a}
+
+
+
+
+Definition at line 53 of file qperpgenerator3.h.
+
+References QperpGenerator3$<$ n $>$::mu2, and QperpGenerator3$<$ n $>$::qmax.
+
+\begin{Code}\begin{verbatim}54 {
+55   qmax = sqrt( 6. * temp * energy );
+56   mu2 = mu*mu;
+57 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator3@{QperpGenerator3}!GetQsThetas@{GetQsThetas}}
+\index{GetQsThetas@{GetQsThetas}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void {\bf QperpGenerator3}$<$ n $>$::GetQsThetas (boost::array$<$ double, 2 $\ast$n $>$ \& {\em randoms}, boost::array$<$ double, n $>$ \& {\em Qs}, boost::array$<$ double, n $>$ \& {\em Thetas})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator3_0258a688d52a150065e00b0013373b6e}
+
+
+
+
+Definition at line 61 of file qperpgenerator3.h.
+
+References SwUtils::\_\-NumberToBoolArray(), QperpGenerator3$<$ n $>$::mu2, pi, QperpGenerator3$<$ n $>$::qmax, and QperpGenerator3$<$ n $>$::weights.
+
+\begin{Code}\begin{verbatim}63 {
+64   for ( std::size_t i=0; i<n; ++i )
+65   {
+66     //Qs[i] = randoms[n+i]*qmax;
+67     //Thetas[i] = randoms[2*n+i]*2.*pi;
+68     Qs[i] = randoms[i]*qmax;
+69     Thetas[i] = randoms[n+i]*2.*pi;
+70   }
+71 
+72   boost::array<double, n> qweights;
+73   for ( std::size_t i=0; i<n; ++i )
+74   {
+75     qweights[i] = 2.*Qs[i] * mu2 / pow( Qs[i]*Qs[i] + mu2, 2 );
+76     qweights[i] *= qmax;
+77   }
+78 
+79   std::vector<bool> _isZeroed(n);
+80   for ( long j=0; j< TPower<2,n>::value; ++j )
+81   {
+82     weights[j] = 1.;
+83     SwUtils::_NumberToBoolArray( j, _isZeroed, n );
+84     for ( std::size_t i=0; i<n; ++i )
+85     {
+86       if ( !_isZeroed[i] )
+87         weights[j] *= qweights[i];
+88       else
+89         weights[j] *= -1.;
+90     }
+91   }
+92 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator3@{QperpGenerator3}!GetQsEventWeight@{GetQsEventWeight}}
+\index{GetQsEventWeight@{GetQsEventWeight}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpGenerator3}$<$ n $>$::GetQsEventWeight (long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator3_fee76fe6543f1ca8f42179c52d990f76}
+
+
+
+
+Definition at line 95 of file qperpgenerator3.h.
+
+References QperpGenerator3$<$ n $>$::weights.
+
+\begin{Code}\begin{verbatim}96 {
+97   return weights[zeroes];
+98 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{QperpGenerator3@{QperpGenerator3}!qmax@{qmax}}
+\index{qmax@{qmax}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpGenerator3}$<$ n $>$::{\bf qmax}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator3_4a9d6c2d97c851d9d012fda899fb3f86}
+
+
+
+
+Definition at line 34 of file qperpgenerator3.h.
+
+Referenced by QperpGenerator3$<$ n $>$::GetQsThetas(), and QperpGenerator3$<$ n $>$::SetParameters().\index{QperpGenerator3@{QperpGenerator3}!mu2@{mu2}}
+\index{mu2@{mu2}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpGenerator3}$<$ n $>$::{\bf mu2}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator3_f65e5abc92aea7d7b221160bb04953d7}
+
+
+
+
+Definition at line 35 of file qperpgenerator3.h.
+
+Referenced by QperpGenerator3$<$ n $>$::GetQsThetas(), and QperpGenerator3$<$ n $>$::SetParameters().\index{QperpGenerator3@{QperpGenerator3}!weights@{weights}}
+\index{weights@{weights}!QperpGenerator3@{QperpGenerator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ boost::array$<$double, {\bf TPower}$<$2,n$>$::value$>$ {\bf QperpGenerator3}$<$ n $>$::{\bf weights}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator3_c915b1095818e4b5d05e890eb02b37e2}
+
+
+
+
+Definition at line 36 of file qperpgenerator3.h.
+
+Referenced by QperpGenerator3$<$ n $>$::GetQsEventWeight(), and QperpGenerator3$<$ n $>$::GetQsThetas().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv3/{\bf qperpgenerator3.h}\end{CompactItemize}

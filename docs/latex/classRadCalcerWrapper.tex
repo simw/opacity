@@ -1,0 +1,178 @@
+\section{RadCalcerWrapper$<$ numOfRandoms $>$ Class Template Reference}
+\label{classRadCalcerWrapper}\index{RadCalcerWrapper@{RadCalcerWrapper}}
+{\tt \#include $<$radcalcerwrapper.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf RadCalcerWrapper} ()
+\item 
+{\bf $\sim$RadCalcerWrapper} ()
+\item 
+void {\bf SetParameters} ({\bf Parameters} \&inParams)
+\item 
+void {\bf SetCoord} (long dimension, double value)
+\item 
+void {\bf SetRandoms} ({\bf SwArrays::MyArray} \&randomNumbers)
+\item 
+void {\bf GetAnswer} ({\bf SwArrays::MyArray} \&answers)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+{\bf RadCalcer} $\ast$ {\bf radcalc}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std::size\_\-t numOfRandoms$>$ class RadCalcerWrapper$<$ numOfRandoms $>$}
+
+\begin{Desc}
+\item[Author:]\end{Desc}
+
+
+Definition at line 25 of file radcalcerwrapper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{RadCalcerWrapper@{RadCalcerWrapper}!RadCalcerWrapper@{RadCalcerWrapper}}
+\index{RadCalcerWrapper@{RadCalcerWrapper}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::{\bf RadCalcerWrapper} ()\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcerWrapper_529946c8f674506ae65fc3d5d7db7539}
+
+
+
+
+Definition at line 31 of file radcalcerwrapper.h.
+
+\begin{Code}\begin{verbatim}32   {
+33 
+34   };
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcerWrapper@{RadCalcerWrapper}!~RadCalcerWrapper@{$\sim$RadCalcerWrapper}}
+\index{~RadCalcerWrapper@{$\sim$RadCalcerWrapper}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::$\sim${\bf RadCalcerWrapper} ()\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcerWrapper_ab7d609bfbe44c77f650df7d82e977ec}
+
+
+
+
+Definition at line 36 of file radcalcerwrapper.h.
+
+References RadCalcerWrapper$<$ numOfRandoms $>$::radcalc.
+
+\begin{Code}\begin{verbatim}37   {
+38     delete radcalc;
+39   };
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{RadCalcerWrapper@{RadCalcerWrapper}!SetParameters@{SetParameters}}
+\index{SetParameters@{SetParameters}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::SetParameters ({\bf Parameters} \& {\em inParams})\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcerWrapper_9ab907c24f56fb67aefdfbe03550171c}
+
+
+
+
+Definition at line 41 of file radcalcerwrapper.h.
+
+References RadCalcerWrapper$<$ numOfRandoms $>$::radcalc.
+
+\begin{Code}\begin{verbatim}42   {
+43     long opacity = numOfRandoms / 3;
+44     radcalc = new RadCalcer( inParams, opacity, true );
+45   };
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcerWrapper@{RadCalcerWrapper}!SetCoord@{SetCoord}}
+\index{SetCoord@{SetCoord}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::SetCoord (long {\em dimension}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcerWrapper_0ef1a476bcef6bdf397fc6e5f11fe13f}
+
+
+
+
+Definition at line 47 of file radcalcerwrapper.h.
+
+References RadCalcerWrapper$<$ numOfRandoms $>$::radcalc, RadCalcer::SetKonly(), and RadCalcer::SetXonly().
+
+\begin{Code}\begin{verbatim}48   {
+49     // Dimension 1 = k
+50     // Dimension 2 = x
+51 
+52     switch (dimension)
+53     {
+54       case 1:
+55         radcalc->SetKonly( value );
+56         break;
+57 
+58       case 2:
+59         radcalc->SetXonly( value );
+60         break;
+61 
+62       default:
+63         break;
+64     }
+65   };
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcerWrapper@{RadCalcerWrapper}!SetRandoms@{SetRandoms}}
+\index{SetRandoms@{SetRandoms}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::SetRandoms ({\bf SwArrays::MyArray} \& {\em randomNumbers})\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcerWrapper_fef9ee4382b675b0e0d23d8db820ee72}
+
+
+
+
+Definition at line 67 of file radcalcerwrapper.h.
+
+References RadCalcer::DistributeRandoms(), and RadCalcerWrapper$<$ numOfRandoms $>$::radcalc.
+
+\begin{Code}\begin{verbatim}68   {
+69     radcalc->DistributeRandoms( randomNumbers );
+70   };
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcerWrapper@{RadCalcerWrapper}!GetAnswer@{GetAnswer}}
+\index{GetAnswer@{GetAnswer}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::GetAnswer ({\bf SwArrays::MyArray} \& {\em answers})\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcerWrapper_c07c6df06199a7e65969f9a47ca5e813}
+
+
+
+
+Definition at line 72 of file radcalcerwrapper.h.
+
+References RadCalcer::GetdNdk2dx(), and RadCalcerWrapper$<$ numOfRandoms $>$::radcalc.
+
+\begin{Code}\begin{verbatim}73   {
+74     radcalc->GetdNdk2dx( answers );
+75   };
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{RadCalcerWrapper@{RadCalcerWrapper}!radcalc@{radcalc}}
+\index{radcalc@{radcalc}!RadCalcerWrapper@{RadCalcerWrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ {\bf RadCalcer}$\ast$ {\bf RadCalcerWrapper}$<$ numOfRandoms $>$::{\bf radcalc}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcerWrapper_34c16c4a37e0d7c896be0a800d744e62}
+
+
+
+
+Definition at line 28 of file radcalcerwrapper.h.
+
+Referenced by RadCalcerWrapper$<$ numOfRandoms $>$::GetAnswer(), RadCalcerWrapper$<$ numOfRandoms $>$::SetCoord(), RadCalcerWrapper$<$ numOfRandoms $>$::SetParameters(), RadCalcerWrapper$<$ numOfRandoms $>$::SetRandoms(), and RadCalcerWrapper$<$ numOfRandoms $>$::$\sim$RadCalcerWrapper().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf radcalcerwrapper.h}\end{CompactItemize}

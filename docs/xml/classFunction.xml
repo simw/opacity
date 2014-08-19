@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classFunction" kind="class" prot="public">
+    <compoundname>Function</compoundname>
+    <derivedcompoundref refid="classExpDecayFunction" prot="public" virt="non-virtual">ExpDecayFunction</derivedcompoundref>
+    <derivedcompoundref refid="classUniformFunction" prot="public" virt="non-virtual">UniformFunction</derivedcompoundref>
+    <derivedcompoundref refid="classUnitStepFunction" prot="public" virt="non-virtual">UnitStepFunction</derivedcompoundref>
+    <derivedcompoundref refid="classYukawaFunction" prot="public" virt="non-virtual">YukawaFunction</derivedcompoundref>
+    <includes refid="Function_8h" local="no">Function.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFunction_1898df0a0fea5d9f32386b5c1527e7508" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Function::dim</definition>
+        <argsstring></argsstring>
+        <name>dim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="27" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">GetDimensionality</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classFunction_1804a0abd014760d47a12206f1e9715f2" prot="private" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray Function::xmins</definition>
+        <argsstring></argsstring>
+        <name>xmins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="28" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classFunction_18009360f13f8b2def90d7fbb30584b58" compoundref="Function_8h" startline="48" endline="51">GetRange</referencedby>
+        <referencedby refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">GetXmin</referencedby>
+        <referencedby refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" compoundref="Function_8cpp" startline="14" endline="18">SetLimits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classFunction_1feaa4fbf9516f3a680ec032622586198" prot="private" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray Function::xmaxs</definition>
+        <argsstring></argsstring>
+        <name>xmaxs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="29" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classFunction_18009360f13f8b2def90d7fbb30584b58" compoundref="Function_8h" startline="48" endline="51">GetRange</referencedby>
+        <referencedby refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" compoundref="Function_8h" startline="43" endline="46">GetXmax</referencedby>
+        <referencedby refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" compoundref="Function_8cpp" startline="14" endline="18">SetLimits</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Function::Function</definition>
+        <argsstring>(unsigned long Dimensionality)</argsstring>
+        <name>Function</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="11" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="3" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual</type>
+        <definition>Function::~Function</definition>
+        <argsstring>()</argsstring>
+        <name>~Function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="12" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_1cae7bf3099d7e05b59814823dab252b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classFunction" kindref="compound">Function</ref> *</type>
+        <definition>virtual Function* Function::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <reimplementedby refid="classExpDecayFunction_18186f67946fc433087ac05d397d3a3ff">clone</reimplementedby>
+        <reimplementedby refid="classUnitStepFunction_1c9575c66d4b1c47901fbb4d96065f93f">clone</reimplementedby>
+        <reimplementedby refid="classUniformFunction_19b57843688a438ac030f3abcfb4d07ac">clone</reimplementedby>
+        <reimplementedby refid="classYukawaFunction_15f5caf1a5d9ccbbd111a72ce3961395e">clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_1a78440b1498d1b7e113b163dfc88274c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Function::function</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)=0</argsstring>
+        <name>function</name>
+        <reimplementedby refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347">function</reimplementedby>
+        <reimplementedby refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de">function</reimplementedby>
+        <reimplementedby refid="classUniformFunction_1c7b39b7195838195e1796570e549e67f">function</reimplementedby>
+        <reimplementedby refid="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c">function</reimplementedby>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_19e1a0a6468b4df5de365481db11df5d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Function::NormedIntegralInverse</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)=0</argsstring>
+        <name>NormedIntegralInverse</name>
+        <reimplementedby refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264">NormedIntegralInverse</reimplementedby>
+        <reimplementedby refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb">NormedIntegralInverse</reimplementedby>
+        <reimplementedby refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1">NormedIntegralInverse</reimplementedby>
+        <reimplementedby refid="classYukawaFunction_16946664b03976629db6fede4c250f363">NormedIntegralInverse</reimplementedby>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Function::SetLimits</definition>
+        <argsstring>(MyArray &amp;xmins_, MyArray &amp;xmaxs_)</argsstring>
+        <name>SetLimits</name>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xmins_</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xmaxs_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="14" bodyend="18"/>
+        <references refid="classFunction_1feaa4fbf9516f3a680ec032622586198" compoundref="Function_8h" startline="29">xmaxs</references>
+        <references refid="classFunction_1804a0abd014760d47a12206f1e9715f2" compoundref="Function_8h" startline="28">xmins</references>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator::ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_16944f24e3174d98fe7c61dc0652d3ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Function::SetParams</definition>
+        <argsstring>(MyArray &amp;params_)=0</argsstring>
+        <name>SetParams</name>
+        <reimplementedby refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84">SetParams</reimplementedby>
+        <reimplementedby refid="classUnitStepFunction_176fde5d7a6e4ff7958a927298ff0379f">SetParams</reimplementedby>
+        <reimplementedby refid="classUniformFunction_1a4666e3a6e7420a5b4c9a15d3677d762">SetParams</reimplementedby>
+        <reimplementedby refid="classYukawaFunction_115b63ca3d7be01c385940f57641fdfad">SetParams</reimplementedby>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>params_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_1f97b276352a58200c533ddb1b3542c2d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long Function::GetDimensionality</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDimensionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="21" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="33" bodyend="36"/>
+        <references refid="classFunction_1898df0a0fea5d9f32386b5c1527e7508" compoundref="Function_8h" startline="27">dim</references>
+        <referencedby refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347" compoundref="Function_8cpp" startline="160" endline="167">ExpDecayFunction::function</referencedby>
+        <referencedby refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" compoundref="Function_8cpp" startline="120" endline="126">UnitStepFunction::function</referencedby>
+        <referencedby refid="classUniformFunction_1c7b39b7195838195e1796570e549e67f" compoundref="Function_8cpp" startline="80" endline="86">UniformFunction::function</referencedby>
+        <referencedby refid="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c" compoundref="Function_8cpp" startline="38" endline="44">YukawaFunction::function</referencedby>
+        <referencedby refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" compoundref="Function_8cpp" startline="169" endline="176">ExpDecayFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" compoundref="Function_8cpp" startline="128" endline="134">UnitStepFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" compoundref="Function_8cpp" startline="88" endline="94">UniformFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classYukawaFunction_16946664b03976629db6fede4c250f363" compoundref="Function_8cpp" startline="46" endline="55">YukawaFunction::NormedIntegralInverse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_1165315e9bf20842dc57425d3d04507cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Function::GetXmin</definition>
+        <argsstring>(unsigned long i) const </argsstring>
+        <name>GetXmin</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="38" bodyend="41"/>
+        <references refid="classFunction_1804a0abd014760d47a12206f1e9715f2" compoundref="Function_8h" startline="28">xmins</references>
+        <referencedby refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347" compoundref="Function_8cpp" startline="160" endline="167">ExpDecayFunction::function</referencedby>
+        <referencedby refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" compoundref="Function_8cpp" startline="120" endline="126">UnitStepFunction::function</referencedby>
+        <referencedby refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" compoundref="Function_8cpp" startline="169" endline="176">ExpDecayFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" compoundref="Function_8cpp" startline="128" endline="134">UnitStepFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" compoundref="Function_8cpp" startline="88" endline="94">UniformFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classYukawaFunction_16946664b03976629db6fede4c250f363" compoundref="Function_8cpp" startline="46" endline="55">YukawaFunction::NormedIntegralInverse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_144b5a0cafa8873fb26e4ce714325b56a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Function::GetXmax</definition>
+        <argsstring>(unsigned long i) const </argsstring>
+        <name>GetXmax</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="23" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="43" bodyend="46"/>
+        <references refid="classFunction_1feaa4fbf9516f3a680ec032622586198" compoundref="Function_8h" startline="29">xmaxs</references>
+        <referencedby refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" compoundref="Function_8cpp" startline="169" endline="176">ExpDecayFunction::NormedIntegralInverse</referencedby>
+        <referencedby refid="classYukawaFunction_16946664b03976629db6fede4c250f363" compoundref="Function_8cpp" startline="46" endline="55">YukawaFunction::NormedIntegralInverse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classFunction_18009360f13f8b2def90d7fbb30584b58" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Function::GetRange</definition>
+        <argsstring>(unsigned long i) const </argsstring>
+        <name>GetRange</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="48" bodyend="51"/>
+        <references refid="classFunction_1feaa4fbf9516f3a680ec032622586198" compoundref="Function_8h" startline="29">xmaxs</references>
+        <references refid="classFunction_1804a0abd014760d47a12206f1e9715f2" compoundref="Function_8h" startline="28">xmins</references>
+        <referencedby refid="classUniformFunction_1c7b39b7195838195e1796570e549e67f" compoundref="Function_8cpp" startline="80" endline="86">UniformFunction::function</referencedby>
+        <referencedby refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" compoundref="Function_8cpp" startline="88" endline="94">UniformFunction::NormedIntegralInverse</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="18">
+        <label>UnitStepFunction</label>
+        <link refid="classUnitStepFunction"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>YukawaFunction</label>
+        <link refid="classYukawaFunction"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>UniformFunction</label>
+        <link refid="classUniformFunction"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ExpDecayFunction</label>
+        <link refid="classExpDecayFunction"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="9" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="8" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classFunction_1cae7bf3099d7e05b59814823dab252b2" prot="public" virt="pure-virtual"><scope>Function</scope><name>clone</name></member>
+      <member refid="classFunction_1898df0a0fea5d9f32386b5c1527e7508" prot="private" virt="non-virtual"><scope>Function</scope><name>dim</name></member>
+      <member refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" prot="public" virt="non-virtual"><scope>Function</scope><name>Function</name></member>
+      <member refid="classFunction_1a78440b1498d1b7e113b163dfc88274c" prot="public" virt="pure-virtual"><scope>Function</scope><name>function</name></member>
+      <member refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" prot="public" virt="non-virtual"><scope>Function</scope><name>GetDimensionality</name></member>
+      <member refid="classFunction_18009360f13f8b2def90d7fbb30584b58" prot="public" virt="non-virtual"><scope>Function</scope><name>GetRange</name></member>
+      <member refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" prot="public" virt="non-virtual"><scope>Function</scope><name>GetXmax</name></member>
+      <member refid="classFunction_1165315e9bf20842dc57425d3d04507cb" prot="public" virt="non-virtual"><scope>Function</scope><name>GetXmin</name></member>
+      <member refid="classFunction_19e1a0a6468b4df5de365481db11df5d4" prot="public" virt="pure-virtual"><scope>Function</scope><name>NormedIntegralInverse</name></member>
+      <member refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" prot="public" virt="virtual"><scope>Function</scope><name>SetLimits</name></member>
+      <member refid="classFunction_16944f24e3174d98fe7c61dc0652d3ae4" prot="public" virt="pure-virtual"><scope>Function</scope><name>SetParams</name></member>
+      <member refid="classFunction_1feaa4fbf9516f3a680ec032622586198" prot="private" virt="non-virtual"><scope>Function</scope><name>xmaxs</name></member>
+      <member refid="classFunction_1804a0abd014760d47a12206f1e9715f2" prot="private" virt="non-virtual"><scope>Function</scope><name>xmins</name></member>
+      <member refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" prot="public" virt="virtual"><scope>Function</scope><name>~Function</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

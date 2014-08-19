@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="Random3_8h" kind="file">
+    <compoundname>Random3.h</compoundname>
+    <includes refid="Arrays_8h" local="yes">../Arrays.h</includes>
+    <includedby refid="driver_8h" local="yes">Gyulassy/opacity3/src/driver.h</includedby>
+    <includedby refid="RandDrand_8h" local="yes">Gyulassy/opacity3/src/randoms/RandDrand.h</includedby>
+    <includedby refid="RandSobol_8h" local="yes">Gyulassy/opacity3/src/randoms/RandSobol.h</includedby>
+    <incdepgraph>
+      <node id="369">
+        <label>valarray</label>
+      </node>
+      <node id="367">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="368" relation="include">
+        </childnode>
+        <childnode refid="369" relation="include">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>Gyulassy/opacity3/src/randoms/Random3.h</label>
+        <link refid="Random3.h"/>
+        <childnode refid="367" relation="include">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="371">
+        <label>Gyulassy/opacity3/src/driver.h</label>
+        <link refid="driver_8h"/>
+        <childnode refid="372" relation="include">
+        </childnode>
+      </node>
+      <node id="374">
+        <label>Gyulassy/opacity3/src/randoms/RandDrand.cpp</label>
+        <link refid="RandDrand_8cpp"/>
+      </node>
+      <node id="376">
+        <label>Gyulassy/opacity3/src/randoms/RandSobol.cpp</label>
+        <link refid="RandSobol_8cpp"/>
+      </node>
+      <node id="372">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="375">
+        <label>Gyulassy/opacity3/src/randoms/RandSobol.h</label>
+        <link refid="RandSobol_8h"/>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="376" relation="include">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>Gyulassy/opacity3/src/randoms/Random3.h</label>
+        <link refid="Random3.h"/>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="373" relation="include">
+        </childnode>
+        <childnode refid="375" relation="include">
+        </childnode>
+      </node>
+      <node id="373">
+        <label>Gyulassy/opacity3/src/randoms/RandDrand.h</label>
+        <link refid="RandDrand_8h"/>
+        <childnode refid="371" relation="include">
+        </childnode>
+        <childnode refid="374" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSwRandoms_1_1RandomBase2" prot="public">SwRandoms::RandomBase2</innerclass>
+    <innernamespace refid="namespaceSwRandoms">SwRandoms</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RANDOM3_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RANDOM3_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Arrays.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SwRandoms</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classSwRandoms_1_1RandomBase2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12" refid="classSwRandoms_1_1RandomBase2_1dd5e3fc4699b36e56970047463186e51" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classSwRandoms_1_1RandomBase2_1dd5e3fc4699b36e56970047463186e51" kindref="member">RandomBase2</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality_<sp/>)<sp/>:<sp/><ref refid="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" kindref="member">Dimensionality</ref>(<sp/>Dimensionality_<sp/>)<sp/>{};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" kindref="member">GetDimensionality</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref>*<sp/><ref refid="classSwRandoms_1_1RandomBase2_1633ab071ed2eded4784ea5c6faf4a9af" kindref="member">clone</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_1ee4b8f64be04c3cea35ea63cc4f9c6d6" kindref="member">GetUniforms</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref>&amp;<sp/>variates<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_18a202b85b9c0f380700922331506f459" kindref="member">Skip</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>numberOfPaths<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_1ff006e42b1f514697427cc4578383b5e" kindref="member">SetSeed</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Seed<sp/>)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_154a0497121db4d91e3ff6e2b4cdf380a" kindref="member">Reset</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" kindref="member">Dimensionality</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" kindref="member">RandomBase2::GetDimensionality</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="27"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" kindref="member">Dimensionality</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>SwRandoms<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h"/>
+  </compounddef>
+</doxygen>

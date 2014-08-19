@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_a31747d4e9bd2931d5473a77b5fd2b78" kind="dir">
+    <compoundname>Gyulassy/opacity3/src/store2d/</compoundname>
+    <innerfile refid="convergencetable_8cpp">convergencetable.cpp</innerfile>
+    <innerfile refid="convergencetable_8h">convergencetable.h</innerfile>
+    <innerfile refid="statisticsmc_8cpp">statisticsmc.cpp</innerfile>
+    <innerfile refid="statisticsmc_8h">statisticsmc.h</innerfile>
+    <innerfile refid="store_8cpp">store.cpp</innerfile>
+    <innerfile refid="store_8h">store.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/"/>
+  </compounddef>
+</doxygen>

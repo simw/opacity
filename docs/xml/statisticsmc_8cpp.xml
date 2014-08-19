@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="statisticsmc_8cpp" kind="file">
+    <compoundname>statisticsmc.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cmath</includes>
+    <includes refid="statisticsmc_8h" local="yes">statisticsmc.h</includes>
+    <incdepgraph>
+      <node id="452">
+        <label>cmath</label>
+      </node>
+      <node id="454">
+        <label>vector</label>
+      </node>
+      <node id="453">
+        <label>statisticsmc.h</label>
+        <link refid="statisticsmc_8h"/>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>iostream</label>
+      </node>
+      <node id="450">
+        <label>Gyulassy/opacity3/src/store2d/statisticsmc.cpp</label>
+        <link refid="statisticsmc.cpp"/>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceStatGathering">StatGathering</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="statisticsmc_8h" kindref="compound">statisticsmc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">StatGathering</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classStatGathering_1_1StatisticsMean_1b403f5b4e4850246d85b98ca9de55120" refkind="member"><highlight class="normal"><ref refid="classStatGathering_1_1StatisticsMean_1b403f5b4e4850246d85b98ca9de55120" kindref="member">StatisticsMean::StatisticsMean</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>:<sp/>RunningSum(0.),<sp/>RunningSum2(0.),<sp/>PathsDone(0)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classStatGathering_1_1StatisticsMean_1a041fcd7d325906ecbc05b7dd60a8245" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>StatisticsMean::AddOneResult(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Adding<sp/>in<sp/>one<sp/>result</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hence,<sp/>increment<sp/>PathsDone<sp/>by<sp/>one,<sp/>add<sp/>the<sp/>result<sp/>to<sp/>the<sp/>running<sp/>sum,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>squre<sp/>to<sp/>RunningSum2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref>++;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_145df8cfa879d644ee6b97b7fc2512c01" kindref="member" tooltip="The sum of all the input results.">RunningSum</ref><sp/>+=<sp/>result;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_15dc5bc0ddb6acfe5c19f1dd5f13c0166" kindref="member" tooltip="The sum of all the squares of input results.">RunningSum2</ref><sp/>+=<sp/>result*result;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classStatGathering_1_1StatisticsMean_1a0089d1731c6b33a7749de1ec41e0a8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1StatisticsMean_1a0089d1731c6b33a7749de1ec41e0a8f" kindref="member">StatisticsMean::AddOneSetOfResults</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Number_,<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>&amp;ResultsSoFar_<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref><sp/>+=<sp/>Number_;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ResultsSoFar_<sp/>is<sp/>passed<sp/>in<sp/>as<sp/>two<sp/>elements:<sp/>the<sp/>mean<sp/>and<sp/>the<sp/>standard<sp/>deviation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean,<sp/>sd,<sp/>num;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>num<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(Number_);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>mean<sp/>=<sp/>ResultsSoFar_[0][0];</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>sd<sp/>=<sp/>ResultsSoFar_[0][1];</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>but<sp/>we<sp/>store<sp/>internally<sp/>as<sp/>total<sp/>total<sp/>of<sp/>squares</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>convert<sp/>from<sp/>mean,<sp/>sd<sp/>to<sp/>total,<sp/>total<sp/>of<sp/>squres</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_145df8cfa879d644ee6b97b7fc2512c01" kindref="member" tooltip="The sum of all the input results.">RunningSum</ref><sp/>+=<sp/>mean<sp/>*<sp/>num;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_15dc5bc0ddb6acfe5c19f1dd5f13c0166" kindref="member" tooltip="The sum of all the squares of input results.">RunningSum2</ref><sp/>+=<sp/>(sd*sd*num<sp/>+<sp/>mean*mean)<sp/>*<sp/>num;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classStatGathering_1_1StatisticsMean_141cc79ed93147ad208d83ae9d3b0c97d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" kindref="member">StatisticsMean::Reset</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_145df8cfa879d644ee6b97b7fc2512c01" kindref="member" tooltip="The sum of all the input results.">RunningSum</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_15dc5bc0ddb6acfe5c19f1dd5f13c0166" kindref="member" tooltip="The sum of all the squares of input results.">RunningSum2</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classStatGathering_1_1StatisticsMean_19b574a960041288be6bf2892133252e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1StatisticsMean_19b574a960041288be6bf2892133252e7" kindref="member" tooltip="Set to a specific set of results.">StatisticsMean::SetResultsSoFar</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Number_,<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>&amp;ResultsSoFar_<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_141cc79ed93147ad208d83ae9d3b0c97d" kindref="member" tooltip="Reset all internal values to zero.">Reset</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean_1a0089d1731c6b33a7749de1ec41e0a8f" kindref="member">AddOneSetOfResults</ref>(<sp/>Number_,<sp/>ResultsSoFar_<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classStatGathering_1_1StatisticsMean_19345a3844d530b36af1e10a1e1310f1b" refkind="member"><highlight class="normal">std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/><ref refid="classStatGathering_1_1StatisticsMean_19345a3844d530b36af1e10a1e1310f1b" kindref="member">StatisticsMean::GetResultsSoFar</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="56"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>our<sp/>2D<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>Results(1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>Results[0].resize(2);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>the<sp/>mean<sp/>and<sp/>standard<sp/>deviation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>Results[0][0]<sp/>=<sp/><ref refid="classStatGathering_1_1StatisticsMean_145df8cfa879d644ee6b97b7fc2512c01" kindref="member" tooltip="The sum of all the input results.">RunningSum</ref><sp/>/<sp/><ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>Results[0][1]<sp/>=<sp/>sqrt(<sp/>(<ref refid="classStatGathering_1_1StatisticsMean_15dc5bc0ddb6acfe5c19f1dd5f13c0166" kindref="member" tooltip="The sum of all the squares of input results.">RunningSum2</ref><sp/>/<sp/><ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref><sp/>-<sp/>Results[0][0]*Results[0][0])<sp/>/<sp/><ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref><sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Results;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classStatGathering_1_1StatisticsMean_10afe279f79a7a68922f0ae9d52bb2957" refkind="member"><highlight class="normal"><ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref>*<sp/><ref refid="classStatGathering_1_1StatisticsMean_10afe279f79a7a68922f0ae9d52bb2957" kindref="member" tooltip="clone method, to interface with the &amp;#39;Wrapper&amp;#39; template">StatisticsMean::clone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="69"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1StatisticsMean_1b403f5b4e4850246d85b98ca9de55120" kindref="member">StatisticsMean</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="namespaceStatGathering_1633e5a7991e58ca433da34b4cd49ecd2" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="classStatGathering_1_1StatisticsMean_14d264c059e867bdf5ca9c9fa11eb4b7d" kindref="member" tooltip="friend to &amp;lt;&amp;lt; so that we can overload the &amp;lt;&amp;lt; operator to output a ConvergenceTable...">operator&lt;&lt; </ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1StatisticsMean" kindref="compound">StatisticsMean</ref>&amp;<sp/>stats<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>theResults<sp/>=<sp/>stats.<ref refid="classStatGathering_1_1StatisticsMean_19345a3844d530b36af1e10a1e1310f1b" kindref="member">GetResultsSoFar</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean<sp/>=<sp/>theResults[0][0];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sd<sp/>=<sp/>theResults[0][1];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>out<sp/>&lt;&lt;<sp/>mean<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>sd<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>stats.<ref refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" kindref="member" tooltip="The total number of points input.">PathsDone</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>out<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="namespaceStatGathering_1b23aa5d15b648487f59543f3963cb3af" refkind="member"><highlight class="normal">std::istream&amp;<sp/><ref refid="classStatGathering_1_1StatisticsMean_1507a4dd865a4b8aa0d32f895e5fe847f" kindref="member">operator&gt;&gt; </ref>(<sp/>std::istream&amp;<sp/>in,<sp/><ref refid="classStatGathering_1_1StatisticsMean" kindref="compound">StatisticsMean</ref>&amp;<sp/>stats<sp/>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>theResults(<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>theResults[0].resize(2);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pathsDone;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sd;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>in<sp/>&gt;&gt;<sp/>mean<sp/>&gt;&gt;<sp/>sd<sp/>&gt;&gt;<sp/>pathsDone;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>theResults[0][0]<sp/>=<sp/>mean;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>theResults[0][1]<sp/>=<sp/>sd;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>stats.<ref refid="classStatGathering_1_1StatisticsMean_19b574a960041288be6bf2892133252e7" kindref="member" tooltip="Set to a specific set of results.">SetResultsSoFar</ref>(<sp/>pathsDone,<sp/>theResults<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>in<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>StatGathering<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.cpp"/>
+  </compounddef>
+</doxygen>

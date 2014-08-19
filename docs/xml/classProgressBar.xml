@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classProgressBar" kind="class" prot="public">
+    <compoundname>ProgressBar</compoundname>
+    <includes refid="progressbar_8h" local="no">progressbar.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classProgressBar_1044f47136c34c520d647c99d2b25c7c7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ProgressBar::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="9" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" compoundref="progressbar_8cpp" startline="7" endline="17">ProgressBar</referencedby>
+        <referencedby refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" compoundref="progressbar_8cpp" startline="24" endline="42">SetNow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classProgressBar_1fd056430958e4ae958e3c064180ff208" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ProgressBar::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="10" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" compoundref="progressbar_8cpp" startline="7" endline="17">ProgressBar</referencedby>
+        <referencedby refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" compoundref="progressbar_8cpp" startline="24" endline="42">SetNow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classProgressBar_1176dbe3f61d798da0f9971f0f45db2bf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ProgressBar::now</definition>
+        <argsstring></argsstring>
+        <name>now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="11" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" compoundref="progressbar_8cpp" startline="7" endline="17">ProgressBar</referencedby>
+        <referencedby refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" compoundref="progressbar_8cpp" startline="24" endline="42">SetNow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProgressBar::nowPercent</definition>
+        <argsstring></argsstring>
+        <name>nowPercent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="12" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" compoundref="progressbar_8cpp" startline="49" endline="71">PrintProgress</referencedby>
+        <referencedby refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" compoundref="progressbar_8cpp" startline="7" endline="17">ProgressBar</referencedby>
+        <referencedby refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" compoundref="progressbar_8cpp" startline="24" endline="42">SetNow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classProgressBar_149d68b4372aec9c7622b4f88764bc2ca" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProgressBar::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="14" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" compoundref="progressbar_8cpp" startline="49" endline="71">PrintProgress</referencedby>
+        <referencedby refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" compoundref="progressbar_8cpp" startline="7" endline="17">ProgressBar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classProgressBar_1aaf24bac272f65fcbefc354913d402da" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProgressBar::update</definition>
+        <argsstring></argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" compoundref="progressbar_8cpp" startline="49" endline="71">PrintProgress</referencedby>
+        <referencedby refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" compoundref="progressbar_8cpp" startline="7" endline="17">ProgressBar</referencedby>
+        <referencedby refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" compoundref="progressbar_8cpp" startline="24" endline="42">SetNow</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classProgressBar_1b04618141efbac296b3403ea532fd94e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgressBar::SetNow</definition>
+        <argsstring>(double iNow)</argsstring>
+        <name>SetNow</name>
+        <param>
+          <type>double</type>
+          <declname>iNow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="24" bodyend="42"/>
+        <references refid="classProgressBar_1fd056430958e4ae958e3c064180ff208" compoundref="progressbar_8h" startline="10">max</references>
+        <references refid="classProgressBar_1044f47136c34c520d647c99d2b25c7c7" compoundref="progressbar_8h" startline="9">min</references>
+        <references refid="classProgressBar_1176dbe3f61d798da0f9971f0f45db2bf" compoundref="progressbar_8h" startline="11">now</references>
+        <references refid="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" compoundref="progressbar_8h" startline="12">nowPercent</references>
+        <references refid="classProgressBar_1aaf24bac272f65fcbefc354913d402da" compoundref="progressbar_8h" startline="15">update</references>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classProgressBar_1c8c63307694b7dda08c866f40120d3d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgressBar::PrintPreliminaries</definition>
+        <argsstring>()</argsstring>
+        <name>PrintPreliminaries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="44" bodyend="47"/>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgressBar::PrintProgress</definition>
+        <argsstring>()</argsstring>
+        <name>PrintProgress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="20" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="49" bodyend="71"/>
+        <references refid="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" compoundref="progressbar_8h" startline="12">nowPercent</references>
+        <references refid="classProgressBar_1728e5c2abda4c45938032e399a62f9ee" compoundref="progressbar_8cpp" startline="73" endline="98">PrintSpinner</references>
+        <references refid="classProgressBar_1aaf24bac272f65fcbefc354913d402da" compoundref="progressbar_8h" startline="15">update</references>
+        <references refid="classProgressBar_149d68b4372aec9c7622b4f88764bc2ca" compoundref="progressbar_8h" startline="14">width</references>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classProgressBar_1728e5c2abda4c45938032e399a62f9ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgressBar::PrintSpinner</definition>
+        <argsstring>()</argsstring>
+        <name>PrintSpinner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="21" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="73" bodyend="98"/>
+        <referencedby refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" compoundref="progressbar_8cpp" startline="49" endline="71">PrintProgress</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classProgressBar_15029c2f271c6d928da3d0146246b9847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProgressBar::PrintFinal</definition>
+        <argsstring>()</argsstring>
+        <name>PrintFinal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="100" bodyend="103"/>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classProgressBar_1816453dc9f180edc84d7c51b73a14546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProgressBar::ProgressBar</definition>
+        <argsstring>(double iMin, double iMax)</argsstring>
+        <name>ProgressBar</name>
+        <param>
+          <type>double</type>
+          <declname>iMin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>iMax</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="7" bodyend="17"/>
+        <references refid="classProgressBar_1fd056430958e4ae958e3c064180ff208" compoundref="progressbar_8h" startline="10">max</references>
+        <references refid="classProgressBar_1044f47136c34c520d647c99d2b25c7c7" compoundref="progressbar_8h" startline="9">min</references>
+        <references refid="classProgressBar_1176dbe3f61d798da0f9971f0f45db2bf" compoundref="progressbar_8h" startline="11">now</references>
+        <references refid="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" compoundref="progressbar_8h" startline="12">nowPercent</references>
+        <references refid="classProgressBar_1aaf24bac272f65fcbefc354913d402da" compoundref="progressbar_8h" startline="15">update</references>
+        <references refid="classProgressBar_149d68b4372aec9c7622b4f88764bc2ca" compoundref="progressbar_8h" startline="14">width</references>
+      </memberdef>
+      <memberdef kind="function" id="classProgressBar_1a0ced60c0ade467a4602c35443e7bc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProgressBar::~ProgressBar</definition>
+        <argsstring>()</argsstring>
+        <name>~ProgressBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="25" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Simon Wicks &lt;simon&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h" line="7" bodyfile="/home/simon/Gyulassy/opacity3/src/progressbar.h" bodystart="7" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classProgressBar_1fd056430958e4ae958e3c064180ff208" prot="private" virt="non-virtual"><scope>ProgressBar</scope><name>max</name></member>
+      <member refid="classProgressBar_1044f47136c34c520d647c99d2b25c7c7" prot="private" virt="non-virtual"><scope>ProgressBar</scope><name>min</name></member>
+      <member refid="classProgressBar_1176dbe3f61d798da0f9971f0f45db2bf" prot="private" virt="non-virtual"><scope>ProgressBar</scope><name>now</name></member>
+      <member refid="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" prot="private" virt="non-virtual"><scope>ProgressBar</scope><name>nowPercent</name></member>
+      <member refid="classProgressBar_15029c2f271c6d928da3d0146246b9847" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>PrintFinal</name></member>
+      <member refid="classProgressBar_1c8c63307694b7dda08c866f40120d3d8" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>PrintPreliminaries</name></member>
+      <member refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>PrintProgress</name></member>
+      <member refid="classProgressBar_1728e5c2abda4c45938032e399a62f9ee" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>PrintSpinner</name></member>
+      <member refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>ProgressBar</name></member>
+      <member refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>SetNow</name></member>
+      <member refid="classProgressBar_1aaf24bac272f65fcbefc354913d402da" prot="private" virt="non-virtual"><scope>ProgressBar</scope><name>update</name></member>
+      <member refid="classProgressBar_149d68b4372aec9c7622b4f88764bc2ca" prot="private" virt="non-virtual"><scope>ProgressBar</scope><name>width</name></member>
+      <member refid="classProgressBar_1a0ced60c0ade467a4602c35443e7bc78" prot="public" virt="non-virtual"><scope>ProgressBar</scope><name>~ProgressBar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

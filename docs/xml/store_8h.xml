@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="store_8h" kind="file">
+    <compoundname>store.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="Arrays_8h" local="yes">../Arrays.h</includes>
+    <includes local="yes">boost/multi_array.hpp</includes>
+    <includes refid="statisticsmc_8h" local="yes">statisticsmc.h</includes>
+    <includes refid="Wrapper_8h" local="yes">../Wrapper.h</includes>
+    <includedby refid="main_8cpp" local="yes">Gyulassy/opacity3/src/main.cpp</includedby>
+    <includedby refid="store_8cpp" local="yes">Gyulassy/opacity3/src/store2d/store.cpp</includedby>
+    <incdepgraph>
+      <node id="489">
+        <label>valarray</label>
+      </node>
+      <node id="487">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+      </node>
+      <node id="491">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="485">
+        <label>Gyulassy/opacity3/src/store2d/store.h</label>
+        <link refid="store.h"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+      </node>
+      <node id="486">
+        <label>vector</label>
+      </node>
+      <node id="490">
+        <label>statisticsmc.h</label>
+        <link refid="statisticsmc_8h"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="494">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store_8cpp"/>
+      </node>
+      <node id="493">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="492">
+        <label>Gyulassy/opacity3/src/store2d/store.h</label>
+        <link refid="store.h"/>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classStore2D" prot="public">Store2D</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>STORE_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>STORE_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Arrays.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/multi_array.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="statisticsmc_8h" kindref="compound">statisticsmc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Wrapper.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">StatGathering;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwArrays;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classParameters" kindref="compound">Parameters</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classStore2D" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classStore2D" kindref="compound">Store2D</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classStore2D_19e796d51abbd87d71beadcf2eb5ec49c" kindref="member" tooltip="friend to &amp;lt;&amp;lt; so that we can overload it to output a Store2D object">operator&lt;&lt; </ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStore2D" kindref="compound">Store2D</ref>&amp;<sp/>store<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::istream&amp;<sp/><ref refid="classStore2D_1bf866377a8793ea9bde62133d1c1f153" kindref="member">operator&gt;&gt; </ref>(<sp/>std::istream&amp;<sp/>in,<sp/><ref refid="classStore2D" kindref="compound">Store2D</ref>&amp;<sp/>store<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" kindref="member" tooltip="The Starting point of dimension 1.">MinDim1</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classStore2D_1f14d43ff981525c89d154034154403b2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1f14d43ff981525c89d154034154403b2" kindref="member" tooltip="The finishing point of dimension 1.">MaxDim1</ref>;<sp/><sp/></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="45" refid="classStore2D_116c7e319b97eedbacddec716691a6141" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_116c7e319b97eedbacddec716691a6141" kindref="member">StepDim1</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classStore2D_11aa79281f9314909e1554aac58fe6904" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" kindref="member" tooltip="The Starting point of dimension 2.">MinDim2</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classStore2D_1c64ee1837967c1c4c485f21d7f7b5f3f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1c64ee1837967c1c4c485f21d7f7b5f3f" kindref="member" tooltip="The finishing point of dimension 2.">MaxDim2</ref>;<sp/><sp/></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="56" refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" kindref="member">StepDim2</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" refkind="member"><highlight class="normal"><sp/><sp/>boost::multi_array&lt;Wrapper&lt;StatisticsMC&gt;,<sp/>2<sp/>&gt;<sp/><ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" kindref="member" tooltip="Helper function to turn (IndexDim1,IndexDim2) into a 1D index.">GetIndex</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" kindref="member">Store2D</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" kindref="member">Store2D</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizeDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizeDim2_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizePerPoint_<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" kindref="member">SetParameters</ref>(<sp/><ref refid="classParameters" kindref="compound">Parameters</ref>&amp;<sp/>inParams<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1439adcb475b85255da8b9444a4d15fe0" kindref="member">ReadFromFile</ref>(<sp/>std::string<sp/>FileName_<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_144ca03413f3add88b089d5ca5e2db146" kindref="member" tooltip="Write everything to file.">WriteToFile</ref>(<sp/>std::string<sp/>FileName_,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>append<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1603637865cf139ab0ba16d4209231db0" kindref="member" tooltip="Resize the store.">SetSize</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Size1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Size2_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizePerPoint_<sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" kindref="member" tooltip="Set the limits in dimension 1.">SetLimitsDim1</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MinDim1_,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MaxDim1_<sp/>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_13bfb842289b901099cb616887ae07d7f" kindref="member" tooltip="Set the limits in dimension 2.">SetLimitsDim2</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MinDim2_,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MaxDim2_<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" kindref="member">AddPoint</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>Values_<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" kindref="member" tooltip="Get the coordinate in dimension 1 corresponding to the given index.">GetCoordDim1</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" kindref="member" tooltip="Get the coordinate in dimension 2 corresponding to the given index.">GetCoordDim2</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_13592300d59dc260078f9812de27766c1" kindref="member" tooltip="Get the 2D coordinates corresponding to the given indices.">GetCoords</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_,<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>ValDim1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>ValDim2<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1f23f90b6e71e144d8943504932e54c63" kindref="member">GetLengthDim1</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1d0d940749b30d9cc8649712b62b8bd0b" kindref="member">GetLengthDim2</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" kindref="member">GetNumIterations</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>opac,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>kth,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>xth<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>0<sp/>&lt;=<sp/>kth<sp/>&lt;=<sp/>sizeK;<sp/>0<sp/>&lt;=<sp/>xth<sp/>&lt;=<sp/>sizeX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" kindref="member" tooltip="Helper function to turn (IndexDim1,IndexDim2) into a 1D index.">Store2D::GetIndex</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="114"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>IndexDim1_*(<ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>+1)<sp/>+<sp/>IndexDim2_<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" kindref="member" tooltip="Get the coordinate in dimension 1 corresponding to the given index.">Store2D::GetCoordDim1</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="119"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" kindref="member" tooltip="The Starting point of dimension 1.">MinDim1</ref><sp/>+<sp/>static_cast&lt;double&gt;(IndexDim1_)<sp/>*<sp/><ref refid="classStore2D_116c7e319b97eedbacddec716691a6141" kindref="member">StepDim1</ref><sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" kindref="member" tooltip="Get the coordinate in dimension 2 corresponding to the given index.">Store2D::GetCoordDim2</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="124"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" kindref="member" tooltip="The Starting point of dimension 2.">MinDim2</ref><sp/>+<sp/>static_cast&lt;double&gt;(IndexDim2_)<sp/>*<sp/><ref refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" kindref="member">StepDim2</ref><sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classStore2D_13592300d59dc260078f9812de27766c1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_13592300d59dc260078f9812de27766c1" kindref="member" tooltip="Get the 2D coordinates corresponding to the given indices.">Store2D::GetCoords</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>ValDim1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>ValDim2<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="130"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>ValDim1<sp/>=<sp/><ref refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" kindref="member" tooltip="Get the coordinate in dimension 1 corresponding to the given index.">GetCoordDim1</ref>(<sp/>IndexDim1_<sp/>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>ValDim2<sp/>=<sp/><ref refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" kindref="member" tooltip="Get the coordinate in dimension 2 corresponding to the given index.">GetCoordDim2</ref>(<sp/>IndexDim2_<sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classStore2D_1f23f90b6e71e144d8943504932e54c63" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1f23f90b6e71e144d8943504932e54c63" kindref="member">Store2D::GetLengthDim1</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="136"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classStore2D_1d0d940749b30d9cc8649712b62b8bd0b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1d0d940749b30d9cc8649712b62b8bd0b" kindref="member">Store2D::GetLengthDim2</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="141"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h"/>
+  </compounddef>
+</doxygen>

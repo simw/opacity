@@ -1,0 +1,302 @@
+\section{ProgressBar Class Reference}
+\label{classProgressBar}\index{ProgressBar@{ProgressBar}}
+{\tt \#include $<$progressbar.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf SetNow} (double iNow)
+\item 
+void {\bf PrintPreliminaries} ()
+\item 
+void {\bf PrintProgress} ()
+\item 
+void {\bf PrintSpinner} ()
+\item 
+void {\bf PrintFinal} ()
+\item 
+{\bf ProgressBar} (double iMin, double iMax)
+\item 
+{\bf $\sim$ProgressBar} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+double {\bf min}
+\item 
+double {\bf max}
+\item 
+double {\bf now}
+\item 
+int {\bf nowPercent}
+\item 
+int {\bf width}
+\item 
+bool {\bf update}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Simon Wicks $<$simon$>$ \end{Desc}
+
+
+Definition at line 7 of file progressbar.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ProgressBar@{ProgressBar}!ProgressBar@{ProgressBar}}
+\index{ProgressBar@{ProgressBar}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ProgressBar::ProgressBar (double {\em iMin}, double {\em iMax})}\label{classProgressBar_816453dc9f180edc84d7c51b73a14546}
+
+
+
+
+Definition at line 7 of file progressbar.cpp.
+
+References max, min, now, nowPercent, update, and width.
+
+\begin{Code}\begin{verbatim}8 {
+9   min = iMin;
+10   max = iMax;
+11   now = iMin;
+12   nowPercent = 0;
+13   
+14   width = 45;
+15   
+16   update = true;
+17 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ProgressBar@{ProgressBar}!~ProgressBar@{$\sim$ProgressBar}}
+\index{~ProgressBar@{$\sim$ProgressBar}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ProgressBar::$\sim$ProgressBar ()}\label{classProgressBar_a0ced60c0ade467a4602c35443e7bc78}
+
+
+
+
+Definition at line 20 of file progressbar.cpp.
+
+\begin{Code}\begin{verbatim}21 {
+22 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{ProgressBar@{ProgressBar}!SetNow@{SetNow}}
+\index{SetNow@{SetNow}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ProgressBar::SetNow (double {\em iNow})}\label{classProgressBar_b04618141efbac296b3403ea532fd94e}
+
+
+
+
+Definition at line 24 of file progressbar.cpp.
+
+References max, min, now, nowPercent, and update.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}25 {
+26   int nowPercentTmp;
+27   
+28   if (iNow >= min && iNow <= max)
+29   {
+30     now = iNow;
+31     nowPercentTmp = int((now-min)/(max-min) * 100.);
+32     if (nowPercentTmp != nowPercent)
+33     {
+34       nowPercent = nowPercentTmp;
+35       update = true;
+36     }
+37   }
+38   else
+39   {
+40     std::cerr << "ProgressBar: 'now' is out of range, " << iNow << endl;
+41   }
+42 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ProgressBar@{ProgressBar}!PrintPreliminaries@{PrintPreliminaries}}
+\index{PrintPreliminaries@{PrintPreliminaries}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ProgressBar::PrintPreliminaries ()}\label{classProgressBar_c8c63307694b7dda08c866f40120d3d8}
+
+
+
+
+Definition at line 44 of file progressbar.cpp.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}45 {
+46   std::cerr << "Progress: [";
+47 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ProgressBar@{ProgressBar}!PrintProgress@{PrintProgress}}
+\index{PrintProgress@{PrintProgress}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ProgressBar::PrintProgress ()}\label{classProgressBar_1b12b38d231af0f4274015ba3a792ac0}
+
+
+
+
+Definition at line 49 of file progressbar.cpp.
+
+References nowPercent, PrintSpinner(), update, and width.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}50 {
+51   if (update)
+52   {  
+53     int numDash = int(width*nowPercent/100.+0.5);
+54   
+55     cerr << "\rProgress: [";
+56     
+57     int i = 0;
+58     for (i=1;i<=numDash;i++)
+59       cerr << "|";
+60   
+61     if (numDash < width)
+62      for (i=numDash+1; i<width; i++)
+63         cerr << ".";
+64   
+65     cerr << "] ";
+66     PrintSpinner();
+67     cerr << " (" << int(nowPercent+0.5) << "%)";
+68   
+69     update = false;
+70   }
+71 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ProgressBar@{ProgressBar}!PrintSpinner@{PrintSpinner}}
+\index{PrintSpinner@{PrintSpinner}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ProgressBar::PrintSpinner ()}\label{classProgressBar_728e5c2abda4c45938032e399a62f9ee}
+
+
+
+
+Definition at line 73 of file progressbar.cpp.
+
+Referenced by PrintProgress().
+
+\begin{Code}\begin{verbatim}74 {
+75   static int num = 1;
+76   switch (num)
+77   {
+78     case 1:
+79       cerr << "|";
+80       num++;
+81       break;
+82       
+83     case 2:
+84       cerr << "/";
+85       num++;
+86       break;
+87       
+88     case 3:
+89       cerr << "-";
+90       num++;
+91       break;
+92       
+93     case 4:
+94       cerr << "\\";
+95       num = 1;
+96       break;
+97   }
+98 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ProgressBar@{ProgressBar}!PrintFinal@{PrintFinal}}
+\index{PrintFinal@{PrintFinal}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ProgressBar::PrintFinal ()}\label{classProgressBar_5029c2f271c6d928da3d0146246b9847}
+
+
+
+
+Definition at line 100 of file progressbar.cpp.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}101 {
+102   cerr << endl;
+103 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{ProgressBar@{ProgressBar}!min@{min}}
+\index{min@{min}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ProgressBar::min}\hspace{0.3cm}{\tt  [private]}}\label{classProgressBar_044f47136c34c520d647c99d2b25c7c7}
+
+
+
+
+Definition at line 9 of file progressbar.h.
+
+Referenced by ProgressBar(), and SetNow().\index{ProgressBar@{ProgressBar}!max@{max}}
+\index{max@{max}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ProgressBar::max}\hspace{0.3cm}{\tt  [private]}}\label{classProgressBar_fd056430958e4ae958e3c064180ff208}
+
+
+
+
+Definition at line 10 of file progressbar.h.
+
+Referenced by ProgressBar(), and SetNow().\index{ProgressBar@{ProgressBar}!now@{now}}
+\index{now@{now}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ProgressBar::now}\hspace{0.3cm}{\tt  [private]}}\label{classProgressBar_176dbe3f61d798da0f9971f0f45db2bf}
+
+
+
+
+Definition at line 11 of file progressbar.h.
+
+Referenced by ProgressBar(), and SetNow().\index{ProgressBar@{ProgressBar}!nowPercent@{nowPercent}}
+\index{nowPercent@{nowPercent}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf ProgressBar::nowPercent}\hspace{0.3cm}{\tt  [private]}}\label{classProgressBar_da00c88aa213354c1b9fc4d9d9feba74}
+
+
+
+
+Definition at line 12 of file progressbar.h.
+
+Referenced by PrintProgress(), ProgressBar(), and SetNow().\index{ProgressBar@{ProgressBar}!width@{width}}
+\index{width@{width}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf ProgressBar::width}\hspace{0.3cm}{\tt  [private]}}\label{classProgressBar_49d68b4372aec9c7622b4f88764bc2ca}
+
+
+
+
+Definition at line 14 of file progressbar.h.
+
+Referenced by PrintProgress(), and ProgressBar().\index{ProgressBar@{ProgressBar}!update@{update}}
+\index{update@{update}!ProgressBar@{ProgressBar}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf ProgressBar::update}\hspace{0.3cm}{\tt  [private]}}\label{classProgressBar_aaf24bac272f65fcbefc354913d402da}
+
+
+
+
+Definition at line 15 of file progressbar.h.
+
+Referenced by PrintProgress(), ProgressBar(), and SetNow().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/{\bf progressbar.h}\item 
+Gyulassy/opacity3/src/{\bf progressbar.cpp}\end{CompactItemize}

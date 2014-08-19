@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperparraynew_8h" kind="file">
+    <compoundname>qperparraynew.h</compoundname>
+    <includes refid="Arrays_8h" local="yes">../Arrays.h</includes>
+    <includedby refid="qperparraynew_8cpp" local="yes">Gyulassy/opacity3/src/glv1/qperparraynew.cpp</includedby>
+    <includedby refid="qperpdist_8h" local="yes">Gyulassy/opacity3/src/glv1/qperpdist.h</includedby>
+    <includedby refid="qperpcalculator1_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpcalculator1.h</includedby>
+    <incdepgraph>
+      <node id="95">
+        <label>valarray</label>
+      </node>
+      <node id="93">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>Gyulassy/opacity3/src/glv1/qperparraynew.h</label>
+        <link refid="qperparraynew.h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="99">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.cpp</label>
+        <link refid="qperpdist_8cpp"/>
+      </node>
+      <node id="97">
+        <label>Gyulassy/opacity3/src/glv1/qperparraynew.cpp</label>
+        <link refid="qperparraynew_8cpp"/>
+      </node>
+      <node id="98">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.h</label>
+        <link refid="qperpdist_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="103">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="96">
+        <label>Gyulassy/opacity3/src/glv1/qperparraynew.h</label>
+        <link refid="qperparraynew.h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main__qperptest_8cpp"/>
+      </node>
+      <node id="102">
+        <label>Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classQperpCalculator" prot="public">QperpCalculator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>QPERPARRAYNEW_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QPERPARRAYNEW_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Arrays.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwArrays;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classQperpCalculator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQperpCalculator" kindref="compound">QperpCalculator</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" kindref="member" tooltip="n = dimension, order in opacity, number of q&amp;#39;s to calculate with">n</ref>;</highlight></codeline>
+<codeline lineno="25" refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" kindref="member" tooltip="There are 2^n different permutations of setting each q to zero, pre calculate this...">twotothen</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" kindref="member" tooltip="Are we dealing with a correlated medium? 0 = no, 1 = yes.">correlated</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classQperpCalculator_12eadd4a22a9ce50636a382b7e45e4de0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_12eadd4a22a9ce50636a382b7e45e4de0" kindref="member" tooltip="Store2D the z value, ie the zeroes.">zin</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/><ref refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" kindref="member" tooltip="The magnitudes of the q vectors.">qs</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/><ref refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" kindref="member" tooltip="The polar angles of the q vectors (this is q_perp, ie effectively only 2D vector)...">ths</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1st<sp/>index<sp/>=<sp/>0<sp/>number,<sp/>i<sp/>=<sp/>row,<sp/>j<sp/>=<sp/>column</highlight></codeline>
+<codeline lineno="39" refid="classQperpCalculator_19e589b4cf203e6289b99e459de6ad665" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_12293a5bb6167b46d4664971dffad0f90" kindref="member">array2D</ref><sp/><ref refid="classQperpCalculator_19e589b4cf203e6289b99e459de6ad665" kindref="member" tooltip="Array of vector q_i dot q_j.">qiqj</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_143b0dd0a084045f231ca949f96ba5ea1" kindref="member">array3D</ref><sp/><ref refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" kindref="member" tooltip="Array of q_i.q_j summed from i to n and j to n.">sumqiqj_itonjton</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classQperpCalculator_1c17016ee4dcd57344199ca4d8dd43eb2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1c17016ee4dcd57344199ca4d8dd43eb2" kindref="member" tooltip="k vector magnitude - the emitted gluon">k</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classQperpCalculator_10976c2203a868d6095fd4f7e8d5ce0ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_10976c2203a868d6095fd4f7e8d5ce0ca" kindref="member" tooltip="k vector polar angle">thk</ref>;</highlight></codeline>
+<codeline lineno="48" refid="classQperpCalculator_1eb7a7adbe702a6cd3a94e122fd09178c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1a711e1d51bc667c98e69285d33513165" kindref="member">array1D</ref><sp/><ref refid="classQperpCalculator_1eb7a7adbe702a6cd3a94e122fd09178c" kindref="member" tooltip="Array of khat dot q_i (ie khat is unit vector, independent of k magnitude).">khatqi</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_12293a5bb6167b46d4664971dffad0f90" kindref="member">array2D</ref><sp/><ref refid="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" kindref="member" tooltip="Sum of khat.q_i summed from i to n.">sumkhatqi_iton</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_143b0dd0a084045f231ca949f96ba5ea1" kindref="member">array3D</ref><sp/><ref refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" kindref="member" tooltip="Sum of khat.q_i summed from i to n and j to n.">sumkhatqikhatqj_itonjton</ref>;</highlight></codeline>
+<codeline lineno="54" refid="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_143b0dd0a084045f231ca949f96ba5ea1" kindref="member">array3D</ref><sp/><ref refid="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" kindref="member" tooltip="Sum of k.q_i summed from i to n and j to n - ie depdendent on k.">sumkqikqj_itonjton</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" kindref="member">QperpCalculator</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n_,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>correlated_<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator_1e0d39a269d3ad4ac9511f21b2a6897d5" kindref="member">~QperpCalculator</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" kindref="member" tooltip="Set the input array of q-vectors, ths is relative to the fixed direction of k.">SetQperps</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>qs_,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>ths_<sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" kindref="member" tooltip="Once the q-perps are set, calculate all the further matrices involving q_i.q_j.">CalcQmatrices</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" kindref="member">CalcQmatrices2</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_192a161cdac53f6242ee1d16245466dde" kindref="member" tooltip="Once the q-perps are set, calculate all the further matrices involving khat.q_i.">CalcKhatMatrices</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" kindref="member" tooltip="Set the magnitude of the k vector (direction is always in fixed direction).">SetK</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k_<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_10ec8c93039d650234ac1d2869e7ef5ec" kindref="member" tooltip="Set the z value - ie which &amp;#39;zeroes&amp;#39; value we want.">SetZ</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>z_<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_19dad06b2c1b857059d848c7c3c6099ba" kindref="member" tooltip="Retrieve a specific q-vector magnitude.">GetQi</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1265977b7518bbb896e074a0d54710b47" kindref="member" tooltip="Retrieve a specific q-vector polar angle.">GetThi</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" kindref="member" tooltip="Retrieve the result - sum of q_i.q_j from i to (n+1), j to (n+1) including k.q_i...">GetSumQiQj</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" kindref="member" tooltip="Retrieve the result - sum of q_i.q_j from i to (n+1), j to (n+1) including k.q_i...">GetSumQiQj</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i_,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j_<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classQperpCalculator_19dad06b2c1b857059d848c7c3c6099ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_19dad06b2c1b857059d848c7c3c6099ba" kindref="member" tooltip="Retrieve a specific q-vector magnitude.">QperpCalculator::GetQi</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="89"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" kindref="member" tooltip="The magnitudes of the q vectors.">qs</ref>[i];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classQperpCalculator_1265977b7518bbb896e074a0d54710b47" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_1265977b7518bbb896e074a0d54710b47" kindref="member" tooltip="Retrieve a specific q-vector polar angle.">QperpCalculator::GetThi</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="94"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" kindref="member" tooltip="The polar angles of the q vectors (this is q_perp, ie effectively only 2D vector)...">ths</ref>[i];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h"/>
+  </compounddef>
+</doxygen>

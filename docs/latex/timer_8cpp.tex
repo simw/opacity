@@ -1,0 +1,48 @@
+\section{Gyulassy/opacity3/src/timer.cpp File Reference}
+\label{timer_8cpp}\index{Gyulassy/opacity3/src/timer.cpp@{Gyulassy/opacity3/src/timer.cpp}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$cstdlib$>$}\par
+{\tt \#include $<$ctime$>$}\par
+{\tt \#include \char`\"{}timer.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+unsigned long long int {\bf nanotime\_\-ia32} (void)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const double {\bf cCpNs} = 1.5
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{timer.cpp@{timer.cpp}!nanotime_ia32@{nanotime\_\-ia32}}
+\index{nanotime_ia32@{nanotime\_\-ia32}!timer.cpp@{timer.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long long int nanotime\_\-ia32 (void)}\label{timer_8cpp_eca4efb69b4ffbab549132be3a837a8f}
+
+
+
+
+Definition at line 12 of file timer.cpp.
+
+\begin{Code}\begin{verbatim}13 {
+14      unsigned long long int val;
+15     __asm__ __volatile__("rdtsc" : "=A" (val) : );
+16      return(val);
+17 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Variable Documentation}
+\index{timer.cpp@{timer.cpp}!cCpNs@{cCpNs}}
+\index{cCpNs@{cCpNs}!timer.cpp@{timer.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const double {\bf cCpNs} = 1.5\hspace{0.3cm}{\tt  [static]}}\label{timer_8cpp_34aff3bb2874be0f0c92d7e17b7105eb}
+
+
+
+
+Definition at line 9 of file timer.cpp.

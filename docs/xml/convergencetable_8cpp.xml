@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="convergencetable_8cpp" kind="file">
+    <compoundname>convergencetable.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cmath</includes>
+    <includes refid="convergencetable_8h" local="yes">convergencetable.h</includes>
+    <includes refid="constants_8h" local="yes">../constants.h</includes>
+    <incdepgraph>
+      <node id="436">
+        <label>cmath</label>
+      </node>
+      <node id="434">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.cpp</label>
+        <link refid="convergencetable.cpp"/>
+        <childnode refid="435" relation="include">
+        </childnode>
+        <childnode refid="436" relation="include">
+        </childnode>
+        <childnode refid="437" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="439">
+        <label>vector</label>
+      </node>
+      <node id="438">
+        <label>statisticsmc.h</label>
+        <link refid="statisticsmc_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+      </node>
+      <node id="435">
+        <label>iostream</label>
+      </node>
+      <node id="441">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+      </node>
+      <node id="437">
+        <label>convergencetable.h</label>
+        <link refid="convergencetable_8h"/>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceStatGathering">StatGathering</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="convergencetable_8h" kindref="compound">convergencetable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespaceStatGathering" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">StatGathering</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwUtils;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" refkind="member"><highlight class="normal"><ref refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" kindref="member">ConvergenceTable::ConvergenceTable</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;StatisticsMC&gt;</ref>&amp;<sp/>Inner_<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/>:<sp/>Inner(<sp/>Inner_<sp/>),<sp/>PathsDone(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>a<sp/>convenient<sp/>set<sp/>of<sp/>defaults</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>=<sp/><ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" kindref="member" tooltip="The maximum number of sets to record to file at the end.">MaxSets</ref><sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classStatGathering_1_1ConvergenceTable_1739be407fb8c781a3db471d28f25ba78" refkind="member"><highlight class="normal"><ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref>*<sp/>ConvergenceTable::clone()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="22"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" kindref="member">ConvergenceTable</ref>(<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">ConvergenceTable::GetResultsFromInner</ref>(<sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;&amp;<sp/>results_<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="27"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>2D<sp/>vector<sp/>of<sp/>results<sp/>from<sp/>the<sp/>inner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>a<sp/>StatisticsMean,<sp/>this<sp/>is<sp/>just<sp/>a<sp/>1D<sp/>vector,<sp/>but<sp/>allow<sp/>for<sp/>arbitrary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>2D<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>thisResult(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>-&gt;GetResultsSoFar()<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>over<sp/>all<sp/>the<sp/>rows<sp/>of<sp/>the<sp/>returned<sp/>result,<sp/>store<sp/>them<sp/>in<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>supplied<sp/>table,<sp/>along<sp/>with<sp/>the<sp/>PathsDone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;thisResult.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>thisResult[i].push_back(<ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>results_.push_back(thisResult[i]);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" kindref="member">ConvergenceTable::AddOneResult</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>work<sp/>done<sp/>by<sp/>the<sp/>&apos;Inner&apos;<sp/>statistics<sp/>gatherer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>-&gt;AddOneResult(<sp/>result<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>++<ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>have<sp/>hit<sp/>a<sp/>power<sp/>of<sp/>Increment,<sp/>we<sp/>ask<sp/>the<sp/>&apos;Inner&apos;<sp/>for<sp/>the<sp/>results<sp/>so<sp/>far,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>add<sp/>it<sp/>to<sp/>our<sp/>array<sp/>(along<sp/>with<sp/>the<sp/>number<sp/>of<sp/>points<sp/>that<sp/>contributed<sp/>to<sp/>that<sp/>result)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>==<sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref>)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>*=<sp/><ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">GetResultsFromInner</ref>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref><sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>in<sp/>one<sp/>set<sp/>of<sp/>results<sp/>to<sp/>our<sp/>convergence<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" kindref="member" tooltip="Add in a set of results.">ConvergenceTable::AddOneSetOfResults</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Number_,<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>&amp;ResultsSoFar_<sp/>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>sends<sp/>us<sp/>past<sp/>the<sp/>next<sp/>StoppingPoint,<sp/>then<sp/>store<sp/>current<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>long<sp/>as<sp/>we<sp/>haven&apos;t<sp/>just<sp/>added<sp/>the<sp/>results,<sp/>and<sp/>we&apos;re<sp/>not<sp/>at<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(note:<sp/>this<sp/>is<sp/>ResultsSoFar,<sp/>not<sp/>ResultsSoFar_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>+<sp/>Number_<sp/>&gt;=<sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref>*<ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref><sp/>!=<sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">GetResultsFromInner</ref>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref><sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>pass<sp/>on<sp/>this<sp/>set<sp/>to<sp/>the<sp/>inner<sp/>statistics<sp/>gatherer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>-&gt;AddOneSetOfResults(<sp/>Number_,<sp/>ResultsSoFar_<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>our<sp/>total<sp/>number<sp/>of<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>+=<sp/>Number_;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>=<sp/><ref refid="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" kindref="member">_FindNextPowerOfTwo</ref>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">GetResultsFromInner</ref>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref><sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" kindref="member">ConvergenceTable::Reset</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>on<sp/>the<sp/>order<sp/>to<sp/>the<sp/>inner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>-&gt;Reset();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>our<sp/>results<sp/>to<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>=<sp/><ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref>.clear();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" kindref="member" tooltip="Pass in the results of a simulation so far, one final set.">ConvergenceTable::SetResultsSoFar</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Number_,<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>&amp;ResultsSoFar_<sp/>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>on<sp/>the<sp/>results<sp/>to<sp/>the<sp/>inner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>-&gt;SetResultsSoFar(<sp/>Number_,<sp/>ResultsSoFar_<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>out<sp/>total<sp/>number<sp/>of<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>=<sp/>Number_;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>next<sp/>stopping<sp/>point<sp/>at<sp/>which<sp/>to<sp/>record<sp/>to<sp/>the<sp/>convergence<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>=<sp/><ref refid="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" kindref="member">_FindNextPowerOfTwo</ref>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref><sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>this<sp/>current<sp/>point<sp/>to<sp/>our<sp/>convergence<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">GetResultsFromInner</ref>(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref><sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" refkind="member"><highlight class="normal">std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" kindref="member">ConvergenceTable::GetResultsSoFar</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="102"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>with<sp/>the<sp/>results<sp/>given<sp/>so<sp/>far</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>tmp(<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref><sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>now<sp/>add<sp/>in<sp/>the<sp/>current<sp/>result<sp/>from<sp/>the<sp/>inner<sp/>object,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>have<sp/>just<sp/>hit<sp/>a<sp/>power<sp/>of<sp/>increment,<sp/>the<sp/>result<sp/>now<sp/>is<sp/>identical</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>that<sp/>in<sp/>the<sp/>last<sp/>entry<sp/>in<sp/>ResultsSoFar,<sp/>so<sp/>we<sp/>don&apos;t<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>add<sp/>this<sp/>extra<sp/>point.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref>*<ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref>)<sp/>!=<sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref><sp/>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">GetResultsFromInner</ref>(<sp/>tmp<sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>So<sp/>now<sp/>we<sp/>have<sp/>a<sp/>vector<sp/>of<sp/>(mean,<sp/>sd,<sp/>number)<sp/>for<sp/>powers<sp/>of<sp/>increment,<sp/>and<sp/>the<sp/>final<sp/>total</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Allow<sp/>us<sp/>to<sp/>send<sp/>ConvergenceTable<sp/>objects<sp/>to<sp/>an<sp/>ostream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>ease<sp/>of<sp/>output<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="namespaceStatGathering_1571c4a864b3e5d6ed6047901f8634376" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_12d5efbc6918bef1b0bd6d83011daad1e" kindref="member" tooltip="friend to &amp;lt;&amp;lt; so that we can overload the &amp;lt;&amp;lt; operator to output a ConvergenceTable...">operator&lt;&lt;</ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>&amp;<sp/>conTab<sp/>)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>send<sp/>the<sp/>Inner<sp/>to<sp/>the<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>out<sp/>&lt;&lt;<sp/>*(<sp/>static_cast&lt;const<sp/>StatisticsMean*&gt;<sp/>(<sp/>conTab.<ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>.GetConstPointer()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>send<sp/>the<sp/>convergence<sp/>table<sp/>to<sp/>the<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>One<sp/>entry<sp/>of<sp/>this<sp/>will<sp/>duplicate<sp/>the<sp/>current<sp/>state<sp/>of<sp/>the<sp/>inner.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>a<sp/>separator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>all<sp/>the<sp/>results<sp/>from<sp/>the<sp/>convergence<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>thisResult(<sp/>conTab.<ref refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" kindref="member">GetResultsSoFar</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>What<sp/>is<sp/>the<sp/>length<sp/>of<sp/>the<sp/>array<sp/>of<sp/>results?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>thisResult.size();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>results<sp/>are<sp/>we<sp/>going<sp/>to<sp/>write<sp/>to<sp/>the<sp/>file?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>imax;<sp/>(<sp/>len<sp/>&gt;<sp/>conTab.<ref refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" kindref="member" tooltip="The maximum number of sets to record to file at the end.">MaxSets</ref><sp/>)<sp/>?<sp/>imax<sp/>=<sp/>conTab.<ref refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" kindref="member" tooltip="The maximum number of sets to record to file at the end.">MaxSets</ref><sp/>:<sp/>imax<sp/>=<sp/>len;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>print<sp/>them<sp/>to<sp/>the<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>imax;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>jmax;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>for<sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=len-imax;<sp/>i&lt;len;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>jmax<sp/>=<sp/>thisResult[i].size();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>jmax;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;jmax;<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>thisResult[i][j];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>out<sp/>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>in<sp/>elements<sp/>of<sp/>the<sp/>convergence<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="namespaceStatGathering_194a944fd3996cb074c86c6334df181fd" refkind="member"><highlight class="normal">std::istream&amp;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_124b99d2e5129dc075e2488e32e250b92" kindref="member">operator&gt;&gt;</ref>(<sp/>std::istream&amp;<sp/>in,<sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>&amp;<sp/>conTab<sp/>)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>read<sp/>in<sp/>the<sp/>Inner</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>in<sp/>&gt;&gt;<sp/>*(<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classStatGathering_1_1StatisticsMean" kindref="compound">StatisticsMean</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"><sp/>(<sp/>conTab.<ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>.GetPointer()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>restore<sp/>the<sp/>state<sp/>of<sp/>the<sp/>convergence<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>the<sp/>separator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>std::string<sp/>strTmp;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>in<sp/>&gt;&gt;<sp/>strTmp;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>theResults;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>get<sp/>the<sp/>number<sp/>of<sp/>results<sp/>that<sp/>the<sp/>convergence<sp/>table<sp/>is<sp/>holding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>in<sp/>&gt;&gt;<sp/>len;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>theResults.resize(<sp/>len<sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>jmax;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>iterate<sp/>through<sp/>each<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;len;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>in<sp/>&gt;&gt;<sp/>jmax;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>theResults[i].resize(<sp/>jmax<sp/>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;jmax;<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>&gt;&gt;<sp/>theResults[i][j];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>conTab.<ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref><sp/>=<sp/>theResults;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>in<sp/>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>StatGathering<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp"/>
+  </compounddef>
+</doxygen>

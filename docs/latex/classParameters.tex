@@ -1,0 +1,195 @@
+\section{Parameters Class Reference}
+\label{classParameters}\index{Parameters@{Parameters}}
+{\tt \#include $<$parameters.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Parameters} (std::string StringID\_\-)
+\item 
+int {\bf ParseInputFile} (std::string FileName)
+\item 
+int {\bf ParseSingleLine} (std::string LineString)
+\begin{CompactList}\small\item\em Helper function for ParseInputFile - does one line supplied as LineString. \item\end{CompactList}\item 
+std::list$<$ std::string $>$ {\bf GetParametersString} (std::string ParamID)
+\begin{CompactList}\small\item\em Get a specific parameter in the map, identified by ParamID. \item\end{CompactList}\item 
+std::vector$<$ double $>$ {\bf GetParametersDouble} (std::string ParamID)
+\begin{CompactList}\small\item\em Get the parameter set, but then convert to a vector of doubles. \item\end{CompactList}\item 
+std::vector$<$ long $>$ {\bf GetParametersLong} (std::string ParamID)
+\begin{CompactList}\small\item\em Get the parameter set, but then convert to a vector of longs. \item\end{CompactList}\item 
+int {\bf CheckForUnaccessedParameters} ()
+\item 
+int {\bf WriteToFile} (std::string FileName, bool append)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+std::string {\bf StringID}
+\begin{CompactList}\small\item\em The unique ID to identify the settings section in the file. \item\end{CompactList}\item 
+std::map$<$ std::string, std::list$<$ std::string $>$ $>$ {\bf TheParameters}
+\begin{CompactList}\small\item\em The map in which to store ParamID, list of parameters. \item\end{CompactList}\item 
+std::map$<$ std::string, bool $>$ {\bf AccessedList}
+\begin{CompactList}\small\item\em The map in which to store whether ParamID has been accessed. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Parameters}{p.}{classParameters}: reads a file, retrieves and stores the settings in a map structure When we want to retrieve that setting, a call to GetParameters with the relevant ParamID returns a list of strings containing the relevant parameters.
+
+The file format: the file can contain anything. This object only looks at lines between \char`\"{}\# Begin settings for \char`\"{} + StringID, and \char`\"{}\# End settings for \char`\"{} + StringID where StringID was supplied to the constructor of the object. Between these lines, blank lines and lines beginning with \# (comment lines) are ignored. The rest are taken as \char`\"{}ParamID param1 param2 ...\char`\"{}, space separated values.
+
+ParseInputFile returns an integer. If this is $>$ 0, then this specifies the number of settings lines that have been read. If $<$ 0, this gives an error code. = 0 is also an error - no settings read in.
+
+TODO: extend so that multiple files can be read in, where subsequent files are specified by a line \char`\"{}+ ./furtherparams.txt\char`\"{} line. Must check for looping references. This would be useful for eg multiple jet energies and types, but where everything else is the same. One common settings file, one specialized.
+
+\begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simon\_\-wicks@yahoo.com}$>$ \end{Desc}
+
+
+Definition at line 31 of file parameters.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Parameters@{Parameters}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Parameters::Parameters (std::string {\em StringID\_\-})}\label{classParameters_bf65ea89957e2ca5f712a18aea658744}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Parameters@{Parameters}!ParseInputFile@{ParseInputFile}}
+\index{ParseInputFile@{ParseInputFile}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parameters::ParseInputFile (std::string {\em FileName})}\label{classParameters_a96c497084795f0c0be65c37ff03f162}
+
+
+Read in a file which contains all the settings for the run \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em FileName}]The filename to process \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Integer error code \end{Desc}
+
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup().\index{Parameters@{Parameters}!ParseSingleLine@{ParseSingleLine}}
+\index{ParseSingleLine@{ParseSingleLine}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parameters::ParseSingleLine (std::string {\em LineString})}\label{classParameters_a5cc611f199eccbc05b1908a3d72edd8}
+
+
+Helper function for ParseInputFile - does one line supplied as LineString. 
+
+\index{Parameters@{Parameters}!GetParametersString@{GetParametersString}}
+\index{GetParametersString@{GetParametersString}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::list$<$std::string$>$ Parameters::GetParametersString (std::string {\em ParamID})}\label{classParameters_aad6541e5440beed7c65ac9062109cfe}
+
+
+Get a specific parameter in the map, identified by ParamID. 
+
+
+
+Referenced by RadCalcer::RadCalcer(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::SetParameters().\index{Parameters@{Parameters}!GetParametersDouble@{GetParametersDouble}}
+\index{GetParametersDouble@{GetParametersDouble}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ Parameters::GetParametersDouble (std::string {\em ParamID})}\label{classParameters_ff7eee6fabcdbdc7908b595814537f37}
+
+
+Get the parameter set, but then convert to a vector of doubles. 
+
+
+
+Referenced by RadCalcer::RadCalcer(), Store2D::SetParameters(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters(), and ZposGenerator::ZposGenerator().\index{Parameters@{Parameters}!GetParametersLong@{GetParametersLong}}
+\index{GetParametersLong@{GetParametersLong}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$long$>$ Parameters::GetParametersLong (std::string {\em ParamID})}\label{classParameters_840169a79f0cdd8217e29b3b25a6552d}
+
+
+Get the parameter set, but then convert to a vector of longs. 
+
+
+
+Referenced by RadCalcer::RadCalcer(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{Parameters@{Parameters}!CheckForUnaccessedParameters@{CheckForUnaccessedParameters}}
+\index{CheckForUnaccessedParameters@{CheckForUnaccessedParameters}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parameters::CheckForUnaccessedParameters ()}\label{classParameters_dd8fd8d11a79eff3d3fa6dd6d088dd27}
+
+
+See whether all the parameters read in from file have been accessed by the program \begin{Desc}
+\item[Returns:]Gives 0 if all parameters used, otherwise gives the number of unaccessed parameters (ie $>$0) \end{Desc}
+
+
+Definition at line 190 of file parameters.cpp.
+
+References AccessedList.
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup().
+
+\begin{Code}\begin{verbatim}191 {
+192   // How many unaccessed parameters have we found so far
+193   int ReturnValue = 0;
+194 
+195   // Now iterate over all parameters in the map
+196   // (the ParamIDs in AccessedList should be the same as in TheParameters)
+197   for ( map<string, bool>::iterator i = AccessedList.begin();
+198         i != AccessedList.end(); ++i )
+199   {
+200     if ( i->second != true )
+201     {
+202       ++ReturnValue;
+203       cerr << "Unused parameter: " << i->first << "\n";
+204     }
+205   }
+206 
+207   return ReturnValue;
+208 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Parameters@{Parameters}!WriteToFile@{WriteToFile}}
+\index{WriteToFile@{WriteToFile}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Parameters::WriteToFile (std::string {\em FileName}, bool {\em append})}\label{classParameters_b93e874ce1ee81e9586a2435b7d8a3de}
+
+
+Write our parameters to file, for record and possible reopening later \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em FileName}]The filename of the file to write to \item[{\em append}]A true / false flag on whether to erase the current contents of the file of to append to it. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Integer error code, 0 if ok \end{Desc}
+
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::SaveResults().
+
+\subsection{Member Data Documentation}
+\index{Parameters@{Parameters}!StringID@{StringID}}
+\index{StringID@{StringID}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::string {\bf Parameters::StringID}\hspace{0.3cm}{\tt  [private]}}\label{classParameters_5206e134bcec867289e40fbfac16d354}
+
+
+The unique ID to identify the settings section in the file. 
+
+
+
+Definition at line 65 of file parameters.h.\index{Parameters@{Parameters}!TheParameters@{TheParameters}}
+\index{TheParameters@{TheParameters}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, std::list$<$std::string$>$ $>$ {\bf Parameters::TheParameters}\hspace{0.3cm}{\tt  [private]}}\label{classParameters_8c15233ec44b657431d68b51f42861c4}
+
+
+The map in which to store ParamID, list of parameters. 
+
+
+
+Definition at line 67 of file parameters.h.\index{Parameters@{Parameters}!AccessedList@{AccessedList}}
+\index{AccessedList@{AccessedList}!Parameters@{Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::map$<$std::string, bool$>$ {\bf Parameters::AccessedList}\hspace{0.3cm}{\tt  [private]}}\label{classParameters_d0fc8c05690cdfd6939a7606786f40f5}
+
+
+The map in which to store whether ParamID has been accessed. 
+
+
+
+Definition at line 69 of file parameters.h.
+
+Referenced by CheckForUnaccessedParameters().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/{\bf parameters.h}\item 
+Gyulassy/opacity3/src/{\bf parameters.cpp}\end{CompactItemize}

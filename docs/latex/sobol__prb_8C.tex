@@ -1,0 +1,881 @@
+\section{Gyulassy/opacity3/src/randoms/test/sobol\_\-prb.C File Reference}
+\label{sobol__prb_8C}\index{Gyulassy/opacity3/src/randoms/test/sobol_prb.C@{Gyulassy/opacity3/src/randoms/test/sobol\_\-prb.C}}
+{\tt \#include $<$cstdlib$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$iomanip$>$}\par
+{\tt \#include $<$cmath$>$}\par
+{\tt \#include \char`\"{}sobol.H\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf DIM\_\-MAX}~4
+\item 
+\#define {\bf DIM\_\-NUM}~3
+\item 
+\#define {\bf DIM\_\-MAX}~4
+\item 
+\#define {\bf DIM\_\-NUM}~3
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int {\bf main} (void)
+\item 
+void {\bf test01} (void)
+\item 
+void {\bf test02} (void)
+\item 
+void {\bf test03} (void)
+\item 
+void {\bf test04} (void)
+\item 
+void {\bf test05} (void)
+\item 
+void {\bf test055} (void)
+\item 
+void {\bf test06} (void)
+\item 
+void {\bf test07} (void)
+\item 
+void {\bf test08} (void)
+\item 
+void {\bf test09} (void)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{sobol_prb.C@{sobol\_\-prb.C}!DIM_MAX@{DIM\_\-MAX}}
+\index{DIM_MAX@{DIM\_\-MAX}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-MAX~4}\label{sobol__prb_8C_4bf6f11165a23227af11f1d0d75798a4}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!DIM_MAX@{DIM\_\-MAX}}
+\index{DIM_MAX@{DIM\_\-MAX}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-MAX~4}\label{sobol__prb_8C_4bf6f11165a23227af11f1d0d75798a4}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!DIM_NUM@{DIM\_\-NUM}}
+\index{DIM_NUM@{DIM\_\-NUM}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-NUM~3}\label{sobol__prb_8C_7e02749e4493cd5d2665d3d959fa1c84}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!DIM_NUM@{DIM\_\-NUM}}
+\index{DIM_NUM@{DIM\_\-NUM}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-NUM~3}\label{sobol__prb_8C_7e02749e4493cd5d2665d3d959fa1c84}
+
+
+
+
+Referenced by test05(), and test09().
+
+\subsection{Function Documentation}
+\index{sobol_prb.C@{sobol\_\-prb.C}!main@{main}}
+\index{main@{main}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main (void)}\label{sobol__prb_8C_840291bc02cba5474a4cb46a9b9566fe}
+
+
+
+
+Definition at line 12 of file CMakeCCompilerId.c.
+
+\begin{Code}\begin{verbatim}12 { return 0; }
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test01@{test01}}
+\index{test01@{test01}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test01 (void)}\label{sobol__prb_8C_849bf42660b0ed0bdce06b482cd61847}
+
+
+
+
+Definition at line 71 of file sobol\_\-prb.C.
+
+References i4\_\-uniform().
+
+\begin{Code}\begin{verbatim}75            :
+76 //
+77 //    TEST01 tests OR.
+78 //
+79 //  Modified:
+80 //
+81 //    23 January 2007
+82 //
+83 //  Author:
+84 //
+85 //    John Burkardt
+86 //
+87 {
+88   int i;
+89   int j;
+90   int k;
+91   int seed;
+92   int test;
+93 
+94   seed = 123456789;
+95 
+96   cout << "\n";
+97   cout << "TEST01\n";
+98   cout << "  The C++ function ^ computes the bitwise exclusive OR\n";
+99   cout << "  of two integers.\n";
+100   cout << "\n";
+101   cout << "       I       J     I^J\n";
+102   cout << "\n";
+103 
+104   for ( test = 1; test <= 10; test++ )
+105   {
+106     i = i4_uniform ( 0, 100, &seed );
+107     j = i4_uniform ( 0, 100, &seed );
+108     k = i ^ j;
+109 
+110     cout << "  "
+111          << setw(6) << i << "  "
+112          << setw(6) << j << "  "
+113          << setw(6) << k << "\n";
+114   }
+115 
+116   return;
+117 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test02@{test02}}
+\index{test02@{test02}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test02 (void)}\label{sobol__prb_8C_e58824136dadefa1c95b4e510e87ce64}
+
+
+
+
+Definition at line 120 of file sobol\_\-prb.C.
+
+References i4\_\-bit\_\-hi1(), and i4\_\-uniform().
+
+\begin{Code}\begin{verbatim}124            :
+125 //
+126 //    TEST02 tests I4_BIT_HI1.
+127 //
+128 //  Modified:
+129 //
+130 //    23 January 2007
+131 //
+132 //  Author:
+133 //
+134 //    John Burkardt
+135 //
+136 {
+137   int i;
+138   int j;
+139   int k;
+140   int seed;
+141   int test;
+142 
+143   seed = 123456789;
+144 
+145   cout << "\n";
+146   cout << "TEST02\n";
+147   cout << "  I4_BIT_HI1 returns the location of the high bit in an integer.\n";
+148   cout << "\n";
+149   cout << "       I  I4_BIT_HI1(I)\n";
+150   cout << "\n";
+151 
+152   for ( test = 1; test <= 10; test++ )
+153   {
+154     i = i4_uniform ( 0, 100, &seed );
+155     j = i4_bit_hi1 ( i );
+156 
+157     cout << "  "
+158          << setw(6) << i << "  "
+159          << setw(6) << j << "\n";
+160   }
+161 
+162   return;
+163 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test03@{test03}}
+\index{test03@{test03}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test03 (void)}\label{sobol__prb_8C_c57be81a46227b9cf3e314f243ac8115}
+
+
+
+
+Definition at line 166 of file sobol\_\-prb.C.
+
+References i4\_\-bit\_\-lo0(), and i4\_\-uniform().
+
+\begin{Code}\begin{verbatim}170            :
+171 //
+172 //    TEST03 tests I4_BIT_LO0.
+173 //
+174 //  Modified:
+175 //
+176 //    23 January 2007
+177 //
+178 //  Author:
+179 //
+180 //    John Burkardt
+181 //
+182 {
+183   int i;
+184   int j;
+185   int k;
+186   int seed;
+187   int test;
+188 
+189   seed = 123456789;
+190 
+191   cout << "\n";
+192   cout << "TEST03\n";
+193   cout << "  I4_BIT_LO0 returns the location of the low 0 bit in an integer.\n";
+194   cout << "\n";
+195   cout << "       I  I4_BIT_LO0(I)\n";
+196   cout << "\n";
+197 
+198   for ( test = 1; test <= 10; test++ )
+199   {
+200     i = i4_uniform ( 0, 100, &seed );
+201     j = i4_bit_lo0 ( i );
+202 
+203     cout << "  "
+204          << setw(6) << i << "  "
+205          << setw(6) << j << "\n";
+206   }
+207 
+208   return;
+209 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test04@{test04}}
+\index{test04@{test04}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test04 (void)}\label{sobol__prb_8C_4cf4862bad5a8714cb83b7c1d4623d11}
+
+
+
+
+Definition at line 212 of file sobol\_\-prb.C.
+
+References DIM\_\-MAX, and i4\_\-sobol().
+
+\begin{Code}\begin{verbatim}216            :
+217 //
+218 //    TEST04 tests I4_SOBOL.
+219 //
+220 //  Modified:
+221 //
+222 //    23 January 2007
+223 //
+224 //  Author:
+225 //
+226 //    John Burkardt
+227 //
+228 {
+229 # define DIM_MAX 4
+230 
+231   int dim_num;
+232   int i;
+233   int j;
+234   float r[DIM_MAX];
+235   int seed;
+236   int seed_in;
+237   int seed_out;
+238 
+239   cout << "\n";
+240   cout << "TEST04\n";
+241   cout << "  I4_SOBOL computes the next element of a Sobol sequence.\n";
+242   cout << "\n";
+243   cout << "  In this test, we call I4_SOBOL repeatedly.\n";
+244 
+245   for ( dim_num = 2; dim_num <= DIM_MAX; dim_num++ )
+246   {
+247 
+248     seed = 0;
+249 
+250     cout << "\n";
+251     cout << "  Using dimension DIM_NUM =   " << dim_num << "\n";
+252     cout << "\n";
+253     cout << "  Seed  Seed   I4_SOBOL\n";
+254     cout << "  In    Out\n";
+255     cout << "\n";
+256 
+257     for ( i = 0; i <= 110; i++ )
+258     {
+259       seed_in = seed;
+260       i4_sobol ( dim_num, &seed, r );
+261       seed_out = seed;
+262 
+263       if ( i <= 11 || 95 <= i )
+264       {
+265         cout << setw(6) << seed_in << "  "
+266              << setw(6) << seed_out << "  ";
+267         for ( j = 0; j < dim_num; j++ )
+268         {
+269           cout << setw(14) << r[j] << "  ";
+270         }
+271         cout << "\n";
+272       }
+273       else if ( i == 12 )
+274       {
+275         cout << "....................\n";
+276       }
+277     }
+278 
+279   }
+280 
+281   return;
+282 # undef DIM_MAX
+283 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test05@{test05}}
+\index{test05@{test05}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test05 (void)}\label{sobol__prb_8C_148dff40987bc494cc2f4aee07fd5bad}
+
+
+
+
+Definition at line 286 of file sobol\_\-prb.C.
+
+References DIM\_\-NUM, and i4\_\-sobol().
+
+\begin{Code}\begin{verbatim}290            :
+291 //
+292 //    TEST05 tests I4_SOBOL.
+293 //
+294 //  Modified:
+295 //
+296 //    23 January 2007
+297 //
+298 //  Author:
+299 //
+300 //    John Burkardt
+301 //
+302 {
+303 # define DIM_NUM 3
+304 
+305   int i;
+306   int j;
+307   float r[DIM_NUM];
+308   int seed;
+309   int seed_in;
+310   int seed_out;
+311 
+312   cout << "\n";
+313   cout << "TEST05\n";
+314   cout << "  I4_SOBOL computes the next element of a Sobol sequence.\n";
+315   cout << "\n";
+316   cout << "  In this test, we demonstrate how the SEED can be\n";
+317   cout << "  manipulated to skip ahead in the sequence, or\n";
+318   cout << "  to come back to any part of the sequence.\n";
+319   cout << "\n";
+320   cout << "  Using dimension DIM_NUM =   " << DIM_NUM << "\n";
+321 
+322   seed = 0;
+323 
+324   cout << "\n";
+325   cout << "  Seed  Seed   I4_SOBOL\n";
+326   cout << "  In    Out\n";
+327   cout << "\n";
+328 
+329   for ( i = 1; i <= 11; i++ )
+330   {
+331     seed_in = seed;
+332     i4_sobol ( DIM_NUM, &seed, r );
+333     seed_out = seed;
+334     cout << setw(6) << seed_in << "  "
+335          << setw(6) << seed_out << "  ";
+336     for ( j = 0; j < DIM_NUM; j++ )
+337     {
+338       cout << setw(14) << r[j] << "  ";
+339     }
+340     cout << "\n";
+341   }
+342 
+343   cout << "\n";
+344   cout << "  Jump ahead by increasing SEED:\n";
+345 
+346   seed = 100;
+347 
+348   cout << "\n";
+349   cout << "  Seed  Seed   I4_SOBOL\n";
+350   cout << "  In    Out\n";
+351   cout << "\n";
+352 
+353   for ( i = 1; i <= 5; i++ )
+354   {
+355     seed_in = seed;
+356     i4_sobol ( DIM_NUM, &seed, r );
+357     seed_out = seed;
+358     cout << setw(6) << seed_in << "  "
+359          << setw(6) << seed_out << "  ";
+360     for ( j = 0; j < DIM_NUM; j++ )
+361     {
+362       cout << setw(14) << r[j] << "  ";
+363     }
+364     cout << "\n";
+365   }
+366 
+367   cout << "\n";
+368   cout << "  Jump back by decreasing SEED:\n";
+369 
+370   seed = 3;
+371 
+372   cout << "\n";
+373   cout << "  Seed  Seed   I4_SOBOL\n";
+374   cout << "  In    Out\n";
+375   cout << "\n";
+376 
+377   for ( i = 1; i <= 11; i++ )
+378   {
+379     seed_in = seed;
+380     i4_sobol ( DIM_NUM, &seed, r );
+381     seed_out = seed;
+382     cout << setw(6) << seed_in << "  "
+383          << setw(6) << seed_out << "  ";
+384     for ( j = 0; j < DIM_NUM; j++ )
+385     {
+386       cout << setw(14) << r[j] << "  ";
+387     }
+388     cout << "\n";
+389   }
+390 
+391   cout << "\n";
+392   cout << "  Jump ahead by increasing SEED:\n";
+393 
+394   seed = 98;
+395 
+396   cout << "\n";
+397   cout << "  Seed  Seed   I4_SOBOL\n";
+398   cout << "  In    Out\n";
+399   cout << "\n";
+400 
+401   for ( i = 1; i <= 5; i++ )
+402   {
+403     seed_in = seed;
+404     i4_sobol ( DIM_NUM, &seed, r );
+405     seed_out = seed;
+406     cout << setw(6) << seed_in << "  "
+407          << setw(6) << seed_out << "  ";
+408     for ( j = 0; j < DIM_NUM; j++ )
+409     {
+410       cout << setw(14) << r[j] << "  ";
+411     }
+412     cout << "\n";
+413   }
+414   return;
+415 # undef DIM_NUM
+416 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test055@{test055}}
+\index{test055@{test055}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test055 (void)}\label{sobol__prb_8C_b7b4ea27c42b764b7a146c2c1e61b6e4}
+
+
+
+
+Definition at line 419 of file sobol\_\-prb.C.
+
+References i4\_\-uniform().
+
+\begin{Code}\begin{verbatim}423            :
+424 //
+425 //    TEST055 tests OR on long long ints.
+426 //
+427 //  Modified:
+428 //
+429 //    12 May 2007
+430 //
+431 //  Author:
+432 //
+433 //    John Burkardt
+434 //
+435 {
+436   long long int i;
+437   long long int j;
+438   long long int k;
+439   int seed;
+440   int test;
+441 
+442   seed = 123456789;
+443 
+444   cout << "\n";
+445   cout << "TEST055\n";
+446   cout << "  The C++ function ^ computes the bitwise exclusive OR\n";
+447   cout << "  of two LONG LONG INT's.\n";
+448   cout << "\n";
+449   cout << "       I       J     I^J\n";
+450   cout << "\n";
+451 
+452   for ( test = 1; test <= 10; test++ )
+453   {
+454     i = ( long long int ) i4_uniform ( 0, 100, &seed );
+455     j = ( long long int ) i4_uniform ( 0, 100, &seed );
+456     k = i ^ j;
+457 
+458     cout << "  "
+459          << setw(6) << i << "  "
+460          << setw(6) << j << "  "
+461          << setw(6) << k << "\n";
+462   }
+463 
+464   return;
+465 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test06@{test06}}
+\index{test06@{test06}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test06 (void)}\label{sobol__prb_8C_23a600ccf24c6346dd35868e3b42450a}
+
+
+
+
+Definition at line 468 of file sobol\_\-prb.C.
+
+References i4\_\-uniform(), and i8\_\-bit\_\-hi1().
+
+\begin{Code}\begin{verbatim}472            :
+473 //
+474 //    TEST06 tests I8_BIT_HI1.
+475 //
+476 //  Modified:
+477 //
+478 //    12 May 2007
+479 //
+480 //  Author:
+481 //
+482 //    John Burkardt
+483 //
+484 {
+485   long long int i;
+486   int j;
+487   int seed;
+488   int test;
+489 
+490   seed = 123456789;
+491 
+492   cout << "\n";
+493   cout << "TEST06\n";
+494   cout << "  I8_BIT_HI1 returns the location of the high bit in an integer.\n";
+495   cout << "\n";
+496   cout << "       I  I8_BIT_HI1(I)\n";
+497   cout << "\n";
+498 
+499   for ( test = 1; test <= 10; test++ )
+500   {
+501     i = ( long long int ) i4_uniform ( 0, 100, &seed );
+502     j = i8_bit_hi1 ( i );
+503 
+504     cout << "  "
+505          << setw(6) << i << "  "
+506          << setw(6) << j << "\n";
+507   }
+508 
+509   return;
+510 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test07@{test07}}
+\index{test07@{test07}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test07 (void)}\label{sobol__prb_8C_3909542e3ee8d3c6674db055cd586904}
+
+
+
+
+Definition at line 513 of file sobol\_\-prb.C.
+
+References i4\_\-uniform(), and i8\_\-bit\_\-lo0().
+
+\begin{Code}\begin{verbatim}517            :
+518 //
+519 //    TEST07 tests I8_BIT_LO0.
+520 //
+521 //  Modified:
+522 //
+523 //    12 May 2007
+524 //
+525 //  Author:
+526 //
+527 //    John Burkardt
+528 //
+529 {
+530   long long int i;
+531   int j;
+532   int k;
+533   int seed;
+534   int test;
+535 
+536   seed = 123456789;
+537 
+538   cout << "\n";
+539   cout << "TEST07\n";
+540   cout << "  I8_BIT_LO0 returns the location of the low zero bit\n";
+541   cout << "  in an integer.\n";
+542   cout << "\n";
+543   cout << "       I  I8_BIT_LO0(I)\n";
+544   cout << "\n";
+545 
+546   for ( test = 1; test <= 10; test++ )
+547   {
+548     i = ( long long int ) i4_uniform ( 0, 100, &seed );
+549     j = i8_bit_lo0 ( i );
+550 
+551     cout << "  "
+552          << setw(6) << i << "  "
+553          << setw(6) << j << "\n";
+554   }
+555 
+556   return;
+557 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test08@{test08}}
+\index{test08@{test08}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test08 (void)}\label{sobol__prb_8C_32017d74053b26ec7a261902632c6c08}
+
+
+
+
+Definition at line 560 of file sobol\_\-prb.C.
+
+References DIM\_\-MAX, and i8\_\-sobol().
+
+\begin{Code}\begin{verbatim}564            :
+565 //
+566 //    TEST08 tests I8_SOBOL.
+567 //
+568 //  Modified:
+569 //
+570 //    12 May 2007
+571 //
+572 //  Author:
+573 //
+574 //    John Burkardt
+575 //
+576 {
+577 # define DIM_MAX 4
+578 
+579   int dim_num;
+580   int i;
+581   int j;
+582   double r[DIM_MAX];
+583   long long int seed;
+584   long long int seed_in;
+585   long long int seed_out;
+586 
+587   cout << "\n";
+588   cout << "TEST08\n";
+589   cout << "  I8_SOBOL computes the next element of a Sobol sequence.\n";
+590   cout << "\n";
+591   cout << "  In this test, we call I8_SOBOL repeatedly.\n";
+592 
+593   for ( dim_num = 2; dim_num <= DIM_MAX; dim_num++ )
+594   {
+595 
+596     seed = 0;
+597 
+598     cout << "\n";
+599     cout << "  Using dimension DIM_NUM =   " << dim_num << "\n";
+600     cout << "\n";
+601     cout << "  Seed  Seed   I8_SOBOL\n";
+602     cout << "  In    Out\n";
+603     cout << "\n";
+604 
+605     for ( i = 0; i <= 110; i++ )
+606     {
+607       seed_in = seed;
+608       i8_sobol ( dim_num, &seed, r );
+609       seed_out = seed;
+610 
+611       if ( i <= 11 || 95 <= i )
+612       {
+613         cout << setw(6) << seed_in << "  "
+614              << setw(6) << seed_out << "  ";
+615         for ( j = 0; j < dim_num; j++ )
+616         {
+617           cout << setw(14) << r[j] << "  ";
+618         }
+619         cout << "\n";
+620       }
+621       else if ( i == 12 )
+622       {
+623         cout << "....................\n";
+624       }
+625     }
+626 
+627   }
+628 
+629   return;
+630 # undef DIM_MAX
+631 }
+//****************************************************************************80
+\end{verbatim}
+\end{Code}
+
+
+\index{sobol_prb.C@{sobol\_\-prb.C}!test09@{test09}}
+\index{test09@{test09}!sobol_prb.C@{sobol\_\-prb.C}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void test09 (void)}\label{sobol__prb_8C_0cb5ceb9c965f16407f20b72abff57a9}
+
+
+
+
+Definition at line 634 of file sobol\_\-prb.C.
+
+References DIM\_\-NUM, and i8\_\-sobol().
+
+\begin{Code}\begin{verbatim}638            :
+639 //
+640 //    TEST09 tests I8_SOBOL.
+641 //
+642 //  Modified:
+643 //
+644 //    12 May 2007
+645 //
+646 //  Author:
+647 //
+648 //    John Burkardt
+649 //
+650 {
+651 # define DIM_NUM 3
+652 
+653   int i;
+654   int j;
+655   double r[DIM_NUM];
+656   long long int seed;
+657   long long int seed_in;
+658   long long int seed_out;
+659 
+660   cout << "\n";
+661   cout << "TEST09\n";
+662   cout << "  I8_SOBOL computes the next element of a Sobol sequence.\n";
+663   cout << "\n";
+664   cout << "  In this test, we demonstrate how the SEED can be\n";
+665   cout << "  manipulated to skip ahead in the sequence, or\n";
+666   cout << "  to come back to any part of the sequence.\n";
+667   cout << "\n";
+668   cout << "  Using dimension DIM_NUM =   " << DIM_NUM << "\n";
+669 
+670   seed = 0;
+671 
+672   cout << "\n";
+673   cout << "  Seed  Seed   I8_SOBOL\n";
+674   cout << "  In    Out\n";
+675   cout << "\n";
+676 
+677   for ( i = 1; i <= 11; i++ )
+678   {
+679     seed_in = seed;
+680     i8_sobol ( DIM_NUM, &seed, r );
+681     seed_out = seed;
+682     cout << setw(6) << seed_in << "  "
+683          << setw(6) << seed_out << "  ";
+684     for ( j = 0; j < DIM_NUM; j++ )
+685     {
+686       cout << setw(14) << r[j] << "  ";
+687     }
+688     cout << "\n";
+689   }
+690 
+691   cout << "\n";
+692   cout << "  Jump ahead by increasing SEED:\n";
+693 
+694   seed = 100;
+695 
+696   cout << "\n";
+697   cout << "  Seed  Seed   I8_SOBOL\n";
+698   cout << "  In    Out\n";
+699   cout << "\n";
+700 
+701   for ( i = 1; i <= 5; i++ )
+702   {
+703     seed_in = seed;
+704     i8_sobol ( DIM_NUM, &seed, r );
+705     seed_out = seed;
+706     cout << setw(6) << seed_in << "  "
+707          << setw(6) << seed_out << "  ";
+708     for ( j = 0; j < DIM_NUM; j++ )
+709     {
+710       cout << setw(14) << r[j] << "  ";
+711     }
+712     cout << "\n";
+713   }
+714 
+715   cout << "\n";
+716   cout << "  Jump back by decreasing SEED:\n";
+717 
+718   seed = 3;
+719 
+720   cout << "\n";
+721   cout << "  Seed  Seed   I8_SOBOL\n";
+722   cout << "  In    Out\n";
+723   cout << "\n";
+724 
+725   for ( i = 1; i <= 11; i++ )
+726   {
+727     seed_in = seed;
+728     i8_sobol ( DIM_NUM, &seed, r );
+729     seed_out = seed;
+730     cout << setw(6) << seed_in << "  "
+731          << setw(6) << seed_out << "  ";
+732     for ( j = 0; j < DIM_NUM; j++ )
+733     {
+734       cout << setw(14) << r[j] << "  ";
+735     }
+736     cout << "\n";
+737   }
+738 
+739   cout << "\n";
+740   cout << "  Jump ahead by increasing SEED:\n";
+741 
+742   seed = 98;
+743 
+744   cout << "\n";
+745   cout << "  Seed  Seed   I8_SOBOL\n";
+746   cout << "  In    Out\n";
+747   cout << "\n";
+748 
+749   for ( i = 1; i <= 5; i++ )
+750   {
+751     seed_in = seed;
+752     i8_sobol ( DIM_NUM, &seed, r );
+753     seed_out = seed;
+754     cout << setw(6) << seed_in << "  "
+755          << setw(6) << seed_out << "  ";
+756     for ( j = 0; j < DIM_NUM; j++ )
+757     {
+758       cout << setw(14) << r[j] << "  ";
+759     }
+760     cout << "\n";
+761   }
+762   return;
+763 # undef DIM_NUM
+764 }
+}
+\end{verbatim}
+\end{Code}
+
+

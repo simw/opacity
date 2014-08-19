@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="zcolldist_8h" kind="file">
+    <compoundname>zcolldist.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="Arrays_8h" local="yes">../Arrays.h</includes>
+    <includes refid="Function_8h" local="yes">Function.h</includes>
+    <includes refid="Wrapper_8h" local="yes">../Wrapper.h</includes>
+    <includedby refid="radcalcer_8h" local="yes">Gyulassy/opacity3/src/glv1/radcalcer.h</includedby>
+    <includedby refid="zcolldist_8cpp" local="yes">Gyulassy/opacity3/src/glv1/zcolldist.cpp</includedby>
+    <incdepgraph>
+      <node id="215">
+        <label>valarray</label>
+      </node>
+      <node id="216">
+        <label>Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="212">
+        <label>vector</label>
+      </node>
+      <node id="211">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.h</label>
+        <link refid="zcolldist.h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="220">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="222">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="219">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.h</label>
+        <link refid="zcolldist.h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.cpp</label>
+        <link refid="zcolldist_8cpp"/>
+      </node>
+      <node id="221">
+        <label>Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classZposGenerator" prot="public">ZposGenerator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ZCOLLDIST_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ZCOLLDIST_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Arrays.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Function_8h" kindref="compound">Function.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Wrapper.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwArrays;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classParameters" kindref="compound">Parameters</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classZposGenerator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classZposGenerator" kindref="compound">ZposGenerator</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" kindref="member">mSize</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//MyArray<sp/>mPositions;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" kindref="member">mPositions</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" kindref="member">_loverlambda</ref>;</highlight></codeline>
+<codeline lineno="25" refid="classZposGenerator_113791204df3f02d883a309b880d11043" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_113791204df3f02d883a309b880d11043" kindref="member">_weight</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" kindref="member">_mu</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" kindref="member">_temp</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>reference<sp/>funtion<sp/>-<sp/>the<sp/>one<sp/>in<sp/>the<sp/>integral</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;Function&gt;</ref><sp/><ref refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" kindref="member">refFn</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>from<sp/>which<sp/>to<sp/>sample<sp/>the<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;Function&gt;</ref><sp/><ref refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" kindref="member">sampleFn</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" kindref="member">ZposGenerator</ref>(<sp/><ref refid="classParameters" kindref="compound">Parameters</ref>&amp;<sp/>params_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>opacity_<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" kindref="member">FindRandomPositions</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>Randoms<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" kindref="member">GetTempsMu2s</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>temps,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>mu2s<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1ff9cfd493e73f5d711f755c496c462f0" kindref="member">GetDeltaZi</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_14efcf84343b79a423e7dc356fd9d0261" kindref="member">GetZweight</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.h"/>
+  </compounddef>
+</doxygen>

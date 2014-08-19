@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="namespaceSwRandoms" kind="namespace">
+    <compoundname>SwRandoms</compoundname>
+    <innerclass refid="classSwRandoms_1_1RandDrand48" prot="public">SwRandoms::RandDrand48</innerclass>
+    <innerclass refid="classSwRandoms_1_1RandomBase2" prot="public">SwRandoms::RandomBase2</innerclass>
+    <innerclass refid="classSwRandoms_1_1RandSobol" prot="public">SwRandoms::RandSobol</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" line="6"/>
+  </compounddef>
+</doxygen>

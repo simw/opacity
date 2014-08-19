@@ -1,0 +1,208 @@
+\section{SwRandoms::RandSobol Class Reference}
+\label{classSwRandoms_1_1RandSobol}\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+{\tt \#include $<$RandSobol.h$>$}
+
+Inheritance diagram for SwRandoms::RandSobol::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSwRandoms_1_1RandSobol}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf RandSobol} (unsigned long {\bf Dimensionality}, unsigned long Seed=1)
+\item 
+virtual {\bf RandomBase2} $\ast$ {\bf clone} () const 
+\item 
+virtual void {\bf GetUniforms} ({\bf SwArrays::MyArray} \&variates)
+\item 
+virtual void {\bf Skip} (unsigned long numberOfPaths)
+\item 
+virtual void {\bf SetSeed} (unsigned long Seed)
+\item 
+virtual void {\bf Reset} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+long long int {\bf InitialSeed}
+\item 
+long long int {\bf RunningSeed}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file RandSobol.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!RandSobol@{RandSobol}}
+\index{RandSobol@{RandSobol}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SwRandoms::RandSobol::RandSobol (unsigned long {\em Dimensionality}, unsigned long {\em Seed} = {\tt 1})}\label{classSwRandoms_1_1RandSobol_2c07980724797f1e0b3dd24a071bb745}
+
+
+
+
+Definition at line 9 of file RandSobol.cpp.
+
+Referenced by clone().
+
+\begin{Code}\begin{verbatim}10   : RandomBase2(Dimensionality), InitialSeed( Seed )
+11 {
+12 
+13 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!clone@{clone}}
+\index{clone@{clone}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf RandomBase2} $\ast$ SwRandoms::RandSobol::clone () const\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandSobol_5abf4953d967d0aed2872a5cf2a2cdb7}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_633ab071ed2eded4784ea5c6faf4a9af}.
+
+Definition at line 15 of file RandSobol.cpp.
+
+References RandSobol().
+
+\begin{Code}\begin{verbatim}16 {
+17   return new RandSobol( *this );
+18 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!GetUniforms@{GetUniforms}}
+\index{GetUniforms@{GetUniforms}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandSobol::GetUniforms ({\bf SwArrays::MyArray} \& {\em variates})\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandSobol_8944be055bd402cc4d437d2b4357f79f}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_ee4b8f64be04c3cea35ea63cc4f9c6d6}.
+
+Definition at line 20 of file RandSobol.cpp.
+
+References SwRandoms::RandomBase2::GetDimensionality(), Sobol::i8\_\-sobol(), and RunningSeed.
+
+Referenced by Skip().
+
+\begin{Code}\begin{verbatim}21 {
+22   unsigned long dim = GetDimensionality();
+23   double* sobols = new double[dim];
+24   
+25   // Produces a vector of quasirandom numbers
+26   // Updates RunningSeed
+27   Sobol::i8_sobol( dim, &RunningSeed, sobols );
+28 
+29   // Move our array of floats into the vector
+30   for (unsigned long j=0; j<dim; j++)
+31     variates[j] = sobols[j];
+32 
+33   delete [] sobols;
+34 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!Skip@{Skip}}
+\index{Skip@{Skip}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandSobol::Skip (unsigned long {\em numberOfPaths})\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandSobol_68f45c07b374e627a58f84f7e2491167}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_8a202b85b9c0f380700922331506f459}.
+
+Definition at line 36 of file RandSobol.cpp.
+
+References SwRandoms::RandomBase2::GetDimensionality(), and GetUniforms().
+
+\begin{Code}\begin{verbatim}37 {
+38   SwArrays::MyArray tmp( GetDimensionality() );
+39   for (unsigned long j=0; j<numberOfPaths; j++)
+40     GetUniforms(tmp);
+41 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!SetSeed@{SetSeed}}
+\index{SetSeed@{SetSeed}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandSobol::SetSeed (unsigned long {\em Seed})\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandSobol_cbab6c15df9c297d18fa585cfad1b11d}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_ff006e42b1f514697427cc4578383b5e}.
+
+Definition at line 43 of file RandSobol.cpp.
+
+References InitialSeed, and RunningSeed.
+
+\begin{Code}\begin{verbatim}44 {
+45   //InitialSeed = Seed;
+46   // Sobol sequence should start from 0
+47   InitialSeed = 0;
+48   RunningSeed = InitialSeed;
+49   srand48( Seed );
+50 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!Reset@{Reset}}
+\index{Reset@{Reset}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandSobol::Reset ()\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandSobol_e3d1bfbb3fa3bc81a9775c8d9875f22f}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_54a0497121db4d91e3ff6e2b4cdf380a}.
+
+Definition at line 52 of file RandSobol.cpp.
+
+References InitialSeed.
+
+\begin{Code}\begin{verbatim}53 {
+54   srand48( InitialSeed );
+55 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!InitialSeed@{InitialSeed}}
+\index{InitialSeed@{InitialSeed}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long long int {\bf SwRandoms::RandSobol::InitialSeed}\hspace{0.3cm}{\tt  [private]}}\label{classSwRandoms_1_1RandSobol_d6d335a081b9961d7059c13b1869c57c}
+
+
+
+
+Definition at line 21 of file RandSobol.h.
+
+Referenced by Reset(), and SetSeed().\index{SwRandoms::RandSobol@{SwRandoms::RandSobol}!RunningSeed@{RunningSeed}}
+\index{RunningSeed@{RunningSeed}!SwRandoms::RandSobol@{SwRandoms::RandSobol}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long long int {\bf SwRandoms::RandSobol::RunningSeed}\hspace{0.3cm}{\tt  [private]}}\label{classSwRandoms_1_1RandSobol_3e98e6cf26ba9528d885ebbf45d1a393}
+
+
+
+
+Definition at line 22 of file RandSobol.h.
+
+Referenced by GetUniforms(), and SetSeed().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/randoms/{\bf RandSobol.h}\item 
+Gyulassy/opacity3/src/randoms/{\bf RandSobol.cpp}\end{CompactItemize}

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperpdist_8h" kind="file">
+    <compoundname>qperpdist.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">valarray</includes>
+    <includes refid="Arrays_8h" local="yes">../Arrays.h</includes>
+    <includes refid="qperparraynew_8h" local="yes">qperparraynew.h</includes>
+    <includes refid="Function_8h" local="yes">Function.h</includes>
+    <includes refid="Wrapper_8h" local="yes">../Wrapper.h</includes>
+    <includedby refid="qperpdist_8cpp" local="yes">Gyulassy/opacity3/src/glv1/qperpdist.cpp</includedby>
+    <includedby refid="radcalcer_8h" local="yes">Gyulassy/opacity3/src/glv1/radcalcer.h</includedby>
+    <incdepgraph>
+      <node id="121">
+        <label>valarray</label>
+      </node>
+      <node id="119">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.h</label>
+        <link refid="qperpdist.h"/>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="124">
+        <label>qperparraynew.h</label>
+        <link refid="qperparraynew_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>vector</label>
+      </node>
+      <node id="123">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="128">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.cpp</label>
+        <link refid="qperpdist_8cpp"/>
+      </node>
+      <node id="127">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.h</label>
+        <link refid="qperpdist.h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="132">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="129">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classQperpGenerator" prot="public">QperpGenerator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>QPERPDIST_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QPERPDIST_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;valarray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Arrays.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperparraynew_8h" kindref="compound">qperparraynew.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Function_8h" kindref="compound">Function.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Wrapper.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwArrays;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>class<sp/>generates<sp/>randomly<sp/>distributed<sp/>qs<sp/>and<sp/>thetas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>from<sp/>any<sp/>desired<sp/>distribution,<sp/>sends<sp/>the<sp/>generated<sp/>qs<sp/>and<sp/>thetas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>into<sp/>the<sp/>QperpCalculator<sp/>object,<sp/>and<sp/>keeps<sp/>track<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>weight<sp/>relative<sp/>to<sp/>a<sp/>fixed<sp/>Gyulassy-Wang<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classQperpGenerator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQperpGenerator" kindref="compound">QperpGenerator</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref>;</highlight></codeline>
+<codeline lineno="24" refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator" kindref="compound">QperpCalculator</ref><sp/><ref refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" kindref="member" tooltip="The class dealing with the details of the calculation, once filled with qs, thetas...">qps</ref>;</highlight></codeline>
+<codeline lineno="26" refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/><ref refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" kindref="member" tooltip="The weight of the event compared to the fixed Gyulassy-Wang distribution.">_weights</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" kindref="member" tooltip="The product of all the weights, ie the event weight.">_totWeight</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" kindref="member" tooltip="Whether the medium is correlated.">_correlated</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" kindref="member" tooltip="The code for which qs are zeroed - int converts to binary gives which qs are zeroed...">_zeroSet</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" kindref="member" tooltip="The total number of zeroed qs.">_numZeroedQs</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;bool&gt;<sp/><ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" kindref="member" tooltip="Whether we have an even number of zeroed qs (hence a -1 in the event weight).">_evenZeroes</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;Function&gt;</ref><sp/><ref refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" kindref="member" tooltip="The distribution function from which to choose the qs.">qDistFn</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;Function&gt;</ref><sp/><ref refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" kindref="member" tooltip="The reference function in the integral - yukawa (ie Gyulassy-Wang).">yukDistFn</ref>;</highlight></codeline>
+<codeline lineno="47" refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;Function&gt;</ref><sp/><ref refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" kindref="member" tooltip="The distribution function from which to choose the thetas.">thDistFn</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;Function&gt;</ref><sp/><ref refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" kindref="member" tooltip="The reference function in the integral - uniform.">uniDistFn</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" kindref="member" tooltip="Constructor: feed in the number of dimensions, and whether the medium is correlated...">QperpGenerator</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n_,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>correlated_<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1fad2d91783826777f3b9d5c82804c61e" kindref="member" tooltip="Destructor.">~QperpGenerator</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" kindref="member" tooltip="Supply random numbers in inForQs, inForThs, generates random qs between qmins and...">FindRandomQs</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>inForQs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>qmins,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>qmaxs,<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>inForThs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>thmins,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>thmaxs,<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>mu2s<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" kindref="member" tooltip="Set the combination of zeroed qs from an integer.">SetZeroedQs</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num<sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" kindref="member" tooltip="Set the k value.">SetK</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" kindref="member" tooltip="Get out the SumQiQj - passed straight onto QperpCalculator object.">GetSumQiQj</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" kindref="member" tooltip="Get the weight of the event, ie the ratio of the distribtutions from which the qs...">GetQeventWeight</ref>(<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_18309ae1765318ca72e16a4b072a889be" kindref="member" tooltip="Ask whether a specific q is zeroed.">IsZeroed</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classQperpGenerator_18309ae1765318ca72e16a4b072a889be" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_18309ae1765318ca72e16a4b072a889be" kindref="member" tooltip="Ask whether a specific q is zeroed.">QperpGenerator::IsZeroed</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>[i];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" kindref="member" tooltip="Set the k value.">QperpGenerator::SetK</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" kindref="member" tooltip="The class dealing with the details of the calculation, once filled with qs, thetas...">qps</ref>.<ref refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" kindref="member" tooltip="Set the magnitude of the k vector (direction is always in fixed direction).">SetK</ref>(<sp/>k<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" kindref="member" tooltip="Get out the SumQiQj - passed straight onto QperpCalculator object.">QperpGenerator::GetSumQiQj</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="86"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" kindref="member" tooltip="The class dealing with the details of the calculation, once filled with qs, thetas...">qps</ref>.<ref refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" kindref="member" tooltip="Retrieve the result - sum of q_i.q_j from i to (n+1), j to (n+1) including k.q_i...">GetSumQiQj</ref>(<sp/>i,<sp/>j,<sp/><ref refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" kindref="member" tooltip="The code for which qs are zeroed - int converts to binary gives which qs are zeroed...">_zeroSet</ref><sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h"/>
+  </compounddef>
+</doxygen>

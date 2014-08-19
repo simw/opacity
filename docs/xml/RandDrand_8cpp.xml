@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="RandDrand_8cpp" kind="file">
+    <compoundname>RandDrand.cpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes refid="RandDrand_8h" local="yes">RandDrand.h</includes>
+    <incdepgraph>
+      <node id="355">
+        <label>valarray</label>
+      </node>
+      <node id="349">
+        <label>Gyulassy/opacity3/src/randoms/RandDrand.cpp</label>
+        <link refid="RandDrand.cpp"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+      </node>
+      <node id="350">
+        <label>cmath</label>
+      </node>
+      <node id="353">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="354" relation="include">
+        </childnode>
+        <childnode refid="355" relation="include">
+        </childnode>
+      </node>
+      <node id="352">
+        <label>Random3.h</label>
+        <link refid="Random3_8h"/>
+        <childnode refid="353" relation="include">
+        </childnode>
+      </node>
+      <node id="354">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="351">
+        <label>RandDrand.h</label>
+        <link refid="RandDrand_8h"/>
+        <childnode refid="352" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceSwRandoms">SwRandoms</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RandDrand_8h" kindref="compound">RandDrand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespaceSwRandoms" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SwRandoms</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classSwRandoms_1_1RandDrand48_16200e7125a190ec6c31116ade72eeeea" refkind="member"><highlight class="normal"><ref refid="classSwRandoms_1_1RandDrand48_16200e7125a190ec6c31116ade72eeeea" kindref="member">RandDrand48::RandDrand48</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Seed<sp/>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref>(Dimensionality),<sp/>InitialSeed(<sp/>Seed<sp/>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classSwRandoms_1_1RandDrand48_1835ce3d71b66d4610a60caa89fc7411c" refkind="member"><highlight class="normal"><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref>*<sp/>RandDrand48::clone()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="15"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandDrand48_16200e7125a190ec6c31116ade72eeeea" kindref="member">RandDrand48</ref>(<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" kindref="member">RandDrand48::GetUniforms</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref>&amp;<sp/>variates<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;<ref refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" kindref="member">GetDimensionality</ref>();<sp/>j++)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>variates[j]<sp/>=<sp/>drand48();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87" kindref="member">RandDrand48::Skip</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>numberOfPaths)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref><sp/>tmp(<sp/><ref refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" kindref="member">GetDimensionality</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;numberOfPaths;<sp/>j++)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" kindref="member">GetUniforms</ref>(tmp);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classSwRandoms_1_1RandDrand48_19596b643d1915b3f8543bbdff6960105" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSwRandoms_1_1RandDrand48_19596b643d1915b3f8543bbdff6960105" kindref="member">RandDrand48::SetSeed</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Seed<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classSwRandoms_1_1RandDrand48_18447e5c4c6bdd0758f19d3df331960c5" kindref="member">InitialSeed</ref><sp/>=<sp/>Seed;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>srand48(<sp/>Seed<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classSwRandoms_1_1RandDrand48_1d572e124c7bf89a406800ce07618b1bd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" kindref="member">RandDrand48::Reset</ref>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>srand48(<sp/><ref refid="classSwRandoms_1_1RandDrand48_18447e5c4c6bdd0758f19d3df331960c5" kindref="member">InitialSeed</ref><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace<sp/>SwRandoms</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp"/>
+  </compounddef>
+</doxygen>

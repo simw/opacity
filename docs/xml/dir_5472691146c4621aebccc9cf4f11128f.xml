@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_5472691146c4621aebccc9cf4f11128f" kind="dir">
+    <compoundname>Gyulassy/opacity3/</compoundname>
+    <innerdir refid="dir_73f50a8f2dc2b0350c411339ba52e34a">Gyulassy/opacity3/CMakeFiles/</innerdir>
+    <innerdir refid="dir_72d8ec73e3ad7b6d59e51ccaa1cc405b">Gyulassy/opacity3/src/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/"/>
+  </compounddef>
+</doxygen>

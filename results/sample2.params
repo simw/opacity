@@ -1,0 +1,42 @@
+# Begin settings for Opacity3
+
+@opacityOrder 1
+
+# Radiative energy loss settings
+
+# The jet flavour: any of Gluon, Light, Charm, Bottom
+# (gives a jet Casimir and a default mass: m_g, m_g/sqrt(2), 1.2, 4.75)
+@jetFlavour Light
+# Alter the given jet mass from the default (optional)
+@jetMassDirect 0
+
+# The jet momentum
+@jetMomentum 10
+# The parameters for the medium: mu, temperature, mass of the gluon, gluon mean free path
+@mediumParams 0.582488 0.30 0.411881 1.00189 
+# The jet's path length traversed in the medium (for the fixed block)
+@pathLength 2
+# The strong coupling: fixed, value
+@alpha fixed 0.3
+# The limits on the k integral: 1=>xE, 2=> Min(xE, (1-x)E), 3=>2x(1-x)E
+@limitSet 3
+# Whether to include the classical diffusion terms in the all orders radiative result: yes or no
+@incClassicalDiffusion no
+
+# Storage settings
+# Min max (number of steps)
+# The range in the k variable: min, max, number of steps (excluding the minimum point)
+# Dimension1 = k
+# The range in the x variable: min, max, number of steps (excluding the minimum point)
+# Dimension2 = x
+@storedim1 0.025 5. 99
+@storedim2 0.005 0.1. 199
+
+# Monte Carlo settings
+
+# The type of random number generator to use
+# Choices: the built in library Drand48, or Sobol
+# @RandomNumberGenerator Drand48
+@RandomNumberGenerator Sobol
+
+# End settings for Opacity3

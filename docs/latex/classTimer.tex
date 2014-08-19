@@ -1,0 +1,282 @@
+\section{Timer Class Reference}
+\label{classTimer}\index{Timer@{Timer}}
+{\tt \#include $<$timer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void {\bf StartTimer} ()
+\item 
+void {\bf StopTimer} ()
+\item 
+void {\bf DisplayResult} (double div=1.)
+\item 
+double {\bf GetResult} ()
+\item 
+{\bf Timer} ()
+\item 
+{\bf $\sim$Timer} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+clockid\_\-t {\bf clock\_\-id}
+\item 
+struct timespec tstart {\bf tstop}
+\item 
+double {\bf \_\-totDiff}
+\item 
+double {\bf \_\-totDiffNanSecs}
+\item 
+clock\_\-t {\bf clock1}
+\item 
+clock\_\-t {\bf clock2}
+\item 
+double {\bf clockdiff}
+\item 
+unsigned long long int {\bf ia32Start}
+\item 
+unsigned long long int {\bf ia32Stop}
+\item 
+unsigned long long int {\bf ia32NanoSecs}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simonw@phys.columbia.edu}$>$ A simple class to time events TODO: improve the implementation, make possible different implementations At the moment, there is code for a couple of different ways, but these are commented out or not. \end{Desc}
+
+
+Definition at line 15 of file timer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Timer::Timer ()}\label{classTimer_5f16e8da27d2a5a5242dead46de05d97}
+
+
+
+
+Definition at line 19 of file timer.cpp.
+
+References ia32Start, ia32Stop, and tstop.
+
+\begin{Code}\begin{verbatim}20 {
+21   // clock_id = CLOCK_REALTIME;
+22       
+23   tstart.tv_sec = 0;
+24   tstart.tv_nsec = 0;
+25   tstop.tv_sec = 0;
+26   tstop.tv_nsec = 0;
+27   
+28   ia32Start = 0;
+29   ia32Stop = 0;
+30 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Timer@{Timer}!~Timer@{$\sim$Timer}}
+\index{~Timer@{$\sim$Timer}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Timer::$\sim$Timer ()}\label{classTimer_14fa469c4c295c5fa6e66a4ad1092146}
+
+
+
+
+Definition at line 33 of file timer.cpp.
+
+\begin{Code}\begin{verbatim}34 {
+35   
+36 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Timer@{Timer}!StartTimer@{StartTimer}}
+\index{StartTimer@{StartTimer}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Timer::StartTimer ()}\label{classTimer_49838bb0d401f745ce6756a7fc5882e3}
+
+
+
+
+Definition at line 38 of file timer.cpp.
+
+References clock1.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}39 {
+40   //clock_gettime(clock_id, &tstart);
+41 
+42   clock1 = clock();
+43   
+44   //ia32Start = nanotime_ia32();
+45 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Timer@{Timer}!StopTimer@{StopTimer}}
+\index{StopTimer@{StopTimer}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Timer::StopTimer ()}\label{classTimer_8ebf0e6d027f40f1b419f83f7a1d218a}
+
+
+
+
+Definition at line 47 of file timer.cpp.
+
+References clock1, clock2, and clockdiff.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}48 {
+49   //clock_gettime(clock_id, &tstop);
+50   //_totDiff = double(tstop.tv_sec-tstart.tv_sec) + double(tstop.tv_nsec-tstart.tv_nsec)/1.e9;
+51   //_totDiffNanSecs = double(tstop.tv_sec-tstart.tv_sec)*1.e9 + double(tstop.tv_nsec-tstart.tv_nsec);
+52 
+53   clock2 = clock();
+54   clockdiff = static_cast<double>(clock2-clock1)/CLOCKS_PER_SEC;
+55   
+56   //ia32Stop = nanotime_ia32();  
+57   //ia32NanoSecs = int(double(ia32Stop - ia32Start)/cCpNs);
+58 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Timer@{Timer}!DisplayResult@{DisplayResult}}
+\index{DisplayResult@{DisplayResult}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Timer::DisplayResult (double {\em div} = {\tt 1.})}\label{classTimer_9791ca9cebd4a28e657d7facecbdb603}
+
+
+
+
+Definition at line 60 of file timer.cpp.
+
+References clockdiff.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}61 {
+62   //std::cerr << "Total time: " << _totDiffNanSecs << std::endl;
+63   std::cerr << "Total time: " << clockdiff / div << std::endl;
+64   //std::cerr << "Total time: " << (ia32NanoSecs) << std::endl;
+65 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Timer@{Timer}!GetResult@{GetResult}}
+\index{GetResult@{GetResult}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Timer::GetResult ()}\label{classTimer_4db34f21ca587602a5496e34e061501f}
+
+
+
+
+Definition at line 67 of file timer.cpp.
+
+References clockdiff.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}68 {
+69   return clockdiff;
+70 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Timer@{Timer}!clock_id@{clock\_\-id}}
+\index{clock_id@{clock\_\-id}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}clockid\_\-t {\bf Timer::clock\_\-id}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_6d6f0e6b1f075669a0b03cbaa5e26fa6}
+
+
+
+
+Definition at line 17 of file timer.h.\index{Timer@{Timer}!tstop@{tstop}}
+\index{tstop@{tstop}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}struct timespec tstart {\bf Timer::tstop}\hspace{0.3cm}{\tt  [read, private]}}\label{classTimer_bf54ab5847d8e97c930349d639a1cbee}
+
+
+
+
+Definition at line 18 of file timer.h.
+
+Referenced by Timer().\index{Timer@{Timer}!_totDiff@{\_\-totDiff}}
+\index{_totDiff@{\_\-totDiff}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Timer::\_\-totDiff}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_ff38d0d636d6d1d70c26c81b1b22956b}
+
+
+
+
+Definition at line 19 of file timer.h.\index{Timer@{Timer}!_totDiffNanSecs@{\_\-totDiffNanSecs}}
+\index{_totDiffNanSecs@{\_\-totDiffNanSecs}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Timer::\_\-totDiffNanSecs}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_cf7b601e65a944a9fd46df722f445039}
+
+
+
+
+Definition at line 20 of file timer.h.\index{Timer@{Timer}!clock1@{clock1}}
+\index{clock1@{clock1}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}clock\_\-t {\bf Timer::clock1}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_3ae91f3d031faeb8401702ec8ceab51d}
+
+
+
+
+Definition at line 22 of file timer.h.
+
+Referenced by StartTimer(), and StopTimer().\index{Timer@{Timer}!clock2@{clock2}}
+\index{clock2@{clock2}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}clock\_\-t {\bf Timer::clock2}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_d29500007a671be2a0dbd230249fa5a9}
+
+
+
+
+Definition at line 22 of file timer.h.
+
+Referenced by StopTimer().\index{Timer@{Timer}!clockdiff@{clockdiff}}
+\index{clockdiff@{clockdiff}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Timer::clockdiff}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_5d5b55e5c6ac25294066d1493cba740b}
+
+
+
+
+Definition at line 23 of file timer.h.
+
+Referenced by DisplayResult(), GetResult(), and StopTimer().\index{Timer@{Timer}!ia32Start@{ia32Start}}
+\index{ia32Start@{ia32Start}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long long int {\bf Timer::ia32Start}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_01bbd5a781157f6531a4bc9b28756da9}
+
+
+
+
+Definition at line 25 of file timer.h.
+
+Referenced by Timer().\index{Timer@{Timer}!ia32Stop@{ia32Stop}}
+\index{ia32Stop@{ia32Stop}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long long int {\bf Timer::ia32Stop}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_894bd5ca4c19e1528a735cfcff05a25d}
+
+
+
+
+Definition at line 26 of file timer.h.
+
+Referenced by Timer().\index{Timer@{Timer}!ia32NanoSecs@{ia32NanoSecs}}
+\index{ia32NanoSecs@{ia32NanoSecs}!Timer@{Timer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long long int {\bf Timer::ia32NanoSecs}\hspace{0.3cm}{\tt  [private]}}\label{classTimer_ffbf82f944c5a2f58548d18f140fe0fc}
+
+
+
+
+Definition at line 27 of file timer.h.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/{\bf timer.h}\item 
+Gyulassy/opacity3/src/{\bf timer.cpp}\end{CompactItemize}

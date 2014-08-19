@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="driver_8h" kind="file">
+    <compoundname>driver.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="Wrapper_8h" local="yes">Wrapper.h</includes>
+    <includes refid="Random3_8h" local="yes">randoms/Random3.h</includes>
+    <includes refid="RandDrand_8h" local="yes">randoms/RandDrand.h</includes>
+    <includes refid="RandSobol_8h" local="yes">randoms/RandSobol.h</includes>
+    <includes refid="Arrays_8h" local="yes">Arrays.h</includes>
+    <includes refid="parameters_8h" local="yes">parameters.h</includes>
+    <includedby refid="main_8cpp" local="yes">Gyulassy/opacity3/src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="61">
+        <label>list</label>
+      </node>
+      <node id="56">
+        <label>valarray</label>
+      </node>
+      <node id="49">
+        <label>Gyulassy/opacity3/src/driver.h</label>
+        <link refid="driver.h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>string</label>
+      </node>
+      <node id="60">
+        <label>map</label>
+      </node>
+      <node id="54">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="51">
+        <label>vector</label>
+      </node>
+      <node id="58">
+        <label>randoms/RandSobol.h</label>
+        <link refid="RandSobol_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>parameters.h</label>
+        <link refid="parameters_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>randoms/Random3.h</label>
+        <link refid="Random3_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="57">
+        <label>randoms/RandDrand.h</label>
+        <link refid="RandDrand_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="62">
+        <label>Gyulassy/opacity3/src/driver.h</label>
+        <link refid="driver.h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDriver" prot="public">Driver</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Interface:<sp/>driver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>A<sp/>generic<sp/>driver<sp/>for<sp/>a<sp/>Monte<sp/>Carlo<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Simon<sp/>Wicks<sp/>&lt;simonw@phys.columbia.edu&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DRIVER_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DRIVER_H</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Wrapper_8h" kindref="compound">Wrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Random3_8h" kindref="compound">randoms/Random3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RandDrand_8h" kindref="compound">randoms/RandDrand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RandSobol_8h" kindref="compound">randoms/RandSobol.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Arrays_8h" kindref="compound">Arrays.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="parameters_8h" kindref="compound">parameters.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="47" refid="classDriver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDriver" kindref="compound">Driver</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" refkind="member"><highlight class="normal"><sp/><sp/>TcalcEngine<sp/><ref refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" kindref="member" tooltip="Supplied template parameter type, to perform the calculation.">calculator</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" refkind="member"><highlight class="normal"><sp/><sp/>Tstore<sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>;</highlight></codeline>
+<codeline lineno="55" refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classParameters" kindref="compound">Parameters</ref><sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref>;</highlight></codeline>
+<codeline lineno="57" refid="classDriver_14da27b778d9838012125868afd04c1ed" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;SwRandoms::RandomBase2&gt;</ref><sp/><ref refid="classDriver_14da27b778d9838012125868afd04c1ed" kindref="member" tooltip="Random number generator, on the interval [0,1).">randomGenerator</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1d18a1349226d25296a188e371debec56" kindref="member">Driver</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1322d8366a3a84a1539d1eb37fad8d3a8" kindref="member">~Driver</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" kindref="member">Setup</ref>(<sp/>std::string<sp/>resume,<sp/>std::string<sp/>inputFile<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" kindref="member" tooltip="Read any runtime parameters for the Driver object from the Parameters object.">SetParameters</ref>(<sp/><ref refid="classParameters" kindref="compound">Parameters</ref><sp/>&amp;<ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref><sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" kindref="member" tooltip="Run a single iteration of the monte carlo simulation.">RunOneIteration</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" kindref="member" tooltip="Save the stored results to a file.">SaveResults</ref>(<sp/>std::string<sp/>outputFile<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="77" refid="classDriver_1d18a1349226d25296a188e371debec56" refkind="member"><highlight class="normal"><ref refid="classDriver_1d18a1349226d25296a188e371debec56" kindref="member">Driver&lt;TcalcEngine, Tstore, numOfRandoms&gt;::Driver</ref>()</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>:<sp/>myParameters(<sp/></highlight><highlight class="stringliteral">&quot;Opacity3&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Nothing<sp/>to<sp/>do<sp/>on<sp/>creation,<sp/>most<sp/>setup<sp/>done<sp/>by<sp/>the<sp/>Setup()<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>that<sp/>errors<sp/>on<sp/>setup<sp/>can<sp/>be<sp/>understood</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>only<sp/>thing<sp/>is<sp/>the<sp/>constructor<sp/>of<sp/>myParameters,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>tell<sp/>it<sp/>that<sp/>the<sp/>version<sp/>of<sp/>this<sp/>program<sp/>is<sp/>Opacity<sp/>version<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>make<sp/>the<sp/>&apos;Opacity3&apos;<sp/>section<sp/>describe<sp/>all<sp/>necessary<sp/>parts<sp/>of<sp/>the<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>a<sp/>compatible<sp/>read<sp/>in<sp/>/<sp/>out</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="90" refid="classDriver_1322d8366a3a84a1539d1eb37fad8d3a8" refkind="member"><highlight class="normal"><ref refid="classDriver_1322d8366a3a84a1539d1eb37fad8d3a8" kindref="member">Driver&lt;TcalcEngine, Tstore, numOfRandoms&gt;::~Driver</ref>()</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Nothing<sp/>to<sp/>do<sp/>in<sp/>the<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="96" refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" kindref="member">Driver&lt;TcalcEngine, Tstore, numOfRandoms&gt;::Setup</ref>(<sp/>std::string<sp/>resume,<sp/>std::string<sp/>inputFile<sp/>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>do<sp/>all<sp/>necessary<sp/>run<sp/>time<sp/>setup<sp/>of<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>give<sp/>a<sp/>meaningful<sp/>return<sp/>code,<sp/>so<sp/>if<sp/>this<sp/>fails<sp/>the<sp/>program<sp/>quits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>runtime<sp/>settings<sp/>are<sp/>read<sp/>in<sp/>from<sp/>a<sp/>file<sp/>with<sp/>a<sp/>specific<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>format<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>&apos;Parameters&apos;<sp/>object,<sp/>see<sp/>there<sp/>for<sp/>specifics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>read<sp/>in<sp/>the<sp/>file<sp/>into<sp/>the<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>resuming<sp/>from<sp/>a<sp/>previous<sp/>run,<sp/>the<sp/>parameters<sp/>have<sp/>been<sp/>written<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>the<sp/>file,<sp/>and<sp/>the<sp/>Parameters<sp/>objects<sp/>can<sp/>find<sp/>them<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>the<sp/>tokens<sp/>in<sp/>the<sp/>file<sp/>are<sp/>read<sp/>into<sp/>a<sp/>&apos;map&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref>.<ref refid="classParameters_1a96c497084795f0c0be65c37ff03f162" kindref="member">ParseInputFile</ref>(<sp/>inputFile<sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>the<sp/>parameters<sp/>object<sp/>to<sp/>each<sp/>object<sp/>in<sp/>turn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>this<sp/>one,<sp/>the<sp/>driver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" kindref="member" tooltip="Read any runtime parameters for the Driver object from the Parameters object.">SetParameters</ref>(<sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref><sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Second,<sp/>the<sp/>storage<sp/>object<sp/>-<sp/>eg<sp/>for<sp/>size<sp/>of<sp/>each<sp/>dimensions,<sp/>number<sp/>of<sp/>points<sp/>etc<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.SetParameters(<sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref><sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Third,<sp/>the<sp/>calculation<sp/>object<sp/>-<sp/>eg<sp/>GLV<sp/>specific<sp/>params,<sp/>mu,<sp/>temperature<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" kindref="member" tooltip="Supplied template parameter type, to perform the calculation.">calculator</ref>.SetParameters(<sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref><sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>resuming<sp/>from<sp/>a<sp/>previous<sp/>run,<sp/>we<sp/>also<sp/>need<sp/>to<sp/>read<sp/>in<sp/>the<sp/>statistics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>that<sp/>run<sp/>into<sp/>the<sp/>data<sp/>store</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>resume<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.ReadFromFile(<sp/>inputFile<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally,<sp/>check<sp/>that<sp/>all<sp/>the<sp/>inputs<sp/>from<sp/>the<sp/>parameters<sp/>file<sp/>were<sp/>used<sp/>at<sp/>some<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Otherwise,<sp/>the<sp/>user<sp/>might<sp/>think<sp/>that<sp/>some<sp/>parameters<sp/>are<sp/>being<sp/>set<sp/>that<sp/>really<sp/>aren&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>allUsed<sp/>=<sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref>.<ref refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" kindref="member">CheckForUnaccessedParameters</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>allUsed<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Driver::Setup<sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>allUsed<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>unused<sp/>parameters<sp/>from<sp/>input<sp/>file.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;All<sp/>parameters<sp/>read<sp/>successfully<sp/>from<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>inputFile<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>change<sp/>this<sp/>so<sp/>that<sp/>more<sp/>errors<sp/>are<sp/>detected<sp/>and<sp/>so<sp/>more<sp/>possible<sp/>to<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="142" refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" kindref="member" tooltip="Read any runtime parameters for the Driver object from the Parameters object.">Driver&lt;TcalcEngine, Tstore, numOfRandoms&gt;::SetParameters</ref>(<sp/><ref refid="classParameters" kindref="compound">Parameters</ref><sp/>&amp;MyParameters<sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>specific<sp/>setup<sp/>for<sp/>this<sp/>driver<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>only<sp/>settings<sp/>necessary<sp/>are<sp/>for<sp/>the<sp/>random<sp/>number<sp/>generator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>clean<sp/>up<sp/>the<sp/>&apos;Parameters&apos;<sp/>object,<sp/>so<sp/>this<sp/>doesn&apos;t<sp/>look<sp/>so<sp/>convoluted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>std::list&lt;std::string&gt;<sp/>ReturnedParamsString;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>type<sp/>of<sp/>random<sp/>number<sp/>generator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>options<sp/>are<sp/>&apos;Drand48&apos;<sp/>and<sp/>&apos;Sobol&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>ReturnedParamsString.empty();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>ReturnedParamsString<sp/>=<sp/>MyParameters.<ref refid="classParameters_1aad6541e5440beed7c65ac9062109cfe" kindref="member" tooltip="Get a specific parameter in the map, identified by ParamID.">GetParametersString</ref>(<sp/></highlight><highlight class="stringliteral">&quot;@RandomNumberGenerator&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><ref refid="classSwRandoms_1_1RandDrand48" kindref="compound">SwRandoms::RandDrand48</ref><sp/>ranDrand48(<sp/>numOfRandoms<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><ref refid="classSwRandoms_1_1RandSobol" kindref="compound">SwRandoms::RandSobol</ref><sp/>ranSobol(<sp/>numOfRandoms<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ReturnedParamsString.front()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Drand48&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDriver_14da27b778d9838012125868afd04c1ed" kindref="member" tooltip="Random number generator, on the interval [0,1).">randomGenerator</ref><sp/>=<sp/>ranDrand48;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ReturnedParamsString.front()<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Sobol&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDriver_14da27b778d9838012125868afd04c1ed" kindref="member" tooltip="Random number generator, on the interval [0,1).">randomGenerator</ref><sp/>=<sp/>ranSobol;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>-1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>that<sp/>we<sp/>have<sp/>set<sp/>up<sp/>the<sp/>type<sp/>of<sp/>generator,<sp/>we<sp/>need<sp/>a<sp/>seed<sp/>for<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>generator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>add<sp/>this<sp/>as<sp/>an<sp/>option<sp/>to<sp/>the<sp/>Parameters<sp/>object,<sp/>including<sp/>the<sp/>time(NULL)<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//long<sp/>seed<sp/>=<sp/>time(NULL);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>seed<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="classDriver_14da27b778d9838012125868afd04c1ed" kindref="member" tooltip="Random number generator, on the interval [0,1).">randomGenerator</ref>-&gt;SetSeed(<sp/>seed<sp/>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//return<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="178" refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" kindref="member" tooltip="Run a single iteration of the monte carlo simulation.">Driver&lt;TcalcEngine, Tstore, numOfRandoms&gt;::RunOneIteration</ref>()</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>guts<sp/>of<sp/>the<sp/>Monte<sp/>Carlo<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>one<sp/>iteration,<sp/>we<sp/>fetch<sp/>in<sp/>a<sp/>set<sp/>of<sp/>random<sp/>numbers,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(these<sp/>are<sp/>supplied<sp/>as<sp/>a<sp/>uniform<sp/>distribution<sp/>over<sp/>[0,1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>pass<sp/>this<sp/>to<sp/>the<sp/>calculation<sp/>object,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(which<sp/>will<sp/>transform<sp/>them<sp/>to<sp/>the<sp/>required<sp/>limits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>iterate<sp/>over<sp/>all<sp/>the<sp/>points<sp/>in<sp/>the<sp/>deterministic<sp/>dimensions,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>getting<sp/>the<sp/>calculation<sp/>result<sp/>for<sp/>each<sp/>point,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>passing<sp/>this<sp/>result<sp/>to<sp/>the<sp/>data<sp/>store.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>generalize<sp/>the<sp/>iteration<sp/>over<sp/>deterministic<sp/>dimensions<sp/>to<sp/>n-dimensions,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>n<sp/>chosen<sp/>as<sp/>a<sp/>template<sp/>parameter<sp/>to<sp/>the<sp/>driver<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>get<sp/>the<sp/>array<sp/>of<sp/>random<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>change<sp/>the<sp/>interface<sp/>to<sp/>the<sp/>random<sp/>number<sp/>generator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>ask<sp/>/<sp/>get<sp/>a<sp/>fixed<sp/>size<sp/>array<sp/>using<sp/>boost::array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>At<sp/>the<sp/>moment,<sp/>the<sp/>change<sp/>from<sp/>a<sp/>boost::array<sp/>to<sp/>a<sp/>std::vector<sp/>(MyArray)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>cumbersome<sp/>/<sp/>a<sp/>hack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>numOfRandoms&gt;<sp/>randomNumbers;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref><sp/>randomNumbersTmp(<sp/>numOfRandoms<sp/>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><ref refid="classDriver_14da27b778d9838012125868afd04c1ed" kindref="member" tooltip="Random number generator, on the interval [0,1).">randomGenerator</ref>-&gt;GetUniforms(<sp/>randomNumbersTmp<sp/>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;numOfRandoms;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>randomNumbers[i]<sp/>=<sp/>randomNumbersTmp[i];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>the<sp/>random<sp/>numbers<sp/>to<sp/>the<sp/>calculator<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" kindref="member" tooltip="Supplied template parameter type, to perform the calculation.">calculator</ref>.SetRandoms(<sp/>randomNumbers<sp/>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>iterate<sp/>over<sp/>the<sp/>deterministic<sp/>dimensions,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>setting<sp/>the<sp/>new<sp/>coordinate<sp/>for<sp/>each<sp/>point<sp/>in<sp/>each<sp/>dimension,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>getting<sp/>the<sp/>answer<sp/>and<sp/>adding<sp/>it<sp/>to<sp/>the<sp/>data<sp/>store</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>improve,<sp/>to<sp/>have<sp/>arbitrary<sp/>number<sp/>of<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>tmp(1);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dim1=0;<sp/>dim1&lt;<ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.GetLengthDim1();<sp/>++dim1)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" kindref="member" tooltip="Supplied template parameter type, to perform the calculation.">calculator</ref>.SetCoord(<sp/>1,<sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.GetCoordDim1(<sp/>dim1<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dim2=0;<sp/>dim2&lt;<ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.GetLengthDim2();<sp/>++dim2)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" kindref="member" tooltip="Supplied template parameter type, to perform the calculation.">calculator</ref>.SetCoord(<sp/>2,<sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.GetCoordDim2(<sp/>dim2<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" kindref="member" tooltip="Supplied template parameter type, to perform the calculation.">calculator</ref>.GetAnswer(<sp/>tmp<sp/>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.AddPoint(<sp/>dim1,<sp/>dim2,<sp/>tmp<sp/>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TcalcEngine,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Tstore,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numOfRandoms&gt;</highlight></codeline>
+<codeline lineno="224" refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" kindref="member" tooltip="Save the stored results to a file.">Driver&lt;TcalcEngine, Tstore, numOfRandoms&gt;::SaveResults</ref>(<sp/>std::string<sp/>outputFile<sp/>)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>results<sp/>of<sp/>our<sp/>simulation<sp/>to<sp/>a<sp/>permanent<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>need<sp/>to<sp/>include<sp/>the<sp/>state<sp/>of<sp/>both<sp/>the<sp/>data<sp/>store<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>input<sp/>runtime<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>send<sp/>the<sp/>Store2D<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>false<sp/>here<sp/>=&gt;<sp/>erase<sp/>any<sp/>current<sp/>contents<sp/>of<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" kindref="member" tooltip="Supplied template parameter type, to store the results of the calculation.">storage</ref>.WriteToFile(<sp/>outputFile,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>delegate<sp/>to<sp/>the<sp/>params<sp/>class<sp/>to<sp/>output<sp/>the<sp/>settings<sp/>to<sp/>the<sp/>end<sp/>of<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>this<sp/>way,<sp/>we<sp/>have<sp/>a<sp/>record<sp/>of<sp/>what<sp/>the<sp/>inputs<sp/>were,<sp/>and<sp/>a<sp/>way<sp/>to<sp/>resume<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>more<sp/>statistics<sp/>if<sp/>wanted.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>true<sp/>here<sp/>=&gt;<sp/>append<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><ref refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" kindref="member" tooltip="Object to read runtime parameters from file, supplied to calculation and storage...">myParameters</ref>.<ref refid="classParameters_1b93e874ce1ee81e9586a2435b7d8a3de" kindref="member">WriteToFile</ref>(<sp/>outputFile,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/driver.h"/>
+  </compounddef>
+</doxygen>

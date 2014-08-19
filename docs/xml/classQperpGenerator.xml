@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classQperpGenerator" kind="class" prot="public">
+    <compoundname>QperpGenerator</compoundname>
+    <includes refid="qperpdist_8h" local="no">qperpdist.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classQperpGenerator_101f27723035e78b7436c4899603787a0" prot="private" static="no" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long QperpGenerator::_dim</definition>
+        <argsstring></argsstring>
+        <name>_dim</name>
+        <briefdescription>
+<para>Number of dimensions of q, theta. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" compoundref="qperpdist_8cpp" startline="95" endline="106">GetQeventWeight</referencedby>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" prot="private" static="no" mutable="no">
+        <type><ref refid="classQperpCalculator" kindref="compound">QperpCalculator</ref></type>
+        <definition>QperpCalculator QperpGenerator::qps</definition>
+        <argsstring></argsstring>
+        <name>qps</name>
+        <briefdescription>
+<para>The class dealing with the details of the calculation, once filled with qs, thetas. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" compoundref="qperpdist_8h" startline="85" endline="88">GetSumQiQj</referencedby>
+        <referencedby refid="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" compoundref="qperpdist_8h" startline="80" endline="83">SetK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" prot="private" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray QperpGenerator::_weights</definition>
+        <argsstring></argsstring>
+        <name>_weights</name>
+        <briefdescription>
+<para>The weight of the event compared to the fixed Gyulassy-Wang distribution. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="26" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" compoundref="qperpdist_8cpp" startline="95" endline="106">GetQeventWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QperpGenerator::_totWeight</definition>
+        <argsstring></argsstring>
+        <name>_totWeight</name>
+        <briefdescription>
+<para>The product of all the weights, ie the event weight. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="28" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QperpGenerator::_correlated</definition>
+        <argsstring></argsstring>
+        <name>_correlated</name>
+        <briefdescription>
+<para>Whether the medium is correlated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="31" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long QperpGenerator::_zeroSet</definition>
+        <argsstring></argsstring>
+        <name>_zeroSet</name>
+        <briefdescription>
+<para>The code for which qs are zeroed - int converts to binary gives which qs are zeroed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="34" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" compoundref="qperpdist_8h" startline="85" endline="88">GetSumQiQj</referencedby>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long QperpGenerator::_numZeroedQs</definition>
+        <argsstring></argsstring>
+        <name>_numZeroedQs</name>
+        <briefdescription>
+<para>The total number of zeroed qs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="36" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; QperpGenerator::_isZeroed</definition>
+        <argsstring></argsstring>
+        <name>_isZeroed</name>
+        <briefdescription>
+<para>The array of zeroed qs - ie zeroSet in binary form, with 0&lt;-&gt;1 inverted. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="38" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" compoundref="qperpdist_8cpp" startline="95" endline="106">GetQeventWeight</referencedby>
+        <referencedby refid="classQperpGenerator_18309ae1765318ca72e16a4b072a889be" compoundref="qperpdist_8h" startline="75" endline="78">IsZeroed</referencedby>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_17f09257e99fb8f7487448763107c7343" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QperpGenerator::_evenZeroes</definition>
+        <argsstring></argsstring>
+        <name>_evenZeroes</name>
+        <briefdescription>
+<para>Whether we have an even number of zeroed qs (hence a -1 in the event weight). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="40" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" compoundref="qperpdist_8cpp" startline="95" endline="106">GetQeventWeight</referencedby>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classFunction" kindref="compound">Function</ref> &gt;</type>
+        <definition>Wrapper&lt;Function&gt; QperpGenerator::qDistFn</definition>
+        <argsstring></argsstring>
+        <name>qDistFn</name>
+        <briefdescription>
+<para>The distribution function from which to choose the qs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="43" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classFunction" kindref="compound">Function</ref> &gt;</type>
+        <definition>Wrapper&lt;Function&gt; QperpGenerator::yukDistFn</definition>
+        <argsstring></argsstring>
+        <name>yukDistFn</name>
+        <briefdescription>
+<para>The reference function in the integral - yukawa (ie Gyulassy-Wang). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="45" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classFunction" kindref="compound">Function</ref> &gt;</type>
+        <definition>Wrapper&lt;Function&gt; QperpGenerator::thDistFn</definition>
+        <argsstring></argsstring>
+        <name>thDistFn</name>
+        <briefdescription>
+<para>The distribution function from which to choose the thetas. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="47" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classFunction" kindref="compound">Function</ref> &gt;</type>
+        <definition>Wrapper&lt;Function&gt; QperpGenerator::uniDistFn</definition>
+        <argsstring></argsstring>
+        <name>uniDistFn</name>
+        <briefdescription>
+<para>The reference function in the integral - uniform. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="49" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" compoundref="qperpdist_8cpp" startline="10" endline="25">QperpGenerator</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QperpGenerator::QperpGenerator</definition>
+        <argsstring>(unsigned long n_, bool correlated_)</argsstring>
+        <name>QperpGenerator</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>n_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>correlated_</declname>
+        </param>
+        <briefdescription>
+<para>Constructor: feed in the number of dimensions, and whether the medium is correlated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="53" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.cpp" bodystart="10" bodyend="25"/>
+        <references refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" compoundref="qperpdist_8h" startline="31">_correlated</references>
+        <references refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" compoundref="qperpdist_8h" startline="22">_dim</references>
+        <references refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" compoundref="qperpdist_8h" startline="38">_isZeroed</references>
+        <references refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" compoundref="qperpdist_8h" startline="43">qDistFn</references>
+        <references refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" compoundref="qperpdist_8h" startline="47">thDistFn</references>
+        <references refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" compoundref="qperpdist_8h" startline="49">uniDistFn</references>
+        <references refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" compoundref="qperpdist_8h" startline="45">yukDistFn</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_1fad2d91783826777f3b9d5c82804c61e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QperpGenerator::~QperpGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>~QperpGenerator</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="55" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpGenerator::FindRandomQs</definition>
+        <argsstring>(MyArray &amp;inForQs, MyArray &amp;qmins, MyArray &amp;qmaxs, MyArray &amp;inForThs, MyArray &amp;thmins, MyArray &amp;thmaxs, MyArray &amp;mu2s)</argsstring>
+        <name>FindRandomQs</name>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>inForQs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>qmins</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>qmaxs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>inForThs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>thmins</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>thmaxs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>mu2s</declname>
+        </param>
+        <briefdescription>
+<para>Supply random numbers in inForQs, inForThs, generates random qs between qmins and qmaxs, ths between thmins and thmaxs - using the Debye masses from mu2s. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="60" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.cpp" bodystart="59" bodyend="93"/>
+        <references refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" compoundref="qperpdist_8h" startline="22">_dim</references>
+        <references refid="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" compoundref="qperpdist_8h" startline="28">_totWeight</references>
+        <references refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" compoundref="qperpdist_8h" startline="26">_weights</references>
+        <references refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" compoundref="qperpdist_8h" startline="43">qDistFn</references>
+        <references refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" compoundref="qperpdist_8h" startline="24">qps</references>
+        <references refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" compoundref="qperparraynew_8cpp" startline="238" endline="244">QperpCalculator::SetQperps</references>
+        <references refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">SetZeroedQs</references>
+        <references refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" compoundref="qperpdist_8h" startline="47">thDistFn</references>
+        <references refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" compoundref="qperpdist_8h" startline="49">uniDistFn</references>
+        <references refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" compoundref="qperpdist_8h" startline="45">yukDistFn</references>
+        <referencedby refid="classRadCalcer_1fbd62b63a05b0ee23a4a2fcb26b1ac6c" compoundref="radcalcer_8cpp" startline="106" endline="129">RadCalcer::DistributeRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpGenerator::SetZeroedQs</definition>
+        <argsstring>(unsigned long num)</argsstring>
+        <name>SetZeroedQs</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Set the combination of zeroed qs from an integer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="62" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.cpp" bodystart="32" bodyend="57"/>
+        <references refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" compoundref="qperpdist_8h" startline="31">_correlated</references>
+        <references refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" compoundref="qperpdist_8h" startline="22">_dim</references>
+        <references refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" compoundref="qperpdist_8h" startline="40">_evenZeroes</references>
+        <references refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" compoundref="qperpdist_8h" startline="38">_isZeroed</references>
+        <references refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" compoundref="constants_8h" startline="43" endline="49">SwUtils::_NumberToBoolArray</references>
+        <references refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" compoundref="qperpdist_8h" startline="36">_numZeroedQs</references>
+        <references refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" compoundref="qperpdist_8h" startline="34">_zeroSet</references>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">FindRandomQs</referencedby>
+        <referencedby refid="classRadCalcer_1ccc5f82826c691219a05e4cb277bcc45" compoundref="radcalcer_8cpp" startline="219" endline="370">RadCalcer::GetdNdk2dx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpGenerator::SetK</definition>
+        <argsstring>(double k)</argsstring>
+        <name>SetK</name>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>Set the k value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="64" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="80" bodyend="83"/>
+        <references refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" compoundref="qperpdist_8h" startline="24">qps</references>
+        <references refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">QperpCalculator::SetK</references>
+        <referencedby refid="classRadCalcer_149aa8982cec3cc56a881c843a74954e7" compoundref="radcalcer_8cpp" startline="141" endline="146">RadCalcer::SetKonly</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpGenerator::GetSumQiQj</definition>
+        <argsstring>(unsigned long i, unsigned long j) const </argsstring>
+        <name>GetSumQiQj</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Get out the SumQiQj - passed straight onto <ref refid="classQperpCalculator" kindref="compound">QperpCalculator</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="67" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="85" bodyend="88"/>
+        <references refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" compoundref="qperpdist_8h" startline="34">_zeroSet</references>
+        <references refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" compoundref="qperparraynew_8cpp" startline="204" endline="217">QperpCalculator::GetSumQiQj</references>
+        <references refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" compoundref="qperpdist_8h" startline="24">qps</references>
+        <referencedby refid="classRadCalcer_19d1b2bef2d32ed924de8a5bd0aaf748f" compoundref="radcalcer_8cpp" startline="206" endline="217">RadCalcer::_cdotb</referencedby>
+        <referencedby refid="classRadCalcer_1bd6b5fab0ce714f55b1d11776c02ba4d" compoundref="radcalcer_8cpp" startline="148" endline="162">RadCalcer::_interference</referencedby>
+        <referencedby refid="classRadCalcer_16f89500579873100e9d69a79b5738c4b" compoundref="radcalcer_8cpp" startline="164" endline="204">RadCalcer::_interferenceExp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpGenerator::GetQeventWeight</definition>
+        <argsstring>() const </argsstring>
+        <name>GetQeventWeight</name>
+        <briefdescription>
+<para>Get the weight of the event, ie the ratio of the distribtutions from which the qs, ths are generated and the ones in the integrals. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="69" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.cpp" bodystart="95" bodyend="106"/>
+        <references refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" compoundref="qperpdist_8h" startline="22">_dim</references>
+        <references refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" compoundref="qperpdist_8h" startline="40">_evenZeroes</references>
+        <references refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" compoundref="qperpdist_8h" startline="38">_isZeroed</references>
+        <references refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" compoundref="qperpdist_8h" startline="26">_weights</references>
+        <referencedby refid="classRadCalcer_1ccc5f82826c691219a05e4cb277bcc45" compoundref="radcalcer_8cpp" startline="219" endline="370">RadCalcer::GetdNdk2dx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator_18309ae1765318ca72e16a4b072a889be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool QperpGenerator::IsZeroed</definition>
+        <argsstring>(unsigned long i)</argsstring>
+        <name>IsZeroed</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Ask whether a specific q is zeroed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="71" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="75" bodyend="78"/>
+        <references refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" compoundref="qperpdist_8h" startline="38">_isZeroed</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="39">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="37">
+        <label>QperpGenerator</label>
+        <link refid="classQperpGenerator"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>yukDistFn
+qDistFn
+thDistFn
+uniDistFn</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>qps</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Wrapper&lt; Function &gt;</label>
+        <link refid="classWrapper"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>DataPtr</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>QperpCalculator</label>
+        <link refid="classQperpCalculator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.h" bodystart="18" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_correlated</name></member>
+      <member refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_dim</name></member>
+      <member refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_evenZeroes</name></member>
+      <member refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_isZeroed</name></member>
+      <member refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_numZeroedQs</name></member>
+      <member refid="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_totWeight</name></member>
+      <member refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_weights</name></member>
+      <member refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>_zeroSet</name></member>
+      <member refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>FindRandomQs</name></member>
+      <member refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>GetQeventWeight</name></member>
+      <member refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>GetSumQiQj</name></member>
+      <member refid="classQperpGenerator_18309ae1765318ca72e16a4b072a889be" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>IsZeroed</name></member>
+      <member refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>qDistFn</name></member>
+      <member refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>QperpGenerator</name></member>
+      <member refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>qps</name></member>
+      <member refid="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>SetK</name></member>
+      <member refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>SetZeroedQs</name></member>
+      <member refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>thDistFn</name></member>
+      <member refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>uniDistFn</name></member>
+      <member refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" prot="private" virt="non-virtual"><scope>QperpGenerator</scope><name>yukDistFn</name></member>
+      <member refid="classQperpGenerator_1fad2d91783826777f3b9d5c82804c61e" prot="public" virt="non-virtual"><scope>QperpGenerator</scope><name>~QperpGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

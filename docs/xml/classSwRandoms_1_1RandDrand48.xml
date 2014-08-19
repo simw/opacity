@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classSwRandoms_1_1RandDrand48" kind="class" prot="public">
+    <compoundname>SwRandoms::RandDrand48</compoundname>
+    <basecompoundref refid="classSwRandoms_1_1RandomBase2" prot="public" virt="non-virtual">SwRandoms::RandomBase2</basecompoundref>
+    <includes refid="RandDrand_8h" local="no">RandDrand.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSwRandoms_1_1RandDrand48_18447e5c4c6bdd0758f19d3df331960c5" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SwRandoms::RandDrand48::InitialSeed</definition>
+        <argsstring></argsstring>
+        <name>InitialSeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="21" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classSwRandoms_1_1RandDrand48_1d572e124c7bf89a406800ce07618b1bd" compoundref="RandDrand_8cpp" startline="38" endline="41">Reset</referencedby>
+        <referencedby refid="classSwRandoms_1_1RandDrand48_19596b643d1915b3f8543bbdff6960105" compoundref="RandDrand_8cpp" startline="32" endline="36">SetSeed</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSwRandoms_1_1RandDrand48_16200e7125a190ec6c31116ade72eeeea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SwRandoms::RandDrand48::RandDrand48</definition>
+        <argsstring>(unsigned long Dimensionality, unsigned long Seed=1)</argsstring>
+        <name>RandDrand48</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>Seed</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="12" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" bodystart="8" bodyend="12"/>
+        <referencedby refid="classSwRandoms_1_1RandDrand48_1835ce3d71b66d4610a60caa89fc7411c" compoundref="RandDrand_8cpp" startline="14" endline="17">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandDrand48_1835ce3d71b66d4610a60caa89fc7411c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref> *</type>
+        <definition>RandomBase2 * SwRandoms::RandDrand48::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_1633ab071ed2eded4784ea5c6faf4a9af">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="14" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" bodystart="14" bodyend="17"/>
+        <references refid="classSwRandoms_1_1RandDrand48_16200e7125a190ec6c31116ade72eeeea" compoundref="RandDrand_8cpp" startline="8" endline="12">RandDrand48</references>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandDrand48::GetUniforms</definition>
+        <argsstring>(SwArrays::MyArray &amp;variates)</argsstring>
+        <name>GetUniforms</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_1ee4b8f64be04c3cea35ea63cc4f9c6d6">GetUniforms</reimplements>
+        <param>
+          <type><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref> &amp;</type>
+          <declname>variates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" bodystart="19" bodyend="23"/>
+        <references refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" compoundref="Random3_8h" startline="26" endline="29">SwRandoms::RandomBase2::GetDimensionality</references>
+        <referencedby refid="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87" compoundref="RandDrand_8cpp" startline="25" endline="30">Skip</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandDrand48::Skip</definition>
+        <argsstring>(unsigned long numberOfPaths)</argsstring>
+        <name>Skip</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_18a202b85b9c0f380700922331506f459">Skip</reimplements>
+        <param>
+          <type>unsigned long</type>
+          <declname>numberOfPaths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="16" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" bodystart="25" bodyend="30"/>
+        <references refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" compoundref="Random3_8h" startline="26" endline="29">SwRandoms::RandomBase2::GetDimensionality</references>
+        <references refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" compoundref="RandDrand_8cpp" startline="19" endline="23">GetUniforms</references>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandDrand48_19596b643d1915b3f8543bbdff6960105" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandDrand48::SetSeed</definition>
+        <argsstring>(unsigned long Seed)</argsstring>
+        <name>SetSeed</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_1ff006e42b1f514697427cc4578383b5e">SetSeed</reimplements>
+        <param>
+          <type>unsigned long</type>
+          <declname>Seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="17" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" bodystart="32" bodyend="36"/>
+        <references refid="classSwRandoms_1_1RandDrand48_18447e5c4c6bdd0758f19d3df331960c5" compoundref="RandDrand_8h" startline="21">InitialSeed</references>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandDrand48_1d572e124c7bf89a406800ce07618b1bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandDrand48::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_154a0497121db4d91e3ff6e2b4cdf380a">Reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.cpp" bodystart="38" bodyend="41"/>
+        <references refid="classSwRandoms_1_1RandDrand48_18447e5c4c6bdd0758f19d3df331960c5" compoundref="RandDrand_8h" startline="21">InitialSeed</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="62">
+        <label>SwRandoms::RandDrand48</label>
+        <link refid="classSwRandoms_1_1RandDrand48"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>SwRandoms::RandomBase2</label>
+        <link refid="classSwRandoms_1_1RandomBase2"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>SwRandoms::RandDrand48</label>
+        <link refid="classSwRandoms_1_1RandDrand48"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>SwRandoms::RandomBase2</label>
+        <link refid="classSwRandoms_1_1RandomBase2"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" line="10" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandDrand.h" bodystart="9" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classSwRandoms_1_1RandDrand48_1835ce3d71b66d4610a60caa89fc7411c" prot="public" virt="virtual"><scope>SwRandoms::RandDrand48</scope><name>clone</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" prot="public" virt="non-virtual"><scope>SwRandoms::RandDrand48</scope><name>GetDimensionality</name></member>
+      <member refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" prot="public" virt="virtual"><scope>SwRandoms::RandDrand48</scope><name>GetUniforms</name></member>
+      <member refid="classSwRandoms_1_1RandDrand48_18447e5c4c6bdd0758f19d3df331960c5" prot="private" virt="non-virtual"><scope>SwRandoms::RandDrand48</scope><name>InitialSeed</name></member>
+      <member refid="classSwRandoms_1_1RandDrand48_16200e7125a190ec6c31116ade72eeeea" prot="public" virt="non-virtual"><scope>SwRandoms::RandDrand48</scope><name>RandDrand48</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1dd5e3fc4699b36e56970047463186e51" prot="public" virt="non-virtual"><scope>SwRandoms::RandDrand48</scope><name>RandomBase2</name></member>
+      <member refid="classSwRandoms_1_1RandDrand48_1d572e124c7bf89a406800ce07618b1bd" prot="public" virt="virtual"><scope>SwRandoms::RandDrand48</scope><name>Reset</name></member>
+      <member refid="classSwRandoms_1_1RandDrand48_19596b643d1915b3f8543bbdff6960105" prot="public" virt="virtual"><scope>SwRandoms::RandDrand48</scope><name>SetSeed</name></member>
+      <member refid="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87" prot="public" virt="virtual"><scope>SwRandoms::RandDrand48</scope><name>Skip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="store_8cpp" kind="file">
+    <compoundname>store.cpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">boost/algorithm/string.hpp</includes>
+    <includes refid="store_8h" local="yes">store.h</includes>
+    <includes refid="convergencetable_8h" local="yes">convergencetable.h</includes>
+    <includes refid="statisticsmc_8h" local="yes">statisticsmc.h</includes>
+    <includes refid="parameters_8h" local="yes">../parameters.h</includes>
+    <includes refid="constants_8h" local="yes">../constants.h</includes>
+    <incdepgraph>
+      <node id="482">
+        <label>list</label>
+      </node>
+      <node id="475">
+        <label>valarray</label>
+      </node>
+      <node id="470">
+        <label>boost/algorithm/string.hpp</label>
+      </node>
+      <node id="465">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store.cpp"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>cmath</label>
+      </node>
+      <node id="481">
+        <label>string</label>
+      </node>
+      <node id="480">
+        <label>map</label>
+      </node>
+      <node id="473">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="468">
+        <label>fstream</label>
+      </node>
+      <node id="471">
+        <label>store.h</label>
+        <link refid="store_8h"/>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>vector</label>
+      </node>
+      <node id="469">
+        <label>sstream</label>
+      </node>
+      <node id="479">
+        <label>../parameters.h</label>
+        <link refid="parameters_8h"/>
+        <childnode refid="480" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>statisticsmc.h</label>
+        <link refid="statisticsmc_8h"/>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>iostream</label>
+      </node>
+      <node id="474">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="483">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>convergencetable.h</label>
+        <link refid="convergencetable_8h"/>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const Store2D &amp;store)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStore2D" kindref="compound">Store2D</ref> &amp;</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" line="183" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="182" bodyend="213"/>
+        <references refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" compoundref="store_8h" startline="118" endline="121">Store2D::GetCoordDim1</references>
+        <references refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" compoundref="store_8h" startline="123" endline="126">Store2D::GetCoordDim2</references>
+        <references refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" compoundref="store_8h" startline="113" endline="116">Store2D::GetIndex</references>
+        <references refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" compoundref="store_8h" startline="37">Store2D::SizeDim1</references>
+        <references refid="classStore2D_11aa79281f9314909e1554aac58fe6904" compoundref="store_8h" startline="48">Store2D::SizeDim2</references>
+        <references refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" compoundref="store_8h" startline="59">Store2D::SizePerPoint</references>
+        <references refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" compoundref="store_8h" startline="64">Store2D::stats</references>
+      </memberdef>
+      <memberdef kind="function" id="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, Store2D &amp;store)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classStore2D" kindref="compound">Store2D</ref> &amp;</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" line="216" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="215" bodyend="240"/>
+        <references refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" compoundref="store_8h" startline="113" endline="116">Store2D::GetIndex</references>
+        <references refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" compoundref="store_8h" startline="37">Store2D::SizeDim1</references>
+        <references refid="classStore2D_11aa79281f9314909e1554aac58fe6904" compoundref="store_8h" startline="48">Store2D::SizeDim2</references>
+        <references refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" compoundref="store_8h" startline="59">Store2D::SizePerPoint</references>
+        <references refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" compoundref="store_8h" startline="64">Store2D::stats</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/algorithm/string.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="store_8h" kindref="compound">store.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="convergencetable_8h" kindref="compound">convergencetable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="statisticsmc_8h" kindref="compound">statisticsmc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../parameters.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" refkind="member"><highlight class="normal"><ref refid="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" kindref="member">Store2D::Store2D</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classStore2D_118d5d02a147c7a93d3df5bbe14a399ab" refkind="member"><highlight class="normal"><ref refid="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" kindref="member">Store2D::Store2D</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizeDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizeDim2_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizePerPoint_<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_1603637865cf139ab0ba16d4209231db0" kindref="member" tooltip="Resize the store.">SetSize</ref>(<sp/>SizeDim1_,<sp/>SizeDim2_,<sp/>SizePerPoint_<sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" kindref="member">Store2D::SetParameters</ref>(<sp/><ref refid="classParameters" kindref="compound">Parameters</ref>&amp;<sp/>MyParameters<sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>ReturnedParamsDouble1,<sp/>ReturnedParamsDouble2;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>std::list&lt;std::string&gt;<sp/>ReturnedParamsString;<sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>get<sp/>the<sp/>details<sp/>from<sp/>the<sp/>parameters<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min1,<sp/>max1,<sp/>min2,<sp/>max2;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>size1,<sp/>size2;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>ReturnedParamsDouble1<sp/>=<sp/>MyParameters.<ref refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" kindref="member" tooltip="Get the parameter set, but then convert to a vector of doubles.">GetParametersDouble</ref>(<sp/></highlight><highlight class="stringliteral">&quot;@storedim1&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ReturnedParamsDouble1.size()<sp/>&lt;<sp/>3<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>with<sp/>@storedim1&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>ReturnedParamsDouble2<sp/>=<sp/>MyParameters.<ref refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" kindref="member" tooltip="Get the parameter set, but then convert to a vector of doubles.">GetParametersDouble</ref>(<sp/></highlight><highlight class="stringliteral">&quot;@storedim2&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ReturnedParamsDouble2.size()<sp/>&lt;<sp/>3<sp/>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>with<sp/>@storedim2&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>size1<sp/>=<sp/>long(ReturnedParamsDouble1.at(2)+0.5);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>size2<sp/>=<sp/>long(ReturnedParamsDouble2[2]+0.5);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>min1<sp/>=<sp/>ReturnedParamsDouble1[0];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>min2<sp/>=<sp/>ReturnedParamsDouble2[0];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>max1<sp/>=<sp/>ReturnedParamsDouble1[1];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>max2<sp/>=<sp/>ReturnedParamsDouble2[1];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_1603637865cf139ab0ba16d4209231db0" kindref="member" tooltip="Resize the store.">SetSize</ref>(<sp/>size1,<sp/>size2,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" kindref="member" tooltip="Set the limits in dimension 1.">SetLimitsDim1</ref>(<sp/>ReturnedParamsDouble1[0],<sp/>ReturnedParamsDouble1[1]<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_13bfb842289b901099cb616887ae07d7f" kindref="member" tooltip="Set the limits in dimension 2.">SetLimitsDim2</ref>(<sp/>ReturnedParamsDouble2[0],<sp/>ReturnedParamsDouble2[1]<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classStore2D_1603637865cf139ab0ba16d4209231db0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1603637865cf139ab0ba16d4209231db0" kindref="member" tooltip="Resize the store.">Store2D::SetSize</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Size1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Size2_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SizePerPoint_<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref><sp/>=<sp/>Size1_;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref><sp/>=<sp/>Size2_;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref><sp/>=<sp/>SizePerPoint_;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>.resize(<sp/>boost::extents[<sp/>(<ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>+1)*(<ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>+1)<sp/>][<ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref>]<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>to<sp/>set<sp/>up<sp/>all<sp/>the<sp/>StatisticsMC<sp/>as<sp/>pointers<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ConvergenceTable<sp/>objects<sp/>containing<sp/>StatisticsMean<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1StatisticsMean" kindref="compound">StatisticsMean</ref><sp/>gatherer;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref><sp/>tab(gatherer);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=(<ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>+1)*(<ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>+1);<sp/>++i)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>opac=0;<sp/>opac!=<ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref>;<sp/>++opac)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>[i][opac]<sp/>=<sp/>tab;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" kindref="member" tooltip="Set the limits in dimension 1.">Store2D::SetLimitsDim1</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MinDim1_,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MaxDim1_<sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" kindref="member" tooltip="The Starting point of dimension 1.">MinDim1</ref><sp/>=<sp/>MinDim1_;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_1f14d43ff981525c89d154034154403b2" kindref="member" tooltip="The finishing point of dimension 1.">MaxDim1</ref><sp/>=<sp/>MaxDim1_;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>convenience,<sp/>we<sp/>calculate<sp/>the<sp/>fixed<sp/>step<sp/>size<sp/>and<sp/>store<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_116c7e319b97eedbacddec716691a6141" kindref="member">StepDim1</ref><sp/>=<sp/>(<ref refid="classStore2D_1f14d43ff981525c89d154034154403b2" kindref="member" tooltip="The finishing point of dimension 1.">MaxDim1</ref>-<ref refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" kindref="member" tooltip="The Starting point of dimension 1.">MinDim1</ref>)/</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">(<ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classStore2D_13bfb842289b901099cb616887ae07d7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_13bfb842289b901099cb616887ae07d7f" kindref="member" tooltip="Set the limits in dimension 2.">Store2D::SetLimitsDim2</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MinDim2_,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>MaxDim2_<sp/>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" kindref="member" tooltip="The Starting point of dimension 2.">MinDim2</ref><sp/>=<sp/>MinDim2_;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_1c64ee1837967c1c4c485f21d7f7b5f3f" kindref="member" tooltip="The finishing point of dimension 2.">MaxDim2</ref><sp/>=<sp/>MaxDim2_;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>convenience,<sp/>we<sp/>calculate<sp/>the<sp/>fixed<sp/>step<sp/>size<sp/>and<sp/>store<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" kindref="member">StepDim2</ref><sp/>=<sp/>(MaxDim2_-MinDim2_)/static_cast&lt;double&gt;(<ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" kindref="member">Store2D::AddPoint</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim1_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>IndexDim2_,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>Values_<sp/>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>[<ref refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" kindref="member" tooltip="Helper function to turn (IndexDim1,IndexDim2) into a 1D index.">GetIndex</ref>(<sp/>IndexDim1_,<sp/>IndexDim2_<sp/>)][i]-&gt;AddOneResult(<sp/>Values_[i]<sp/>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" kindref="member">Store2D::GetNumIterations</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>opac,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>kth,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>xth<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>res<sp/>=<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>[<ref refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" kindref="member" tooltip="Helper function to turn (IndexDim1,IndexDim2) into a 1D index.">GetIndex</ref>(<sp/>kth,<sp/>xth<sp/>)][opac]-&gt;GetResultsSoFar();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;::iterator<sp/>it;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>it<sp/>=<sp/>res.end();<sp/>--it;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>it-&gt;at(2)<sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classStore2D_1439adcb475b85255da8b9444a4d15fe0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classStore2D_1439adcb475b85255da8b9444a4d15fe0" kindref="member">Store2D::ReadFromFile</ref>(<sp/>std::string<sp/>FileName_<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reading<sp/>in<sp/>a<sp/>file,<sp/>and<sp/>putting<sp/>it<sp/>in<sp/>the<sp/>store</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>code<sp/>here<sp/>is<sp/>very<sp/>similar<sp/>to<sp/>that<sp/>in<sp/>the<sp/>parameters.cpp<sp/>for<sp/>reading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>parameters<sp/>from<sp/>a<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>we<sp/>open<sp/>the<sp/>file<sp/>and<sp/>check<sp/>that<sp/>it<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>std::ifstream<sp/>FileIn;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>FileIn.open(<sp/>FileName_.c_str(),<sp/>std::ios::in<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FileIn.fail()<sp/>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Store2D,<sp/>unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>FileName_;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>reading.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-20;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Each<sp/>line,<sp/>we&apos;ll<sp/>read<sp/>into<sp/>LineReadIn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Each<sp/>line<sp/>of<sp/>settings<sp/>will<sp/>be<sp/>counted<sp/>in<sp/>NumberOfLines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>std::string<sp/>LineReadIn;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Ok,<sp/>we<sp/>have<sp/>an<sp/>open<sp/>file,<sp/>we<sp/>want<sp/>to<sp/>find<sp/>the<sp/>data<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>string<sp/>that<sp/>identifies<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>settings<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>std::string<sp/>BeginString<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>Begin<sp/>Store2D<sp/>data&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>string<sp/>that<sp/>identifies<sp/>the<sp/>end<sp/>of<sp/>the<sp/>settings<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>std::string<sp/>EndString<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>End<sp/>Store2D<sp/>data&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicator<sp/>whether<sp/>we<sp/>have<sp/>found<sp/>the<sp/>settings<sp/>section<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>FoundStart;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>through<sp/>the<sp/>file<sp/>until<sp/>we<sp/>find<sp/>the<sp/>settings<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FileIn.eof()<sp/>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Store2D,<sp/>reached<sp/>end<sp/>of<sp/>file<sp/>at<sp/>line<sp/>before<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;finding<sp/>data<sp/>section&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-21;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>getline(<sp/>FileIn,<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::trim(<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>LineReadIn<sp/>==<sp/>BeginString<sp/>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>FoundStart<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!FoundStart<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>pass<sp/>off<sp/>the<sp/>logic<sp/>to<sp/>the<sp/>&gt;&gt;<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>FileIn<sp/>&gt;&gt;<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we&apos;re<sp/>done,<sp/>we<sp/>close<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>FileIn.close();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Everything<sp/>has<sp/>worked<sp/>fine.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>a<sp/>success<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classStore2D_144ca03413f3add88b089d5ca5e2db146" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStore2D_144ca03413f3add88b089d5ca5e2db146" kindref="member" tooltip="Write everything to file.">Store2D::WriteToFile</ref>(<sp/>std::string<sp/>FileName_,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>append<sp/>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>open<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>std::ofstream<sp/>FileOut;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>append<sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>FileOut.open(<sp/>FileName_.c_str(),<sp/>std::ios::app<sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>FileOut.open(<sp/>FileName_.c_str(),<sp/>std::ios::trunc<sp/>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FileOut.fail()<sp/>)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Store2D,<sp/>unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>FileName_;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>writing.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>Begin<sp/>Store2D<sp/>data&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>End<sp/>Store2D<sp/>data&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>FileOut.close();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="classStore2D_19e796d51abbd87d71beadcf2eb5ec49c" kindref="member" tooltip="friend to &amp;lt;&amp;lt; so that we can overload it to output a Store2D object">operator&lt;&lt;</ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStore2D" kindref="compound">Store2D</ref>&amp;<sp/>store<sp/>)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Assume<sp/>that<sp/>all<sp/>the<sp/>preliminaries<sp/>have<sp/>been<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>we<sp/>have<sp/>to<sp/>do<sp/>here<sp/>is<sp/>write<sp/>the<sp/>data<sp/>to<sp/>file<sp/>/<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Format:<sp/>dim1<sp/>dim2<sp/>results....</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Incrementing<sp/>dim1,<sp/>then<sp/>dim2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>are<sp/>multiple<sp/>data<sp/>sets<sp/>per<sp/>point,<sp/>output<sp/>one<sp/>whole<sp/>set<sp/>then<sp/>the<sp/>next</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hence,<sp/>outer<sp/>iteration<sp/>is<sp/>over<sp/>data<sp/>sets<sp/>per<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;store.<ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inner<sp/>iteration<sp/>over<sp/>all<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dim2=0;<sp/>dim2&lt;store.<ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>;<sp/>++dim2)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dim1=0;<sp/>dim1&lt;store.<ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>;<sp/>++dim1)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>write<sp/>the<sp/>k,<sp/>x<sp/>coords<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(for<sp/>ease<sp/>of<sp/>reading<sp/>either<sp/>manually<sp/>or<sp/>by<sp/>eg<sp/>Mathematica)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>store.<ref refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" kindref="member" tooltip="Get the coordinate in dimension 1 corresponding to the given index.">GetCoordDim1</ref>(<sp/>dim1<sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>store.<ref refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" kindref="member" tooltip="Get the coordinate in dimension 2 corresponding to the given index.">GetCoordDim2</ref>(<sp/>dim2<sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>off<sp/>the<sp/>logic<sp/>of<sp/>writing<sp/>to<sp/>the<sp/>ConvergenceTable<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>*<sp/>conTab<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>store.<ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>[<sp/>store.<ref refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" kindref="member" tooltip="Helper function to turn (IndexDim1,IndexDim2) into a 1D index.">GetIndex</ref>(<sp/>dim1,<sp/>dim2<sp/>)<sp/>][i].GetConstPointer()<sp/>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>*conTab;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;re<sp/>done,<sp/>all<sp/>overloading<sp/>of<sp/>&lt;&lt;<sp/>has<sp/>to<sp/>return<sp/>the<sp/>supplied<sp/>ostream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>out<sp/>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" refkind="member"><highlight class="normal">std::istream&amp;<sp/><ref refid="classStore2D_1bf866377a8793ea9bde62133d1c1f153" kindref="member">operator&gt;&gt;</ref>(<sp/>std::istream&amp;<sp/>in,<sp/><ref refid="classStore2D" kindref="compound">Store2D</ref>&amp;<sp/>store<sp/>)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>improve<sp/>this<sp/>to<sp/>handle<sp/>possible<sp/>alterations<sp/>to<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>eg<sp/>blank<sp/>lines,<sp/>comment<sp/>lines<sp/>etc,<sp/>handle<sp/>errors<sp/>and<sp/>bad<sp/>files<sp/>properly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>coordDim1,<sp/>coordDim2;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hence,<sp/>outer<sp/>iteration<sp/>is<sp/>over<sp/>data<sp/>sets<sp/>per<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;store.<ref refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" kindref="member" tooltip="The size of the array of information for each point.">SizePerPoint</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inner<sp/>iteration<sp/>over<sp/>all<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dim2=0;<sp/>dim2&lt;store.<ref refid="classStore2D_11aa79281f9314909e1554aac58fe6904" kindref="member" tooltip="The number of points in dimension 2, excluding the starting point.">SizeDim2</ref>;<sp/>++dim2)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>dim1=0;<sp/>dim1&lt;store.<ref refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" kindref="member" tooltip="The number of points in dimension 1, excluding the starting point.">SizeDim1</ref>;<sp/>++dim1)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>we<sp/>have<sp/>the<sp/>coords<sp/>in<sp/>dim1<sp/>and<sp/>dim2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>&gt;&gt;<sp/>coordDim1<sp/>&gt;&gt;<sp/>coordDim2;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>off<sp/>the<sp/>logic<sp/>of<sp/>reading<sp/>to<sp/>the<sp/>ConvergenceTable<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>*<sp/>conTab<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>store.<ref refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" kindref="member">stats</ref>[<sp/>store.<ref refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" kindref="member" tooltip="Helper function to turn (IndexDim1,IndexDim2) into a 1D index.">GetIndex</ref>(<sp/>dim1,<sp/>dim2<sp/>)<sp/>][i].GetPointer()<sp/>);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>&gt;&gt;<sp/>*conTab;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>in<sp/>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="progressbar_8h" kind="file">
+    <compoundname>progressbar.h</compoundname>
+    <includedby refid="main_8cpp" local="yes">Gyulassy/opacity3/src/main.cpp</includedby>
+    <includedby refid="progressbar_8cpp" local="yes">Gyulassy/opacity3/src/progressbar.cpp</includedby>
+    <invincdepgraph>
+      <node id="347">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="346">
+        <label>Gyulassy/opacity3/src/progressbar.h</label>
+        <link refid="progressbar.h"/>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+      </node>
+      <node id="348">
+        <label>Gyulassy/opacity3/src/progressbar.cpp</label>
+        <link refid="progressbar_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classProgressBar" prot="public">ProgressBar</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PROGRESSBAR_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PROGRESSBAR_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="7" refid="classProgressBar" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classProgressBar" kindref="compound">ProgressBar</ref>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="classProgressBar_1044f47136c34c520d647c99d2b25c7c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1044f47136c34c520d647c99d2b25c7c7" kindref="member">min</ref>;</highlight></codeline>
+<codeline lineno="10" refid="classProgressBar_1fd056430958e4ae958e3c064180ff208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1fd056430958e4ae958e3c064180ff208" kindref="member">max</ref>;</highlight></codeline>
+<codeline lineno="11" refid="classProgressBar_1176dbe3f61d798da0f9971f0f45db2bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1176dbe3f61d798da0f9971f0f45db2bf" kindref="member">now</ref>;</highlight></codeline>
+<codeline lineno="12" refid="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1da00c88aa213354c1b9fc4d9d9feba74" kindref="member">nowPercent</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="classProgressBar_149d68b4372aec9c7622b4f88764bc2ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_149d68b4372aec9c7622b4f88764bc2ca" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="15" refid="classProgressBar_1aaf24bac272f65fcbefc354913d402da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1aaf24bac272f65fcbefc354913d402da" kindref="member">update</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" kindref="member">SetNow</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>iNow);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1c8c63307694b7dda08c866f40120d3d8" kindref="member">PrintPreliminaries</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" kindref="member">PrintProgress</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_1728e5c2abda4c45938032e399a62f9ee" kindref="member">PrintSpinner</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classProgressBar_15029c2f271c6d928da3d0146246b9847" kindref="member">PrintFinal</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classProgressBar_1816453dc9f180edc84d7c51b73a14546" kindref="member">ProgressBar</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>iMin,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>iMax);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classProgressBar_1a0ced60c0ade467a4602c35443e7bc78" kindref="member">~ProgressBar</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/progressbar.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classSwRandoms_1_1RandSobol" kind="class" prot="public">
+    <compoundname>SwRandoms::RandSobol</compoundname>
+    <basecompoundref refid="classSwRandoms_1_1RandomBase2" prot="public" virt="non-virtual">SwRandoms::RandomBase2</basecompoundref>
+    <includes refid="RandSobol_8h" local="no">RandSobol.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSwRandoms_1_1RandSobol_1d6d335a081b9961d7059c13b1869c57c" prot="private" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int SwRandoms::RandSobol::InitialSeed</definition>
+        <argsstring></argsstring>
+        <name>InitialSeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="21" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classSwRandoms_1_1RandSobol_1e3d1bfbb3fa3bc81a9775c8d9875f22f" compoundref="RandSobol_8cpp" startline="52" endline="55">Reset</referencedby>
+        <referencedby refid="classSwRandoms_1_1RandSobol_1cbab6c15df9c297d18fa585cfad1b11d" compoundref="RandSobol_8cpp" startline="43" endline="50">SetSeed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSwRandoms_1_1RandSobol_13e98e6cf26ba9528d885ebbf45d1a393" prot="private" static="no" mutable="no">
+        <type>long long int</type>
+        <definition>long long int SwRandoms::RandSobol::RunningSeed</definition>
+        <argsstring></argsstring>
+        <name>RunningSeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f" compoundref="RandSobol_8cpp" startline="20" endline="34">GetUniforms</referencedby>
+        <referencedby refid="classSwRandoms_1_1RandSobol_1cbab6c15df9c297d18fa585cfad1b11d" compoundref="RandSobol_8cpp" startline="43" endline="50">SetSeed</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSwRandoms_1_1RandSobol_12c07980724797f1e0b3dd24a071bb745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SwRandoms::RandSobol::RandSobol</definition>
+        <argsstring>(unsigned long Dimensionality, unsigned long Seed=1)</argsstring>
+        <name>RandSobol</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>Seed</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="12" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.cpp" bodystart="9" bodyend="13"/>
+        <referencedby refid="classSwRandoms_1_1RandSobol_15abf4953d967d0aed2872a5cf2a2cdb7" compoundref="RandSobol_8cpp" startline="15" endline="18">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandSobol_15abf4953d967d0aed2872a5cf2a2cdb7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref> *</type>
+        <definition>RandomBase2 * SwRandoms::RandSobol::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_1633ab071ed2eded4784ea5c6faf4a9af">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="14" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.cpp" bodystart="15" bodyend="18"/>
+        <references refid="classSwRandoms_1_1RandSobol_12c07980724797f1e0b3dd24a071bb745" compoundref="RandSobol_8cpp" startline="9" endline="13">RandSobol</references>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandSobol::GetUniforms</definition>
+        <argsstring>(SwArrays::MyArray &amp;variates)</argsstring>
+        <name>GetUniforms</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_1ee4b8f64be04c3cea35ea63cc4f9c6d6">GetUniforms</reimplements>
+        <param>
+          <type><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref> &amp;</type>
+          <declname>variates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.cpp" bodystart="20" bodyend="34"/>
+        <references refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" compoundref="Random3_8h" startline="26" endline="29">SwRandoms::RandomBase2::GetDimensionality</references>
+        <references refid="namespaceSobol_11df68ce8fabb1764e491885b5e1c366b" compoundref="sobol_8cpp" startline="14205" endline="27871">Sobol::i8_sobol</references>
+        <references refid="classSwRandoms_1_1RandSobol_13e98e6cf26ba9528d885ebbf45d1a393" compoundref="RandSobol_8h" startline="22">RunningSeed</references>
+        <referencedby refid="classSwRandoms_1_1RandSobol_168f45c07b374e627a58f84f7e2491167" compoundref="RandSobol_8cpp" startline="36" endline="41">Skip</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandSobol_168f45c07b374e627a58f84f7e2491167" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandSobol::Skip</definition>
+        <argsstring>(unsigned long numberOfPaths)</argsstring>
+        <name>Skip</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_18a202b85b9c0f380700922331506f459">Skip</reimplements>
+        <param>
+          <type>unsigned long</type>
+          <declname>numberOfPaths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="16" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.cpp" bodystart="36" bodyend="41"/>
+        <references refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" compoundref="Random3_8h" startline="26" endline="29">SwRandoms::RandomBase2::GetDimensionality</references>
+        <references refid="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f" compoundref="RandSobol_8cpp" startline="20" endline="34">GetUniforms</references>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandSobol_1cbab6c15df9c297d18fa585cfad1b11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandSobol::SetSeed</definition>
+        <argsstring>(unsigned long Seed)</argsstring>
+        <name>SetSeed</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_1ff006e42b1f514697427cc4578383b5e">SetSeed</reimplements>
+        <param>
+          <type>unsigned long</type>
+          <declname>Seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="17" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.cpp" bodystart="43" bodyend="50"/>
+        <references refid="classSwRandoms_1_1RandSobol_1d6d335a081b9961d7059c13b1869c57c" compoundref="RandSobol_8h" startline="21">InitialSeed</references>
+        <references refid="classSwRandoms_1_1RandSobol_13e98e6cf26ba9528d885ebbf45d1a393" compoundref="RandSobol_8h" startline="22">RunningSeed</references>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandSobol_1e3d1bfbb3fa3bc81a9775c8d9875f22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwRandoms::RandSobol::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <reimplements refid="classSwRandoms_1_1RandomBase2_154a0497121db4d91e3ff6e2b4cdf380a">Reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.cpp" bodystart="52" bodyend="55"/>
+        <references refid="classSwRandoms_1_1RandSobol_1d6d335a081b9961d7059c13b1869c57c" compoundref="RandSobol_8h" startline="21">InitialSeed</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="70">
+        <label>SwRandoms::RandSobol</label>
+        <link refid="classSwRandoms_1_1RandSobol"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>SwRandoms::RandomBase2</label>
+        <link refid="classSwRandoms_1_1RandomBase2"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="72">
+        <label>SwRandoms::RandSobol</label>
+        <link refid="classSwRandoms_1_1RandSobol"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>SwRandoms::RandomBase2</label>
+        <link refid="classSwRandoms_1_1RandomBase2"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" line="10" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/RandSobol.h" bodystart="9" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classSwRandoms_1_1RandSobol_15abf4953d967d0aed2872a5cf2a2cdb7" prot="public" virt="virtual"><scope>SwRandoms::RandSobol</scope><name>clone</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" prot="public" virt="non-virtual"><scope>SwRandoms::RandSobol</scope><name>GetDimensionality</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f" prot="public" virt="virtual"><scope>SwRandoms::RandSobol</scope><name>GetUniforms</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_1d6d335a081b9961d7059c13b1869c57c" prot="private" virt="non-virtual"><scope>SwRandoms::RandSobol</scope><name>InitialSeed</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1dd5e3fc4699b36e56970047463186e51" prot="public" virt="non-virtual"><scope>SwRandoms::RandSobol</scope><name>RandomBase2</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_12c07980724797f1e0b3dd24a071bb745" prot="public" virt="non-virtual"><scope>SwRandoms::RandSobol</scope><name>RandSobol</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_1e3d1bfbb3fa3bc81a9775c8d9875f22f" prot="public" virt="virtual"><scope>SwRandoms::RandSobol</scope><name>Reset</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_13e98e6cf26ba9528d885ebbf45d1a393" prot="private" virt="non-virtual"><scope>SwRandoms::RandSobol</scope><name>RunningSeed</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_1cbab6c15df9c297d18fa585cfad1b11d" prot="public" virt="virtual"><scope>SwRandoms::RandSobol</scope><name>SetSeed</name></member>
+      <member refid="classSwRandoms_1_1RandSobol_168f45c07b374e627a58f84f7e2491167" prot="public" virt="virtual"><scope>SwRandoms::RandSobol</scope><name>Skip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,112 @@
+\section{Gyulassy/opacity3/src/glv1/qperpstore1.h File Reference}
+\label{qperpstore1_8h}\index{Gyulassy/opacity3/src/glv1/qperpstore1.h@{Gyulassy/opacity3/src/glv1/qperpstore1.h}}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class {\bf QperpStore1}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf SetZ} (long zin\_\-)
+\item 
+void {\bf SetVal} (long x\_\-, long y\_\-, long val\_\-)
+\item 
+double {\bf GetVal} (long x\_\-, long y\_\-)
+\item 
+long {\bf XYtoIndex} (long x\_\-, long y\_\-)
+\item 
+void {\bf Reset} ()
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{qperpstore1.h@{qperpstore1.h}!GetVal@{GetVal}}
+\index{GetVal@{GetVal}!qperpstore1.h@{qperpstore1.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double GetVal (long {\em x\_\-}, long {\em y\_\-})}\label{qperpstore1_8h_be1f66be610bdae78fdcdf045421bd11}
+
+
+
+
+Definition at line 80 of file qperpstore1.h.
+
+References XYtoIndex().
+
+\begin{Code}\begin{verbatim}81 {
+82   return vals[ XYtoIndex( x_, y_ ) ];
+83 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperpstore1.h@{qperpstore1.h}!Reset@{Reset}}
+\index{Reset@{Reset}!qperpstore1.h@{qperpstore1.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Reset ()}\label{qperpstore1_8h_372de693ad40b3f42839c8ec6ac845f4}
+
+
+
+
+Definition at line 90 of file qperpstore1.h.
+
+\begin{Code}\begin{verbatim}91 {
+92   long imax = sizeZ * sizeXY2;
+93   
+94   for (long i=0; i<imax; ++i)
+95     vals[i] = 0.;
+96 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperpstore1.h@{qperpstore1.h}!SetVal@{SetVal}}
+\index{SetVal@{SetVal}!qperpstore1.h@{qperpstore1.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SetVal (long {\em x\_\-}, long {\em y\_\-}, long {\em val\_\-})}\label{qperpstore1_8h_b553105dc5e4c85d03275fed3d74b8d5}
+
+
+
+
+Definition at line 75 of file qperpstore1.h.
+
+References XYtoIndex().
+
+\begin{Code}\begin{verbatim}76 {
+77   vals[ XYtoIndex( x_, y_ ) ] = val_;
+78 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperpstore1.h@{qperpstore1.h}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!qperpstore1.h@{qperpstore1.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SetZ (long {\em zin\_\-})}\label{qperpstore1_8h_369d36f2cf516db573e5620b3cbe3a3c}
+
+
+
+
+Definition at line 70 of file qperpstore1.h.
+
+\begin{Code}\begin{verbatim}71 {
+72   bookmarkZ = sizeXY2 * zin_;
+73 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperpstore1.h@{qperpstore1.h}!XYtoIndex@{XYtoIndex}}
+\index{XYtoIndex@{XYtoIndex}!qperpstore1.h@{qperpstore1.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long XYtoIndex (long {\em x\_\-}, long {\em y\_\-})}\label{qperpstore1_8h_4bbf7878725b1e6aed6a1244db0dd50f}
+
+
+
+
+Definition at line 85 of file qperpstore1.h.
+
+Referenced by GetVal(), and SetVal().
+
+\begin{Code}\begin{verbatim}86 {
+87   return ( bookmarkZ + y_*sizeXY + x_ );
+88 }
+\end{verbatim}
+\end{Code}
+
+

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classExpDecayFunction" kind="class" prot="public">
+    <compoundname>ExpDecayFunction</compoundname>
+    <basecompoundref refid="classFunction" prot="public" virt="non-virtual">Function</basecompoundref>
+    <includes refid="Function_8h" local="no">Function.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" prot="private" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray ExpDecayFunction::lambdas</definition>
+        <argsstring></argsstring>
+        <name>lambdas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="114" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347" compoundref="Function_8cpp" startline="160" endline="167">function</referencedby>
+        <referencedby refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" compoundref="Function_8cpp" startline="169" endline="176">NormedIntegralInverse</referencedby>
+        <referencedby refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" compoundref="Function_8cpp" startline="178" endline="181">SetParams</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classExpDecayFunction_14905fdca1777ecc6795372b6a4c88ef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ExpDecayFunction::ExpDecayFunction</definition>
+        <argsstring>(unsigned long Dimensionality)</argsstring>
+        <name>ExpDecayFunction</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="104" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="144" bodyend="148"/>
+        <referencedby refid="classExpDecayFunction_18186f67946fc433087ac05d397d3a3ff" compoundref="Function_8cpp" startline="155" endline="158">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classExpDecayFunction_18772fb3b5b7aeb29c294b78b32ffb88b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual</type>
+        <definition>ExpDecayFunction::~ExpDecayFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~ExpDecayFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="105" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classExpDecayFunction_18186f67946fc433087ac05d397d3a3ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classFunction" kindref="compound">Function</ref> *</type>
+        <definition>Function * ExpDecayFunction::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classFunction_1cae7bf3099d7e05b59814823dab252b2">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="106" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="155" bodyend="158"/>
+        <references refid="classExpDecayFunction_14905fdca1777ecc6795372b6a4c88ef5" compoundref="Function_8cpp" startline="144" endline="148">ExpDecayFunction</references>
+      </memberdef>
+      <memberdef kind="function" id="classExpDecayFunction_10a6016e8146f03897300c728cd408347" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ExpDecayFunction::function</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>function</name>
+        <reimplements refid="classFunction_1a78440b1498d1b7e113b163dfc88274c">function</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="108" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="160" bodyend="167"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">Function::GetXmin</references>
+        <references refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" compoundref="Function_8h" startline="114">lambdas</references>
+      </memberdef>
+      <memberdef kind="function" id="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ExpDecayFunction::NormedIntegralInverse</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>NormedIntegralInverse</name>
+        <reimplements refid="classFunction_19e1a0a6468b4df5de365481db11df5d4">NormedIntegralInverse</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="109" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="169" bodyend="176"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" compoundref="Function_8h" startline="43" endline="46">Function::GetXmax</references>
+        <references refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">Function::GetXmin</references>
+        <references refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" compoundref="Function_8h" startline="114">lambdas</references>
+      </memberdef>
+      <memberdef kind="function" id="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ExpDecayFunction::SetParams</definition>
+        <argsstring>(MyArray &amp;params_)</argsstring>
+        <name>SetParams</name>
+        <reimplements refid="classFunction_16944f24e3174d98fe7c61dc0652d3ae4">SetParams</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>params_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="111" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="178" bodyend="181"/>
+        <references refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" compoundref="Function_8h" startline="114">lambdas</references>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator::ZposGenerator</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="11">
+        <label>ExpDecayFunction</label>
+        <link refid="classExpDecayFunction"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="13">
+        <label>ExpDecayFunction</label>
+        <link refid="classExpDecayFunction"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="102" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="101" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classExpDecayFunction_18186f67946fc433087ac05d397d3a3ff" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>clone</name></member>
+      <member refid="classExpDecayFunction_14905fdca1777ecc6795372b6a4c88ef5" prot="public" virt="non-virtual"><scope>ExpDecayFunction</scope><name>ExpDecayFunction</name></member>
+      <member refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>function</name></member>
+      <member refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" prot="public" virt="non-virtual"><scope>ExpDecayFunction</scope><name>Function</name></member>
+      <member refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" prot="public" virt="non-virtual"><scope>ExpDecayFunction</scope><name>GetDimensionality</name></member>
+      <member refid="classFunction_18009360f13f8b2def90d7fbb30584b58" prot="public" virt="non-virtual"><scope>ExpDecayFunction</scope><name>GetRange</name></member>
+      <member refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" prot="public" virt="non-virtual"><scope>ExpDecayFunction</scope><name>GetXmax</name></member>
+      <member refid="classFunction_1165315e9bf20842dc57425d3d04507cb" prot="public" virt="non-virtual"><scope>ExpDecayFunction</scope><name>GetXmin</name></member>
+      <member refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" prot="private" virt="non-virtual"><scope>ExpDecayFunction</scope><name>lambdas</name></member>
+      <member refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>NormedIntegralInverse</name></member>
+      <member refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>SetLimits</name></member>
+      <member refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>SetParams</name></member>
+      <member refid="classExpDecayFunction_18772fb3b5b7aeb29c294b78b32ffb88b" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>~ExpDecayFunction</name></member>
+      <member refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" prot="public" virt="virtual"><scope>ExpDecayFunction</scope><name>~Function</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

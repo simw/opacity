@@ -1,0 +1,183 @@
+\section{YukawaFunction Class Reference}
+\label{classYukawaFunction}\index{YukawaFunction@{YukawaFunction}}
+{\tt \#include $<$Function.h$>$}
+
+Inheritance diagram for YukawaFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classYukawaFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf YukawaFunction} (unsigned long Dimensionality)
+\item 
+virtual {\bf $\sim$YukawaFunction} ()
+\item 
+virtual {\bf Function} $\ast$ {\bf clone} () const 
+\item 
+virtual void {\bf function} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf NormedIntegralInverse} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf SetParams} (MyArray \&params\_\-)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+MyArray {\bf mu2s}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 53 of file Function.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{YukawaFunction@{YukawaFunction}!YukawaFunction@{YukawaFunction}}
+\index{YukawaFunction@{YukawaFunction}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}YukawaFunction::YukawaFunction (unsigned long {\em Dimensionality})}\label{classYukawaFunction_092c7af1e8755547c5354c84d418be7c}
+
+
+
+
+Definition at line 22 of file Function.cpp.
+
+Referenced by clone().
+
+\begin{Code}\begin{verbatim}23   : Function( Dimensionality ), mu2s( Dimensionality )
+24 {
+25 
+26 }
+\end{verbatim}
+\end{Code}
+
+
+\index{YukawaFunction@{YukawaFunction}!~YukawaFunction@{$\sim$YukawaFunction}}
+\index{~YukawaFunction@{$\sim$YukawaFunction}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}YukawaFunction::$\sim$YukawaFunction ()\hspace{0.3cm}{\tt  [virtual]}}\label{classYukawaFunction_1e07e5116228b911a3008940db1c4f9b}
+
+
+
+
+Definition at line 28 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}29 {
+30 
+31 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{YukawaFunction@{YukawaFunction}!clone@{clone}}
+\index{clone@{clone}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Function} $\ast$ YukawaFunction::clone () const\hspace{0.3cm}{\tt  [virtual]}}\label{classYukawaFunction_5f5caf1a5d9ccbbd111a72ce3961395e}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_cae7bf3099d7e05b59814823dab252b2}.
+
+Definition at line 33 of file Function.cpp.
+
+References YukawaFunction().
+
+\begin{Code}\begin{verbatim}34 {
+35   return new YukawaFunction( *this );
+36 }
+\end{verbatim}
+\end{Code}
+
+
+\index{YukawaFunction@{YukawaFunction}!function@{function}}
+\index{function@{function}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void YukawaFunction::function (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classYukawaFunction_e1cfdb6a1024fd9099c9d178bb25e30c}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_a78440b1498d1b7e113b163dfc88274c}.
+
+Definition at line 38 of file Function.cpp.
+
+References Function::GetDimensionality(), and mu2s.
+
+\begin{Code}\begin{verbatim}39 {
+40   for (unsigned long i=0; i<GetDimensionality(); ++i)
+41   {
+42     res[i] = 2.*xs[i]*mu2s[i] / pow( xs[i]*xs[i] + mu2s[i], 2 );
+43   }
+44 }
+\end{verbatim}
+\end{Code}
+
+
+\index{YukawaFunction@{YukawaFunction}!NormedIntegralInverse@{NormedIntegralInverse}}
+\index{NormedIntegralInverse@{NormedIntegralInverse}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void YukawaFunction::NormedIntegralInverse (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classYukawaFunction_6946664b03976629db6fede4c250f363}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_9e1a0a6468b4df5de365481db11df5d4}.
+
+Definition at line 46 of file Function.cpp.
+
+References Function::GetDimensionality(), Function::GetXmax(), Function::GetXmin(), and mu2s.
+
+\begin{Code}\begin{verbatim}47 {
+48   for (unsigned long i=0; i<GetDimensionality(); ++i)
+49   {
+50     xs[i] = (pow(GetXmin(i),2) + mu2s[i]) * (pow(GetXmax(i),2) + mu2s[i]);
+51     xs[i] /= mu2s[i] + pow(GetXmax(i),2) - (pow(GetXmax(i),2)-pow(GetXmin(i),2))*uniforms[i];
+52     xs[i] -= mu2s[i];
+53     xs[i] = sqrt(xs[i]);
+54   }
+55 }
+\end{verbatim}
+\end{Code}
+
+
+\index{YukawaFunction@{YukawaFunction}!SetParams@{SetParams}}
+\index{SetParams@{SetParams}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void YukawaFunction::SetParams (MyArray \& {\em params\_\-})\hspace{0.3cm}{\tt  [virtual]}}\label{classYukawaFunction_15b63ca3d7be01c385940f57641fdfad}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_6944f24e3174d98fe7c61dc0652d3ae4}.
+
+Definition at line 57 of file Function.cpp.
+
+References mu2s.
+
+\begin{Code}\begin{verbatim}58 {
+59   mu2s = mu2s_;
+60 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{YukawaFunction@{YukawaFunction}!mu2s@{mu2s}}
+\index{mu2s@{mu2s}!YukawaFunction@{YukawaFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf YukawaFunction::mu2s}\hspace{0.3cm}{\tt  [private]}}\label{classYukawaFunction_16023bd3790db880d3001b6430c173d0}
+
+
+
+
+Definition at line 66 of file Function.h.
+
+Referenced by function(), NormedIntegralInverse(), and SetParams().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.cpp}\end{CompactItemize}

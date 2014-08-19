@@ -1,0 +1,106 @@
+\section{SimpleCalc3$<$ numOfRandoms $>$ Class Template Reference}
+\label{classSimpleCalc3}\index{SimpleCalc3@{SimpleCalc3}}
+{\tt \#include $<$simplecalc1.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf SimpleCalc3} ()
+\item 
+void {\bf SetParameter} ({\bf Parameters} myParams)
+\item 
+void {\bf SetCoord} (long dimension, double value)
+\item 
+void {\bf SetRandoms} (boost::array$<$ double, numOfRandoms $>$ randoms)
+\item 
+void {\bf GetAnswer} ({\bf SwArrays::MyArray} \&answers)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std::size\_\-t numOfRandoms$>$ class SimpleCalc3$<$ numOfRandoms $>$}
+
+\begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simonw@phys.columbia.edu}$>$ Example class to implement the necessary calculation interface to the driver class. Whatever the coordinates supplied in the deterministic dimensions it just returns the number of random numbers supplied.\end{Desc}
+Implementation of other calculations can be based off this interface. 
+
+Definition at line 23 of file simplecalc1.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{SimpleCalc3@{SimpleCalc3}!SimpleCalc3@{SimpleCalc3}}
+\index{SimpleCalc3@{SimpleCalc3}!SimpleCalc3@{SimpleCalc3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ {\bf SimpleCalc3}$<$ numOfRandoms $>$::{\bf SimpleCalc3} ()\hspace{0.3cm}{\tt  [inline]}}\label{classSimpleCalc3_8df774903b7e610d93f05e7600c1a6ab}
+
+
+
+
+Definition at line 37 of file simplecalc1.h.
+
+\begin{Code}\begin{verbatim}38 {
+39 
+40 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{SimpleCalc3@{SimpleCalc3}!SetParameter@{SetParameter}}
+\index{SetParameter@{SetParameter}!SimpleCalc3@{SimpleCalc3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf SimpleCalc3}$<$ numOfRandoms $>$::SetParameter ({\bf Parameters} {\em myParams})}\label{classSimpleCalc3_b9681ce02d9b6cd391a77d3c396c665e}
+
+
+\index{SimpleCalc3@{SimpleCalc3}!SetCoord@{SetCoord}}
+\index{SetCoord@{SetCoord}!SimpleCalc3@{SimpleCalc3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf SimpleCalc3}$<$ numOfRandoms $>$::SetCoord (long {\em dimension}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classSimpleCalc3_7f612fa190cc836d859e5e8a408dafd1}
+
+
+
+
+Definition at line 49 of file simplecalc1.h.
+
+\begin{Code}\begin{verbatim}50 {
+51   
+52 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SimpleCalc3@{SimpleCalc3}!SetRandoms@{SetRandoms}}
+\index{SetRandoms@{SetRandoms}!SimpleCalc3@{SimpleCalc3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf SimpleCalc3}$<$ numOfRandoms $>$::SetRandoms (boost::array$<$ double, numOfRandoms $>$ {\em randoms})\hspace{0.3cm}{\tt  [inline]}}\label{classSimpleCalc3_e87134efa498b50cb86ba2a0827f5e11}
+
+
+
+
+Definition at line 55 of file simplecalc1.h.
+
+\begin{Code}\begin{verbatim}56 {
+57 
+58 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SimpleCalc3@{SimpleCalc3}!GetAnswer@{GetAnswer}}
+\index{GetAnswer@{GetAnswer}!SimpleCalc3@{SimpleCalc3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t numOfRandoms$>$ void {\bf SimpleCalc3}$<$ numOfRandoms $>$::GetAnswer ({\bf SwArrays::MyArray} \& {\em answers})\hspace{0.3cm}{\tt  [inline]}}\label{classSimpleCalc3_ca9193e3aef081ac6558d909adf16bb7}
+
+
+
+
+Definition at line 61 of file simplecalc1.h.
+
+\begin{Code}\begin{verbatim}62 {
+63   answers[0] = static_cast<double>(numOfRandoms);
+64 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/{\bf simplecalc1.h}\end{CompactItemize}

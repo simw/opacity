@@ -1,0 +1,108 @@
+\section{Gyulassy/opacity3/src/store2d/store.cpp File Reference}
+\label{store_8cpp}\index{Gyulassy/opacity3/src/store2d/store.cpp@{Gyulassy/opacity3/src/store2d/store.cpp}}
+{\tt \#include $<$cmath$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$fstream$>$}\par
+{\tt \#include $<$sstream$>$}\par
+{\tt \#include $<$boost/algorithm/string.hpp$>$}\par
+{\tt \#include \char`\"{}store.h\char`\"{}}\par
+{\tt \#include \char`\"{}convergencetable.h\char`\"{}}\par
+{\tt \#include \char`\"{}statisticsmc.h\char`\"{}}\par
+{\tt \#include \char`\"{}../parameters.h\char`\"{}}\par
+{\tt \#include \char`\"{}../constants.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+std::ostream \& {\bf operator$<$$<$} (std::ostream \&out, const {\bf Store2D} \&store)
+\item 
+std::istream \& {\bf operator$>$$>$} (std::istream \&in, {\bf Store2D} \&store)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{store.cpp@{store.cpp}!operator<<@{operator$<$$<$}}
+\index{operator<<@{operator$<$$<$}!store.cpp@{store.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (std::ostream \& {\em out}, const {\bf Store2D} \& {\em store})}\label{store_8cpp_9e796d51abbd87d71beadcf2eb5ec49c}
+
+
+
+
+Definition at line 182 of file store.cpp.
+
+References Store2D::GetCoordDim1(), Store2D::GetCoordDim2(), Store2D::GetIndex(), Store2D::SizeDim1, Store2D::SizeDim2, Store2D::SizePerPoint, and Store2D::stats.
+
+\begin{Code}\begin{verbatim}183 {
+184   // Assume that all the preliminaries have been written
+185   // All we have to do here is write the data to file / stream
+186 
+187   // Format: dim1 dim2 results....
+188   // Incrementing dim1, then dim2
+189   
+190   // If there are multiple data sets per point, output one whole set then the next
+191   // Hence, outer iteration is over data sets per point
+192   for (long i=0; i<store.SizePerPoint; ++i)
+193   {
+194     // Inner iteration over all points
+195     for (long dim2=0; dim2<store.SizeDim2; ++dim2)
+196     {
+197       for (long dim1=0; dim1<store.SizeDim1; ++dim1)
+198       {
+199         // First, write the k, x coords to file
+200         // (for ease of reading either manually or by eg Mathematica)
+201         out << store.GetCoordDim1( dim1 ) << " " << store.GetCoordDim2( dim2 ) << " ";
+202         // Pass off the logic of writing to the ConvergenceTable object
+203         const ConvergenceTable* conTab = static_cast<const ConvergenceTable*>
+204                  ( store.stats[ store.GetIndex( dim1, dim2 ) ][i].GetConstPointer() );
+205         out << *conTab;
+206         out << std::endl;
+207       }
+208     }
+209   }
+210 
+211   // We're done, all overloading of << has to return the supplied ostream
+212   return ( out );
+213 }
+\end{verbatim}
+\end{Code}
+
+
+\index{store.cpp@{store.cpp}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!store.cpp@{store.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::istream\& operator$>$$>$ (std::istream \& {\em in}, {\bf Store2D} \& {\em store})}\label{store_8cpp_bf866377a8793ea9bde62133d1c1f153}
+
+
+
+
+Definition at line 215 of file store.cpp.
+
+References Store2D::GetIndex(), Store2D::SizeDim1, Store2D::SizeDim2, Store2D::SizePerPoint, and Store2D::stats.
+
+\begin{Code}\begin{verbatim}216 {
+217   // TODO: improve this to handle possible alterations to the file
+218   // eg blank lines, comment lines etc, handle errors and bad files properly
+219 
+220   double coordDim1, coordDim2;
+221   // Hence, outer iteration is over data sets per point
+222   for (long i=0; i<store.SizePerPoint; ++i)
+223   {
+224     // Inner iteration over all points
+225     for (long dim2=0; dim2<store.SizeDim2; ++dim2)
+226     {
+227       for (long dim1=0; dim1<store.SizeDim1; ++dim1)
+228       {
+229         // First, we have the coords in dim1 and dim2
+230         in >> coordDim1 >> coordDim2;
+231         // Pass off the logic of reading to the ConvergenceTable object
+232         ConvergenceTable* conTab = static_cast<ConvergenceTable*>
+233                  ( store.stats[ store.GetIndex( dim1, dim2 ) ][i].GetPointer() );
+234         in >> *conTab;
+235       }
+236     }
+237   }
+238 
+239   return ( in );
+240 }
+\end{verbatim}
+\end{Code}
+
+

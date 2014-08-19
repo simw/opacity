@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="convergencetable_8h" kind="file">
+    <compoundname>convergencetable.h</compoundname>
+    <includes refid="statisticsmc_8h" local="yes">statisticsmc.h</includes>
+    <includes refid="Wrapper_8h" local="yes">../Wrapper.h</includes>
+    <includedby refid="convergencetable_8cpp" local="yes">Gyulassy/opacity3/src/store2d/convergencetable.cpp</includedby>
+    <includedby refid="store_8cpp" local="yes">Gyulassy/opacity3/src/store2d/store.cpp</includedby>
+    <incdepgraph>
+      <node id="446">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="445">
+        <label>vector</label>
+      </node>
+      <node id="444">
+        <label>statisticsmc.h</label>
+        <link refid="statisticsmc_8h"/>
+        <childnode refid="445" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.h</label>
+        <link refid="convergencetable.h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="449">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store_8cpp"/>
+      </node>
+      <node id="448">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.cpp</label>
+        <link refid="convergencetable_8cpp"/>
+      </node>
+      <node id="447">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.h</label>
+        <link refid="convergencetable.h"/>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classStatGathering_1_1ConvergenceTable" prot="public">StatGathering::ConvergenceTable</innerclass>
+    <innernamespace refid="namespaceStatGathering">StatGathering</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONVERGENCETABLE_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONVERGENCETABLE_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="statisticsmc_8h" kindref="compound">statisticsmc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Wrapper.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">StatGathering</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classStatGathering_1_1ConvergenceTable" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_12d5efbc6918bef1b0bd6d83011daad1e" kindref="member" tooltip="friend to &amp;lt;&amp;lt; so that we can overload the &amp;lt;&amp;lt; operator to output a ConvergenceTable...">operator&lt;&lt; </ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>&amp;<sp/>conTab<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::istream&amp;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_124b99d2e5129dc075e2488e32e250b92" kindref="member">operator&gt;&gt; </ref>(<sp/>std::istream&amp;<sp/>in,<sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>&amp;<sp/>conTab<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" kindref="member">ConvergenceTable</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;StatisticsMC&gt;</ref>&amp;<sp/>Inner_<sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref>*<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1739be407fb8c781a3db471d28f25ba78" kindref="member" tooltip="clone method, to interface with the &amp;#39;Wrapper&amp;#39; template">clone</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" kindref="member">AddOneResult</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" kindref="member" tooltip="Add in a set of results.">AddOneSetOfResults</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Number_,<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>&amp;ResultsSoFar_<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" kindref="member" tooltip="Reset to an empty table.">Reset</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" kindref="member" tooltip="Pass in the results of a simulation so far, one final set.">SetResultsSoFar</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Number_,<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/>&amp;ResultsSoFar_<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" kindref="member">GetResultsSoFar</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;StatisticsMC&gt;</ref><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" kindref="member">Inner</ref>;</highlight></codeline>
+<codeline lineno="56" refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;<sp/><ref refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" kindref="member">ResultsSoFar</ref>;</highlight></codeline>
+<codeline lineno="58" refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" kindref="member" tooltip="The next point at which we need to ask for the results from the inner, and then store...">StoppingPoint</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" kindref="member" tooltip="Number of points evaluated so far (also stored in the &amp;#39;Inner&amp;#39;).">PathsDone</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" kindref="member" tooltip="The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ....">Increment</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" kindref="member" tooltip="The maximum number of sets to record to file at the end.">MaxSets</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" kindref="member">GetResultsFromInner</ref>(<sp/>std::vector&lt;std::vector&lt;double&gt;<sp/>&gt;&amp;<sp/>results_<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceStatGathering_1571c4a864b3e5d6ed6047901f8634376" kindref="member">operator&lt;&lt;</ref>(<sp/>std::ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>&amp;<sp/>conTab<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">std::istream&amp;<sp/><ref refid="namespaceStatGathering_194a944fd3996cb074c86c6334df181fd" kindref="member">operator&gt;&gt;</ref>(<sp/>std::istream&amp;<sp/>in,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref>&amp;<sp/>conTab<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h"/>
+  </compounddef>
+</doxygen>

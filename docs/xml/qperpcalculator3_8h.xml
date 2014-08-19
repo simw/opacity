@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperpcalculator3_8h" kind="file">
+    <compoundname>qperpcalculator3.h</compoundname>
+    <includes refid="sw__templatemeta_8h" local="yes">../sw_templatemeta.h</includes>
+    <includes refid="constants_8h" local="yes">../constants.h</includes>
+    <includes local="no">boost/array.hpp</includes>
+    <includedby refid="main_8cpp" local="yes">Gyulassy/opacity3/src/main.cpp</includedby>
+    <includedby refid="main__qperptest_8cpp" local="yes">Gyulassy/opacity3/src/main_qperptest.cpp</includedby>
+    <incdepgraph>
+      <node id="248">
+        <label>../sw_templatemeta.h</label>
+        <link refid="sw__templatemeta_8h"/>
+      </node>
+      <node id="250">
+        <label>vector</label>
+      </node>
+      <node id="247">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator3.h</label>
+        <link refid="qperpcalculator3.h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>boost/array.hpp</label>
+      </node>
+      <node id="249">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="250" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="253">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="252">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator3.h</label>
+        <link refid="qperpcalculator3.h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main__qperptest_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classQperpCalculator3" prot="public">QperpCalculator3</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="qperpcalculator3_8h_138b5c4a624794a33b769d0bb04732f4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>n</declname>
+            <defname>n</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void _Convert2DPolarToCartesian</definition>
+        <argsstring>(boost::array&lt; double, n &gt; &amp;qs, boost::array&lt; double, n &gt; &amp;thetas, boost::array&lt; double, n &gt; &amp;qxs, boost::array&lt; double, n &gt; &amp;qys)</argsstring>
+        <name>_Convert2DPolarToCartesian</name>
+        <param>
+          <type>boost::array&lt; double, n &gt; &amp;</type>
+          <declname>qs</declname>
+        </param>
+        <param>
+          <type>boost::array&lt; double, n &gt; &amp;</type>
+          <declname>thetas</declname>
+        </param>
+        <param>
+          <type>boost::array&lt; double, n &gt; &amp;</type>
+          <declname>qxs</declname>
+        </param>
+        <param>
+          <type>boost::array&lt; double, n &gt; &amp;</type>
+          <declname>qys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="20" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Interface:<sp/>qperpcalculator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/>&lt;&gt;,<sp/>(C)<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>QPERPCALCULATOR3_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QPERPCALCULATOR3_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../sw_templatemeta.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="20" refid="qperpcalculator3_8h_138b5c4a624794a33b769d0bb04732f4b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpcalculator3_8h_138b5c4a624794a33b769d0bb04732f4b" kindref="member">_Convert2DPolarToCartesian</ref>(<sp/>boost::array&lt;double,<sp/>n&gt;<sp/>&amp;qs,<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;<sp/>&amp;thetas,<sp/>boost::array&lt;double,<sp/>n&gt;<sp/>&amp;qxs,<sp/>boost::array&lt;double,<sp/>n&gt;<sp/>&amp;qys<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>qxs[i]<sp/>=<sp/>qs[i]<sp/>*<sp/>cos(<sp/>thetas[i]<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>qys[i]<sp/>=<sp/>qs[i]<sp/>*<sp/>sin(<sp/>thetas[i]<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="34" refid="classQperpCalculator3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQperpCalculator3" kindref="compound">QperpCalculator3</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" refkind="member"><highlight class="normal"><sp/><sp/>boost::array&lt;boost::array&lt;double,<sp/>n&gt;,<sp/><ref refid="structTPower" kindref="compound">TPower&lt;2,n&gt;::value</ref>&gt;<sp/><ref refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" kindref="member" tooltip="Array of Sum_(i=1 to n, j = k to n)_Qi Dot Qj.">SumQs_1i</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" refkind="member"><highlight class="normal"><sp/><sp/>boost::array&lt;boost::array&lt;double,<sp/>n&gt;,<sp/><ref refid="structTPower" kindref="compound">TPower&lt;2,n&gt;::value</ref>&gt;<sp/><ref refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" kindref="member">SumQs_ii</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" refkind="member"><highlight class="normal"><sp/><sp/>boost::array&lt;boost::array&lt;double,<sp/>n&gt;,<sp/><ref refid="structTPower" kindref="compound">TPower&lt;2,n&gt;::value</ref>&gt;<sp/><ref refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" kindref="member">SumKhatQ_i</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" refkind="member"><highlight class="normal"><sp/><sp/>boost::array&lt;boost::array&lt;double,<sp/>n+1&gt;,<sp/><ref refid="structTPower" kindref="compound">TPower&lt;2,n&gt;::value</ref>&gt;<sp/><ref refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" kindref="member">SumQsIncK_1i</ref>;</highlight></codeline>
+<codeline lineno="43" refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" refkind="member"><highlight class="normal"><sp/><sp/>boost::array&lt;boost::array&lt;double,<sp/>n+1&gt;,<sp/><ref refid="structTPower" kindref="compound">TPower&lt;2,n&gt;::value</ref>&gt;<sp/><ref refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" kindref="member">SumQsIncK_ii</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator3_1e093a25aa0ff255a5ec74cf1b4aac57a" kindref="member">QperpCalculator3</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" kindref="member">SetK</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" kindref="member">SetQsThetas</ref>(<sp/>boost::array&lt;double,<sp/>n&gt;<sp/>Qs,<sp/>boost::array&lt;double,<sp/>n&gt;<sp/>Thetas<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" kindref="member">GetSumQskk</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="52"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" kindref="member">SumQsIncK_ii</ref>[zeroes][m-1]<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" kindref="member">GetSumQs1k</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="57"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" kindref="member">SumQsIncK_1i</ref>[zeroes][m-1]<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="64" refid="classQperpCalculator3_1e093a25aa0ff255a5ec74cf1b4aac57a" refkind="member"><highlight class="normal"><ref refid="classQperpCalculator3_1e093a25aa0ff255a5ec74cf1b4aac57a" kindref="member">QperpCalculator3&lt;n&gt;::QperpCalculator3</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="70" refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" kindref="member">QperpCalculator3&lt;n&gt;::SetK</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k<sp/>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k2<sp/>=<sp/>k*k;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;<sp/>sumkq_i;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>z=0;<sp/>z&lt;TPower&lt;2,n&gt;::value;<sp/>++z<sp/>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sumkq_i[i]<sp/>=<sp/>k<sp/>*<sp/><ref refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" kindref="member">SumKhatQ_i</ref>[z][i];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" kindref="member">SumQsIncK_1i</ref>[z][i]<sp/>=<sp/><ref refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" kindref="member" tooltip="Array of Sum_(i=1 to n, j = k to n)_Qi Dot Qj.">SumQs_1i</ref>[z][i]<sp/>+<sp/>sumkq_i[0]<sp/>+<sp/>sumkq_i[i]<sp/>+<sp/>k2;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" kindref="member">SumQsIncK_ii</ref>[z][i]<sp/>=<sp/><ref refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" kindref="member">SumQs_ii</ref>[z][i]<sp/>+<sp/>2.*sumkq_i[i]<sp/>+<sp/>k2;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" kindref="member">SumQsIncK_1i</ref>[z][n]<sp/>=<sp/>sumkq_i[0]<sp/>+<sp/>k2;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" kindref="member">SumQsIncK_ii</ref>[z][n]<sp/>=<sp/>k2;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="88" refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" kindref="member">QperpCalculator3&lt;n&gt;::SetQsThetas</ref>(<sp/>boost::array&lt;double,<sp/>n&gt;<sp/>Qs,<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;<sp/>Thetas<sp/>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;<sp/>qxs,<sp/>qys;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>_Convert2DPolarToCartesian&lt;n&gt;(<sp/>Qs,<sp/>Thetas,<sp/>qxs,<sp/>qys<sp/>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;<sp/>sumqxs,<sp/>sumqys;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>notZeroed;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>z=0;<sp/>z&lt;TPower&lt;2,n&gt;::value;<sp/>++z<sp/>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>notZeroed<sp/>=<sp/>!<ref refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" kindref="member">SwUtils::_TestBitI</ref>(<sp/>z,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>sumqxs[n-1]<sp/>=<sp/>notZeroed*qxs[n-1];<sp/>sumqys[n-1]<sp/>=<sp/>notZeroed*qys[n-1];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=1;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>ind<sp/>=<sp/>n-1-i;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>notZeroed<sp/>=<sp/>!<ref refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" kindref="member">SwUtils::_TestBitI</ref>(<sp/>z,<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sumqxs[ind]<sp/>=<sp/>sumqxs[ind+1]<sp/>+<sp/>notZeroed*qxs[ind];</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sumqys[ind]<sp/>=<sp/>sumqys[ind+1]<sp/>+<sp/>notZeroed*qys[ind];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" kindref="member" tooltip="Array of Sum_(i=1 to n, j = k to n)_Qi Dot Qj.">SumQs_1i</ref>[z][i]<sp/>=<sp/>sumqxs[0]*sumqxs[i]<sp/>+<sp/>sumqys[0]*sumqys[i];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" kindref="member">SumQs_ii</ref>[z][i]<sp/>=<sp/>sumqxs[i]*sumqxs[i]<sp/>+<sp/>sumqys[i]*sumqys[i];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" kindref="member">SumKhatQ_i</ref>[z][i]<sp/>=<sp/>-sumqxs[i];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h"/>
+  </compounddef>
+</doxygen>

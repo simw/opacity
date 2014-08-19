@@ -1,0 +1,131 @@
+\section{StatGathering::StatisticsMC Class Reference}
+\label{classStatGathering_1_1StatisticsMC}\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+{\tt \#include $<$statisticsmc.h$>$}
+
+Inheritance diagram for StatGathering::StatisticsMC::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classStatGathering_1_1StatisticsMC}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf StatisticsMC} ()
+\item 
+virtual {\bf $\sim$StatisticsMC} ()
+\item 
+virtual {\bf StatisticsMC} $\ast$ {\bf clone} () const =0
+\begin{CompactList}\small\item\em clone method, to interface with the 'Wrapper' template \item\end{CompactList}\item 
+virtual void {\bf AddOneResult} (double result)=0
+\item 
+virtual void {\bf AddOneSetOfResults} (long Number, std::vector$<$ std::vector$<$ double $>$ $>$ \&ResultsSoFar\_\-)=0
+\item 
+virtual void {\bf Reset} ()=0
+\begin{CompactList}\small\item\em Reset all internal values, start again. \item\end{CompactList}\item 
+virtual void {\bf SetResultsSoFar} (long Number\_\-, std::vector$<$ std::vector$<$ double $>$ $>$ \&ResultsSoFar\_\-)=0
+\item 
+virtual std::vector$<$ std::vector$<$ double $>$ $>$ {\bf GetResultsSoFar} () const =0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for statistics gatherer for a Monte Carlo integrator based on code from Joshi 'C++ Design Patterns and Derivatives Pricing'
+
+This base class is pure virtual, defines an interface to interact with the statistics gatherer This represents one 'point': each point is filled with a single double, but can return a 2D vector with information about its results. 
+
+Definition at line 17 of file statisticsmc.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!StatisticsMC@{StatisticsMC}}
+\index{StatisticsMC@{StatisticsMC}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}StatGathering::StatisticsMC::StatisticsMC ()\hspace{0.3cm}{\tt  [inline]}}\label{classStatGathering_1_1StatisticsMC_e5f00cda87f14f55cef6914e26b9ef67}
+
+
+
+
+Definition at line 20 of file statisticsmc.h.
+
+\begin{Code}\begin{verbatim}20 {}
+\end{verbatim}
+\end{Code}
+
+
+\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!~StatisticsMC@{$\sim$StatisticsMC}}
+\index{~StatisticsMC@{$\sim$StatisticsMC}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual StatGathering::StatisticsMC::$\sim$StatisticsMC ()\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classStatGathering_1_1StatisticsMC_1bd9450c20d37ee3954207df031b3619}
+
+
+
+
+Definition at line 21 of file statisticsmc.h.
+
+\begin{Code}\begin{verbatim}21 {}
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!clone@{clone}}
+\index{clone@{clone}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf StatisticsMC}$\ast$ StatGathering::StatisticsMC::clone () const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classStatGathering_1_1StatisticsMC_cfcf6abd6e973c00e5f31a79496233e0}
+
+
+clone method, to interface with the 'Wrapper' template 
+
+
+
+Implemented in {\bf StatGathering::ConvergenceTable} \doxyref{}{p.}{classStatGathering_1_1ConvergenceTable_739be407fb8c781a3db471d28f25ba78}, and {\bf StatGathering::StatisticsMean} \doxyref{}{p.}{classStatGathering_1_1StatisticsMean_0afe279f79a7a68922f0ae9d52bb2957}.\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!AddOneResult@{AddOneResult}}
+\index{AddOneResult@{AddOneResult}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void StatGathering::StatisticsMC::AddOneResult (double {\em result})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classStatGathering_1_1StatisticsMC_aac13c0a41a374bec47c67afc59a0182}
+
+
+Add one result to the mix This is the standard way of adding in another result 
+
+Implemented in {\bf StatGathering::ConvergenceTable} \doxyref{}{p.}{classStatGathering_1_1ConvergenceTable_8dfcddda38ea9657e1ae4aa6b917ff8b}, and {\bf StatGathering::StatisticsMean} \doxyref{}{p.}{classStatGathering_1_1StatisticsMean_a041fcd7d325906ecbc05b7dd60a8245}.\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!AddOneSetOfResults@{AddOneSetOfResults}}
+\index{AddOneSetOfResults@{AddOneSetOfResults}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void StatGathering::StatisticsMC::AddOneSetOfResults (long {\em Number}, std::vector$<$ std::vector$<$ double $>$ $>$ \& {\em ResultsSoFar\_\-})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classStatGathering_1_1StatisticsMC_3f706f03424b931973415b8723127cad}
+
+
+Add many results to the mix This might be from merging two sets of results or similar \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Number}]The total number of results to add in \item[{\em ResultsSoFar\_\-}]A 2D vector of doubles, which gives the relevant structure of the results (this structure is not specified in this base class) \end{description}
+\end{Desc}
+
+
+Implemented in {\bf StatGathering::ConvergenceTable} \doxyref{}{p.}{classStatGathering_1_1ConvergenceTable_32d89dcbeedf1846f36319d9b36eafba}, and {\bf StatGathering::StatisticsMean} \doxyref{}{p.}{classStatGathering_1_1StatisticsMean_a0089d1731c6b33a7749de1ec41e0a8f}.\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!Reset@{Reset}}
+\index{Reset@{Reset}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void StatGathering::StatisticsMC::Reset ()\hspace{0.3cm}{\tt  [pure virtual]}}\label{classStatGathering_1_1StatisticsMC_43259c270bbf6b23620252f11a155812}
+
+
+Reset all internal values, start again. 
+
+
+
+Implemented in {\bf StatGathering::ConvergenceTable} \doxyref{}{p.}{classStatGathering_1_1ConvergenceTable_7bb5a965ab53ca72d501e0d7f694d93b}, and {\bf StatGathering::StatisticsMean} \doxyref{}{p.}{classStatGathering_1_1StatisticsMean_41cc79ed93147ad208d83ae9d3b0c97d}.\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!SetResultsSoFar@{SetResultsSoFar}}
+\index{SetResultsSoFar@{SetResultsSoFar}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void StatGathering::StatisticsMC::SetResultsSoFar (long {\em Number\_\-}, std::vector$<$ std::vector$<$ double $>$ $>$ \& {\em ResultsSoFar\_\-})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classStatGathering_1_1StatisticsMC_b97a4292be61cff81425390f1fbed69c}
+
+
+Set the results as supplied \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Number}]The total number of results so far \item[{\em ResultsSoFar\_\-}]A 2D vector of doubles, which gives the relevant structure of the results (this structure is not specified in this base class) \end{description}
+\end{Desc}
+
+
+Implemented in {\bf StatGathering::ConvergenceTable} \doxyref{}{p.}{classStatGathering_1_1ConvergenceTable_84375f0e4ec9925ae1c0575ac3d15075}, and {\bf StatGathering::StatisticsMean} \doxyref{}{p.}{classStatGathering_1_1StatisticsMean_9b574a960041288be6bf2892133252e7}.\index{StatGathering::StatisticsMC@{StatGathering::StatisticsMC}!GetResultsSoFar@{GetResultsSoFar}}
+\index{GetResultsSoFar@{GetResultsSoFar}!StatGathering::StatisticsMC@{StatGathering::StatisticsMC}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual std::vector$<$std::vector$<$double$>$ $>$ StatGathering::StatisticsMC::GetResultsSoFar () const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classStatGathering_1_1StatisticsMC_ddb9cc20ac28892097e902286c5204bb}
+
+
+Get a suitably structured 2D vector of the results so far This base class does not specify the structure to return 
+
+Implemented in {\bf StatGathering::ConvergenceTable} \doxyref{}{p.}{classStatGathering_1_1ConvergenceTable_6cd7612fa109159ae022555ae84e5819}, and {\bf StatGathering::StatisticsMean} \doxyref{}{p.}{classStatGathering_1_1StatisticsMean_9345a3844d530b36af1e10a1e1310f1b}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/store2d/{\bf statisticsmc.h}\end{CompactItemize}

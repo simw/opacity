@@ -1,0 +1,253 @@
+\section{Function Class Reference}
+\label{classFunction}\index{Function@{Function}}
+{\tt \#include $<$Function.h$>$}
+
+Inheritance diagram for Function::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Function} (unsigned long Dimensionality)
+\item 
+virtual {\bf $\sim$Function} ()
+\item 
+virtual {\bf Function} $\ast$ {\bf clone} () const =0
+\item 
+virtual void {\bf function} (MyArray \&xs, MyArray \&res)=0
+\item 
+virtual void {\bf NormedIntegralInverse} (MyArray \&xs, MyArray \&res)=0
+\item 
+virtual void {\bf SetLimits} (MyArray \&xmins\_\-, MyArray \&xmaxs\_\-)
+\item 
+virtual void {\bf SetParams} (MyArray \&params\_\-)=0
+\item 
+unsigned long {\bf GetDimensionality} () const 
+\item 
+double {\bf GetXmin} (unsigned long i) const 
+\item 
+double {\bf GetXmax} (unsigned long i) const 
+\item 
+double {\bf GetRange} (unsigned long i) const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+unsigned long {\bf dim}
+\item 
+MyArray {\bf xmins}
+\item 
+MyArray {\bf xmaxs}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Function.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Function@{Function}!Function@{Function}}
+\index{Function@{Function}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Function::Function (unsigned long {\em Dimensionality})}\label{classFunction_0bc8fc78c9f9e9b2b646d6c3de75a9b1}
+
+
+
+
+Definition at line 3 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}4   : dim( Dimensionality ), xmins( Dimensionality ), xmaxs( Dimensionality )
+5 {
+6 
+7 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Function@{Function}!~Function@{$\sim$Function}}
+\index{~Function@{$\sim$Function}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Function::$\sim$Function ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFunction_3b03f7cf0b75d16edebdda1dee1db6fd}
+
+
+
+
+Definition at line 9 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}10 {
+11 
+12 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Function@{Function}!clone@{clone}}
+\index{clone@{clone}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Function}$\ast$ Function::clone () const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classFunction_cae7bf3099d7e05b59814823dab252b2}
+
+
+
+
+Implemented in {\bf YukawaFunction} \doxyref{}{p.}{classYukawaFunction_5f5caf1a5d9ccbbd111a72ce3961395e}, {\bf UniformFunction} \doxyref{}{p.}{classUniformFunction_9b57843688a438ac030f3abcfb4d07ac}, {\bf UnitStepFunction} \doxyref{}{p.}{classUnitStepFunction_c9575c66d4b1c47901fbb4d96065f93f}, and {\bf ExpDecayFunction} \doxyref{}{p.}{classExpDecayFunction_8186f67946fc433087ac05d397d3a3ff}.\index{Function@{Function}!function@{function}}
+\index{function@{function}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void Function::function (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classFunction_a78440b1498d1b7e113b163dfc88274c}
+
+
+
+
+Implemented in {\bf YukawaFunction} \doxyref{}{p.}{classYukawaFunction_e1cfdb6a1024fd9099c9d178bb25e30c}, {\bf UniformFunction} \doxyref{}{p.}{classUniformFunction_c7b39b7195838195e1796570e549e67f}, {\bf UnitStepFunction} \doxyref{}{p.}{classUnitStepFunction_2a0ff6cc70176563ceedfd044e6da9de}, and {\bf ExpDecayFunction} \doxyref{}{p.}{classExpDecayFunction_0a6016e8146f03897300c728cd408347}.\index{Function@{Function}!NormedIntegralInverse@{NormedIntegralInverse}}
+\index{NormedIntegralInverse@{NormedIntegralInverse}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void Function::NormedIntegralInverse (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classFunction_9e1a0a6468b4df5de365481db11df5d4}
+
+
+
+
+Implemented in {\bf YukawaFunction} \doxyref{}{p.}{classYukawaFunction_6946664b03976629db6fede4c250f363}, {\bf UniformFunction} \doxyref{}{p.}{classUniformFunction_db51f361d9802c90260b584bf590a1a1}, {\bf UnitStepFunction} \doxyref{}{p.}{classUnitStepFunction_c56d83c52d4e17781fb0a43d55051fcb}, and {\bf ExpDecayFunction} \doxyref{}{p.}{classExpDecayFunction_c9e70e87e699a4342869ab6c90aa5264}.\index{Function@{Function}!SetLimits@{SetLimits}}
+\index{SetLimits@{SetLimits}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Function::SetLimits (MyArray \& {\em xmins\_\-}, MyArray \& {\em xmaxs\_\-})\hspace{0.3cm}{\tt  [virtual]}}\label{classFunction_b15faddc7dbbbc25a0bcdc3bc3223684}
+
+
+
+
+Definition at line 14 of file Function.cpp.
+
+References xmaxs, and xmins.
+
+Referenced by ZposGenerator::ZposGenerator().
+
+\begin{Code}\begin{verbatim}15 {
+16   xmins = xmins_;
+17   xmaxs = xmaxs_;
+18 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Function@{Function}!SetParams@{SetParams}}
+\index{SetParams@{SetParams}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void Function::SetParams (MyArray \& {\em params\_\-})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classFunction_6944f24e3174d98fe7c61dc0652d3ae4}
+
+
+
+
+Implemented in {\bf YukawaFunction} \doxyref{}{p.}{classYukawaFunction_15b63ca3d7be01c385940f57641fdfad}, {\bf UniformFunction} \doxyref{}{p.}{classUniformFunction_a4666e3a6e7420a5b4c9a15d3677d762}, {\bf UnitStepFunction} \doxyref{}{p.}{classUnitStepFunction_76fde5d7a6e4ff7958a927298ff0379f}, and {\bf ExpDecayFunction} \doxyref{}{p.}{classExpDecayFunction_d665a0ac0d156a9f058b1881d40f2f84}.\index{Function@{Function}!GetDimensionality@{GetDimensionality}}
+\index{GetDimensionality@{GetDimensionality}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long Function::GetDimensionality () const\hspace{0.3cm}{\tt  [inline]}}\label{classFunction_f97b276352a58200c533ddb1b3542c2d}
+
+
+
+
+Definition at line 33 of file Function.h.
+
+References dim.
+
+Referenced by ExpDecayFunction::function(), UnitStepFunction::function(), UniformFunction::function(), YukawaFunction::function(), ExpDecayFunction::NormedIntegralInverse(), UnitStepFunction::NormedIntegralInverse(), UniformFunction::NormedIntegralInverse(), and YukawaFunction::NormedIntegralInverse().
+
+\begin{Code}\begin{verbatim}34 {
+35   return dim;
+36 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Function@{Function}!GetXmin@{GetXmin}}
+\index{GetXmin@{GetXmin}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Function::GetXmin (unsigned long {\em i}) const\hspace{0.3cm}{\tt  [inline]}}\label{classFunction_165315e9bf20842dc57425d3d04507cb}
+
+
+
+
+Definition at line 38 of file Function.h.
+
+References xmins.
+
+Referenced by ExpDecayFunction::function(), UnitStepFunction::function(), ExpDecayFunction::NormedIntegralInverse(), UnitStepFunction::NormedIntegralInverse(), UniformFunction::NormedIntegralInverse(), and YukawaFunction::NormedIntegralInverse().
+
+\begin{Code}\begin{verbatim}39 {
+40   return xmins[i];
+41 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Function@{Function}!GetXmax@{GetXmax}}
+\index{GetXmax@{GetXmax}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Function::GetXmax (unsigned long {\em i}) const\hspace{0.3cm}{\tt  [inline]}}\label{classFunction_44b5a0cafa8873fb26e4ce714325b56a}
+
+
+
+
+Definition at line 43 of file Function.h.
+
+References xmaxs.
+
+Referenced by ExpDecayFunction::NormedIntegralInverse(), and YukawaFunction::NormedIntegralInverse().
+
+\begin{Code}\begin{verbatim}44 {
+45   return xmaxs[i];
+46 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Function@{Function}!GetRange@{GetRange}}
+\index{GetRange@{GetRange}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Function::GetRange (unsigned long {\em i}) const\hspace{0.3cm}{\tt  [inline]}}\label{classFunction_8009360f13f8b2def90d7fbb30584b58}
+
+
+
+
+Definition at line 48 of file Function.h.
+
+References xmaxs, and xmins.
+
+Referenced by UniformFunction::function(), and UniformFunction::NormedIntegralInverse().
+
+\begin{Code}\begin{verbatim}49 {
+50   return (xmaxs[i] - xmins[i]);
+51 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Function@{Function}!dim@{dim}}
+\index{dim@{dim}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf Function::dim}\hspace{0.3cm}{\tt  [private]}}\label{classFunction_898df0a0fea5d9f32386b5c1527e7508}
+
+
+
+
+Definition at line 27 of file Function.h.
+
+Referenced by GetDimensionality().\index{Function@{Function}!xmins@{xmins}}
+\index{xmins@{xmins}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf Function::xmins}\hspace{0.3cm}{\tt  [private]}}\label{classFunction_804a0abd014760d47a12206f1e9715f2}
+
+
+
+
+Definition at line 28 of file Function.h.
+
+Referenced by GetRange(), GetXmin(), and SetLimits().\index{Function@{Function}!xmaxs@{xmaxs}}
+\index{xmaxs@{xmaxs}!Function@{Function}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf Function::xmaxs}\hspace{0.3cm}{\tt  [private]}}\label{classFunction_feaa4fbf9516f3a680ec032622586198}
+
+
+
+
+Definition at line 29 of file Function.h.
+
+Referenced by GetRange(), GetXmax(), and SetLimits().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.cpp}\end{CompactItemize}

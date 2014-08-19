@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classYukawaFunction" kind="class" prot="public">
+    <compoundname>YukawaFunction</compoundname>
+    <basecompoundref refid="classFunction" prot="public" virt="non-virtual">Function</basecompoundref>
+    <includes refid="Function_8h" local="no">Function.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classYukawaFunction_116023bd3790db880d3001b6430c173d0" prot="private" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray YukawaFunction::mu2s</definition>
+        <argsstring></argsstring>
+        <name>mu2s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="66" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c" compoundref="Function_8cpp" startline="38" endline="44">function</referencedby>
+        <referencedby refid="classYukawaFunction_16946664b03976629db6fede4c250f363" compoundref="Function_8cpp" startline="46" endline="55">NormedIntegralInverse</referencedby>
+        <referencedby refid="classYukawaFunction_115b63ca3d7be01c385940f57641fdfad" compoundref="Function_8cpp" startline="57" endline="60">SetParams</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classYukawaFunction_1092c7af1e8755547c5354c84d418be7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>YukawaFunction::YukawaFunction</definition>
+        <argsstring>(unsigned long Dimensionality)</argsstring>
+        <name>YukawaFunction</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="56" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="22" bodyend="26"/>
+        <referencedby refid="classYukawaFunction_15f5caf1a5d9ccbbd111a72ce3961395e" compoundref="Function_8cpp" startline="33" endline="36">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classYukawaFunction_11e07e5116228b911a3008940db1c4f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual</type>
+        <definition>YukawaFunction::~YukawaFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~YukawaFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="57" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classYukawaFunction_15f5caf1a5d9ccbbd111a72ce3961395e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classFunction" kindref="compound">Function</ref> *</type>
+        <definition>Function * YukawaFunction::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classFunction_1cae7bf3099d7e05b59814823dab252b2">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="58" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="33" bodyend="36"/>
+        <references refid="classYukawaFunction_1092c7af1e8755547c5354c84d418be7c" compoundref="Function_8cpp" startline="22" endline="26">YukawaFunction</references>
+      </memberdef>
+      <memberdef kind="function" id="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void YukawaFunction::function</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>function</name>
+        <reimplements refid="classFunction_1a78440b1498d1b7e113b163dfc88274c">function</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="60" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="38" bodyend="44"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" compoundref="Function_8h" startline="66">mu2s</references>
+      </memberdef>
+      <memberdef kind="function" id="classYukawaFunction_16946664b03976629db6fede4c250f363" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void YukawaFunction::NormedIntegralInverse</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>NormedIntegralInverse</name>
+        <reimplements refid="classFunction_19e1a0a6468b4df5de365481db11df5d4">NormedIntegralInverse</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="61" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="46" bodyend="55"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" compoundref="Function_8h" startline="43" endline="46">Function::GetXmax</references>
+        <references refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">Function::GetXmin</references>
+        <references refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" compoundref="Function_8h" startline="66">mu2s</references>
+      </memberdef>
+      <memberdef kind="function" id="classYukawaFunction_115b63ca3d7be01c385940f57641fdfad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void YukawaFunction::SetParams</definition>
+        <argsstring>(MyArray &amp;params_)</argsstring>
+        <name>SetParams</name>
+        <reimplements refid="classFunction_16944f24e3174d98fe7c61dc0652d3ae4">SetParams</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>params_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="63" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="57" bodyend="60"/>
+        <references refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" compoundref="Function_8h" startline="66">mu2s</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="104">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="103">
+        <label>YukawaFunction</label>
+        <link refid="classYukawaFunction"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="106">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="105">
+        <label>YukawaFunction</label>
+        <link refid="classYukawaFunction"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="54" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="53" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classYukawaFunction_15f5caf1a5d9ccbbd111a72ce3961395e" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>clone</name></member>
+      <member refid="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>function</name></member>
+      <member refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" prot="public" virt="non-virtual"><scope>YukawaFunction</scope><name>Function</name></member>
+      <member refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" prot="public" virt="non-virtual"><scope>YukawaFunction</scope><name>GetDimensionality</name></member>
+      <member refid="classFunction_18009360f13f8b2def90d7fbb30584b58" prot="public" virt="non-virtual"><scope>YukawaFunction</scope><name>GetRange</name></member>
+      <member refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" prot="public" virt="non-virtual"><scope>YukawaFunction</scope><name>GetXmax</name></member>
+      <member refid="classFunction_1165315e9bf20842dc57425d3d04507cb" prot="public" virt="non-virtual"><scope>YukawaFunction</scope><name>GetXmin</name></member>
+      <member refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" prot="private" virt="non-virtual"><scope>YukawaFunction</scope><name>mu2s</name></member>
+      <member refid="classYukawaFunction_16946664b03976629db6fede4c250f363" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>NormedIntegralInverse</name></member>
+      <member refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>SetLimits</name></member>
+      <member refid="classYukawaFunction_115b63ca3d7be01c385940f57641fdfad" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>SetParams</name></member>
+      <member refid="classYukawaFunction_1092c7af1e8755547c5354c84d418be7c" prot="public" virt="non-virtual"><scope>YukawaFunction</scope><name>YukawaFunction</name></member>
+      <member refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>~Function</name></member>
+      <member refid="classYukawaFunction_11e07e5116228b911a3008940db1c4f9b" prot="public" virt="virtual"><scope>YukawaFunction</scope><name>~YukawaFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

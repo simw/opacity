@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_3daa2c6e0ad04490e68d2a34691e6d34" kind="dir">
+    <compoundname>Gyulassy/opacity3/src/glv3/</compoundname>
+    <innerfile refid="glvradiative3_8h">glvradiative3.h</innerfile>
+    <innerfile refid="qperpcalculator1_8h">qperpcalculator1.h</innerfile>
+    <innerfile refid="qperpcalculator3_8h">qperpcalculator3.h</innerfile>
+    <innerfile refid="qperpgenerator3_8h">qperpgenerator3.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/"/>
+  </compounddef>
+</doxygen>

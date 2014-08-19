@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_0ed65a904cf03154e4fa84f9591919ea" kind="dir">
+    <compoundname>Gyulassy/opacity3/src/glv1/</compoundname>
+    <innerfile refid="Function_8cpp">Function.cpp</innerfile>
+    <innerfile refid="Function_8h">Function.h</innerfile>
+    <innerfile refid="qperparraynew_8cpp">qperparraynew.cpp</innerfile>
+    <innerfile refid="qperparraynew_8h">qperparraynew.h</innerfile>
+    <innerfile refid="qperpdist_8cpp">qperpdist.cpp</innerfile>
+    <innerfile refid="qperpdist_8h">qperpdist.h</innerfile>
+    <innerfile refid="qperpstore1_8h">qperpstore1.h</innerfile>
+    <innerfile refid="qperpstore2_8h">qperpstore2.h</innerfile>
+    <innerfile refid="radcalcer_8cpp">radcalcer.cpp</innerfile>
+    <innerfile refid="radcalcer_8h">radcalcer.h</innerfile>
+    <innerfile refid="radcalcerwrapper_8h">radcalcerwrapper.h</innerfile>
+    <innerfile refid="zcolldist_8cpp">zcolldist.cpp</innerfile>
+    <innerfile refid="zcolldist_8h">zcolldist.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,376 @@
+\section{Gyulassy/opacity3/src/glv1/qperparraynew.cpp File Reference}
+\label{qperparraynew_8cpp}\index{Gyulassy/opacity3/src/glv1/qperparraynew.cpp@{Gyulassy/opacity3/src/glv1/qperparraynew.cpp}}
+{\tt \#include \char`\"{}qperparraynew.h\char`\"{}}\par
+{\tt \#include \char`\"{}../constants.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf \_\-FillFirstRow} (unsigned long n, unsigned long z, std::vector$<$ bool $>$ zeroed, array2D \&qiqjs, array3D \&sumqiqjs)
+\item 
+void {\bf \_\-FillNextRow} (unsigned long n, unsigned long i, unsigned long z, std::vector$<$ bool $>$ zeroed, array2D \&qiqjs, array3D \&sumqiqjs)
+\item 
+void {\bf \_\-FillAllRows2DSymmetric} (unsigned long n, array2D \&qiqjs, array3D \&sumqiqjs, long z)
+\item 
+void {\bf \_\-FillAllRows1D} (unsigned long n, array1D \&khatqis, array2D \&sumkhatqis, long z)
+\item 
+void {\bf \_\-Fill2DFrom1D} (unsigned long n, array2D \&sumkhatqi\_\-iton, array3D \&sumkhatqikhatqj\_\-itonjton, long z)
+\item 
+void {\bf \_\-DotProducts2D} (unsigned long n, MyArray \&mags, MyArray \&ths, array2D \&res)
+\item 
+void {\bf \_\-DotProducts1D} (unsigned long n, double mag1, double th1, MyArray \&mags, MyArray \&ths, array1D \&res)
+\item 
+void {\bf \_\-OuterProduct1D1D} (unsigned long n, MyArray \&mags1, MyArray \&ths1, MyArray \&mags2, MyArray \&ths2, array2D \&res)
+\item 
+void {\bf \_\-OuterProduct0D1D} (unsigned long n, double mag1, double th1, MyArray \&mags2, MyArray \&ths2, array1D \&res)
+\item 
+void {\bf \_\-Iterate2DForZeroes} (unsigned long n, array2D \&qiqjs, array3D \&sumqiqjs)
+\item 
+void {\bf \_\-Iterate1DForZeroes} (unsigned long n, array1D \&khatqis, array2D \&sumkhatqis)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_DotProducts1D@{\_\-DotProducts1D}}
+\index{_DotProducts1D@{\_\-DotProducts1D}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-DotProducts1D (unsigned long {\em n}, double {\em mag1}, double {\em th1}, MyArray \& {\em mags}, MyArray \& {\em ths}, array1D \& {\em res})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_aea824af3e9dc625dd755fe24f0492b2}
+
+
+
+
+Definition at line 147 of file qperparraynew.cpp.
+
+Referenced by QperpCalculator::CalcQmatrices2().
+
+\begin{Code}\begin{verbatim}149 {
+150   // TODO: put in asserts to check that the dimensions of mags, ths and res are correct
+151 
+152   // No need to pre-calculate the cosine this time, we'll just jump in
+153   for (unsigned long i=0; i!=n; ++i)
+154     res[i] = mag1 * mags[i] * cos( th1 - ths[i] );
+155 
+156   // And we're done!
+157 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_DotProducts2D@{\_\-DotProducts2D}}
+\index{_DotProducts2D@{\_\-DotProducts2D}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-DotProducts2D (unsigned long {\em n}, MyArray \& {\em mags}, MyArray \& {\em ths}, array2D \& {\em res})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_3b87a5052e73e5de13161681e25cf1fa}
+
+
+
+
+Definition at line 111 of file qperparraynew.cpp.
+
+Referenced by QperpCalculator::CalcQmatrices2().
+
+\begin{Code}\begin{verbatim}112 {
+113   // TODO: put in asserts to check that the dimensions of mags, ths and res are correct
+114 
+115   // The operations sin and cos are numerically expensive
+116   // For the dot products: will need cos( ths[i] - ths[j] )
+117   // = cos(ths[i]) cos(ths[j]) + sin(ths[i]) sin(ths[j])
+118   // Here: evaluate them 2n times, instead of possibly n^2 or 0.5*n(n+1)
+119   MyArray sines(n), cosines(n);
+120   for (unsigned long i=0; i!=n; ++i)
+121   {
+122     sines[i] = sin( ths[i] );
+123     cosines[i] = cos( ths[i] );
+124   }
+125 
+126   // Now, find the 2D matrix qi.qj
+127   // We know that it is symmetric, so first we'll evaluate the off-diagonal on
+128   // one side, then mirror it over to the other side
+129   for (unsigned long i=0; i!=n; ++i)
+130     for (unsigned long j=i+1; j!=n; ++j)
+131     {
+132       res[i][j] = mags[i] * mags[j] * ( cosines[i]*cosines[j] + sines[i]*sines[j] );
+133       res[j][i] = res[i][j];
+134     }
+135 
+136   // Now all that's left is the diagonal
+137   for (unsigned long i=0; i!=n; ++i)
+138     res[i][i] = mags[i] * mags[i];
+139 
+140   // And we're done!
+141 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_Fill2DFrom1D@{\_\-Fill2DFrom1D}}
+\index{_Fill2DFrom1D@{\_\-Fill2DFrom1D}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-Fill2DFrom1D (unsigned long {\em n}, array2D \& {\em sumkhatqi\_\-iton}, array3D \& {\em sumkhatqikhatqj\_\-itonjton}, long {\em z})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_d834a8fc7dd96237188220f0ed214a38}
+
+
+
+
+Definition at line 90 of file qperparraynew.cpp.
+
+Referenced by QperpCalculator::CalcQmatrices2().
+
+\begin{Code}\begin{verbatim}92 {
+93   for (unsigned long i=0; i<n; ++i)
+94   {
+95     for (unsigned long j=0; j<n; ++j)
+96     {
+97       sumkhatqikhatqj_itonjton[z][i][j] = sumkhatqi_iton[z][i] + sumkhatqi_iton[z][j];
+98     }
+99     sumkhatqikhatqj_itonjton[z][i][n] = sumkhatqi_iton[z][i];
+100   }
+101   for (unsigned long j=0; j<n; ++j)
+102   {
+103     sumkhatqikhatqj_itonjton[z][n][j] = sumkhatqi_iton[z][j];
+104   }
+105   sumkhatqikhatqj_itonjton[z][n][n] = 0.;
+106 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_FillAllRows1D@{\_\-FillAllRows1D}}
+\index{_FillAllRows1D@{\_\-FillAllRows1D}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-FillAllRows1D (unsigned long {\em n}, array1D \& {\em khatqis}, array2D \& {\em sumkhatqis}, long {\em z})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_6e28f19c83c2c6e49a2672873048fd10}
+
+
+
+
+Definition at line 75 of file qperparraynew.cpp.
+
+References SwUtils::\_\-NumberToBoolArray().
+
+Referenced by QperpCalculator::CalcQmatrices2().
+
+\begin{Code}\begin{verbatim}76 {
+77   // We will be stepping through setting each qi to zero
+78   // Create a vector of bools to indicate which qi is zero for this iteration
+79   std::vector<bool> zeroed( n );
+80 
+81   // Convert number z to an array of bools, the ith element saying whether qi should be zero
+82   _NumberToBoolArray( z, zeroed, n ); 
+83   // Starting point for the iteration: (n-1)th has just one element, khat.q_{n-1}
+84   sumkhatqis[z][n-1] = (!zeroed[n-1])*khatqis[n-1];
+85   // Now iterate over the rest, adding one khatqi at each step
+86   for (unsigned long i=2; i<(n+1); ++i)
+87     sumkhatqis[z][n-i] = sumkhatqis[z][n-i+1] + (!zeroed[n-i])*khatqis[n-i];
+88 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_FillAllRows2DSymmetric@{\_\-FillAllRows2DSymmetric}}
+\index{_FillAllRows2DSymmetric@{\_\-FillAllRows2DSymmetric}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-FillAllRows2DSymmetric (unsigned long {\em n}, array2D \& {\em qiqjs}, array3D \& {\em sumqiqjs}, long {\em z})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_e6e4ce05ca5129920fbf7d9ef0a1e88f}
+
+
+
+
+Definition at line 66 of file qperparraynew.cpp.
+
+References \_\-FillFirstRow(), \_\-FillNextRow(), and SwUtils::\_\-NumberToBoolArray().
+
+Referenced by QperpCalculator::CalcQmatrices2().
+
+\begin{Code}\begin{verbatim}67 {
+68   std::vector<bool> zeroed( n );
+69   _NumberToBoolArray( z, zeroed, n ); 
+70   _FillFirstRow( n, z, zeroed, qiqjs, sumqiqjs );
+71   for (unsigned long i=2; i<(n+1); ++i)
+72     _FillNextRow( n, n-i, z, zeroed, qiqjs, sumqiqjs );
+73 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_FillFirstRow@{\_\-FillFirstRow}}
+\index{_FillFirstRow@{\_\-FillFirstRow}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-FillFirstRow (unsigned long {\em n}, unsigned long {\em z}, std::vector$<$ bool $>$ {\em zeroed}, array2D \& {\em qiqjs}, array3D \& {\em sumqiqjs})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_2038a405262755765309ef166e170a95}
+
+
+
+
+Definition at line 24 of file qperparraynew.cpp.
+
+Referenced by \_\-FillAllRows2DSymmetric().
+
+\begin{Code}\begin{verbatim}26 {
+27   // If the (n-1)th row is zeroed, jump ahead to the answer
+28   if (zeroed[n-1])
+29   {
+30     for (unsigned long i=0; i<n; ++i)
+31     {
+32       sumqiqjs[z][n-1][i] = 0.; sumqiqjs[z][i][n-1] = 0.;
+33     }
+34   }
+35   else
+36   {
+37     // The bottom right hand corner of the matrix has just one contribution
+38     sumqiqjs[z][n-1][n-1] = qiqjs[n-1][n-1];
+39 
+40     // Now fill in the lower row and the right most column
+41     for (unsigned long i=2; i<(n+1); ++i)
+42     {
+43       sumqiqjs[z][n-1][n-i] = sumqiqjs[z][n-1][n-i+1] + (!zeroed[n-i])*qiqjs[n-1][n-i];
+44       sumqiqjs[z][n-i][n-1] = sumqiqjs[z][n-1][n-i];
+45     }
+46   }
+47 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_FillNextRow@{\_\-FillNextRow}}
+\index{_FillNextRow@{\_\-FillNextRow}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-FillNextRow (unsigned long {\em n}, unsigned long {\em i}, unsigned long {\em z}, std::vector$<$ bool $>$ {\em zeroed}, array2D \& {\em qiqjs}, array3D \& {\em sumqiqjs})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_fa7bacdc3db3da4a62517d2518826fbc}
+
+
+
+
+Definition at line 51 of file qperparraynew.cpp.
+
+Referenced by \_\-FillAllRows2DSymmetric().
+
+\begin{Code}\begin{verbatim}53 {
+54   for (unsigned long j=0; j<(i+1); ++j)
+55     sumqiqjs[z][i][i-j] = sumqiqjs[z][i+1][i-j] 
+56         + sumqiqjs[z][i][i-j+1] - sumqiqjs[z][i+1][i-j+1] 
+57         + (!zeroed[i])*(!zeroed[i-j])*qiqjs[i][i-j];
+58 
+59   for (unsigned long j=1; j<(i+1); ++j)
+60     sumqiqjs[z][i-j][i] = sumqiqjs[z][i][i-j];
+61 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_Iterate1DForZeroes@{\_\-Iterate1DForZeroes}}
+\index{_Iterate1DForZeroes@{\_\-Iterate1DForZeroes}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-Iterate1DForZeroes (unsigned long {\em n}, array1D \& {\em khatqis}, array2D \& {\em sumkhatqis})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_9b9808a1bf16458a7ebdf81287337ec5}
+
+
+
+
+Definition at line 331 of file qperparraynew.cpp.
+
+References SwUtils::\_\-NumberToBoolArray().
+
+Referenced by QperpCalculator::CalcQmatrices().
+
+\begin{Code}\begin{verbatim}332 {
+333   std::vector<bool> zeroed(n);
+334   double tmp;
+335   for (unsigned long z=1; z<pow(2,n); ++z)
+336   {
+337     // First, calculate the array of zeroed bools
+338     _NumberToBoolArray( z, zeroed, n );
+339     // Now, iterated over all the elements
+340     for (unsigned long i=0; i<n; ++i) 
+341     { 
+342       // Now deal with k part
+343       tmp = sumkhatqis[0][i];
+344       for (unsigned long ii=i; ii<n; ++ii)
+345       {
+346         if ( zeroed[ii] )
+347         {
+348           tmp -= khatqis[ii];
+349         }
+350       }
+351       sumkhatqis[z][i] = tmp;
+352     }
+353   }
+354 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_Iterate2DForZeroes@{\_\-Iterate2DForZeroes}}
+\index{_Iterate2DForZeroes@{\_\-Iterate2DForZeroes}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-Iterate2DForZeroes (unsigned long {\em n}, array2D \& {\em qiqjs}, array3D \& {\em sumqiqjs})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_5e634626e89e347ac7105f3a34a7f065}
+
+
+
+
+Definition at line 301 of file qperparraynew.cpp.
+
+References SwUtils::\_\-NumberToBoolArray().
+
+Referenced by QperpCalculator::CalcQmatrices().
+
+\begin{Code}\begin{verbatim}302 {
+303   // Now we go through all the possible combinations of zeroed columns and rows
+304   std::vector<bool> zeroed( n );
+305   double tmp;
+306   for (unsigned long z=1; z<pow(2,n); ++z)
+307   {
+308     // First, calculate the array of zeroed bools
+309     _NumberToBoolArray( z, zeroed, n );
+310     // Now, iterated over all the elements
+311     for (unsigned long i=0; i<n; ++i) 
+312     { 
+313       for (unsigned long j=0; j<n; ++j) 
+314       {
+315         // If either the row or column has been zeroed, subtract off from answer
+316         tmp = sumqiqjs[0][i][j];
+317         for (unsigned long ii=i; ii<n; ii++)
+318         {
+319           for (unsigned long jj=j; jj<n; jj++)
+320           {
+321             if ( zeroed[ii] || zeroed[jj] )
+322               tmp -= qiqjs[ii][jj];
+323           }
+324         }
+325         sumqiqjs[z][i][j] = tmp;
+326       }
+327     }
+328   }
+329 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_OuterProduct0D1D@{\_\-OuterProduct0D1D}}
+\index{_OuterProduct0D1D@{\_\-OuterProduct0D1D}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-OuterProduct0D1D (unsigned long {\em n}, double {\em mag1}, double {\em th1}, MyArray \& {\em mags2}, MyArray \& {\em ths2}, array1D \& {\em res})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_fc899dbd2fbe818860b4c384c52fb84f}
+
+
+
+
+Definition at line 293 of file qperparraynew.cpp.
+
+Referenced by QperpCalculator::CalcQmatrices().
+
+\begin{Code}\begin{verbatim}294 {
+295   for (unsigned long i=0; i!=n; ++i)
+296     res[i] = mag1 * mags2[i] * cos( th1 - ths2[i] );
+297 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperparraynew.cpp@{qperparraynew.cpp}!_OuterProduct1D1D@{\_\-OuterProduct1D1D}}
+\index{_OuterProduct1D1D@{\_\-OuterProduct1D1D}!qperparraynew.cpp@{qperparraynew.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void @8::\_\-OuterProduct1D1D (unsigned long {\em n}, MyArray \& {\em mags1}, MyArray \& {\em ths1}, MyArray \& {\em mags2}, MyArray \& {\em ths2}, array2D \& {\em res})\hspace{0.3cm}{\tt  [static]}}\label{qperparraynew_8cpp_7d756d821e729c3031739ae9168483e4}
+
+
+
+
+Definition at line 280 of file qperparraynew.cpp.
+
+Referenced by QperpCalculator::CalcQmatrices().
+
+\begin{Code}\begin{verbatim}281 {
+282   for (unsigned long i=0; i!=n; ++i)
+283     for (unsigned long j=i+1; j!=n; ++j)
+284     {
+285       res[i][j] = mags1[i] * mags2[j] * cos( ths1[i] - ths2[j] );
+286       res[j][i] = res[i][j];
+287     }
+288   
+289   for (unsigned long i=0; i!=n; ++i)
+290     res[i][i] = mags1[i] * mags2[i];
+291 }
+\end{verbatim}
+\end{Code}
+
+

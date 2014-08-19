@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classParameters" kind="class" prot="public">
+    <compoundname>Parameters</compoundname>
+    <includes refid="parameters_8h" local="no">parameters.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classParameters_15206e134bcec867289e40fbfac16d354" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Parameters::StringID</definition>
+        <argsstring></argsstring>
+        <name>StringID</name>
+        <briefdescription>
+<para>The unique ID to identify the settings section in the file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="65" bodyfile="/home/simon/Gyulassy/opacity3/src/parameters.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParameters_18c15233ec44b657431d68b51f42861c4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::list&lt; std::string &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::list&lt;std::string&gt; &gt; Parameters::TheParameters</definition>
+        <argsstring></argsstring>
+        <name>TheParameters</name>
+        <briefdescription>
+<para>The map in which to store ParamID, list of parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="67" bodyfile="/home/simon/Gyulassy/opacity3/src/parameters.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, bool &gt;</type>
+        <definition>std::map&lt;std::string, bool&gt; Parameters::AccessedList</definition>
+        <argsstring></argsstring>
+        <name>AccessedList</name>
+        <briefdescription>
+<para>The map in which to store whether ParamID has been accessed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="69" bodyfile="/home/simon/Gyulassy/opacity3/src/parameters.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" compoundref="parameters_8cpp" startline="190" endline="208">CheckForUnaccessedParameters</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParameters_1bf65ea89957e2ca5f712a18aea658744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Parameters::Parameters</definition>
+        <argsstring>(std::string StringID_)</argsstring>
+        <name>Parameters</name>
+        <param>
+          <type>std::string</type>
+          <declname>StringID_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1a96c497084795f0c0be65c37ff03f162" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Parameters::ParseInputFile</definition>
+        <argsstring>(std::string FileName)</argsstring>
+        <name>ParseInputFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>FileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read in a file which contains all the settings for the run <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename to process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Integer error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="41"/>
+        <referencedby refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" compoundref="driver_8h" startline="96" endline="139">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1a5cc611f199eccbc05b1908a3d72edd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Parameters::ParseSingleLine</definition>
+        <argsstring>(std::string LineString)</argsstring>
+        <name>ParseSingleLine</name>
+        <param>
+          <type>std::string</type>
+          <declname>LineString</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for ParseInputFile - does one line supplied as LineString. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1aad6541e5440beed7c65ac9062109cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::list&lt; std::string &gt;</type>
+        <definition>std::list&lt;std::string&gt; Parameters::GetParametersString</definition>
+        <argsstring>(std::string ParamID)</argsstring>
+        <name>GetParametersString</name>
+        <param>
+          <type>std::string</type>
+          <declname>ParamID</declname>
+        </param>
+        <briefdescription>
+<para>Get a specific parameter in the map, identified by ParamID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="45"/>
+        <referencedby refid="classRadCalcer_1e287ad55adcf2d34ac95c6d339337e42" compoundref="radcalcer_8cpp" startline="11" endline="99">RadCalcer::RadCalcer</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" compoundref="driver_8h" startline="142" endline="175">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1ff7eee6fabcdbdc7908b595814537f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; Parameters::GetParametersDouble</definition>
+        <argsstring>(std::string ParamID)</argsstring>
+        <name>GetParametersDouble</name>
+        <param>
+          <type>std::string</type>
+          <declname>ParamID</declname>
+        </param>
+        <briefdescription>
+<para>Get the parameter set, but then convert to a vector of doubles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="47"/>
+        <referencedby refid="classRadCalcer_1e287ad55adcf2d34ac95c6d339337e42" compoundref="radcalcer_8cpp" startline="11" endline="99">RadCalcer::RadCalcer</referencedby>
+        <referencedby refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" compoundref="store_8cpp" startline="23" endline="47">Store2D::SetParameters</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" compoundref="zcolldist_8cpp" startline="11" endline="65">ZposGenerator::ZposGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1840169a79f0cdd8217e29b3b25a6552d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; long &gt;</type>
+        <definition>std::vector&lt;long&gt; Parameters::GetParametersLong</definition>
+        <argsstring>(std::string ParamID)</argsstring>
+        <name>GetParametersLong</name>
+        <param>
+          <type>std::string</type>
+          <declname>ParamID</declname>
+        </param>
+        <briefdescription>
+<para>Get the parameter set, but then convert to a vector of longs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="49"/>
+        <referencedby refid="classRadCalcer_1e287ad55adcf2d34ac95c6d339337e42" compoundref="radcalcer_8cpp" startline="11" endline="99">RadCalcer::RadCalcer</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Parameters::CheckForUnaccessedParameters</definition>
+        <argsstring>()</argsstring>
+        <name>CheckForUnaccessedParameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>See whether all the parameters read in from file have been accessed by the program <simplesect kind="return"><para>Gives 0 if all parameters used, otherwise gives the number of unaccessed parameters (ie &gt;0) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="54" bodyfile="/home/simon/Gyulassy/opacity3/src/parameters.cpp" bodystart="190" bodyend="208"/>
+        <references refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" compoundref="parameters_8h" startline="69">AccessedList</references>
+        <referencedby refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" compoundref="driver_8h" startline="96" endline="139">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParameters_1b93e874ce1ee81e9586a2435b7d8a3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Parameters::WriteToFile</definition>
+        <argsstring>(std::string FileName, bool append)</argsstring>
+        <name>WriteToFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>FileName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>append</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write our parameters to file, for record and possible reopening later <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>FileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the file to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>append</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A true / false flag on whether to erase the current contents of the file of to append to it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Integer error code, 0 if ok </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="61"/>
+        <referencedby refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" compoundref="driver_8h" startline="224" endline="239">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SaveResults</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classParameters" kindref="compound">Parameters</ref>: reads a file, retrieves and stores the settings in a map structure When we want to retrieve that setting, a call to GetParameters with the relevant ParamID returns a list of strings containing the relevant parameters.</para><para>The file format: the file can contain anything. This object only looks at lines between &quot;# Begin settings for &quot; + StringID, and &quot;# End settings for &quot; + StringID where StringID was supplied to the constructor of the object. Between these lines, blank lines and lines beginning with # (comment lines) are ignored. The rest are taken as &quot;ParamID param1 param2 ...&quot;, space separated values.</para><para>ParseInputFile returns an integer. If this is &gt; 0, then this specifies the number of settings lines that have been read. If &lt; 0, this gives an error code. = 0 is also an error - no settings read in.</para><para>TODO: extend so that multiple files can be read in, where subsequent files are specified by a line &quot;+ ./furtherparams.txt&quot; line. Must check for looping references. This would be useful for eg multiple jet energies and types, but where everything else is the same. One common settings file, one specialized.</para><para><simplesect kind="author"><para>Simon Wicks &lt;<ulink url="mailto:simon_wicks@yahoo.com">simon_wicks@yahoo.com</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/parameters.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/parameters.h" bodystart="31" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" prot="private" virt="non-virtual"><scope>Parameters</scope><name>AccessedList</name></member>
+      <member refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" prot="public" virt="non-virtual"><scope>Parameters</scope><name>CheckForUnaccessedParameters</name></member>
+      <member refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" prot="public" virt="non-virtual"><scope>Parameters</scope><name>GetParametersDouble</name></member>
+      <member refid="classParameters_1840169a79f0cdd8217e29b3b25a6552d" prot="public" virt="non-virtual"><scope>Parameters</scope><name>GetParametersLong</name></member>
+      <member refid="classParameters_1aad6541e5440beed7c65ac9062109cfe" prot="public" virt="non-virtual"><scope>Parameters</scope><name>GetParametersString</name></member>
+      <member refid="classParameters_1bf65ea89957e2ca5f712a18aea658744" prot="public" virt="non-virtual"><scope>Parameters</scope><name>Parameters</name></member>
+      <member refid="classParameters_1a96c497084795f0c0be65c37ff03f162" prot="public" virt="non-virtual"><scope>Parameters</scope><name>ParseInputFile</name></member>
+      <member refid="classParameters_1a5cc611f199eccbc05b1908a3d72edd8" prot="public" virt="non-virtual"><scope>Parameters</scope><name>ParseSingleLine</name></member>
+      <member refid="classParameters_15206e134bcec867289e40fbfac16d354" prot="private" virt="non-virtual"><scope>Parameters</scope><name>StringID</name></member>
+      <member refid="classParameters_18c15233ec44b657431d68b51f42861c4" prot="private" virt="non-virtual"><scope>Parameters</scope><name>TheParameters</name></member>
+      <member refid="classParameters_1b93e874ce1ee81e9586a2435b7d8a3de" prot="public" virt="non-virtual"><scope>Parameters</scope><name>WriteToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

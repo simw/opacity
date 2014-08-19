@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classUniformFunction" kind="class" prot="public">
+    <compoundname>UniformFunction</compoundname>
+    <basecompoundref refid="classFunction" prot="public" virt="non-virtual">Function</basecompoundref>
+    <includes refid="Function_8h" local="no">Function.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUniformFunction_125d798ef7cb0a90ccfa50fcdcf9438a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UniformFunction::UniformFunction</definition>
+        <argsstring>(unsigned long Dimensionality)</argsstring>
+        <name>UniformFunction</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="72" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="64" bodyend="68"/>
+        <referencedby refid="classUniformFunction_19b57843688a438ac030f3abcfb4d07ac" compoundref="Function_8cpp" startline="75" endline="78">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classUniformFunction_15498bd978cd9441cd3c4e195240f6347" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual</type>
+        <definition>UniformFunction::~UniformFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~UniformFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="73" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classUniformFunction_19b57843688a438ac030f3abcfb4d07ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classFunction" kindref="compound">Function</ref> *</type>
+        <definition>Function * UniformFunction::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classFunction_1cae7bf3099d7e05b59814823dab252b2">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="74" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="75" bodyend="78"/>
+        <references refid="classUniformFunction_125d798ef7cb0a90ccfa50fcdcf9438a3" compoundref="Function_8cpp" startline="64" endline="68">UniformFunction</references>
+      </memberdef>
+      <memberdef kind="function" id="classUniformFunction_1c7b39b7195838195e1796570e549e67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UniformFunction::function</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>function</name>
+        <reimplements refid="classFunction_1a78440b1498d1b7e113b163dfc88274c">function</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="76" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="80" bodyend="86"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_18009360f13f8b2def90d7fbb30584b58" compoundref="Function_8h" startline="48" endline="51">Function::GetRange</references>
+      </memberdef>
+      <memberdef kind="function" id="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UniformFunction::NormedIntegralInverse</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>NormedIntegralInverse</name>
+        <reimplements refid="classFunction_19e1a0a6468b4df5de365481db11df5d4">NormedIntegralInverse</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="77" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="88" bodyend="94"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_18009360f13f8b2def90d7fbb30584b58" compoundref="Function_8h" startline="48" endline="51">Function::GetRange</references>
+        <references refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">Function::GetXmin</references>
+      </memberdef>
+      <memberdef kind="function" id="classUniformFunction_1a4666e3a6e7420a5b4c9a15d3677d762" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UniformFunction::SetParams</definition>
+        <argsstring>(MyArray &amp;params_)</argsstring>
+        <name>SetParams</name>
+        <reimplements refid="classFunction_16944f24e3174d98fe7c61dc0652d3ae4">SetParams</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>params_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="79" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="93">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="92">
+        <label>UniformFunction</label>
+        <link refid="classUniformFunction"/>
+        <childnode refid="93" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="95">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="94">
+        <label>UniformFunction</label>
+        <link refid="classUniformFunction"/>
+        <childnode refid="95" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="70" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="69" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classUniformFunction_19b57843688a438ac030f3abcfb4d07ac" prot="public" virt="virtual"><scope>UniformFunction</scope><name>clone</name></member>
+      <member refid="classUniformFunction_1c7b39b7195838195e1796570e549e67f" prot="public" virt="virtual"><scope>UniformFunction</scope><name>function</name></member>
+      <member refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" prot="public" virt="non-virtual"><scope>UniformFunction</scope><name>Function</name></member>
+      <member refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" prot="public" virt="non-virtual"><scope>UniformFunction</scope><name>GetDimensionality</name></member>
+      <member refid="classFunction_18009360f13f8b2def90d7fbb30584b58" prot="public" virt="non-virtual"><scope>UniformFunction</scope><name>GetRange</name></member>
+      <member refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" prot="public" virt="non-virtual"><scope>UniformFunction</scope><name>GetXmax</name></member>
+      <member refid="classFunction_1165315e9bf20842dc57425d3d04507cb" prot="public" virt="non-virtual"><scope>UniformFunction</scope><name>GetXmin</name></member>
+      <member refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" prot="public" virt="virtual"><scope>UniformFunction</scope><name>NormedIntegralInverse</name></member>
+      <member refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" prot="public" virt="virtual"><scope>UniformFunction</scope><name>SetLimits</name></member>
+      <member refid="classUniformFunction_1a4666e3a6e7420a5b4c9a15d3677d762" prot="public" virt="virtual"><scope>UniformFunction</scope><name>SetParams</name></member>
+      <member refid="classUniformFunction_125d798ef7cb0a90ccfa50fcdcf9438a3" prot="public" virt="non-virtual"><scope>UniformFunction</scope><name>UniformFunction</name></member>
+      <member refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" prot="public" virt="virtual"><scope>UniformFunction</scope><name>~Function</name></member>
+      <member refid="classUniformFunction_15498bd978cd9441cd3c4e195240f6347" prot="public" virt="virtual"><scope>UniformFunction</scope><name>~UniformFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

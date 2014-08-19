@@ -1,0 +1,93 @@
+\section{QperpStore2 Class Reference}
+\label{classQperpStore2}\index{QperpStore2@{QperpStore2}}
+{\tt \#include $<$qperpstore2.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpStore2} (long sizeXY\_\-, long sizeZ\_\-)
+\item 
+void {\bf SetZ} (long zin\_\-)
+\item 
+void {\bf SetVal} (long x\_\-, long y\_\-, double val\_\-)
+\item 
+double {\bf GetVal} (long x\_\-, long y\_\-)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+long {\bf setZ}
+\item 
+boost::multi\_\-array$<$ double, 3 $>$ {\bf vals}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]\end{Desc}
+
+
+Definition at line 10 of file qperpstore2.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpStore2@{QperpStore2}!QperpStore2@{QperpStore2}}
+\index{QperpStore2@{QperpStore2}!QperpStore2@{QperpStore2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpStore2::QperpStore2 (long {\em sizeXY\_\-}, long {\em sizeZ\_\-})}\label{classQperpStore2_77a508d8dad963a7e4d574e501e2f9b1}
+
+
+
+
+Definition at line 24 of file qperpstore2.h.
+
+\begin{Code}\begin{verbatim}25   : vals( boost::extents[sizeXY_][sizeXY_][sizeZ_] ), setZ( 0 )
+26 {
+27 
+28 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpStore2@{QperpStore2}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!QperpStore2@{QperpStore2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpStore2::SetZ (long {\em zin\_\-})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpStore2_ba8224f96c07dd83816fecad90070d29}
+
+
+\index{QperpStore2@{QperpStore2}!SetVal@{SetVal}}
+\index{SetVal@{SetVal}!QperpStore2@{QperpStore2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpStore2::SetVal (long {\em x\_\-}, long {\em y\_\-}, double {\em val\_\-})}\label{classQperpStore2_c0a299f6580dc44dd2025645e720a55c}
+
+
+\index{QperpStore2@{QperpStore2}!GetVal@{GetVal}}
+\index{GetVal@{GetVal}!QperpStore2@{QperpStore2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpStore2::GetVal (long {\em x\_\-}, long {\em y\_\-})}\label{classQperpStore2_afdbee7b4d126315bab26b1436e77db2}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{QperpStore2@{QperpStore2}!setZ@{setZ}}
+\index{setZ@{setZ}!QperpStore2@{QperpStore2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long {\bf QperpStore2::setZ}\hspace{0.3cm}{\tt  [private]}}\label{classQperpStore2_1e56964ca66d38009dbf2dd386ed5f95}
+
+
+
+
+Definition at line 20 of file qperpstore2.h.
+
+Referenced by GetVal(), SetVal(), and SetZ().\index{QperpStore2@{QperpStore2}!vals@{vals}}
+\index{vals@{vals}!QperpStore2@{QperpStore2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}boost::multi\_\-array$<$double, 3$>$ {\bf QperpStore2::vals}\hspace{0.3cm}{\tt  [private]}}\label{classQperpStore2_0fa093aaf1c87565a3741584eef5a35c}
+
+
+
+
+Definition at line 21 of file qperpstore2.h.
+
+Referenced by GetVal(), and SetVal().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf qperpstore2.h}\end{CompactItemize}

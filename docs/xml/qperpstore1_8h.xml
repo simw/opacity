@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperpstore1_8h" kind="file">
+    <compoundname>qperpstore1.h</compoundname>
+    <innerclass refid="classQperpStore1" prot="public">QperpStore1</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="qperpstore1_8h_1369d36f2cf516db573e5620b3cbe3a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetZ</definition>
+        <argsstring>(long zin_)</argsstring>
+        <name>SetZ</name>
+        <param>
+          <type>long</type>
+          <declname>zin_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="71" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="qperpstore1_8h_1b553105dc5e4c85d03275fed3d74b8d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetVal</definition>
+        <argsstring>(long x_, long y_, long val_)</argsstring>
+        <name>SetVal</name>
+        <param>
+          <type>long</type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>val_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="76" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="75" bodyend="78"/>
+        <references refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" compoundref="qperpstore1_8h" startline="85" endline="88">XYtoIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="qperpstore1_8h_1be1f66be610bdae78fdcdf045421bd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetVal</definition>
+        <argsstring>(long x_, long y_)</argsstring>
+        <name>GetVal</name>
+        <param>
+          <type>long</type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="81" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="80" bodyend="83"/>
+        <references refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" compoundref="qperpstore1_8h" startline="85" endline="88">XYtoIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long XYtoIndex</definition>
+        <argsstring>(long x_, long y_)</argsstring>
+        <name>XYtoIndex</name>
+        <param>
+          <type>long</type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="86" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="85" bodyend="88"/>
+        <referencedby refid="qperpstore1_8h_1be1f66be610bdae78fdcdf045421bd11" compoundref="qperpstore1_8h" startline="80" endline="83">GetVal</referencedby>
+        <referencedby refid="qperpstore1_8h_1b553105dc5e4c85d03275fed3d74b8d5" compoundref="qperpstore1_8h" startline="75" endline="78">SetVal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="91" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="90" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Interface:<sp/>qperpstore1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/>&lt;&gt;,<sp/>(C)<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>QPERPSTORE1_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QPERPSTORE1_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="18" refid="classQperpStore1" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQperpStore1" kindref="compound">QperpStore1</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="classQperpStore1_1c9a22f6c039b059e62c87c35c85451dd" kindref="member">QperpStore1</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeXY_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeZ_<sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="classQperpStore1_11822e487987fc77bf927898616ed6de0" kindref="member">~QperpStore1</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpStore1_1da5a646b78bc7b47e6a426edf6c21d6f" kindref="member">SetZ</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zin_<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpStore1_1aece9acc309b76ba553094be8c81ddcf" kindref="member">SetVal1</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val_<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpStore1_1928bb91ea205cb788f13e7da94e202ef" kindref="member">SetVal2</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val_<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MakeVals3(<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1be1f66be610bdae78fdcdf045421bd11" kindref="member">GetVal</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>vals1;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>vals2;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>vals3;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeXY;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeXY2;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeZ;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>bookmarkZ;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" kindref="member">XYtoIndex</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classQperpStore1_1c9a22f6c039b059e62c87c35c85451dd" refkind="member"><highlight class="normal"><ref refid="classQperpStore1_1c9a22f6c039b059e62c87c35c85451dd" kindref="member">QperpStore1::QperpStore1</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeXY_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sizeZ_<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>sizeXY<sp/>=<sp/>sizeXY_;<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>sizeXY2<sp/>=<sp/>sizeXY*sizeXY;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>sizeZ<sp/>=<sp/>sizeZ_;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>vals<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>totSize<sp/>=<sp/>sizeZ<sp/>*<sp/>sizeXY2;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>vals1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>double(<sp/>totSize<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>vals2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>double(<sp/>totSize<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>vals3<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>double(<sp/>totSize<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>bookmarkZ<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classQperpStore1_11822e487987fc77bf927898616ed6de0" refkind="member"><highlight class="normal"><ref refid="classQperpStore1_11822e487987fc77bf927898616ed6de0" kindref="member">QperpStore1::~QperpStore1</ref>()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>vals1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>vals1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>vals2;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>vals2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>vals3;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>vals3<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="qperpstore1_8h_1369d36f2cf516db573e5620b3cbe3a3c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpStore1_1da5a646b78bc7b47e6a426edf6c21d6f" kindref="member">SetZ</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zin_<sp/>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>bookmarkZ<sp/>=<sp/>sizeXY2<sp/>*<sp/>zin_;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="qperpstore1_8h_1b553105dc5e4c85d03275fed3d74b8d5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1b553105dc5e4c85d03275fed3d74b8d5" kindref="member">SetVal</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>val_<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>vals[<sp/><ref refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" kindref="member">XYtoIndex</ref>(<sp/>x_,<sp/>y_<sp/>)<sp/>]<sp/>=<sp/>val_;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="qperpstore1_8h_1be1f66be610bdae78fdcdf045421bd11" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1be1f66be610bdae78fdcdf045421bd11" kindref="member">GetVal</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vals[<sp/><ref refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" kindref="member">XYtoIndex</ref>(<sp/>x_,<sp/>y_<sp/>)<sp/>];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_14bbf7878725b1e6aed6a1244db0dd50f" kindref="member">XYtoIndex</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>x_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>y_<sp/>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>bookmarkZ<sp/>+<sp/>y_*sizeXY<sp/>+<sp/>x_<sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="qperpstore1_8h_1372de693ad40b3f42839c8ec6ac845f4" kindref="member">Reset</ref>()</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>imax<sp/>=<sp/>sizeZ<sp/>*<sp/>sizeXY2;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;imax;<sp/>++i)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>vals[i]<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h"/>
+  </compounddef>
+</doxygen>

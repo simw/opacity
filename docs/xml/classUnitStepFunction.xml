@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classUnitStepFunction" kind="class" prot="public">
+    <compoundname>UnitStepFunction</compoundname>
+    <basecompoundref refid="classFunction" prot="public" virt="non-virtual">Function</basecompoundref>
+    <includes refid="Function_8h" local="no">Function.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" prot="private" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray UnitStepFunction::steps</definition>
+        <argsstring></argsstring>
+        <name>steps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="98" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" compoundref="Function_8cpp" startline="120" endline="126">function</referencedby>
+        <referencedby refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" compoundref="Function_8cpp" startline="128" endline="134">NormedIntegralInverse</referencedby>
+        <referencedby refid="classUnitStepFunction_176fde5d7a6e4ff7958a927298ff0379f" compoundref="Function_8cpp" startline="136" endline="139">SetParams</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classUnitStepFunction_1272c40fc075f370eb8e20f0b50c11a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UnitStepFunction::UnitStepFunction</definition>
+        <argsstring>(unsigned long Dimensionality)</argsstring>
+        <name>UnitStepFunction</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="88" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="104" bodyend="108"/>
+        <referencedby refid="classUnitStepFunction_1c9575c66d4b1c47901fbb4d96065f93f" compoundref="Function_8cpp" startline="115" endline="118">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classUnitStepFunction_11643ca85de9bda43d6a85a17dc2879a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>virtual</type>
+        <definition>UnitStepFunction::~UnitStepFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~UnitStepFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="89" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classUnitStepFunction_1c9575c66d4b1c47901fbb4d96065f93f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classFunction" kindref="compound">Function</ref> *</type>
+        <definition>Function * UnitStepFunction::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classFunction_1cae7bf3099d7e05b59814823dab252b2">clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="90" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="115" bodyend="118"/>
+        <references refid="classUnitStepFunction_1272c40fc075f370eb8e20f0b50c11a4a" compoundref="Function_8cpp" startline="104" endline="108">UnitStepFunction</references>
+      </memberdef>
+      <memberdef kind="function" id="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UnitStepFunction::function</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>function</name>
+        <reimplements refid="classFunction_1a78440b1498d1b7e113b163dfc88274c">function</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="92" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="120" bodyend="126"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">Function::GetXmin</references>
+        <references refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" compoundref="Function_8h" startline="98">steps</references>
+      </memberdef>
+      <memberdef kind="function" id="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UnitStepFunction::NormedIntegralInverse</definition>
+        <argsstring>(MyArray &amp;xs, MyArray &amp;res)</argsstring>
+        <name>NormedIntegralInverse</name>
+        <reimplements refid="classFunction_19e1a0a6468b4df5de365481db11df5d4">NormedIntegralInverse</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="93" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="128" bodyend="134"/>
+        <references refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" compoundref="Function_8h" startline="33" endline="36">Function::GetDimensionality</references>
+        <references refid="classFunction_1165315e9bf20842dc57425d3d04507cb" compoundref="Function_8h" startline="38" endline="41">Function::GetXmin</references>
+        <references refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" compoundref="Function_8h" startline="98">steps</references>
+      </memberdef>
+      <memberdef kind="function" id="classUnitStepFunction_176fde5d7a6e4ff7958a927298ff0379f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void UnitStepFunction::SetParams</definition>
+        <argsstring>(MyArray &amp;params_)</argsstring>
+        <name>SetParams</name>
+        <reimplements refid="classFunction_16944f24e3174d98fe7c61dc0652d3ae4">SetParams</reimplements>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>params_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="95" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp" bodystart="136" bodyend="139"/>
+        <references refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" compoundref="Function_8h" startline="98">steps</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="97">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="96">
+        <label>UnitStepFunction</label>
+        <link refid="classUnitStepFunction"/>
+        <childnode refid="97" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="99">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="98">
+        <label>UnitStepFunction</label>
+        <link refid="classUnitStepFunction"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" line="86" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/Function.h" bodystart="85" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classUnitStepFunction_1c9575c66d4b1c47901fbb4d96065f93f" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>clone</name></member>
+      <member refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>function</name></member>
+      <member refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" prot="public" virt="non-virtual"><scope>UnitStepFunction</scope><name>Function</name></member>
+      <member refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" prot="public" virt="non-virtual"><scope>UnitStepFunction</scope><name>GetDimensionality</name></member>
+      <member refid="classFunction_18009360f13f8b2def90d7fbb30584b58" prot="public" virt="non-virtual"><scope>UnitStepFunction</scope><name>GetRange</name></member>
+      <member refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" prot="public" virt="non-virtual"><scope>UnitStepFunction</scope><name>GetXmax</name></member>
+      <member refid="classFunction_1165315e9bf20842dc57425d3d04507cb" prot="public" virt="non-virtual"><scope>UnitStepFunction</scope><name>GetXmin</name></member>
+      <member refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>NormedIntegralInverse</name></member>
+      <member refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>SetLimits</name></member>
+      <member refid="classUnitStepFunction_176fde5d7a6e4ff7958a927298ff0379f" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>SetParams</name></member>
+      <member refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" prot="private" virt="non-virtual"><scope>UnitStepFunction</scope><name>steps</name></member>
+      <member refid="classUnitStepFunction_1272c40fc075f370eb8e20f0b50c11a4a" prot="public" virt="non-virtual"><scope>UnitStepFunction</scope><name>UnitStepFunction</name></member>
+      <member refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>~Function</name></member>
+      <member refid="classUnitStepFunction_11643ca85de9bda43d6a85a17dc2879a0" prot="public" virt="virtual"><scope>UnitStepFunction</scope><name>~UnitStepFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

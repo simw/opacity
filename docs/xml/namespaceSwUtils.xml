@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="namespaceSwUtils" kind="namespace">
+    <compoundname>SwUtils</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceSwUtils_13e747e4d95465902347281e3cc1bcb0d" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double SwUtils::pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <initializer> 3.141592653589793238</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="9" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceSwUtils_1b08cebc8959f71a8ae78b8d56c6d6be6" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double SwUtils::overpi</definition>
+        <argsstring></argsstring>
+        <name>overpi</name>
+        <initializer> 0.3183098861837906715</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="10" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceSwUtils_1d2fad768d402d77bfb40f4c87adb8966" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double SwUtils::hbarc</definition>
+        <argsstring></argsstring>
+        <name>hbarc</name>
+        <initializer> 0.197</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="11" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classRadCalcer_119c0def50051ee0a52a2cb311d8a485a" compoundref="radcalcer_8cpp" startline="131" endline="139">RadCalcer::SetXonly</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long SwUtils::_FindNextPowerOfTwo</definition>
+        <argsstring>(long value)</argsstring>
+        <name>_FindNextPowerOfTwo</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.cpp" line="8" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.cpp" bodystart="7" bodyend="20"/>
+        <references refid="namespaceSwUtils_1a958298ae1d796946e5784f3339ffba1" compoundref="constants_8h" startline="62" endline="68">_IsPowerOfTwo</references>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">StatGathering::ConvergenceTable::AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" compoundref="convergencetable_8cpp" startline="88" endline="99">StatGathering::ConvergenceTable::SetResultsSoFar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_10183044c7c4da9b92fd4a0d94c5632f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long SwUtils::_Combinatoric</definition>
+        <argsstring>(long n, long r)</argsstring>
+        <name>_Combinatoric</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.cpp" line="23" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.cpp" bodystart="22" bodyend="33"/>
+        <references refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" compoundref="constants_8h" startline="14" endline="20">_factorial</references>
+        <referencedby refid="classRadCalcer_1ccc5f82826c691219a05e4cb277bcc45" compoundref="radcalcer_8cpp" startline="219" endline="370">RadCalcer::GetdNdk2dx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long SwUtils::_factorial</definition>
+        <argsstring>(long value, long endval=1)</argsstring>
+        <name>_factorial</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>endval</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="14" bodyend="20"/>
+        <referencedby refid="namespaceSwUtils_10183044c7c4da9b92fd4a0d94c5632f3" compoundref="constants_8cpp" startline="22" endline="33">_Combinatoric</referencedby>
+        <referencedby refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" compoundref="zcolldist_8cpp" startline="67" endline="84">ZposGenerator::FindRandomPositions</referencedby>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_13974619c250bd02a70c9cfcd88384223" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long SwUtils::power</definition>
+        <argsstring>(long num, long pow)</argsstring>
+        <name>power</name>
+        <param>
+          <type>long</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>pow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="26" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="25" bodyend="32"/>
+        <referencedby refid="classRadCalcer_1ccc5f82826c691219a05e4cb277bcc45" compoundref="radcalcer_8cpp" startline="219" endline="370">RadCalcer::GetdNdk2dx</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator::QperpCalculator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SwUtils::_TestBitI</definition>
+        <argsstring>(unsigned long num, unsigned long i)</argsstring>
+        <name>_TestBitI</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="35" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="34" bodyend="41"/>
+        <referencedby refid="namespaceSwUtils_13b26ae74b9091b6bf31b181cb245c7c1" compoundref="constants_8h" startline="51" endline="60">_CountNumZeroes</referencedby>
+        <referencedby refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" compoundref="constants_8h" startline="43" endline="49">_NumberToBoolArray</referencedby>
+        <referencedby refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" compoundref="qperpcalculator3_8h" startline="88" endline="116">QperpCalculator3&lt; n &gt;::SetQsThetas</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SwUtils::_NumberToBoolArray</definition>
+        <argsstring>(unsigned long num, std::vector&lt; bool &gt; &amp;boolarray, unsigned long length)</argsstring>
+        <name>_NumberToBoolArray</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; bool &gt; &amp;</type>
+          <declname>boolarray</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="44" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="43" bodyend="49"/>
+        <references refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" compoundref="constants_8h" startline="34" endline="41">_TestBitI</references>
+        <referencedby refid="qperparraynew_8cpp_16e28f19c83c2c6e49a2672873048fd10" compoundref="qperparraynew_8cpp" startline="75" endline="88">_FillAllRows1D</referencedby>
+        <referencedby refid="qperparraynew_8cpp_1e6e4ce05ca5129920fbf7d9ef0a1e88f" compoundref="qperparraynew_8cpp" startline="66" endline="73">_FillAllRows2DSymmetric</referencedby>
+        <referencedby refid="qperparraynew_8cpp_19b9808a1bf16458a7ebdf81287337ec5" compoundref="qperparraynew_8cpp" startline="331" endline="354">_Iterate1DForZeroes</referencedby>
+        <referencedby refid="qperparraynew_8cpp_15e634626e89e347ac7105f3a34a7f065" compoundref="qperparraynew_8cpp" startline="301" endline="329">_Iterate2DForZeroes</referencedby>
+        <referencedby refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" compoundref="qperpgenerator3_8h" startline="61" endline="92">QperpGenerator3&lt; n &gt;::GetQsThetas</referencedby>
+        <referencedby refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" compoundref="qperpdist_8cpp" startline="32" endline="57">QperpGenerator::SetZeroedQs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_13b26ae74b9091b6bf31b181cb245c7c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long SwUtils::_CountNumZeroes</definition>
+        <argsstring>(unsigned long num, unsigned long length)</argsstring>
+        <name>_CountNumZeroes</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="52" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="51" bodyend="60"/>
+        <references refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" compoundref="constants_8h" startline="34" endline="41">_TestBitI</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSwUtils_1a958298ae1d796946e5784f3339ffba1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SwUtils::_IsPowerOfTwo</definition>
+        <argsstring>(long value)</argsstring>
+        <name>_IsPowerOfTwo</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/constants.h" line="63" bodyfile="/home/simon/Gyulassy/opacity3/src/constants.h" bodystart="62" bodyend="68"/>
+        <referencedby refid="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" compoundref="constants_8cpp" startline="7" endline="20">_FindNextPowerOfTwo</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/constants.cpp" line="5"/>
+  </compounddef>
+</doxygen>

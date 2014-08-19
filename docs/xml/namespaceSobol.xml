@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="namespaceSobol" kind="namespace">
+    <compoundname>Sobol</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceSobol_19264843c48d702dcb9da807c42d73088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i4_bit_hi1</definition>
+        <argsstring>(int n)</argsstring>
+        <name>i4_bit_hi1</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="75" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="21" bodyend="87"/>
+        <referencedby refid="test_2sobol_8H_148eef243aae5f2979b1f88a3867b34e0" compoundref="sobol_8cpp" startline="245" endline="13902">i4_sobol</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_122659c9df56bfdc7fa70da3216ed7d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i4_bit_lo0</definition>
+        <argsstring>(int n)</argsstring>
+        <name>i4_bit_lo0</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="143" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="90" bodyend="164"/>
+        <referencedby refid="test_2sobol_8H_148eef243aae5f2979b1f88a3867b34e0" compoundref="sobol_8cpp" startline="245" endline="13902">i4_sobol</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_10080494dcd3b0b5cc2d9716ccf7011ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i4_max</definition>
+        <argsstring>(int i1, int i2)</argsstring>
+        <name>i4_max</name>
+        <param>
+          <type>int</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="193" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="167" bodyend="203"/>
+        <referencedby refid="test_2sobol_8H_1102057147e64a1a2cc4a9d1d535d820e" compoundref="sobol_8cpp" startline="13905" endline="14000">i4_uniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_11b11f98f3d3a04e144df5f1a78f8085d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i4_min</definition>
+        <argsstring>(int i1, int i2)</argsstring>
+        <name>i4_min</name>
+        <param>
+          <type>int</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="232" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="206" bodyend="242"/>
+        <referencedby refid="test_2sobol_8H_1102057147e64a1a2cc4a9d1d535d820e" compoundref="sobol_8cpp" startline="13905" endline="14000">i4_uniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1b1e7bc3da10b02bd10b2ea4a7f1b3125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sobol::i4_sobol</definition>
+        <argsstring>(int dim_num, int *seed, float quasi[])</argsstring>
+        <name>i4_sobol</name>
+        <param>
+          <type>int</type>
+          <declname>dim_num</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>quasi</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="326" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="245" bodyend="13902"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1e0cc8cf911c36d5d9c5f437af4e91927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i4_uniform</definition>
+        <argsstring>(int a, int b, int *seed)</argsstring>
+        <name>i4_uniform</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="13963" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="13905" bodyend="14000"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_15c11d2ad4db4d8e710cb9b98d6e72b68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Sobol::i4_xor</definition>
+        <argsstring>(unsigned int i, unsigned int j)</argsstring>
+        <name>i4_xor</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="14029" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="14003" bodyend="14056"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_19f0e3b32d9811d43c67204f3813db9b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i8_bit_hi1</definition>
+        <argsstring>(long long int n)</argsstring>
+        <name>i8_bit_hi1</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="14113" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="14059" bodyend="14125"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_19f619ae932155d020d4b69c3562884f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::i8_bit_lo0</definition>
+        <argsstring>(long long int n)</argsstring>
+        <name>i8_bit_lo0</name>
+        <param>
+          <type>long long int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="14181" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="14128" bodyend="14202"/>
+        <referencedby refid="test_2sobol_8H_1687d6bd2ce71be51a560e949d4ec371a" compoundref="sobol_8cpp" startline="14205" endline="27871">i8_sobol</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_11df68ce8fabb1764e491885b5e1c366b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sobol::i8_sobol</definition>
+        <argsstring>(int dim_num, long long int *seed, double quasi[])</argsstring>
+        <name>i8_sobol</name>
+        <param>
+          <type>int</type>
+          <declname>dim_num</declname>
+        </param>
+        <param>
+          <type>long long int *</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>quasi</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="14286" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="14205" bodyend="27871"/>
+        <referencedby refid="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f" compoundref="RandSobol_8cpp" startline="20" endline="34">SwRandoms::RandSobol::GetUniforms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1c71aa59df2cc3a7f4cc4508d3ee6397a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long int</type>
+        <definition>long long int Sobol::i8_max</definition>
+        <argsstring>(long long int i1, long long int i2)</argsstring>
+        <name>i8_max</name>
+        <param>
+          <type>long long int</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="27900" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="27874" bodyend="27910"/>
+        <referencedby refid="test_2sobol_8H_1038950bacc0ae51128de8764951eb95a" compoundref="sobol_8cpp" startline="27952" endline="28047">i8_uniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1be6c43b630ae37e4f3d18fde2495dfda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long int</type>
+        <definition>long long int Sobol::i8_min</definition>
+        <argsstring>(long long int i1, long long int i2)</argsstring>
+        <name>i8_min</name>
+        <param>
+          <type>long long int</type>
+          <declname>i1</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>i2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="27939" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="27913" bodyend="27949"/>
+        <referencedby refid="test_2sobol_8H_1038950bacc0ae51128de8764951eb95a" compoundref="sobol_8cpp" startline="27952" endline="28047">i8_uniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1e826404c44f0bc42d848e95c79666ff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long long int</type>
+        <definition>long long int Sobol::i8_uniform</definition>
+        <argsstring>(long long int a, long long int b, int *seed)</argsstring>
+        <name>i8_uniform</name>
+        <param>
+          <type>long long int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28010" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="27952" bodyend="28047"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_161091b24c854aa21d883fa318c21160c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int Sobol::i8_xor</definition>
+        <argsstring>(unsigned long long int i, unsigned long long int j)</argsstring>
+        <name>i8_xor</name>
+        <param>
+          <type>unsigned long long int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned long long int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28077" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28050" bodyend="28104"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_11697cdd7d9de22a1266425ebf5cf1ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Sobol::r4_abs</definition>
+        <argsstring>(float x)</argsstring>
+        <name>r4_abs</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28133" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28107" bodyend="28145"/>
+        <referencedby refid="test_2sobol_8H_1da0ad8c792693b55cc52dfc079b131b3" compoundref="sobol_8cpp" startline="28148" endline="28200">r4_nint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_12b4963a910ca5cc1c140df2c51d689b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::r4_nint</definition>
+        <argsstring>(float x)</argsstring>
+        <name>r4_nint</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28187" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28148" bodyend="28200"/>
+        <referencedby refid="test_2sobol_8H_1102057147e64a1a2cc4a9d1d535d820e" compoundref="sobol_8cpp" startline="13905" endline="14000">i4_uniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_19a72897260280481cb6f55bea3875845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Sobol::r4_uniform_01</definition>
+        <argsstring>(int *seed)</argsstring>
+        <name>r4_uniform_01</name>
+        <param>
+          <type>int *</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28274" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28203" bodyend="28301"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1f258a02f26da6f7c0c63c0fd9385ee9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sobol::r8_abs</definition>
+        <argsstring>(double x)</argsstring>
+        <name>r8_abs</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28330" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28304" bodyend="28342"/>
+        <referencedby refid="test_2sobol_8H_17e0d15a4d0accb8c91928f44aa302394" compoundref="sobol_8cpp" startline="28345" endline="28397">r8_nint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_183688fca088fa994ae33d851458f3473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sobol::r8_nint</definition>
+        <argsstring>(double x)</argsstring>
+        <name>r8_nint</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28384" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28345" bodyend="28397"/>
+        <referencedby refid="test_2sobol_8H_1038950bacc0ae51128de8764951eb95a" compoundref="sobol_8cpp" startline="27952" endline="28047">i8_uniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1c471c7517d377c20a1bab58faa94f819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sobol::r8_uniform_01</definition>
+        <argsstring>(int *seed)</argsstring>
+        <name>r8_uniform_01</name>
+        <param>
+          <type>int *</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28471" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28400" bodyend="28498"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceSobol_1cdcb4cbc7988fd26d62d4c5cadb9de5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sobol::timestamp</definition>
+        <argsstring>(void)</argsstring>
+        <name>timestamp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="28529" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" bodystart="28501" bodyend="28546"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/sobol.cpp" line="17"/>
+  </compounddef>
+</doxygen>

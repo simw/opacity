@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperpdist_8cpp" kind="file">
+    <compoundname>qperpdist.cpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="qperpdist_8h" local="yes">qperpdist.h</includes>
+    <includes refid="Function_8h" local="yes">Function.h</includes>
+    <includes refid="constants_8h" local="yes">../constants.h</includes>
+    <incdepgraph>
+      <node id="111">
+        <label>valarray</label>
+      </node>
+      <node id="106">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.cpp</label>
+        <link refid="qperpdist.cpp"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>qperpdist.h</label>
+        <link refid="qperpdist_8h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>cmath</label>
+      </node>
+      <node id="112">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="114">
+        <label>qperparraynew.h</label>
+        <link refid="qperparraynew_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>vector</label>
+      </node>
+      <node id="108">
+        <label>iostream</label>
+      </node>
+      <node id="113">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="117">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperpdist_8h" kindref="compound">qperpdist.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Function_8h" kindref="compound">Function.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwUtils;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" refkind="member"><highlight class="normal"><ref refid="classQperpGenerator_100f91d421cea93fd0251ad4112a58662" kindref="member" tooltip="Constructor: feed in the number of dimensions, and whether the medium is correlated...">QperpGenerator::QperpGenerator</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>correlated_<sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>:<sp/>_dim(<sp/>n<sp/>),<sp/>qps(<sp/>n,<sp/>correlated_<sp/>),<sp/>_weights(<sp/>n<sp/>),<sp/>_isZeroed(<sp/>n+1<sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="classYukawaFunction" kindref="compound">YukawaFunction</ref><sp/>yuk(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><ref refid="classUniformFunction" kindref="compound">UniformFunction</ref><sp/>uni(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" kindref="member" tooltip="The distribution function from which to choose the qs.">qDistFn</ref><sp/>=<sp/>yuk;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" kindref="member" tooltip="The reference function in the integral - yukawa (ie Gyulassy-Wang).">yukDistFn</ref><sp/>=<sp/>yuk;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" kindref="member" tooltip="The distribution function from which to choose the thetas.">thDistFn</ref><sp/>=<sp/>uni;<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" kindref="member" tooltip="The reference function in the integral - uniform.">uniDistFn</ref><sp/>=<sp/>uni;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" kindref="member" tooltip="Whether the medium is correlated.">_correlated</ref><sp/>=<sp/>correlated_;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>k<sp/>is<sp/>never<sp/>zeroed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>[n]<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classQperpGenerator_1fad2d91783826777f3b9d5c82804c61e" refkind="member"><highlight class="normal"><ref refid="classQperpGenerator_1fad2d91783826777f3b9d5c82804c61e" kindref="member" tooltip="Destructor.">QperpGenerator::~QperpGenerator</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" kindref="member" tooltip="Set the combination of zeroed qs from an integer.">QperpGenerator::SetZeroedQs</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1c34e541812a2f1aec7f1cf6fd540f007" kindref="member" tooltip="The code for which qs are zeroed - int converts to binary gives which qs are zeroed...">_zeroSet</ref><sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classQperpGenerator_1ef35e836797c13f96da1c986adfb3c7b" kindref="member" tooltip="Whether the medium is correlated.">_correlated</ref><sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" kindref="member">_NumberToBoolArray</ref>(<sp/>num,<sp/><ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>,<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" kindref="member" tooltip="The total number of zeroed qs.">_numZeroedQs</ref><sp/>=<sp/>0;<sp/><ref refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" kindref="member" tooltip="Whether we have an even number of zeroed qs (hence a -1 in the event weight).">_evenZeroes</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref>;<sp/>++i)<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>[i])</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/>++<ref refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" kindref="member" tooltip="The total number of zeroed qs.">_numZeroedQs</ref>;<sp/><ref refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" kindref="member" tooltip="Whether we have an even number of zeroed qs (hence a -1 in the event weight).">_evenZeroes</ref><sp/>=<sp/>!<ref refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" kindref="member" tooltip="Whether we have an even number of zeroed qs (hence a -1 in the event weight).">_evenZeroes</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;num;<sp/>++i)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>[i]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=num;<sp/>i&lt;<ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_1baeef4fe35a600a8ad4413dc0c40ee1b" kindref="member" tooltip="The total number of zeroed qs.">_numZeroedQs</ref><sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" kindref="member" tooltip="Whether we have an even number of zeroed qs (hence a -1 in the event weight).">_evenZeroes</ref><sp/>=<sp/>!(num<sp/>%<sp/>2);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" kindref="member" tooltip="Supply random numbers in inForQs, inForThs, generates random qs between qmins and...">QperpGenerator::FindRandomQs</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>inForQs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>qmins,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>qmaxs,<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>inForThs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>thmins,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>thmaxs,<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>mu2s<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>have<sp/>inputs:<sp/>inForQs,<sp/>inForThs<sp/>-<sp/>randomly<sp/>distributed<sp/>numbers<sp/>between<sp/>0,1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>to<sp/>produce<sp/>Qs,<sp/>Ths<sp/>distributed<sp/>between<sp/>qmins,qmaxs<sp/>and<sp/>thmins,thmaxs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/>_qs(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>),<sp/>_ths(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1625dab8d6796160d279fb43d310593e2" kindref="member" tooltip="Set the combination of zeroed qs from an integer.">SetZeroedQs</ref>(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" kindref="member" tooltip="The distribution function from which to choose the qs.">qDistFn</ref>-&gt;SetLimits(<sp/>qmins,<sp/>qmaxs<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" kindref="member" tooltip="The reference function in the integral - yukawa (ie Gyulassy-Wang).">yukDistFn</ref>-&gt;SetLimits(<sp/>qmins,<sp/>qmaxs<sp/>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" kindref="member" tooltip="The distribution function from which to choose the thetas.">thDistFn</ref>-&gt;SetLimits(<sp/>thmins,<sp/>thmaxs<sp/>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" kindref="member" tooltip="The reference function in the integral - uniform.">uniDistFn</ref>-&gt;SetLimits(<sp/>thmins,<sp/>thmaxs<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" kindref="member" tooltip="The distribution function from which to choose the qs.">qDistFn</ref>-&gt;SetParams(<sp/>mu2s<sp/>);<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" kindref="member" tooltip="The reference function in the integral - yukawa (ie Gyulassy-Wang).">yukDistFn</ref>-&gt;SetParams(<sp/>mu2s<sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" kindref="member" tooltip="The distribution function from which to choose the qs.">qDistFn</ref>-&gt;NormedIntegralInverse(<sp/>inForQs,<sp/>_qs<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" kindref="member" tooltip="The distribution function from which to choose the thetas.">thDistFn</ref>-&gt;NormedIntegralInverse(<sp/>inForThs,<sp/>_ths<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_159c5be1eac3a7f43b01a24162eeb5ae0" kindref="member" tooltip="The class dealing with the details of the calculation, once filled with qs, thetas...">qps</ref>.<ref refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" kindref="member" tooltip="Set the input array of q-vectors, ths is relative to the fixed direction of k.">SetQperps</ref>(<sp/>_qs,<sp/>_ths<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/>tmp1(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>),<sp/>tmp2(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>),<sp/>tmp3(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>),<sp/>tmp4(<sp/><ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref><sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_1f35c641a4871fe9270e5d7bcd42875d2" kindref="member" tooltip="The distribution function from which to choose the qs.">qDistFn</ref>-&gt;function(<sp/>_qs,<sp/>tmp1<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_175d08ac9dd8b2d84ced041397ac41b43" kindref="member" tooltip="The reference function in the integral - yukawa (ie Gyulassy-Wang).">yukDistFn</ref>-&gt;function(<sp/>_qs,<sp/>tmp2<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_18a155b4b8c59ea36bf1a54ee1c14a892" kindref="member" tooltip="The distribution function from which to choose the thetas.">thDistFn</ref>-&gt;function(<sp/>_ths,<sp/>tmp3<sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_14e60857ecf52fc3574974de2350a5b01" kindref="member" tooltip="The reference function in the integral - uniform.">uniDistFn</ref>-&gt;function(<sp/>_ths,<sp/>tmp4<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" kindref="member" tooltip="The product of all the weights, ie the event weight.">_totWeight</ref><sp/>=<sp/>1.;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" kindref="member" tooltip="The weight of the event compared to the fixed Gyulassy-Wang distribution.">_weights</ref>[i]<sp/>=<sp/>tmp2[i]/tmp1[i]<sp/>*<sp/>tmp4[i]/tmp3[i];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator_11d3977d3561dc95c11458737ecc2aa52" kindref="member" tooltip="The product of all the weights, ie the event weight.">_totWeight</ref><sp/>*=<sp/><ref refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" kindref="member" tooltip="The weight of the event compared to the fixed Gyulassy-Wang distribution.">_weights</ref>[i];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator_1f40e5cf376bc3e80397e2e15f5c499b7" kindref="member" tooltip="Get the weight of the event, ie the ratio of the distribtutions from which the qs...">QperpGenerator::GetQeventWeight</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="96"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>1.;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classQperpGenerator_101f27723035e78b7436c4899603787a0" kindref="member" tooltip="Number of dimensions of q, theta.">_dim</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="classQperpGenerator_122a673f1ed105b1c664e74d99d8679b1" kindref="member" tooltip="The array of zeroed qs - ie zeroSet in binary form, with 0&amp;lt;-&amp;gt;1 inverted.">_isZeroed</ref>[i]<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tmp<sp/>*=<sp/><ref refid="classQperpGenerator_1b0fda647da2e8ef295056f588a6bcdbe" kindref="member" tooltip="The weight of the event compared to the fixed Gyulassy-Wang distribution.">_weights</ref>[i];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="classQperpGenerator_17f09257e99fb8f7487448763107c7343" kindref="member" tooltip="Whether we have an even number of zeroed qs (hence a -1 in the event weight).">_evenZeroes</ref><sp/>)<sp/>tmp<sp/>=<sp/>-tmp;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpdist.cpp"/>
+  </compounddef>
+</doxygen>

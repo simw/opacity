@@ -1,0 +1,180 @@
+\section{UnitStepFunction Class Reference}
+\label{classUnitStepFunction}\index{UnitStepFunction@{UnitStepFunction}}
+{\tt \#include $<$Function.h$>$}
+
+Inheritance diagram for UnitStepFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classUnitStepFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf UnitStepFunction} (unsigned long Dimensionality)
+\item 
+virtual {\bf $\sim$UnitStepFunction} ()
+\item 
+virtual {\bf Function} $\ast$ {\bf clone} () const 
+\item 
+virtual void {\bf function} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf NormedIntegralInverse} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf SetParams} (MyArray \&params\_\-)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+MyArray {\bf steps}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 85 of file Function.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{UnitStepFunction@{UnitStepFunction}!UnitStepFunction@{UnitStepFunction}}
+\index{UnitStepFunction@{UnitStepFunction}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}UnitStepFunction::UnitStepFunction (unsigned long {\em Dimensionality})}\label{classUnitStepFunction_272c40fc075f370eb8e20f0b50c11a4a}
+
+
+
+
+Definition at line 104 of file Function.cpp.
+
+Referenced by clone().
+
+\begin{Code}\begin{verbatim}105   : Function( Dimensionality ), steps( Dimensionality )
+106 {
+107 
+108 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UnitStepFunction@{UnitStepFunction}!~UnitStepFunction@{$\sim$UnitStepFunction}}
+\index{~UnitStepFunction@{$\sim$UnitStepFunction}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}UnitStepFunction::$\sim$UnitStepFunction ()\hspace{0.3cm}{\tt  [virtual]}}\label{classUnitStepFunction_1643ca85de9bda43d6a85a17dc2879a0}
+
+
+
+
+Definition at line 110 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}111 {
+112 
+113 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{UnitStepFunction@{UnitStepFunction}!clone@{clone}}
+\index{clone@{clone}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Function} $\ast$ UnitStepFunction::clone () const\hspace{0.3cm}{\tt  [virtual]}}\label{classUnitStepFunction_c9575c66d4b1c47901fbb4d96065f93f}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_cae7bf3099d7e05b59814823dab252b2}.
+
+Definition at line 115 of file Function.cpp.
+
+References UnitStepFunction().
+
+\begin{Code}\begin{verbatim}116 {
+117   return new UnitStepFunction(*this);
+118 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UnitStepFunction@{UnitStepFunction}!function@{function}}
+\index{function@{function}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void UnitStepFunction::function (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classUnitStepFunction_2a0ff6cc70176563ceedfd044e6da9de}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_a78440b1498d1b7e113b163dfc88274c}.
+
+Definition at line 120 of file Function.cpp.
+
+References Function::GetDimensionality(), Function::GetXmin(), and steps.
+
+\begin{Code}\begin{verbatim}121 {
+122   for (unsigned long i=0; i<GetDimensionality(); ++i)
+123   {
+124     xs[i] < steps[i]  ? res[i] = 1. / (steps[i]-GetXmin(i))  : res[i] = 0.;
+125   }
+126 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UnitStepFunction@{UnitStepFunction}!NormedIntegralInverse@{NormedIntegralInverse}}
+\index{NormedIntegralInverse@{NormedIntegralInverse}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void UnitStepFunction::NormedIntegralInverse (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classUnitStepFunction_c56d83c52d4e17781fb0a43d55051fcb}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_9e1a0a6468b4df5de365481db11df5d4}.
+
+Definition at line 128 of file Function.cpp.
+
+References Function::GetDimensionality(), Function::GetXmin(), and steps.
+
+\begin{Code}\begin{verbatim}129 {
+130   for (unsigned long i=0; i<GetDimensionality(); ++i)
+131   {
+132     xs[i] = GetXmin(i) + uniforms[i]*steps[i];
+133   }
+134 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UnitStepFunction@{UnitStepFunction}!SetParams@{SetParams}}
+\index{SetParams@{SetParams}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void UnitStepFunction::SetParams (MyArray \& {\em params\_\-})\hspace{0.3cm}{\tt  [virtual]}}\label{classUnitStepFunction_76fde5d7a6e4ff7958a927298ff0379f}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_6944f24e3174d98fe7c61dc0652d3ae4}.
+
+Definition at line 136 of file Function.cpp.
+
+References steps.
+
+\begin{Code}\begin{verbatim}137 {
+138   steps = steps_;
+139 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{UnitStepFunction@{UnitStepFunction}!steps@{steps}}
+\index{steps@{steps}!UnitStepFunction@{UnitStepFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf UnitStepFunction::steps}\hspace{0.3cm}{\tt  [private]}}\label{classUnitStepFunction_d36d3310bf79bd0de69718608b1ae6a0}
+
+
+
+
+Definition at line 98 of file Function.h.
+
+Referenced by function(), NormedIntegralInverse(), and SetParams().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.cpp}\end{CompactItemize}

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classSimpleCalc3" kind="class" prot="public">
+    <compoundname>SimpleCalc3</compoundname>
+    <includes refid="simplecalc1_8h" local="no">simplecalc1.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>numOfRandoms</declname>
+        <defname>numOfRandoms</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSimpleCalc3_18df774903b7e610d93f05e7600c1a6ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SimpleCalc3&lt; numOfRandoms &gt;::SimpleCalc3</definition>
+        <argsstring>()</argsstring>
+        <name>SimpleCalc3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" line="28" bodyfile="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleCalc3_1b9681ce02d9b6cd391a77d3c396c665e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimpleCalc3&lt; numOfRandoms &gt;::SetParameter</definition>
+        <argsstring>(Parameters myParams)</argsstring>
+        <name>SetParameter</name>
+        <param>
+          <type><ref refid="classParameters" kindref="compound">Parameters</ref></type>
+          <declname>myParams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" line="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleCalc3_17f612fa190cc836d859e5e8a408dafd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimpleCalc3&lt; numOfRandoms &gt;::SetCoord</definition>
+        <argsstring>(long dimension, double value)</argsstring>
+        <name>SetCoord</name>
+        <param>
+          <type>long</type>
+          <declname>dimension</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" line="31" bodyfile="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleCalc3_1e87134efa498b50cb86ba2a0827f5e11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimpleCalc3&lt; numOfRandoms &gt;::SetRandoms</definition>
+        <argsstring>(boost::array&lt; double, numOfRandoms &gt; randoms)</argsstring>
+        <name>SetRandoms</name>
+        <param>
+          <type>boost::array&lt; double, numOfRandoms &gt;</type>
+          <declname>randoms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classSimpleCalc3_1ca9193e3aef081ac6558d909adf16bb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SimpleCalc3&lt; numOfRandoms &gt;::GetAnswer</definition>
+        <argsstring>(SwArrays::MyArray &amp;answers)</argsstring>
+        <name>GetAnswer</name>
+        <param>
+          <type><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref> &amp;</type>
+          <declname>answers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" line="33" bodyfile="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Simon Wicks &lt;<ulink url="mailto:simonw@phys.columbia.edu">simonw@phys.columbia.edu</ulink>&gt; Example class to implement the necessary calculation interface to the driver class. Whatever the coordinates supplied in the deterministic dimensions it just returns the number of random numbers supplied.</para></simplesect>
+Implementation of other calculations can be based off this interface. </para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/simplecalc1.h" bodystart="23" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classSimpleCalc3_1ca9193e3aef081ac6558d909adf16bb7" prot="public" virt="non-virtual"><scope>SimpleCalc3</scope><name>GetAnswer</name></member>
+      <member refid="classSimpleCalc3_17f612fa190cc836d859e5e8a408dafd1" prot="public" virt="non-virtual"><scope>SimpleCalc3</scope><name>SetCoord</name></member>
+      <member refid="classSimpleCalc3_1b9681ce02d9b6cd391a77d3c396c665e" prot="public" virt="non-virtual"><scope>SimpleCalc3</scope><name>SetParameter</name></member>
+      <member refid="classSimpleCalc3_1e87134efa498b50cb86ba2a0827f5e11" prot="public" virt="non-virtual"><scope>SimpleCalc3</scope><name>SetRandoms</name></member>
+      <member refid="classSimpleCalc3_18df774903b7e610d93f05e7600c1a6ab" prot="public" virt="non-virtual"><scope>SimpleCalc3</scope><name>SimpleCalc3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classStore2D" kind="class" prot="public">
+    <compoundname>Store2D</compoundname>
+    <includes refid="store_8h" local="no">store.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStore2D_157f24bc1891afc382d3f40f037d0aff1" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Store2D::SizeDim1</definition>
+        <argsstring></argsstring>
+        <name>SizeDim1</name>
+        <briefdescription>
+<para>The number of points in dimension 1, excluding the starting point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="37" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classStore2D_1f23f90b6e71e144d8943504932e54c63" compoundref="store_8h" startline="135" endline="138">GetLengthDim1</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+        <referencedby refid="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" compoundref="store_8cpp" startline="215" endline="240">operator&gt;&gt;</referencedby>
+        <referencedby refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" compoundref="store_8cpp" startline="69" endline="75">SetLimitsDim1</referencedby>
+        <referencedby refid="classStore2D_1603637865cf139ab0ba16d4209231db0" compoundref="store_8cpp" startline="49" endline="67">SetSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Store2D::MinDim1</definition>
+        <argsstring></argsstring>
+        <name>MinDim1</name>
+        <briefdescription>
+<para>The Starting point of dimension 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="39" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" compoundref="store_8h" startline="118" endline="121">GetCoordDim1</referencedby>
+        <referencedby refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" compoundref="store_8cpp" startline="69" endline="75">SetLimitsDim1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_1f14d43ff981525c89d154034154403b2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Store2D::MaxDim1</definition>
+        <argsstring></argsstring>
+        <name>MaxDim1</name>
+        <briefdescription>
+<para>The finishing point of dimension 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="41" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" compoundref="store_8cpp" startline="69" endline="75">SetLimitsDim1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_116c7e319b97eedbacddec716691a6141" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Store2D::StepDim1</definition>
+        <argsstring></argsstring>
+        <name>StepDim1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The step size (derived from Size,Min,Max) in dimension 1, MaxDim1 = MinDim1 + StepDim1 * SizeDim1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="45" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" compoundref="store_8h" startline="118" endline="121">GetCoordDim1</referencedby>
+        <referencedby refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" compoundref="store_8cpp" startline="69" endline="75">SetLimitsDim1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_11aa79281f9314909e1554aac58fe6904" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Store2D::SizeDim2</definition>
+        <argsstring></argsstring>
+        <name>SizeDim2</name>
+        <briefdescription>
+<para>The number of points in dimension 2, excluding the starting point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="48" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" compoundref="store_8h" startline="113" endline="116">GetIndex</referencedby>
+        <referencedby refid="classStore2D_1d0d940749b30d9cc8649712b62b8bd0b" compoundref="store_8h" startline="140" endline="143">GetLengthDim2</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+        <referencedby refid="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" compoundref="store_8cpp" startline="215" endline="240">operator&gt;&gt;</referencedby>
+        <referencedby refid="classStore2D_13bfb842289b901099cb616887ae07d7f" compoundref="store_8cpp" startline="77" endline="83">SetLimitsDim2</referencedby>
+        <referencedby refid="classStore2D_1603637865cf139ab0ba16d4209231db0" compoundref="store_8cpp" startline="49" endline="67">SetSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Store2D::MinDim2</definition>
+        <argsstring></argsstring>
+        <name>MinDim2</name>
+        <briefdescription>
+<para>The Starting point of dimension 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="50" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" compoundref="store_8h" startline="123" endline="126">GetCoordDim2</referencedby>
+        <referencedby refid="classStore2D_13bfb842289b901099cb616887ae07d7f" compoundref="store_8cpp" startline="77" endline="83">SetLimitsDim2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_1c64ee1837967c1c4c485f21d7f7b5f3f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Store2D::MaxDim2</definition>
+        <argsstring></argsstring>
+        <name>MaxDim2</name>
+        <briefdescription>
+<para>The finishing point of dimension 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="52" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classStore2D_13bfb842289b901099cb616887ae07d7f" compoundref="store_8cpp" startline="77" endline="83">SetLimitsDim2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_10f00ac5b6b904b877aa15791e561adef" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Store2D::StepDim2</definition>
+        <argsstring></argsstring>
+        <name>StepDim2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The step size (derived from Size,Min,Max) in dimension 2, MaxDim2 = MinDim2 + StepDim2 * SizeDim2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="56" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" compoundref="store_8h" startline="123" endline="126">GetCoordDim2</referencedby>
+        <referencedby refid="classStore2D_13bfb842289b901099cb616887ae07d7f" compoundref="store_8cpp" startline="77" endline="83">SetLimitsDim2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Store2D::SizePerPoint</definition>
+        <argsstring></argsstring>
+        <name>SizePerPoint</name>
+        <briefdescription>
+<para>The size of the array of information for each point. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="59" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" compoundref="store_8cpp" startline="85" endline="89">AddPoint</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+        <referencedby refid="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" compoundref="store_8cpp" startline="215" endline="240">operator&gt;&gt;</referencedby>
+        <referencedby refid="classStore2D_1603637865cf139ab0ba16d4209231db0" compoundref="store_8cpp" startline="49" endline="67">SetSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" prot="private" static="no" mutable="no">
+        <type>boost::multi_array&lt; <ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref> &gt;, 2 &gt;</type>
+        <definition>boost::multi_array&lt;Wrapper&lt;StatisticsMC&gt;, 2 &gt; Store2D::stats</definition>
+        <argsstring></argsstring>
+        <name>stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The array of pointers (wrappers) to Statistics gatherers The first dimension is the 2D store combined into 1 dimension The second dimension corresponds to a size of SizePerPoint </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="64" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" compoundref="store_8cpp" startline="85" endline="89">AddPoint</referencedby>
+        <referencedby refid="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" compoundref="store_8cpp" startline="91" endline="99">GetNumIterations</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+        <referencedby refid="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" compoundref="store_8cpp" startline="215" endline="240">operator&gt;&gt;</referencedby>
+        <referencedby refid="classStore2D_1603637865cf139ab0ba16d4209231db0" compoundref="store_8cpp" startline="49" endline="67">SetSize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classStore2D_19e796d51abbd87d71beadcf2eb5ec49c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const Store2D &amp;store)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStore2D" kindref="compound">Store2D</ref> &amp;</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+<para>friend to &lt;&lt; so that we can overload it to output a <ref refid="classStore2D" kindref="compound">Store2D</ref> object </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="182" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="friend" id="classStore2D_1bf866377a8793ea9bde62133d1c1f153" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, Store2D &amp;store)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classStore2D" kindref="compound">Store2D</ref> &amp;</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="33" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="215" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long Store2D::GetIndex</definition>
+        <argsstring>(long IndexDim1, long IndexDim2) const </argsstring>
+        <name>GetIndex</name>
+        <param>
+          <type>long</type>
+          <declname>IndexDim1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>IndexDim2</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to turn (IndexDim1,IndexDim2) into a 1D index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="67" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="113" bodyend="116"/>
+        <references refid="classStore2D_11aa79281f9314909e1554aac58fe6904" compoundref="store_8h" startline="48">SizeDim2</references>
+        <referencedby refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" compoundref="store_8cpp" startline="85" endline="89">AddPoint</referencedby>
+        <referencedby refid="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" compoundref="store_8cpp" startline="91" endline="99">GetNumIterations</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+        <referencedby refid="store_8cpp_1bf866377a8793ea9bde62133d1c1f153" compoundref="store_8cpp" startline="215" endline="240">operator&gt;&gt;</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Store2D::Store2D</definition>
+        <argsstring>()</argsstring>
+        <name>Store2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="70" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_118d5d02a147c7a93d3df5bbe14a399ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Store2D::Store2D</definition>
+        <argsstring>(long SizeDim1_, long SizeDim2_, long SizePerPoint_)</argsstring>
+        <name>Store2D</name>
+        <param>
+          <type>long</type>
+          <declname>SizeDim1_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>SizeDim2_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>SizePerPoint_</declname>
+        </param>
+        <briefdescription>
+<para>Constructor, supplying the dimensions of the store grid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="72" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="18" bodyend="21"/>
+        <references refid="classStore2D_1603637865cf139ab0ba16d4209231db0" compoundref="store_8cpp" startline="49" endline="67">SetSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Store2D::SetParameters</definition>
+        <argsstring>(Parameters &amp;inParams)</argsstring>
+        <name>SetParameters</name>
+        <param>
+          <type><ref refid="classParameters" kindref="compound">Parameters</ref> &amp;</type>
+          <declname>inParams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="74" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="23" bodyend="47"/>
+        <references refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37">Parameters::GetParametersDouble</references>
+        <references refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" compoundref="store_8cpp" startline="69" endline="75">SetLimitsDim1</references>
+        <references refid="classStore2D_13bfb842289b901099cb616887ae07d7f" compoundref="store_8cpp" startline="77" endline="83">SetLimitsDim2</references>
+        <references refid="classStore2D_1603637865cf139ab0ba16d4209231db0" compoundref="store_8cpp" startline="49" endline="67">SetSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1439adcb475b85255da8b9444a4d15fe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Store2D::ReadFromFile</definition>
+        <argsstring>(std::string FileName_)</argsstring>
+        <name>ReadFromFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>FileName_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get all the store data from a file, and resume from that point <simplesect kind="return"><para>Integer error code: either 0, or negative number indicating error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="80" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="101" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_144ca03413f3add88b089d5ca5e2db146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Store2D::WriteToFile</definition>
+        <argsstring>(std::string FileName_, bool append)</argsstring>
+        <name>WriteToFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>FileName_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>append</declname>
+        </param>
+        <briefdescription>
+<para>Write everything to file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="82" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="156" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1603637865cf139ab0ba16d4209231db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Store2D::SetSize</definition>
+        <argsstring>(long Size1_, long Size2_, long SizePerPoint_)</argsstring>
+        <name>SetSize</name>
+        <param>
+          <type>long</type>
+          <declname>Size1_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>Size2_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>SizePerPoint_</declname>
+        </param>
+        <briefdescription>
+<para>Resize the store. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="84" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="49" bodyend="67"/>
+        <references refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" compoundref="store_8h" startline="37">SizeDim1</references>
+        <references refid="classStore2D_11aa79281f9314909e1554aac58fe6904" compoundref="store_8h" startline="48">SizeDim2</references>
+        <references refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" compoundref="store_8h" startline="59">SizePerPoint</references>
+        <references refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" compoundref="store_8h" startline="64">stats</references>
+        <referencedby refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" compoundref="store_8cpp" startline="23" endline="47">SetParameters</referencedby>
+        <referencedby refid="classStore2D_118d5d02a147c7a93d3df5bbe14a399ab" compoundref="store_8cpp" startline="18" endline="21">Store2D</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1f5e242a3890d45693b57c29604b95c6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Store2D::SetLimitsDim1</definition>
+        <argsstring>(double MinDim1_, double MaxDim1_)</argsstring>
+        <name>SetLimitsDim1</name>
+        <param>
+          <type>double</type>
+          <declname>MinDim1_</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>MaxDim1_</declname>
+        </param>
+        <briefdescription>
+<para>Set the limits in dimension 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="87" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="69" bodyend="75"/>
+        <references refid="classStore2D_1f14d43ff981525c89d154034154403b2" compoundref="store_8h" startline="41">MaxDim1</references>
+        <references refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" compoundref="store_8h" startline="39">MinDim1</references>
+        <references refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" compoundref="store_8h" startline="37">SizeDim1</references>
+        <references refid="classStore2D_116c7e319b97eedbacddec716691a6141" compoundref="store_8h" startline="45">StepDim1</references>
+        <referencedby refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" compoundref="store_8cpp" startline="23" endline="47">SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_13bfb842289b901099cb616887ae07d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Store2D::SetLimitsDim2</definition>
+        <argsstring>(double MinDim2_, double MaxDim2_)</argsstring>
+        <name>SetLimitsDim2</name>
+        <param>
+          <type>double</type>
+          <declname>MinDim2_</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>MaxDim2_</declname>
+        </param>
+        <briefdescription>
+<para>Set the limits in dimension 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="89" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="77" bodyend="83"/>
+        <references refid="classStore2D_1c64ee1837967c1c4c485f21d7f7b5f3f" compoundref="store_8h" startline="52">MaxDim2</references>
+        <references refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" compoundref="store_8h" startline="50">MinDim2</references>
+        <references refid="classStore2D_11aa79281f9314909e1554aac58fe6904" compoundref="store_8h" startline="48">SizeDim2</references>
+        <references refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" compoundref="store_8h" startline="56">StepDim2</references>
+        <referencedby refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" compoundref="store_8cpp" startline="23" endline="47">SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Store2D::AddPoint</definition>
+        <argsstring>(long IndexDim1_, long IndexDim2_, MyArray &amp;Values_)</argsstring>
+        <name>AddPoint</name>
+        <param>
+          <type>long</type>
+          <declname>IndexDim1_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>IndexDim2_</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>Values_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new Monte Carlo point to our results - at (IndexDim1_,IndexDim2_) with an array of values given by Values_ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="95" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="85" bodyend="89"/>
+        <references refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" compoundref="store_8h" startline="113" endline="116">GetIndex</references>
+        <references refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" compoundref="store_8h" startline="59">SizePerPoint</references>
+        <references refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" compoundref="store_8h" startline="64">stats</references>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Store2D::GetCoordDim1</definition>
+        <argsstring>(long IndexDim1_) const </argsstring>
+        <name>GetCoordDim1</name>
+        <param>
+          <type>long</type>
+          <declname>IndexDim1_</declname>
+        </param>
+        <briefdescription>
+<para>Get the coordinate in dimension 1 corresponding to the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="98" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="118" bodyend="121"/>
+        <references refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" compoundref="store_8h" startline="39">MinDim1</references>
+        <references refid="classStore2D_116c7e319b97eedbacddec716691a6141" compoundref="store_8h" startline="45">StepDim1</references>
+        <referencedby refid="classStore2D_13592300d59dc260078f9812de27766c1" compoundref="store_8h" startline="128" endline="133">GetCoords</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Store2D::GetCoordDim2</definition>
+        <argsstring>(long IndexDim2_) const </argsstring>
+        <name>GetCoordDim2</name>
+        <param>
+          <type>long</type>
+          <declname>IndexDim2_</declname>
+        </param>
+        <briefdescription>
+<para>Get the coordinate in dimension 2 corresponding to the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="100" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="123" bodyend="126"/>
+        <references refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" compoundref="store_8h" startline="50">MinDim2</references>
+        <references refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" compoundref="store_8h" startline="56">StepDim2</references>
+        <referencedby refid="classStore2D_13592300d59dc260078f9812de27766c1" compoundref="store_8h" startline="128" endline="133">GetCoords</referencedby>
+        <referencedby refid="store_8cpp_19e796d51abbd87d71beadcf2eb5ec49c" compoundref="store_8cpp" startline="182" endline="213">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_13592300d59dc260078f9812de27766c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Store2D::GetCoords</definition>
+        <argsstring>(long IndexDim1_, long IndexDim2_, double &amp;ValDim1, double &amp;ValDim2) const </argsstring>
+        <name>GetCoords</name>
+        <param>
+          <type>long</type>
+          <declname>IndexDim1_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>IndexDim2_</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ValDim1</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ValDim2</declname>
+        </param>
+        <briefdescription>
+<para>Get the 2D coordinates corresponding to the given indices. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="103" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="128" bodyend="133"/>
+        <references refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" compoundref="store_8h" startline="118" endline="121">GetCoordDim1</references>
+        <references refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" compoundref="store_8h" startline="123" endline="126">GetCoordDim2</references>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1f23f90b6e71e144d8943504932e54c63" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long Store2D::GetLengthDim1</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLengthDim1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="105" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="135" bodyend="138"/>
+        <references refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" compoundref="store_8h" startline="37">SizeDim1</references>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_1d0d940749b30d9cc8649712b62b8bd0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long Store2D::GetLengthDim2</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLengthDim2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="107" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="140" bodyend="143"/>
+        <references refid="classStore2D_11aa79281f9314909e1554aac58fe6904" compoundref="store_8h" startline="48">SizeDim2</references>
+      </memberdef>
+      <memberdef kind="function" id="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long Store2D::GetNumIterations</definition>
+        <argsstring>(long opac, long kth, long xth)</argsstring>
+        <name>GetNumIterations</name>
+        <param>
+          <type>long</type>
+          <declname>opac</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>kth</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>xth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="109" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.cpp" bodystart="91" bodyend="99"/>
+        <references refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" compoundref="store_8h" startline="113" endline="116">GetIndex</references>
+        <references refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" compoundref="store_8h" startline="64">stats</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A two dimensional store of results, with an arbitrary length array of StatisticsMC derived objects for each point. Mechanisms for storage to file and resumption from file are provided. File format: section begins with &apos;# Begin <ref refid="classStore2D" kindref="compound">Store2D</ref> data&apos; and ends with &apos;# End <ref refid="classStore2D" kindref="compound">Store2D</ref> data&apos;. In between this are all the data point, the number corresponding to the <ref refid="classParameters" kindref="compound">Parameters</ref> section in the same file (which has already been read). Blank lines and lines beginning with # are ignored.</para><para>Dimension1 = k; Dimension2 = x;</para><para>TODO: generalise this class for an arbitrary dimension result. </para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/store.h" line="30" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/store.h" bodystart="29" bodyend="110"/>
+    <listofallmembers>
+      <member refid="classStore2D_1ca7474c53986ddae6f781ed9d41301b0" prot="public" virt="non-virtual"><scope>Store2D</scope><name>AddPoint</name></member>
+      <member refid="classStore2D_16b39f08dc385f5a50c18e9d6cbe87050" prot="public" virt="non-virtual"><scope>Store2D</scope><name>GetCoordDim1</name></member>
+      <member refid="classStore2D_11b37ab846af3f6d9568a8e397e172ad1" prot="public" virt="non-virtual"><scope>Store2D</scope><name>GetCoordDim2</name></member>
+      <member refid="classStore2D_13592300d59dc260078f9812de27766c1" prot="public" virt="non-virtual"><scope>Store2D</scope><name>GetCoords</name></member>
+      <member refid="classStore2D_1b44cd7020da6e04cf3b9d8e53fb57b3c" prot="private" virt="non-virtual"><scope>Store2D</scope><name>GetIndex</name></member>
+      <member refid="classStore2D_1f23f90b6e71e144d8943504932e54c63" prot="public" virt="non-virtual"><scope>Store2D</scope><name>GetLengthDim1</name></member>
+      <member refid="classStore2D_1d0d940749b30d9cc8649712b62b8bd0b" prot="public" virt="non-virtual"><scope>Store2D</scope><name>GetLengthDim2</name></member>
+      <member refid="classStore2D_18c7a34cb1e29698174d9d30ca2272ca5" prot="public" virt="non-virtual"><scope>Store2D</scope><name>GetNumIterations</name></member>
+      <member refid="classStore2D_1f14d43ff981525c89d154034154403b2" prot="private" virt="non-virtual"><scope>Store2D</scope><name>MaxDim1</name></member>
+      <member refid="classStore2D_1c64ee1837967c1c4c485f21d7f7b5f3f" prot="private" virt="non-virtual"><scope>Store2D</scope><name>MaxDim2</name></member>
+      <member refid="classStore2D_1933fc3e6ff97599e8f851c8441c52ef5" prot="private" virt="non-virtual"><scope>Store2D</scope><name>MinDim1</name></member>
+      <member refid="classStore2D_15fc0b0e1d2a7041be8d4d43e95166ee7" prot="private" virt="non-virtual"><scope>Store2D</scope><name>MinDim2</name></member>
+      <member refid="classStore2D_19e796d51abbd87d71beadcf2eb5ec49c" prot="private" virt="non-virtual"><scope>Store2D</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classStore2D_1bf866377a8793ea9bde62133d1c1f153" prot="private" virt="non-virtual"><scope>Store2D</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classStore2D_1439adcb475b85255da8b9444a4d15fe0" prot="public" virt="non-virtual"><scope>Store2D</scope><name>ReadFromFile</name></member>
+      <member refid="classStore2D_1f5e242a3890d45693b57c29604b95c6c" prot="public" virt="non-virtual"><scope>Store2D</scope><name>SetLimitsDim1</name></member>
+      <member refid="classStore2D_13bfb842289b901099cb616887ae07d7f" prot="public" virt="non-virtual"><scope>Store2D</scope><name>SetLimitsDim2</name></member>
+      <member refid="classStore2D_1d8d94d26d8090ef21221d3b45363b41a" prot="public" virt="non-virtual"><scope>Store2D</scope><name>SetParameters</name></member>
+      <member refid="classStore2D_1603637865cf139ab0ba16d4209231db0" prot="public" virt="non-virtual"><scope>Store2D</scope><name>SetSize</name></member>
+      <member refid="classStore2D_157f24bc1891afc382d3f40f037d0aff1" prot="private" virt="non-virtual"><scope>Store2D</scope><name>SizeDim1</name></member>
+      <member refid="classStore2D_11aa79281f9314909e1554aac58fe6904" prot="private" virt="non-virtual"><scope>Store2D</scope><name>SizeDim2</name></member>
+      <member refid="classStore2D_125ad66b929c4e1f0dd45e0527d5396d0" prot="private" virt="non-virtual"><scope>Store2D</scope><name>SizePerPoint</name></member>
+      <member refid="classStore2D_14f620513ddd183a5c7bf4cac44c9011f" prot="private" virt="non-virtual"><scope>Store2D</scope><name>stats</name></member>
+      <member refid="classStore2D_116c7e319b97eedbacddec716691a6141" prot="private" virt="non-virtual"><scope>Store2D</scope><name>StepDim1</name></member>
+      <member refid="classStore2D_10f00ac5b6b904b877aa15791e561adef" prot="private" virt="non-virtual"><scope>Store2D</scope><name>StepDim2</name></member>
+      <member refid="classStore2D_18f303cd8a1b95729ebb4bc98b7e39432" prot="public" virt="non-virtual"><scope>Store2D</scope><name>Store2D</name></member>
+      <member refid="classStore2D_118d5d02a147c7a93d3df5bbe14a399ab" prot="public" virt="non-virtual"><scope>Store2D</scope><name>Store2D</name></member>
+      <member refid="classStore2D_144ca03413f3add88b089d5ca5e2db146" prot="public" virt="non-virtual"><scope>Store2D</scope><name>WriteToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

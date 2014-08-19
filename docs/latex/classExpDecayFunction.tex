@@ -1,0 +1,184 @@
+\section{ExpDecayFunction Class Reference}
+\label{classExpDecayFunction}\index{ExpDecayFunction@{ExpDecayFunction}}
+{\tt \#include $<$Function.h$>$}
+
+Inheritance diagram for ExpDecayFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classExpDecayFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf ExpDecayFunction} (unsigned long Dimensionality)
+\item 
+virtual {\bf $\sim$ExpDecayFunction} ()
+\item 
+virtual {\bf Function} $\ast$ {\bf clone} () const 
+\item 
+virtual void {\bf function} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf NormedIntegralInverse} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf SetParams} (MyArray \&params\_\-)
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+MyArray {\bf lambdas}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 101 of file Function.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ExpDecayFunction@{ExpDecayFunction}!ExpDecayFunction@{ExpDecayFunction}}
+\index{ExpDecayFunction@{ExpDecayFunction}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ExpDecayFunction::ExpDecayFunction (unsigned long {\em Dimensionality})}\label{classExpDecayFunction_4905fdca1777ecc6795372b6a4c88ef5}
+
+
+
+
+Definition at line 144 of file Function.cpp.
+
+Referenced by clone().
+
+\begin{Code}\begin{verbatim}145   : Function( Dimensionality ), lambdas( Dimensionality )
+146 {
+147 
+148 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ExpDecayFunction@{ExpDecayFunction}!~ExpDecayFunction@{$\sim$ExpDecayFunction}}
+\index{~ExpDecayFunction@{$\sim$ExpDecayFunction}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ExpDecayFunction::$\sim$ExpDecayFunction ()\hspace{0.3cm}{\tt  [virtual]}}\label{classExpDecayFunction_8772fb3b5b7aeb29c294b78b32ffb88b}
+
+
+
+
+Definition at line 150 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}151 {
+152 
+153 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{ExpDecayFunction@{ExpDecayFunction}!clone@{clone}}
+\index{clone@{clone}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Function} $\ast$ ExpDecayFunction::clone () const\hspace{0.3cm}{\tt  [virtual]}}\label{classExpDecayFunction_8186f67946fc433087ac05d397d3a3ff}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_cae7bf3099d7e05b59814823dab252b2}.
+
+Definition at line 155 of file Function.cpp.
+
+References ExpDecayFunction().
+
+\begin{Code}\begin{verbatim}156 {
+157   return new ExpDecayFunction( *this );
+158 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ExpDecayFunction@{ExpDecayFunction}!function@{function}}
+\index{function@{function}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ExpDecayFunction::function (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classExpDecayFunction_0a6016e8146f03897300c728cd408347}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_a78440b1498d1b7e113b163dfc88274c}.
+
+Definition at line 160 of file Function.cpp.
+
+References Function::GetDimensionality(), Function::GetXmin(), and lambdas.
+
+\begin{Code}\begin{verbatim}161 {
+162   res[0] = 1. / lambdas[0] * exp( -((xs[0]-GetXmin(0)) / lambdas[0]) );
+163   for (unsigned long i=1; i<GetDimensionality(); ++i)
+164   {
+165     res[i] = 1. / lambdas[i] * exp( -(xs[i] - xs[i-1]) / lambdas[i] );
+166   }
+167 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ExpDecayFunction@{ExpDecayFunction}!NormedIntegralInverse@{NormedIntegralInverse}}
+\index{NormedIntegralInverse@{NormedIntegralInverse}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ExpDecayFunction::NormedIntegralInverse (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classExpDecayFunction_c9e70e87e699a4342869ab6c90aa5264}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_9e1a0a6468b4df5de365481db11df5d4}.
+
+Definition at line 169 of file Function.cpp.
+
+References Function::GetDimensionality(), Function::GetXmax(), Function::GetXmin(), and lambdas.
+
+\begin{Code}\begin{verbatim}170 {
+171   for (unsigned long i=0; i<GetDimensionality(); ++i)
+172   {
+173     xs[i] = (1.-uniforms[i])*exp(-GetXmin(i)/lambdas[i]) + uniforms[i]*exp(-GetXmax(i)/lambdas[i]);
+174     xs[i] = -lambdas[i] * log( xs[i] );
+175   }
+176 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ExpDecayFunction@{ExpDecayFunction}!SetParams@{SetParams}}
+\index{SetParams@{SetParams}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ExpDecayFunction::SetParams (MyArray \& {\em params\_\-})\hspace{0.3cm}{\tt  [virtual]}}\label{classExpDecayFunction_d665a0ac0d156a9f058b1881d40f2f84}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_6944f24e3174d98fe7c61dc0652d3ae4}.
+
+Definition at line 178 of file Function.cpp.
+
+References lambdas.
+
+Referenced by ZposGenerator::ZposGenerator().
+
+\begin{Code}\begin{verbatim}179 {
+180   lambdas = params_;
+181 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{ExpDecayFunction@{ExpDecayFunction}!lambdas@{lambdas}}
+\index{lambdas@{lambdas}!ExpDecayFunction@{ExpDecayFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf ExpDecayFunction::lambdas}\hspace{0.3cm}{\tt  [private]}}\label{classExpDecayFunction_9a6764a71c0ca67bd8f71f3af6017c40}
+
+
+
+
+Definition at line 114 of file Function.h.
+
+Referenced by function(), NormedIntegralInverse(), and SetParams().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.cpp}\end{CompactItemize}

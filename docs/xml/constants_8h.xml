@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="constants_8h" kind="file">
+    <compoundname>constants.h</compoundname>
+    <includes local="no">vector</includes>
+    <includedby refid="constants_8cpp" local="yes">Gyulassy/opacity3/src/constants.cpp</includedby>
+    <includedby refid="qperparraynew_8cpp" local="yes">Gyulassy/opacity3/src/glv1/qperparraynew.cpp</includedby>
+    <includedby refid="qperpdist_8cpp" local="yes">Gyulassy/opacity3/src/glv1/qperpdist.cpp</includedby>
+    <includedby refid="radcalcer_8cpp" local="yes">Gyulassy/opacity3/src/glv1/radcalcer.cpp</includedby>
+    <includedby refid="zcolldist_8cpp" local="yes">Gyulassy/opacity3/src/glv1/zcolldist.cpp</includedby>
+    <includedby refid="glvradiative3_8h" local="yes">Gyulassy/opacity3/src/glv3/glvradiative3.h</includedby>
+    <includedby refid="qperpcalculator3_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpcalculator3.h</includedby>
+    <includedby refid="qperpgenerator3_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpgenerator3.h</includedby>
+    <includedby refid="convergencetable_8cpp" local="yes">Gyulassy/opacity3/src/store2d/convergencetable.cpp</includedby>
+    <includedby refid="store_8cpp" local="yes">Gyulassy/opacity3/src/store2d/store.cpp</includedby>
+    <incdepgraph>
+      <node id="35">
+        <label>vector</label>
+      </node>
+      <node id="34">
+        <label>Gyulassy/opacity3/src/constants.h</label>
+        <link refid="constants.h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.cpp</label>
+        <link refid="qperpdist_8cpp"/>
+      </node>
+      <node id="38">
+        <label>Gyulassy/opacity3/src/glv1/qperparraynew.cpp</label>
+        <link refid="qperparraynew_8cpp"/>
+      </node>
+      <node id="48">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store_8cpp"/>
+      </node>
+      <node id="40">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="47">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.cpp</label>
+        <link refid="convergencetable_8cpp"/>
+      </node>
+      <node id="42">
+        <label>Gyulassy/opacity3/src/glv3/glvradiative3.h</label>
+        <link refid="glvradiative3_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="37">
+        <label>Gyulassy/opacity3/src/constants.cpp</label>
+        <link refid="constants_8cpp"/>
+      </node>
+      <node id="44">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator3.h</label>
+        <link refid="qperpcalculator3_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.cpp</label>
+        <link refid="zcolldist_8cpp"/>
+      </node>
+      <node id="45">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main__qperptest_8cpp"/>
+      </node>
+      <node id="46">
+        <label>Gyulassy/opacity3/src/glv3/qperpgenerator3.h</label>
+        <link refid="qperpgenerator3_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Gyulassy/opacity3/src/constants.h</label>
+        <link refid="constants.h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceSwUtils">SwUtils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONSTANTS_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CONSTANTS_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SwUtils</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespaceSwUtils_13e747e4d95465902347281e3cc1bcb0d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_13e747e4d95465902347281e3cc1bcb0d" kindref="member">pi</ref><sp/>=<sp/>3.141592653589793238;</highlight></codeline>
+<codeline lineno="10" refid="namespaceSwUtils_1b08cebc8959f71a8ae78b8d56c6d6be6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_1b08cebc8959f71a8ae78b8d56c6d6be6" kindref="member">overpi</ref><sp/>=<sp/>0.3183098861837906715;</highlight></codeline>
+<codeline lineno="11" refid="namespaceSwUtils_1d2fad768d402d77bfb40f4c87adb8966" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_1d2fad768d402d77bfb40f4c87adb8966" kindref="member">hbarc</ref><sp/>=<sp/>0.197;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_factorial<sp/>(n,b)<sp/>=<sp/>n!/(b-1)!<sp/>ie<sp/>n*(n-1)*...*b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" kindref="member">_factorial</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>endval<sp/>=<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;<sp/>endval)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>value<sp/>*<sp/><ref refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" kindref="member">_factorial</ref>(<sp/>value<sp/>-<sp/>1<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>endval;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" kindref="member">_FindNextPowerOfTwo</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_10183044c7c4da9b92fd4a0d94c5632f3" kindref="member">_Combinatoric</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>r<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespaceSwUtils_13974619c250bd02a70c9cfcd88384223" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_13974619c250bd02a70c9cfcd88384223" kindref="member">power</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>pow<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=1;<sp/>i!=pow;<sp/>++i)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>res<sp/>*=<sp/>num;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" kindref="member">_TestBitI</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i<sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit<sp/>=<sp/>((num<sp/>&gt;&gt;<sp/>i)<sp/>&amp;<sp/>1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bit<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" kindref="member">_NumberToBoolArray</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num,<sp/>std::vector&lt;bool&gt;&amp;<sp/>boolarray,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>length<sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=length;<sp/>++i)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>boolarray[(length-1)-i]<sp/>=<sp/><ref refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" kindref="member">_TestBitI</ref>(<sp/>num,<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="namespaceSwUtils_13b26ae74b9091b6bf31b181cb245c7c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_13b26ae74b9091b6bf31b181cb245c7c1" kindref="member">_CountNumZeroes</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>length<sp/>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>tot<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=length;<sp/>++i)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" kindref="member">_TestBitI</ref>(<sp/>num,<sp/>i<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++tot;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tot;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="namespaceSwUtils_1a958298ae1d796946e5784f3339ffba1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceSwUtils_1a958298ae1d796946e5784f3339ffba1" kindref="member">_IsPowerOfTwo</ref><sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value<sp/>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(value<sp/>&amp;<sp/>(~value+1))<sp/>==<sp/>value;<sp/><sp/></highlight><highlight class="comment">//~value+1<sp/>equals<sp/>a<sp/>two&apos;s<sp/>complement<sp/>-value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>SwUtils<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/constants.h"/>
+  </compounddef>
+</doxygen>

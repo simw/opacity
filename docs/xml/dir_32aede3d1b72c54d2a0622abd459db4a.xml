@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_32aede3d1b72c54d2a0622abd459db4a" kind="dir">
+    <compoundname>Gyulassy/opacity3/src/randoms/test/</compoundname>
+    <innerfile refid="sobol_8C">sobol.C</innerfile>
+    <innerfile refid="test_2sobol_8H">sobol.H</innerfile>
+    <innerfile refid="sobol__prb_8C">sobol_prb.C</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/test/"/>
+  </compounddef>
+</doxygen>

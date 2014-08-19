@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classSwRandoms_1_1RandomBase2" kind="class" prot="public">
+    <compoundname>SwRandoms::RandomBase2</compoundname>
+    <derivedcompoundref refid="classSwRandoms_1_1RandDrand48" prot="public" virt="non-virtual">SwRandoms::RandDrand48</derivedcompoundref>
+    <derivedcompoundref refid="classSwRandoms_1_1RandSobol" prot="public" virt="non-virtual">SwRandoms::RandSobol</derivedcompoundref>
+    <includes refid="Random3_8h" local="no">Random3.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SwRandoms::RandomBase2::Dimensionality</definition>
+        <argsstring></argsstring>
+        <name>Dimensionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="23" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" compoundref="Random3_8h" startline="26" endline="29">GetDimensionality</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_1dd5e3fc4699b36e56970047463186e51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SwRandoms::RandomBase2::RandomBase2</definition>
+        <argsstring>(unsigned long Dimensionality_)</argsstring>
+        <name>RandomBase2</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>Dimensionality_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="12" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long SwRandoms::RandomBase2::GetDimensionality</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDimensionality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="14" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" bodystart="26" bodyend="29"/>
+        <references refid="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" compoundref="Random3_8h" startline="23">Dimensionality</references>
+        <referencedby refid="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f" compoundref="RandSobol_8cpp" startline="20" endline="34">SwRandoms::RandSobol::GetUniforms</referencedby>
+        <referencedby refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521" compoundref="RandDrand_8cpp" startline="19" endline="23">SwRandoms::RandDrand48::GetUniforms</referencedby>
+        <referencedby refid="classSwRandoms_1_1RandSobol_168f45c07b374e627a58f84f7e2491167" compoundref="RandSobol_8cpp" startline="36" endline="41">SwRandoms::RandSobol::Skip</referencedby>
+        <referencedby refid="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87" compoundref="RandDrand_8cpp" startline="25" endline="30">SwRandoms::RandDrand48::Skip</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_1633ab071ed2eded4784ea5c6faf4a9af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">RandomBase2</ref> *</type>
+        <definition>virtual RandomBase2* SwRandoms::RandomBase2::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <reimplementedby refid="classSwRandoms_1_1RandSobol_15abf4953d967d0aed2872a5cf2a2cdb7">clone</reimplementedby>
+        <reimplementedby refid="classSwRandoms_1_1RandDrand48_1835ce3d71b66d4610a60caa89fc7411c">clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_1ee4b8f64be04c3cea35ea63cc4f9c6d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SwRandoms::RandomBase2::GetUniforms</definition>
+        <argsstring>(SwArrays::MyArray &amp;variates)=0</argsstring>
+        <name>GetUniforms</name>
+        <reimplementedby refid="classSwRandoms_1_1RandSobol_18944be055bd402cc4d437d2b4357f79f">GetUniforms</reimplementedby>
+        <reimplementedby refid="classSwRandoms_1_1RandDrand48_19d63751f6824911ebbd943c9391db521">GetUniforms</reimplementedby>
+        <param>
+          <type><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref> &amp;</type>
+          <declname>variates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_18a202b85b9c0f380700922331506f459" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SwRandoms::RandomBase2::Skip</definition>
+        <argsstring>(unsigned long numberOfPaths)=0</argsstring>
+        <name>Skip</name>
+        <reimplementedby refid="classSwRandoms_1_1RandSobol_168f45c07b374e627a58f84f7e2491167">Skip</reimplementedby>
+        <reimplementedby refid="classSwRandoms_1_1RandDrand48_1332d6fbf16276b20465d973c2e89eb87">Skip</reimplementedby>
+        <param>
+          <type>unsigned long</type>
+          <declname>numberOfPaths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_1ff006e42b1f514697427cc4578383b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SwRandoms::RandomBase2::SetSeed</definition>
+        <argsstring>(unsigned long Seed)=0</argsstring>
+        <name>SetSeed</name>
+        <reimplementedby refid="classSwRandoms_1_1RandSobol_1cbab6c15df9c297d18fa585cfad1b11d">SetSeed</reimplementedby>
+        <reimplementedby refid="classSwRandoms_1_1RandDrand48_19596b643d1915b3f8543bbdff6960105">SetSeed</reimplementedby>
+        <param>
+          <type>unsigned long</type>
+          <declname>Seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classSwRandoms_1_1RandomBase2_154a0497121db4d91e3ff6e2b4cdf380a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SwRandoms::RandomBase2::Reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>Reset</name>
+        <reimplementedby refid="classSwRandoms_1_1RandSobol_1e3d1bfbb3fa3bc81a9775c8d9875f22f">Reset</reimplementedby>
+        <reimplementedby refid="classSwRandoms_1_1RandDrand48_1d572e124c7bf89a406800ce07618b1bd">Reset</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="67">
+        <label>SwRandoms::RandDrand48</label>
+        <link refid="classSwRandoms_1_1RandDrand48"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>SwRandoms::RandSobol</label>
+        <link refid="classSwRandoms_1_1RandSobol"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>SwRandoms::RandomBase2</label>
+        <link refid="classSwRandoms_1_1RandomBase2"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" line="10" bodyfile="/home/simon/Gyulassy/opacity3/src/randoms/Random3.h" bodystart="9" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classSwRandoms_1_1RandomBase2_1633ab071ed2eded4784ea5c6faf4a9af" prot="public" virt="pure-virtual"><scope>SwRandoms::RandomBase2</scope><name>clone</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1e07e88e367896cf2eaab51b3f479d52d" prot="private" virt="non-virtual"><scope>SwRandoms::RandomBase2</scope><name>Dimensionality</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1f5da6b70e2ff8646ab461b02db54548a" prot="public" virt="non-virtual"><scope>SwRandoms::RandomBase2</scope><name>GetDimensionality</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1ee4b8f64be04c3cea35ea63cc4f9c6d6" prot="public" virt="pure-virtual"><scope>SwRandoms::RandomBase2</scope><name>GetUniforms</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1dd5e3fc4699b36e56970047463186e51" prot="public" virt="non-virtual"><scope>SwRandoms::RandomBase2</scope><name>RandomBase2</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_154a0497121db4d91e3ff6e2b4cdf380a" prot="public" virt="pure-virtual"><scope>SwRandoms::RandomBase2</scope><name>Reset</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_1ff006e42b1f514697427cc4578383b5e" prot="public" virt="pure-virtual"><scope>SwRandoms::RandomBase2</scope><name>SetSeed</name></member>
+      <member refid="classSwRandoms_1_1RandomBase2_18a202b85b9c0f380700922331506f459" prot="public" virt="pure-virtual"><scope>SwRandoms::RandomBase2</scope><name>Skip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

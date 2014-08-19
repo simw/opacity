@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperpgenerator3_8h" kind="file">
+    <compoundname>qperpgenerator3.h</compoundname>
+    <includes local="no">boost/array.hpp</includes>
+    <includes refid="sw__templatemeta_8h" local="yes">../sw_templatemeta.h</includes>
+    <includes refid="constants_8h" local="yes">../constants.h</includes>
+    <includedby refid="main_8cpp" local="yes">Gyulassy/opacity3/src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="257">
+        <label>../sw_templatemeta.h</label>
+        <link refid="sw__templatemeta_8h"/>
+      </node>
+      <node id="259">
+        <label>vector</label>
+      </node>
+      <node id="255">
+        <label>Gyulassy/opacity3/src/glv3/qperpgenerator3.h</label>
+        <link refid="qperpgenerator3.h"/>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>boost/array.hpp</label>
+      </node>
+      <node id="258">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="259" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="261">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="260">
+        <label>Gyulassy/opacity3/src/glv3/qperpgenerator3.h</label>
+        <link refid="qperpgenerator3.h"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classQperpGenerator3" prot="public">QperpGenerator3</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="qperpgenerator3_8h_143016d873124d39034edb8cd164794db" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <initializer> 3.141592653589793238</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="23" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classRadCalcer_1fbd62b63a05b0ee23a4a2fcb26b1ac6c" compoundref="radcalcer_8cpp" startline="106" endline="129">RadCalcer::DistributeRandoms</referencedby>
+        <referencedby refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" compoundref="qperpgenerator3_8h" startline="61" endline="92">QperpGenerator3&lt; n &gt;::GetQsThetas</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Interface:<sp/>qperpgenerator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/>&lt;&gt;,<sp/>(C)<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>QPERPGENERATOR3_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QPERPGENERATOR3_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../sw_templatemeta.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unnamed<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="qperpgenerator3_8h_143016d873124d39034edb8cd164794db" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="qperpgenerator3_8h_143016d873124d39034edb8cd164794db" kindref="member">pi</ref><sp/>=<sp/>3.141592653589793238;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="31" refid="classQperpGenerator3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQperpGenerator3" kindref="compound">QperpGenerator3</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" kindref="member">qmax</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" kindref="member">mu2</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" refkind="member"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>TPower&lt;2,n&gt;::value&gt;<sp/><ref refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" kindref="member">weights</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator3_13aeef790166a41a08d7dc41ee1ec64d5" kindref="member">QperpGenerator3</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" kindref="member">SetParameters</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mu<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//void<sp/>GetQsThetas(<sp/>boost::array&lt;double,<sp/>3*n&gt;&amp;<sp/>randoms,<sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Qs,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" kindref="member">GetQsThetas</ref>(<sp/>boost::array&lt;double,<sp/>2*n&gt;&amp;<sp/>randoms,<sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Qs,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Thetas<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_1fee76fe6543f1ca8f42179c52d990f76" kindref="member">GetQsEventWeight</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="47" refid="classQperpGenerator3_13aeef790166a41a08d7dc41ee1ec64d5" refkind="member"><highlight class="normal"><ref refid="classQperpGenerator3_13aeef790166a41a08d7dc41ee1ec64d5" kindref="member">QperpGenerator3&lt;n&gt;::QperpGenerator3</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="53" refid="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" kindref="member">QperpGenerator3&lt;n&gt;::SetParameters</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mu<sp/>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" kindref="member">qmax</ref><sp/>=<sp/>sqrt(<sp/>6.<sp/>*<sp/>temp<sp/>*<sp/>energy<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" kindref="member">mu2</ref><sp/>=<sp/>mu*mu;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//void<sp/>QperpGenerator3&lt;n&gt;::GetQsThetas(<sp/>boost::array&lt;double,<sp/>3*n&gt;&amp;<sp/>randoms,<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" kindref="member">QperpGenerator3&lt;n&gt;::GetQsThetas</ref>(<sp/>boost::array&lt;double,<sp/>2*n&gt;&amp;<sp/>randoms,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Qs,<sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Thetas<sp/>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Qs[i]<sp/>=<sp/>randoms[n+i]*qmax;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Thetas[i]<sp/>=<sp/>randoms[2*n+i]*2.*pi;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>Qs[i]<sp/>=<sp/>randoms[i]*<ref refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" kindref="member">qmax</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>Thetas[i]<sp/>=<sp/>randoms[n+i]*2.*<ref refid="qperpgenerator3_8h_143016d873124d39034edb8cd164794db" kindref="member">pi</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>n&gt;<sp/>qweights;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>qweights[i]<sp/>=<sp/>2.*Qs[i]<sp/>*<sp/><ref refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" kindref="member">mu2</ref><sp/>/<sp/>pow(<sp/>Qs[i]*Qs[i]<sp/>+<sp/><ref refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" kindref="member">mu2</ref>,<sp/>2<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>qweights[i]<sp/>*=<sp/><ref refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" kindref="member">qmax</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>std::vector&lt;bool&gt;<sp/>_isZeroed(n);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;<sp/>TPower&lt;2,n&gt;::value;<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" kindref="member">weights</ref>[j]<sp/>=<sp/>1.;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" kindref="member">SwUtils::_NumberToBoolArray</ref>(<sp/>j,<sp/>_isZeroed,<sp/>n<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!_isZeroed[i]<sp/>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" kindref="member">weights</ref>[j]<sp/>*=<sp/>qweights[i];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" kindref="member">weights</ref>[j]<sp/>*=<sp/>-1.;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="95" refid="classQperpGenerator3_1fee76fe6543f1ca8f42179c52d990f76" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_1fee76fe6543f1ca8f42179c52d990f76" kindref="member">QperpGenerator3&lt;n&gt;::GetQsEventWeight</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="96"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" kindref="member">weights</ref>[zeroes];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h"/>
+  </compounddef>
+</doxygen>

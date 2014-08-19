@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="main_8cpp" kind="file">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes refid="progressbar_8h" local="yes">progressbar.h</includes>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <includes refid="driver_8h" local="yes">driver.h</includes>
+    <includes refid="radcalcerwrapper_8h" local="yes">glv1/radcalcerwrapper.h</includes>
+    <includes refid="glvradiative3_8h" local="yes">glv3/glvradiative3.h</includes>
+    <includes refid="store_8h" local="yes">store2d/store.h</includes>
+    <includes refid="qperpcalculator1_8h" local="yes">./glv3/qperpcalculator1.h</includes>
+    <includes refid="qperpcalculator3_8h" local="yes">./glv3/qperpcalculator3.h</includes>
+    <includes refid="qperpgenerator3_8h" local="yes">./glv3/qperpgenerator3.h</includes>
+    <incdepgraph>
+      <node id="279">
+        <label>list</label>
+      </node>
+      <node id="274">
+        <label>valarray</label>
+      </node>
+      <node id="268">
+        <label>driver.h</label>
+        <link refid="driver_8h"/>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>boost/lexical_cast.hpp</label>
+      </node>
+      <node id="282">
+        <label>qperpdist.h</label>
+        <link refid="qperpdist_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>./glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1_8h"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>string</label>
+      </node>
+      <node id="278">
+        <label>map</label>
+      </node>
+      <node id="272">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="286">
+        <label>glv3/glvradiative3.h</label>
+        <link refid="glvradiative3_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main.cpp"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>progressbar.h</label>
+        <link refid="progressbar_8h"/>
+      </node>
+      <node id="290">
+        <label>../sw_templatemeta.h</label>
+        <link refid="sw__templatemeta_8h"/>
+      </node>
+      <node id="266">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>qperparraynew.h</label>
+        <link refid="qperparraynew_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+      <node id="267">
+        <label>ctime</label>
+      </node>
+      <node id="292">
+        <label>store2d/store.h</label>
+        <link refid="store_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>vector</label>
+      </node>
+      <node id="276">
+        <label>randoms/RandSobol.h</label>
+        <link refid="RandSobol_8h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>parameters.h</label>
+        <link refid="parameters_8h"/>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>./glv3/qperpcalculator3.h</label>
+        <link refid="qperpcalculator3_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>statisticsmc.h</label>
+        <link refid="statisticsmc_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>iostream</label>
+      </node>
+      <node id="285">
+        <label>zcolldist.h</label>
+        <link refid="zcolldist_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="271">
+        <label>randoms/Random3.h</label>
+        <link refid="Random3_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>./glv3/qperpgenerator3.h</label>
+        <link refid="qperpgenerator3_8h"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>boost/array.hpp</label>
+      </node>
+      <node id="273">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="289">
+        <label>complex</label>
+      </node>
+      <node id="275">
+        <label>randoms/RandDrand.h</label>
+        <link refid="RandDrand_8h"/>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="main_8cpp_1d62650a8615e3aa9191d667f58c439f0" prot="public" static="no">
+        <name>NO_INPUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/main.cpp" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/main.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1255d3fd88277d4303927db8316098dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GetInput</definition>
+        <argsstring>(std::string &amp;resume, std::string &amp;inputFile, std::string &amp;outputFile, long &amp;NumberOfIterations)</argsstring>
+        <name>GetInput</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>resume</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>outputFile</declname>
+        </param>
+        <param>
+          <type>long &amp;</type>
+          <declname>NumberOfIterations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get input from the user in order to run a Glv calculation If we have define NO_INPUT above then then the user isn&apos;t asked, it just runs with a default set of parameters </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/main.cpp" line="62" bodyfile="/home/simon/Gyulassy/opacity3/src/main.cpp" bodystart="168" bodyend="206"/>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/main.cpp" line="65" bodyfile="/home/simon/Gyulassy/opacity3/src/main.cpp" bodystart="64" bodyend="166"/>
+        <references refid="main_8cpp_1255d3fd88277d4303927db8316098dc7" compoundref="main_8cpp" startline="168" endline="206">GetInput</references>
+        <references refid="classTimer_14db34f21ca587602a5496e34e061501f" compoundref="timer_8cpp" startline="67" endline="70">Timer::GetResult</references>
+        <references refid="classProgressBar_15029c2f271c6d928da3d0146246b9847" compoundref="progressbar_8cpp" startline="100" endline="103">ProgressBar::PrintFinal</references>
+        <references refid="classProgressBar_1c8c63307694b7dda08c866f40120d3d8" compoundref="progressbar_8cpp" startline="44" endline="47">ProgressBar::PrintPreliminaries</references>
+        <references refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" compoundref="progressbar_8cpp" startline="49" endline="71">ProgressBar::PrintProgress</references>
+        <references refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" compoundref="progressbar_8cpp" startline="24" endline="42">ProgressBar::SetNow</references>
+        <references refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" compoundref="timer_8cpp" startline="38" endline="45">Timer::StartTimer</references>
+        <references refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" compoundref="timer_8cpp" startline="47" endline="58">Timer::StopTimer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Simon<sp/>Wicks<sp/>&lt;simonw@phys.columbia.edu&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;config.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="progressbar_8h" kindref="compound">progressbar.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="driver_8h" kindref="compound">driver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="radcalcerwrapper_8h" kindref="compound">glv1/radcalcerwrapper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="glvradiative3_8h" kindref="compound">glv3/glvradiative3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="store_8h" kindref="compound">store2d/store.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperpcalculator1_8h" kindref="compound">./glv3/qperpcalculator1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperpcalculator3_8h" kindref="compound">./glv3/qperpcalculator3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperpgenerator3_8h" kindref="compound">./glv3/qperpgenerator3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="main_8cpp_1d62650a8615e3aa9191d667f58c439f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_INPUT</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC1</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC2</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC3</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC4</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC5</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC6</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC7</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>14;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC8</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC9</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>18;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>OPAC10</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>NUMRANDOMS<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1255d3fd88277d4303927db8316098dc7" kindref="member">GetInput</ref>(<sp/>std::string&amp;<sp/>resume,<sp/>std::string&amp;<sp/>inputFile,<sp/>std::string&amp;<sp/>outputFile,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">&amp;<sp/>NumberOfIterations<sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CMakeCCompilerId_8c_1e66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sample<sp/>program<sp/>doing<sp/>a<sp/>Monte<sp/>Carlo<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>need<sp/>to<sp/>choose<sp/>the<sp/>dimensionality<sp/>of<sp/>the<sp/>Monte<sp/>Carlo<sp/>at<sp/>COMPILE<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>in<sp/>the<sp/>NUMRANDOMS<sp/>macros<sp/>above</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>the<sp/>calculation<sp/>engine<sp/>(eg<sp/>GLV)<sp/>may<sp/>use<sp/>more<sp/>than<sp/>one<sp/>random<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>per<sp/>eg<sp/>order<sp/>in<sp/>opacity,<sp/>so<sp/>NUMRANDOMS<sp/>is<sp/>a<sp/>multiple<sp/>of<sp/>opacity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Monte<sp/>Carlo:<sp/>Opacity<sp/>version<sp/>3<sp/>by<sp/>Simon<sp/>Wicks&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(using<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>NUMRANDOMS<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>random<sp/>numbers).&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>only<sp/>input<sp/>needed<sp/>from<sp/>the<sp/>user<sp/>is:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1)<sp/>whether<sp/>we<sp/>are<sp/>resuming<sp/>from<sp/>a<sp/>previous<sp/>run,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>2)<sp/>the<sp/>filename<sp/>of<sp/>the<sp/>parameters<sp/>(+data<sp/>if<sp/>resuming)<sp/>to<sp/>read<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>3)<sp/>the<sp/>filename<sp/>to<sp/>which<sp/>to<sp/>write<sp/>our<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>4)<sp/>the<sp/>number<sp/>of<sp/>iterations<sp/>to<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>NumberOfIterations;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>std::string<sp/>resume<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/>std::string<sp/>inputFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/>std::string<sp/>outputFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1255d3fd88277d4303927db8316098dc7" kindref="member">GetInput</ref>(<sp/>resume,<sp/>inputFile,<sp/>outputFile,<sp/>NumberOfIterations<sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>templatized<sp/>nature<sp/>of<sp/>the<sp/>Driver<sp/>means<sp/>that<sp/>a<sp/>number<sp/>of<sp/>different<sp/>calculations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>done<sp/>just<sp/>by<sp/>changing<sp/>the<sp/>code<sp/>here<sp/>in<sp/>main.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>number<sp/>of<sp/>examples<sp/>are<sp/>given<sp/>below</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>get<sp/>rid<sp/>of<sp/>the<sp/>/*<sp/>*/<sp/>around<sp/>the<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/>//<sp/>Glv<sp/>calculation<sp/>using<sp/>most<sp/>of<sp/>the<sp/>old<sp/>code<sp/>(&apos;version<sp/>1&apos;),<sp/>but<sp/>using<sp/>a<sp/>wrapper</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/>//<sp/>to<sp/>put<sp/>it<sp/>into<sp/>the<sp/>new<sp/>templatized<sp/>Driver</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/>//<sp/>GlvCalcer<sp/>only<sp/>really<sp/>does<sp/>a<sp/>dq<sp/>dphi_q<sp/>integration<sp/>and<sp/>throws<sp/>away<sp/>an<sp/>extra</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/>//<sp/>random<sp/>number<sp/>per<sp/>dimension,<sp/>hence<sp/>it<sp/>uses<sp/>3<sp/>random<sp/>number<sp/>per<sp/>order<sp/>in<sp/>opacity</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/>//<sp/>ie<sp/>opacity<sp/>=<sp/>NUMRANDOMS/3</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/>//<sp/>TODO:<sp/>change<sp/>this<sp/>to<sp/>work<sp/>again</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/>//Driver&lt;RadCalcerWrapper&lt;9&gt;,<sp/>Store2D,<sp/>9&gt;<sp/>myDriver;</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/>//<sp/>Glv<sp/>calculation,<sp/>using<sp/>the<sp/>new<sp/>(&apos;version<sp/>3&apos;)<sp/>calculation<sp/>code<sp/>(GlvRadiative3),</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/>//<sp/>but<sp/>using<sp/>a<sp/>wrapper<sp/>around<sp/>the<sp/>old<sp/>(&apos;version<sp/>1&apos;)<sp/>QperpCalculator<sp/>code<sp/>(QperpCalculator1)</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/>//<sp/>(which<sp/>is<sp/>slower<sp/>than<sp/>the<sp/>newer<sp/>version,<sp/>but<sp/>is<sp/>a<sp/>good<sp/>test<sp/>to<sp/>give<sp/>the<sp/>same<sp/>answer)</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/>//<sp/>GlvRadiative3<sp/>does<sp/>a<sp/>dq<sp/>dphi_q<sp/>integration,<sp/>hence<sp/>opacity<sp/>=<sp/>NUMRANDOMS/2</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/>Driver&lt;GlvRadiative3</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>&lt;QperpGenerator3&lt;NUMRANDOMS/2&gt;,<sp/>QperpCalculator1&lt;NUMRANDOMS/2&gt;,<sp/>NUMRANDOMS&gt;,<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/>Store2D,<sp/>NUMRANDOMS&gt;<sp/>myDriver;</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Glv<sp/>calculation<sp/>using<sp/>the<sp/>new<sp/>calculation<sp/>code<sp/>(GlvRadiative3)<sp/>and<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>new<sp/>qperpcalculator<sp/>code<sp/>(QperpCalculator3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>GlvRadiative3<sp/>does<sp/>a<sp/>dq<sp/>dphi_q<sp/>integration,<sp/>hence<sp/>opacity<sp/>=<sp/>NUMRANDOMS/2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="classDriver" kindref="compound">Driver</ref>&lt;<ref refid="classGlvRadiative3" kindref="compound">GlvRadiative3</ref></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;<ref refid="classQperpGenerator3" kindref="compound">QperpGenerator3</ref>&lt;NUMRANDOMS/2&gt;,<sp/><ref refid="classQperpCalculator3" kindref="compound">QperpCalculator3</ref>&lt;NUMRANDOMS/2&gt;,<sp/>NUMRANDOMS&gt;,<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStore2D" kindref="compound">Store2D</ref>,<sp/>NUMRANDOMS&gt;<sp/>myDriver;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/>//<sp/>TODO:<sp/>write<sp/>a<sp/>GlvRadiative4<sp/>which<sp/>includes<sp/>the<sp/>z<sp/>integration</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>different<sp/>calculation<sp/>examples</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Call<sp/>the<sp/>driver<sp/>to<sp/>set<sp/>up<sp/>itself<sp/>and<sp/>all<sp/>the<sp/>other<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>ok,<sp/>it&apos;ll<sp/>return<sp/>0.<sp/>If<sp/>not,<sp/>then<sp/>it&apos;ll<sp/>return<sp/>something<sp/>else.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errCode<sp/>=<sp/>myDriver.Setup(<sp/>resume,<sp/>inputFile<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>errCode<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>on<sp/>setting<sp/>up,<sp/>code<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>errCode<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Everything<sp/>is<sp/>ready<sp/>in<sp/>the<sp/>calculation,<sp/>just<sp/>set<sp/>up<sp/>the<sp/>final</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>bits<sp/>for<sp/>the<sp/>user<sp/>interface:<sp/>timer<sp/>and<sp/>progress<sp/>bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ProgressBar:<sp/>The<sp/>first<sp/>number<sp/>of<sp/>the<sp/>current<sp/>point<sp/>(start<sp/>=<sp/>0),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>second<sp/>is<sp/>the<sp/>end<sp/>point,<sp/>the<sp/>total<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><ref refid="classTimer" kindref="compound">Timer</ref><sp/>timer;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="classProgressBar" kindref="compound">ProgressBar</ref><sp/>progBar(0,NumberOfIterations);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>progBar.<ref refid="classProgressBar_1c8c63307694b7dda08c866f40120d3d8" kindref="member">PrintPreliminaries</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>now<sp/>we<sp/>run<sp/>the<sp/>main<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" kindref="member">StartTimer</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;NumberOfIterations;<sp/>++i)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>progBar.<ref refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" kindref="member">SetNow</ref>(i);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>progBar.<ref refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" kindref="member">PrintProgress</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>myDriver.RunOneIteration();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>progBar.<ref refid="classProgressBar_1b04618141efbac296b3403ea532fd94e" kindref="member">SetNow</ref>(NumberOfIterations);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>progBar.<ref refid="classProgressBar_11b12b38d231af0f4274015ba3a792ac0" kindref="member">PrintProgress</ref>();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" kindref="member">StopTimer</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>the<sp/>main<sp/>loop<sp/>is<sp/>done!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Tell<sp/>the<sp/>driver<sp/>to<sp/>save<sp/>our<sp/>results<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>myDriver.SaveResults(<sp/>outputFile<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>to<sp/>screen<sp/>a<sp/>few<sp/>details<sp/>of<sp/>the<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>progBar.<ref refid="classProgressBar_15029c2f271c6d928da3d0146246b9847" kindref="member">PrintFinal</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>totTime<sp/>=<sp/>timer.<ref refid="classTimer_14db34f21ca587602a5496e34e061501f" kindref="member">GetResult</ref>();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Total<sp/>time<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>totTime<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>seconds\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>per<sp/>iteration<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>totTime/</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(NumberOfIterations);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="main_8cpp_1255d3fd88277d4303927db8316098dc7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1255d3fd88277d4303927db8316098dc7" kindref="member">GetInput</ref>(<sp/>std::string&amp;<sp/>resume,<sp/>std::string&amp;<sp/>inputFile,<sp/>std::string&amp;<sp/>outputFile,<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">&amp;<sp/>NumberOfIterations)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>required<sp/>input<sp/>for<sp/>the<sp/>Monte<sp/>Carlo<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>ask<sp/>whether<sp/>we<sp/>are<sp/>resuming<sp/>the<sp/>Monte<sp/>Carlo<sp/>statistics<sp/>from<sp/>a<sp/>previous<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Resume<sp/>from<sp/>a<sp/>previous<sp/>run?<sp/>(y/n)<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NO_INPUT</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/>resume<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>resume;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>resume;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!(<sp/>resume==</highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal"><sp/>||<sp/>resume==</highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Second,<sp/>filenames</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nEnter<sp/>input<sp/>file<sp/>and<sp/>output<sp/>file\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(no<sp/>spaces<sp/>in<sp/>file<sp/>names,<sp/>separate<sp/>two<sp/>names<sp/>with<sp/>a<sp/>space):<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NO_INPUT</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>inputFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./results/temp.params&quot;</highlight><highlight class="normal">;<sp/>outputFile<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./results/temp.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>inputFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>outputFile;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>inputFile<sp/>&gt;&gt;<sp/>outputFile;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally<sp/>(thirdly),<sp/>how<sp/>many<sp/>Monte<sp/>Carlo<sp/>iterations<sp/>do<sp/>we<sp/>want?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;How<sp/>many<sp/>Monte<sp/>Carlo<sp/>iterations?<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NO_INPUT</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>NumberOfIterations<sp/>=<sp/>100000;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>NumberOfIterations;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>NumberOfIterations;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/main.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+\section{Gyulassy/opacity3/src/randoms/sobol.cpp File Reference}
+\label{sobol_8cpp}\index{Gyulassy/opacity3/src/randoms/sobol.cpp@{Gyulassy/opacity3/src/randoms/sobol.cpp}}
+{\tt \#include $<$cstdlib$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$iomanip$>$}\par
+{\tt \#include $<$cmath$>$}\par
+{\tt \#include $<$ctime$>$}\par
+{\tt \#include \char`\"{}sobol.H\char`\"{}}\par
+\subsection*{Namespaces}
+\begin{CompactItemize}
+\item 
+namespace {\bf Sobol}
+\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf DIM\_\-MAX2}~1111
+\item 
+\#define {\bf LOG\_\-MAX}~30
+\item 
+\#define {\bf DIM\_\-MAX}~40
+\item 
+\#define {\bf DIM\_\-MAX2}~1111
+\item 
+\#define {\bf LOG\_\-MAX}~62
+\item 
+\#define {\bf TIME\_\-SIZE}~40
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int {\bf Sobol::i4\_\-bit\_\-hi1} (int n)
+\item 
+int {\bf Sobol::i4\_\-bit\_\-lo0} (int n)
+\item 
+int {\bf Sobol::i4\_\-max} (int i1, int i2)
+\item 
+int {\bf Sobol::i4\_\-min} (int i1, int i2)
+\item 
+void {\bf Sobol::i4\_\-sobol} (int dim\_\-num, int $\ast$seed, float quasi[$\,$])
+\item 
+int {\bf Sobol::i4\_\-uniform} (int a, int b, int $\ast$seed)
+\item 
+unsigned int {\bf Sobol::i4\_\-xor} (unsigned int i, unsigned int j)
+\item 
+int {\bf Sobol::i8\_\-bit\_\-hi1} (long long int n)
+\item 
+int {\bf Sobol::i8\_\-bit\_\-lo0} (long long int n)
+\item 
+void {\bf Sobol::i8\_\-sobol} (int dim\_\-num, long long int $\ast$seed, double quasi[$\,$])
+\item 
+long long int {\bf Sobol::i8\_\-max} (long long int i1, long long int i2)
+\item 
+long long int {\bf Sobol::i8\_\-min} (long long int i1, long long int i2)
+\item 
+long long int {\bf Sobol::i8\_\-uniform} (long long int a, long long int b, int $\ast$seed)
+\item 
+unsigned long long int {\bf Sobol::i8\_\-xor} (unsigned long long int i, unsigned long long int j)
+\item 
+float {\bf Sobol::r4\_\-abs} (float x)
+\item 
+int {\bf Sobol::r4\_\-nint} (float x)
+\item 
+float {\bf Sobol::r4\_\-uniform\_\-01} (int $\ast$seed)
+\item 
+double {\bf Sobol::r8\_\-abs} (double x)
+\item 
+int {\bf Sobol::r8\_\-nint} (double x)
+\item 
+double {\bf Sobol::r8\_\-uniform\_\-01} (int $\ast$seed)
+\item 
+void {\bf Sobol::timestamp} (void)
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{sobol.cpp@{sobol.cpp}!DIM_MAX@{DIM\_\-MAX}}
+\index{DIM_MAX@{DIM\_\-MAX}!sobol.cpp@{sobol.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-MAX~40}\label{sobol_8cpp_4bf6f11165a23227af11f1d0d75798a4}
+
+
+
+
+Referenced by test04(), and test08().\index{sobol.cpp@{sobol.cpp}!DIM_MAX2@{DIM\_\-MAX2}}
+\index{DIM_MAX2@{DIM\_\-MAX2}!sobol.cpp@{sobol.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-MAX2~1111}\label{sobol_8cpp_08477d6b4326959b1d01d9d5795cc8f3}
+
+
+\index{sobol.cpp@{sobol.cpp}!DIM_MAX2@{DIM\_\-MAX2}}
+\index{DIM_MAX2@{DIM\_\-MAX2}!sobol.cpp@{sobol.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define DIM\_\-MAX2~1111}\label{sobol_8cpp_08477d6b4326959b1d01d9d5795cc8f3}
+
+
+
+
+Referenced by i4\_\-sobol(), and i8\_\-sobol().\index{sobol.cpp@{sobol.cpp}!LOG_MAX@{LOG\_\-MAX}}
+\index{LOG_MAX@{LOG\_\-MAX}!sobol.cpp@{sobol.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define LOG\_\-MAX~62}\label{sobol_8cpp_c964c67ea194ec22067081ea9fd4870f}
+
+
+\index{sobol.cpp@{sobol.cpp}!LOG_MAX@{LOG\_\-MAX}}
+\index{LOG_MAX@{LOG\_\-MAX}!sobol.cpp@{sobol.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define LOG\_\-MAX~30}\label{sobol_8cpp_c964c67ea194ec22067081ea9fd4870f}
+
+
+
+
+Referenced by i4\_\-sobol(), and i8\_\-sobol().\index{sobol.cpp@{sobol.cpp}!TIME_SIZE@{TIME\_\-SIZE}}
+\index{TIME_SIZE@{TIME\_\-SIZE}!sobol.cpp@{sobol.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TIME\_\-SIZE~40}\label{sobol_8cpp_c1c7bc76dbfd8378fc96541a6243afd1}
+
+
+
+
+Referenced by timestamp().

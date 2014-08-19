@@ -1,0 +1,161 @@
+\section{UniformFunction Class Reference}
+\label{classUniformFunction}\index{UniformFunction@{UniformFunction}}
+{\tt \#include $<$Function.h$>$}
+
+Inheritance diagram for UniformFunction::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classUniformFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf UniformFunction} (unsigned long Dimensionality)
+\item 
+virtual {\bf $\sim$UniformFunction} ()
+\item 
+virtual {\bf Function} $\ast$ {\bf clone} () const 
+\item 
+virtual void {\bf function} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf NormedIntegralInverse} (MyArray \&xs, MyArray \&res)
+\item 
+virtual void {\bf SetParams} (MyArray \&params\_\-)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 69 of file Function.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{UniformFunction@{UniformFunction}!UniformFunction@{UniformFunction}}
+\index{UniformFunction@{UniformFunction}!UniformFunction@{UniformFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}UniformFunction::UniformFunction (unsigned long {\em Dimensionality})}\label{classUniformFunction_25d798ef7cb0a90ccfa50fcdcf9438a3}
+
+
+
+
+Definition at line 64 of file Function.cpp.
+
+Referenced by clone().
+
+\begin{Code}\begin{verbatim}65   : Function( Dimensionality )
+66 {
+67 
+68 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UniformFunction@{UniformFunction}!~UniformFunction@{$\sim$UniformFunction}}
+\index{~UniformFunction@{$\sim$UniformFunction}!UniformFunction@{UniformFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}UniformFunction::$\sim$UniformFunction ()\hspace{0.3cm}{\tt  [virtual]}}\label{classUniformFunction_5498bd978cd9441cd3c4e195240f6347}
+
+
+
+
+Definition at line 70 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}71 {
+72 
+73 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{UniformFunction@{UniformFunction}!clone@{clone}}
+\index{clone@{clone}!UniformFunction@{UniformFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Function} $\ast$ UniformFunction::clone () const\hspace{0.3cm}{\tt  [virtual]}}\label{classUniformFunction_9b57843688a438ac030f3abcfb4d07ac}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_cae7bf3099d7e05b59814823dab252b2}.
+
+Definition at line 75 of file Function.cpp.
+
+References UniformFunction().
+
+\begin{Code}\begin{verbatim}76 {
+77   return new UniformFunction(*this);
+78 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UniformFunction@{UniformFunction}!function@{function}}
+\index{function@{function}!UniformFunction@{UniformFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void UniformFunction::function (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classUniformFunction_c7b39b7195838195e1796570e549e67f}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_a78440b1498d1b7e113b163dfc88274c}.
+
+Definition at line 80 of file Function.cpp.
+
+References Function::GetDimensionality(), and Function::GetRange().
+
+\begin{Code}\begin{verbatim}81 {
+82   for (unsigned long i=0; i<GetDimensionality(); ++i)
+83   {
+84     res[i] = 1. / GetRange(i);
+85   }
+86 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UniformFunction@{UniformFunction}!NormedIntegralInverse@{NormedIntegralInverse}}
+\index{NormedIntegralInverse@{NormedIntegralInverse}!UniformFunction@{UniformFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void UniformFunction::NormedIntegralInverse (MyArray \& {\em xs}, MyArray \& {\em res})\hspace{0.3cm}{\tt  [virtual]}}\label{classUniformFunction_db51f361d9802c90260b584bf590a1a1}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_9e1a0a6468b4df5de365481db11df5d4}.
+
+Definition at line 88 of file Function.cpp.
+
+References Function::GetDimensionality(), Function::GetRange(), and Function::GetXmin().
+
+\begin{Code}\begin{verbatim}89 {
+90   for (unsigned long i=0; i<GetDimensionality(); ++i)
+91   {
+92     xs[i] = GetXmin(i) + uniforms[i]*GetRange(i);
+93   }
+94 }
+\end{verbatim}
+\end{Code}
+
+
+\index{UniformFunction@{UniformFunction}!SetParams@{SetParams}}
+\index{SetParams@{SetParams}!UniformFunction@{UniformFunction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void UniformFunction::SetParams (MyArray \& {\em params\_\-})\hspace{0.3cm}{\tt  [virtual]}}\label{classUniformFunction_a4666e3a6e7420a5b4c9a15d3677d762}
+
+
+
+
+Implements {\bf Function} \doxyref{}{p.}{classFunction_6944f24e3174d98fe7c61dc0652d3ae4}.
+
+Definition at line 96 of file Function.cpp.
+
+\begin{Code}\begin{verbatim}97 {
+98 
+99 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf Function.cpp}\end{CompactItemize}

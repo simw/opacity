@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="structTPower" kind="struct" prot="public">
+    <compoundname>TPower</compoundname>
+    <includes refid="sw__templatemeta_8h" local="no">sw_templatemeta.h</includes>
+    <templateparamlist>
+      <param>
+        <type>long</type>
+        <declname>a</declname>
+        <defname>a</defname>
+      </param>
+      <param>
+        <type>long</type>
+        <declname>b</declname>
+        <defname>b</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structTPower_11348f3841022dd67390b6a7c9b47eab8" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" prot="public">
+          <name>value</name>
+          <initializer> a*TPower&lt;a</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" prot="public">
+          <name>value</name>
+          <initializer> a*TPower&lt;a</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/sw_templatemeta.h" line="20" bodyfile="/home/simon/Gyulassy/opacity3/src/sw_templatemeta.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/sw_templatemeta.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/sw_templatemeta.h" bodystart="18" bodyend="21"/>
+    <listofallmembers>
+      <member refid="structTPower_11348f3841022dd67390b6a7c9b47eab8" prot="public" virt="non-virtual"><scope>TPower</scope><name>@0</name></member>
+      <member refid="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" prot="public" virt="non-virtual"><scope>TPower</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

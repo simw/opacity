@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_1b9a81bc7ca460a47d6507b1058db06d" kind="dir">
+    <compoundname>Gyulassy/</compoundname>
+    <innerdir refid="dir_5472691146c4621aebccc9cf4f11128f">Gyulassy/opacity3/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/"/>
+  </compounddef>
+</doxygen>

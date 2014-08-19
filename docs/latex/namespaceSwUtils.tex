@@ -1,0 +1,253 @@
+\section{SwUtils Namespace Reference}
+\label{namespaceSwUtils}\index{SwUtils@{SwUtils}}
+
+
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+long {\bf \_\-FindNextPowerOfTwo} (long value)
+\item 
+long {\bf \_\-Combinatoric} (long n, long r)
+\item 
+long {\bf \_\-factorial} (long value, long endval=1)
+\item 
+long {\bf power} (long num, long pow)
+\item 
+bool {\bf \_\-TestBitI} (unsigned long num, unsigned long i)
+\item 
+void {\bf \_\-NumberToBoolArray} (unsigned long num, std::vector$<$ bool $>$ \&boolarray, unsigned long length)
+\item 
+long {\bf \_\-CountNumZeroes} (unsigned long num, unsigned long length)
+\item 
+bool {\bf \_\-IsPowerOfTwo} (long value)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+const double {\bf pi} = 3.141592653589793238
+\item 
+const double {\bf overpi} = 0.3183098861837906715
+\item 
+const double {\bf hbarc} = 0.197
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{SwUtils@{SwUtils}!_Combinatoric@{\_\-Combinatoric}}
+\index{_Combinatoric@{\_\-Combinatoric}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long SwUtils::\_\-Combinatoric (long {\em n}, long {\em r})}\label{namespaceSwUtils_0183044c7c4da9b92fd4a0d94c5632f3}
+
+
+
+
+Definition at line 22 of file constants.cpp.
+
+References \_\-factorial().
+
+Referenced by RadCalcer::GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}23 {
+24   // This returns the combinatoric factor n C r
+25   // ie n! / ( (n-r)! r! )
+26   // Note: sum of n C r over r gives 2^n
+27 
+28   if ( r >= n || r <= 0 )
+29     return 1;
+30 
+31   // _factorial (n,b) = n!/(b-1)! ie n*(n-1)*...*b
+32   return ( _factorial( n, n-r+1 ) / _factorial( r ) );
+33 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!_CountNumZeroes@{\_\-CountNumZeroes}}
+\index{_CountNumZeroes@{\_\-CountNumZeroes}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long SwUtils::\_\-CountNumZeroes (unsigned long {\em num}, unsigned long {\em length})\hspace{0.3cm}{\tt  [inline]}}\label{namespaceSwUtils_3b26ae74b9091b6bf31b181cb245c7c1}
+
+
+
+
+Definition at line 51 of file constants.h.
+
+References \_\-TestBitI().
+
+\begin{Code}\begin{verbatim}52 {
+53   long tot = 0;
+54   for (unsigned long i=0; i!=length; ++i)
+55   {
+56     if ( _TestBitI( num, i ) )
+57       ++tot;
+58   }
+59   return tot;
+60 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!_factorial@{\_\-factorial}}
+\index{_factorial@{\_\-factorial}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long SwUtils::\_\-factorial (long {\em value}, long {\em endval} = {\tt 1})\hspace{0.3cm}{\tt  [inline]}}\label{namespaceSwUtils_3bf3423904e7b04ce19649b33bb7de77}
+
+
+
+
+Definition at line 14 of file constants.h.
+
+Referenced by \_\-Combinatoric(), ZposGenerator::FindRandomPositions(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk().
+
+\begin{Code}\begin{verbatim}15 {
+16   if (value > endval)
+17     return ( value * _factorial( value - 1 ) );
+18 
+19   return endval;
+20 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!_FindNextPowerOfTwo@{\_\-FindNextPowerOfTwo}}
+\index{_FindNextPowerOfTwo@{\_\-FindNextPowerOfTwo}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long SwUtils::\_\-FindNextPowerOfTwo (long {\em value})}\label{namespaceSwUtils_26183064bbbb36f547635316aec1dd97}
+
+
+
+
+Definition at line 7 of file constants.cpp.
+
+References \_\-IsPowerOfTwo().
+
+Referenced by StatGathering::ConvergenceTable::AddOneSetOfResults(), and StatGathering::ConvergenceTable::SetResultsSoFar().
+
+\begin{Code}\begin{verbatim}8 {
+9   long myreturn = 0;
+10   --value;
+11   do
+12   {
+13     ++value;
+14     if ( _IsPowerOfTwo( value ) )
+15       myreturn = value;
+16   }
+17   while( myreturn == 0 );
+18 
+19   return myreturn;
+20 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!_IsPowerOfTwo@{\_\-IsPowerOfTwo}}
+\index{_IsPowerOfTwo@{\_\-IsPowerOfTwo}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool SwUtils::\_\-IsPowerOfTwo (long {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{namespaceSwUtils_a958298ae1d796946e5784f3339ffba1}
+
+
+
+
+Definition at line 62 of file constants.h.
+
+Referenced by \_\-FindNextPowerOfTwo().
+
+\begin{Code}\begin{verbatim}63 {
+64   if (value < 1)
+65     return false;
+66 
+67   return (value & (~value+1)) == value;  //~value+1 equals a two's complement -value
+68 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!_NumberToBoolArray@{\_\-NumberToBoolArray}}
+\index{_NumberToBoolArray@{\_\-NumberToBoolArray}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwUtils::\_\-NumberToBoolArray (unsigned long {\em num}, std::vector$<$ bool $>$ \& {\em boolarray}, unsigned long {\em length})\hspace{0.3cm}{\tt  [inline]}}\label{namespaceSwUtils_1b9e53b0f01225242c82fe97e878bd6d}
+
+
+
+
+Definition at line 43 of file constants.h.
+
+References \_\-TestBitI().
+
+Referenced by \_\-FillAllRows1D(), \_\-FillAllRows2DSymmetric(), \_\-Iterate1DForZeroes(), \_\-Iterate2DForZeroes(), QperpGenerator3$<$ n $>$::GetQsThetas(), and QperpGenerator::SetZeroedQs().
+
+\begin{Code}\begin{verbatim}44 {
+45   for (unsigned long i=0; i!=length; ++i)
+46   {
+47     boolarray[(length-1)-i] = _TestBitI( num, i );
+48   }
+49 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!_TestBitI@{\_\-TestBitI}}
+\index{_TestBitI@{\_\-TestBitI}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool SwUtils::\_\-TestBitI (unsigned long {\em num}, unsigned long {\em i})\hspace{0.3cm}{\tt  [inline]}}\label{namespaceSwUtils_58cbacdf24d6a8eddaae9fbbd58ecf78}
+
+
+
+
+Definition at line 34 of file constants.h.
+
+Referenced by \_\-CountNumZeroes(), \_\-NumberToBoolArray(), and QperpCalculator3$<$ n $>$::SetQsThetas().
+
+\begin{Code}\begin{verbatim}35 {
+36   int bit = ((num >> i) & 1);
+37   if (bit == 1)
+38     return true;
+39     
+40   return false;
+41 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwUtils@{SwUtils}!power@{power}}
+\index{power@{power}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long SwUtils::power (long {\em num}, long {\em pow})\hspace{0.3cm}{\tt  [inline]}}\label{namespaceSwUtils_3974619c250bd02a70c9cfcd88384223}
+
+
+
+
+Definition at line 25 of file constants.h.
+
+Referenced by RadCalcer::GetdNdk2dx(), and QperpCalculator::QperpCalculator().
+
+\begin{Code}\begin{verbatim}26 {
+27   long res = num;
+28   for (long i=1; i!=pow; ++i)
+29     res *= num;
+30 
+31   return res;
+32 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Variable Documentation}
+\index{SwUtils@{SwUtils}!hbarc@{hbarc}}
+\index{hbarc@{hbarc}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const double {\bf SwUtils::hbarc} = 0.197}\label{namespaceSwUtils_d2fad768d402d77bfb40f4c87adb8966}
+
+
+
+
+Definition at line 11 of file constants.h.
+
+Referenced by RadCalcer::SetXonly().\index{SwUtils@{SwUtils}!overpi@{overpi}}
+\index{overpi@{overpi}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const double {\bf SwUtils::overpi} = 0.3183098861837906715}\label{namespaceSwUtils_b08cebc8959f71a8ae78b8d56c6d6be6}
+
+
+
+
+Definition at line 10 of file constants.h.\index{SwUtils@{SwUtils}!pi@{pi}}
+\index{pi@{pi}!SwUtils@{SwUtils}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const double {\bf SwUtils::pi} = 3.141592653589793238}\label{namespaceSwUtils_3e747e4d95465902347281e3cc1bcb0d}
+
+
+
+
+Definition at line 9 of file constants.h.

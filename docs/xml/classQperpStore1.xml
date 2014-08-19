@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classQperpStore1" kind="class" prot="public">
+    <compoundname>QperpStore1</compoundname>
+    <includes refid="qperpstore1_8h" local="no">qperpstore1.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQperpStore1_1c9a22f6c039b059e62c87c35c85451dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QperpStore1::QperpStore1</definition>
+        <argsstring>(long sizeXY_, long sizeZ_)</argsstring>
+        <name>QperpStore1</name>
+        <param>
+          <type>long</type>
+          <declname>sizeXY_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>sizeZ_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="21" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="45" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpStore1_11822e487987fc77bf927898616ed6de0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QperpStore1::~QperpStore1</definition>
+        <argsstring>()</argsstring>
+        <name>~QperpStore1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="60" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpStore1_1da5a646b78bc7b47e6a426edf6c21d6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpStore1::SetZ</definition>
+        <argsstring>(long zin_)</argsstring>
+        <name>SetZ</name>
+        <param>
+          <type>long</type>
+          <declname>zin_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpStore1_1aece9acc309b76ba553094be8c81ddcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpStore1::SetVal1</definition>
+        <argsstring>(long x_, long y_, double val_)</argsstring>
+        <name>SetVal1</name>
+        <param>
+          <type>long</type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y_</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpStore1_1928bb91ea205cb788f13e7da94e202ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpStore1::SetVal2</definition>
+        <argsstring>(long x_, long y_, double val_)</argsstring>
+        <name>SetVal2</name>
+        <param>
+          <type>long</type>
+          <declname>x_</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>y_</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para></para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperpstore1.h" bodystart="18" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classQperpStore1_1c9a22f6c039b059e62c87c35c85451dd" prot="public" virt="non-virtual"><scope>QperpStore1</scope><name>QperpStore1</name></member>
+      <member refid="classQperpStore1_1aece9acc309b76ba553094be8c81ddcf" prot="public" virt="non-virtual"><scope>QperpStore1</scope><name>SetVal1</name></member>
+      <member refid="classQperpStore1_1928bb91ea205cb788f13e7da94e202ef" prot="public" virt="non-virtual"><scope>QperpStore1</scope><name>SetVal2</name></member>
+      <member refid="classQperpStore1_1da5a646b78bc7b47e6a426edf6c21d6f" prot="public" virt="non-virtual"><scope>QperpStore1</scope><name>SetZ</name></member>
+      <member refid="classQperpStore1_11822e487987fc77bf927898616ed6de0" prot="public" virt="non-virtual"><scope>QperpStore1</scope><name>~QperpStore1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

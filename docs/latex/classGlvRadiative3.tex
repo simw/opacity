@@ -1,0 +1,718 @@
+\section{GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$ Class Template Reference}
+\label{classGlvRadiative3}\index{GlvRadiative3@{GlvRadiative3}}
+{\tt \#include $<$glvradiative3.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf GlvRadiative3} ()
+\item 
+void {\bf SetParameters} ({\bf Parameters} \&inParams)
+\begin{CompactList}\small\item\em Getting all the parameters for GLV from the input file. \item\end{CompactList}\item 
+void {\bf SetCoord} (long dimension, double value)
+\item 
+void {\bf SetRandoms} (boost::array$<$ double, numOfRandoms $>$ \&randomNumbers)
+\item 
+void {\bf GetAnswer} (std::vector$<$ double $>$ \&answers) const 
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+double {\bf GetKmax} () const 
+\item 
+double {\bf Interference} (long m, long zeroes) const 
+\item 
+double {\bf CdotB} (long m, long zeroes) const 
+\begin{CompactList}\small\item\em The GLV CdotB. \item\end{CompactList}\item 
+double {\bf Summation} (long mmin, long zeroes) const 
+\item 
+double {\bf GetdNdxdk} () const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+TqperpGenerate {\bf qpgen}
+\begin{CompactList}\small\item\em Takes given uniform random numbers [0,1), gives q\_\-perp vectors (polar coords). \item\end{CompactList}\item 
+TqperpCalculate {\bf qpcalc}
+\begin{CompactList}\small\item\em Takes q\_\-perp vectors, calculates sum q\_\-i.q\_\-j's as necessary. \item\end{CompactList}\item 
+double {\bf \_\-mass2}
+\item 
+double {\bf \_\-mg2}
+\item 
+double {\bf \_\-en}
+\item 
+double {\bf \_\-overEn}
+\item 
+double {\bf \_\-length}
+\item 
+double {\bf \_\-cr}
+\item 
+double {\bf \_\-alphas}
+\item 
+double {\bf \_\-gluonlambda}
+\item 
+double {\bf \_\-temperature}
+\item 
+double {\bf \_\-mu}
+\item 
+double {\bf \_\-dglvBeta}
+\item 
+double {\bf \_\-inteferenceFrac}
+\item 
+double {\bf \_\-x}
+\item 
+double {\bf \_\-overx}
+\item 
+double {\bf \_\-k}
+\item 
+long {\bf \_\-switchkmax}
+\item 
+bool {\bf \_\-abovekmax}
+\item 
+bool {\bf \_\-diffexclude}
+\end{CompactItemize}
+\subsection*{Static Private Attributes}
+\begin{CompactItemize}
+\item 
+static const long {\bf n} = numOfRandoms/2
+\begin{CompactList}\small\item\em The order in opacity. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ class GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$}
+
+\begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simonw@phys.columbia.edu}$>$ Radiative energy loss from Gyulassy-Levai-Vitev, to multiple orders in opacity This object fits into the interface of 'Driver'. It calculates the result for GLV multiple orders in opacity, with the restrictions: 1) fixed temperature medium 2) uncorrelated scattering, with exponential decay distribution between them\end{Desc}
+In order to allow for testing different various different methods of calculating the necessary q\_\-perp vectors and their necessary dot products, this class is templatized to allow the dropping in at compile time of different classes to do these tasks.
+
+Template parameters: TqperpGenerate: takes uniform random numbers supplied, converts them into numbers distributed from 0 to q\_\-max, with a 'weight' given to correspond to the Gyulassy-Wang collision distribution (or other). The produced randoms can be uniformly distributed from 0 to q\_\-max with Yukawa weights, or Yukawa weighted from 0 to q\_\-max with a weight of 1, or some other choice. This object has the interface: .SetParameters( temperature, jet energy, debye mu ) .GetQsThetas( boost::array$<$double, numOfRandoms$>$\& randoms, boost::array$<$double, n$>$\& Qs, boost::array$<$double, n$>$\& Thetas ) .GetQsEventWeight( long i )
+
+TqperpCalculate: takes the 2D q\_\-perp vectors in polar coords, finds all necessary dot products needed for the GLV calculation. This has the interface: .SetK( double k ) .SetQsThetas( boost::array$<$double, n$>$\& Qs, boost::array$<$double, n$>$\& Thetas ) double .GetSumQskk( long k, long zeroes ) double .GetSumQs1k( long k, long zeroes )
+
+numOfRandoms: the number of random numbers needed to produce the result (note that the order in opacity is not numOfRandoms, it's given by n - defined below) 
+
+Definition at line 64 of file glvradiative3.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{GlvRadiative3@{GlvRadiative3}!GlvRadiative3@{GlvRadiative3}}
+\index{GlvRadiative3@{GlvRadiative3}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf GlvRadiative3} ()\hspace{0.3cm}{\tt  [inline]}}\label{classGlvRadiative3_ad9f095ab2cd3e6eae96af8f4a26fd2b}
+
+
+
+
+Definition at line 145 of file glvradiative3.h.
+
+\begin{Code}\begin{verbatim}146   : _x( 0. ), _k( 0. )
+147 {
+148 
+149 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{GlvRadiative3@{GlvRadiative3}!GetKmax@{GetKmax}}
+\index{GetKmax@{GetKmax}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetKmax () const\hspace{0.3cm}{\tt  [inline, private]}}\label{classGlvRadiative3_301c98d47b7989549718874cf54c4cd8}
+
+
+As the GLV calculation only strictly applies for x$<$$<$1 and collinear, eikonal radiation, a rough kinematic cutoff has to be applied to the k integration. The Monte Carlo might not know about this when supplying (x,k) pairs, so we need to simply return 0 for these. 
+
+Definition at line 306 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-en, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-switchkmax, and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-x.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().
+
+\begin{Code}\begin{verbatim}307 {
+308   double kmax;
+309   switch (_switchkmax)
+310   {
+311     case 1:
+312       // Ivan's first version of k_max
+313       kmax = _x*_en;
+314     break;
+315 
+316     case 2:
+317       // Another version from Ivan's code
+318       _x <= 0.5 ? kmax = _x*_en : kmax = (1.-_x)*_en;
+319     break;
+320 
+321     case 3:
+322       // Magdalena's favourite version of k_max
+323       kmax = 2.*_x*(1.-_x)*_en;
+324     break;
+325 
+326     default:
+327       kmax = -1.;
+328       break;
+329   }
+330   return kmax;
+331 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!Interference@{Interference}}
+\index{Interference@{Interference}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference (long {\em m}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline, private]}}\label{classGlvRadiative3_207048cfa0d9458af7d1547e5c7c25b7}
+
+
+An interference term. In the correlated case, this is a bunch of cosines. But in this special case when the scatters are 'uncorrelated' and distributed exp(-L/lambda), this gives a simpler form. 
+
+Definition at line 334 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-dglvBeta, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-inteferenceFrac, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-length, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::n, and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::qpcalc.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Summation().
+
+\begin{Code}\begin{verbatim}335 {
+336   const double modLen = _length / static_cast<double>(n+1) *_inteferenceFrac;
+337 
+338   double result1, result2;
+339   double omknLen;
+340   
+341   std::complex<double> den = std::complex<double>(1.,0.);
+342   double qpkk;
+343 
+344   for ( long k=2; k<=m; ++k ) 
+345   {
+346     qpkk = qpcalc.GetSumQskk( k, zeroes );
+347     omknLen = (qpkk+_dglvBeta) * modLen;
+348     den *= std::complex<double>( 1., omknLen );
+349   }
+350   
+351   result1 = den.real() / ( pow(den.real(),2) + pow(den.imag(),2) );
+352   
+353   qpkk = qpcalc.GetSumQskk( 1, zeroes );
+354   omknLen = (qpkk+_dglvBeta)* modLen;
+355   den *= std::complex<double>( 1., omknLen );
+356   
+357   result2 = den.real() / ( pow(den.real(),2) + pow(den.imag(),2) );
+358   
+359   /*
+360   double denreal = 1.; double denimag = 0.;
+361   double qpkk;
+362 
+363   for ( long k=2; k<=m; ++k ) 
+364   {
+365     qpkk = qpcalc.GetSumQskk( k, zeroes );
+366     omknLen = (qpkk+_dglvBeta) * modLen;
+367     denreal -= denimag*omknLen; denimag += denreal*omknLen;
+368   }  
+369   result1 = denreal / ( denreal*denreal + denimag*denimag );
+370   
+371   qpkk = qpcalc.GetSumQskk( 1, zeroes );
+372   omknLen = (qpkk+_dglvBeta)* modLen;
+373   denreal -= denimag*omknLen; denimag += denreal*omknLen;  
+374   result2 = denreal / ( denreal*denreal + denimag*denimag );
+375   */
+376   return ( result1 - result2 );
+377 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!CdotB@{CdotB}}
+\index{CdotB@{CdotB}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::CdotB (long {\em m}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline, private]}}\label{classGlvRadiative3_df51b9aa368c70ca9bd499d3626dd915}
+
+
+The GLV CdotB. 
+
+
+
+Definition at line 380 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-dglvBeta, and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::qpcalc.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Summation().
+
+\begin{Code}\begin{verbatim}381 {
+382   const double over_qs11 = 1./( _dglvBeta + qpcalc.GetSumQskk( 1, zeroes ) );
+383   const double over_qsmp1mp1 = 1./( _dglvBeta + qpcalc.GetSumQskk( m+1, zeroes ) );
+384   const double over_qsmm = 1./( _dglvBeta + qpcalc.GetSumQskk( m, zeroes ) );
+385 
+386   const double qs1m = qpcalc.GetSumQs1k( m, zeroes );
+387   const double qs1mp1 = qpcalc.GetSumQs1k( m+1, zeroes );
+388 
+389   return ( qs1mp1*over_qsmp1mp1 - qs1m*over_qsmm ) * over_qs11;
+390 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!Summation@{Summation}}
+\index{Summation@{Summation}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Summation (long {\em mmin}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline, private]}}\label{classGlvRadiative3_ba2f10c5132695a0202bc7cf15bf5dd5}
+
+
+Calls interference$\ast$cdotb multiple times, summing over all m values from mmin to n. The choice of mmin depends on whether we want to include the classical diffusion terms (which don't contribute to dN/dx, but do alter the shape of dN/dxdk). 
+
+Definition at line 393 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::CdotB(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::n.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk().
+
+\begin{Code}\begin{verbatim}394 {
+395   double result = 0.;
+396   for ( long m=mmin; m<=n; ++m )
+397   {
+398     result += Interference( m, zeroes ) * CdotB( m, zeroes );
+399   }
+400   return -2.*result;
+401 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!GetdNdxdk@{GetdNdxdk}}
+\index{GetdNdxdk@{GetdNdxdk}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk () const\hspace{0.3cm}{\tt  [inline, private]}}\label{classGlvRadiative3_b2cc7e384f21ea2a73e7d5d0da53ef5b}
+
+
+The ultimate aim of this object - returning dN/dxdk Note that x and k are set in the 'SetCoord' function 
+
+Definition at line 404 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-abovekmax, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-alphas, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-cr, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-diffexclude, SwUtils::\_\-factorial(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-gluonlambda, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-k, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-length, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-overx, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::n, overpi, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::qpgen, and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Summation().
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetAnswer().
+
+\begin{Code}\begin{verbatim}405 {
+406   // First, check whether k is over kmax
+407   if ( _abovekmax )
+408   {
+409     return 0.;
+410   }
+411   
+412   double result = 0.;
+413   for ( long i=0; i<TPower<2,n>::value-1; ++i )
+414   {
+415     // If we want to only look at the quantum source term, exclude the classical
+416     // diffusion terms, then we start at n. If we want all of it, then we start at 1.
+417     unsigned long mmin;
+418     _diffexclude ? mmin = n : mmin = 1;
+419     result += Summation( mmin, i ) * qpgen.GetQsEventWeight( i );
+420   }
+421 
+422   result *= _k * _overx * overpi  * _cr *_alphas * 2.;
+423   result *= pow( _length / _gluonlambda, n ) * 1. / SwUtils::_factorial( n );
+424 
+425   return result;
+426 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!SetParameters@{SetParameters}}
+\index{SetParameters@{SetParameters}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ void {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters ({\bf Parameters} \& {\em inParams})\hspace{0.3cm}{\tt  [inline]}}\label{classGlvRadiative3_4580df54010ce57c315d0b275b92cc49}
+
+
+Getting all the parameters for GLV from the input file. 
+
+
+
+Definition at line 152 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-alphas, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-cr, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-diffexclude, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-en, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-gluonlambda, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-length, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-mass2, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-mg2, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-mu, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-overEn, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-switchkmax, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-temperature, Parameters::GetParametersDouble(), Parameters::GetParametersLong(), Parameters::GetParametersString(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::n.
+
+\begin{Code}\begin{verbatim}153 {
+154   std::vector<double> ReturnedParamsDouble;
+155   std::vector<long> ReturnedParamsLong;
+156   std::list<std::string> ReturnedParamsString;
+157   std::list<std::string>::iterator it;
+158 
+159   // Check that the opacity order in the input file matches
+160   // that of our compiled executable. The opacity is not a runtime choice,
+161   // it's a compile time choice - this just makes sure that it matches, and that
+162   // the opacity is understood by the user
+163   ReturnedParamsLong = inParams.GetParametersLong( "@opacityOrder" );
+164   long opac = ReturnedParamsLong[0];
+165   if ( opac != n )
+166   {
+167     // The opacity doesn't match!!
+168     // Remember that n is defined as a static long above
+169     std::cerr << "Radcalcer, run time opacity doesn't match that set at compile time.\n";
+170     std::cerr << "For possible optimization purposes, opacity is chosen at compile time";
+171     std::cerr << std::endl;
+172     exit(0);
+173   }
+174 
+175   // First, we get the parameters of the medium
+176   // This is: 1st = mu, 2nd = temperature, 3rd = gluon mass, 4th = gluon mean free path
+177   // Here, we only need the gluon mass
+178   // the zDist will need the others
+179   ReturnedParamsDouble = inParams.GetParametersDouble( "@mediumParams" );
+180   _mg2 = ReturnedParamsDouble[2]*ReturnedParamsDouble[2];
+181   _temperature = ReturnedParamsDouble[1];
+182   _gluonlambda = ReturnedParamsDouble[3];
+183   _mu = ReturnedParamsDouble[0];
+184 
+185   // Next, get the jet flavour
+186   ReturnedParamsString = inParams.GetParametersString( "@jetFlavour" );
+187   std::string jetFlavour = ReturnedParamsString.front();
+188   if ( jetFlavour == "Gluon" )
+189   {
+190     _cr = 3.; _mass2 = _mg2;
+191   }
+192   else if ( jetFlavour == "Light" )
+193   {
+194     _cr = 4./3.; _mass2 = _mg2 / 2;
+195   }
+196   else if ( jetFlavour == "Charm" )
+197   {
+198     _cr = 4./3.; _mass2 = 1.2*1.2;
+199   }
+200   else if ( jetFlavour == "Bottom" )
+201   {
+202     _cr = 4./3.; _mass2 = 4.75*4.75;
+203   }
+204   else
+205   {
+206     std::cerr << "@jetFlavour not understood" << std::endl;
+207     exit(0);
+208   }
+209 
+210   // Now, check whether also specifying a jet mass
+211   ReturnedParamsDouble = inParams.GetParametersDouble( "@jetMassDirect" );
+212   if ( ReturnedParamsDouble.size() > 0 )
+213     _mass2 = ReturnedParamsDouble[0]*ReturnedParamsDouble[0];
+214   
+215   // Now, the momentum, to give the jet energy
+216   ReturnedParamsDouble = inParams.GetParametersDouble( "@jetMomentum" );
+217   double jetMomentum = ReturnedParamsDouble[0];
+218   // Now calculate and set energy, and mass
+219   _en = sqrt( _mass2 + jetMomentum*jetMomentum );
+220   _overEn = 1. / _en;
+221 
+222   // The jet path length in the medium
+223   ReturnedParamsDouble = inParams.GetParametersDouble( "@pathLength" );
+224   _length = ReturnedParamsDouble[0];
+225 
+226   // The setting on the k max
+227   ReturnedParamsLong = inParams.GetParametersLong( "@limitSet" );
+228   _switchkmax = ReturnedParamsLong[0];
+229 
+230   // The strong coupling, alpha_s
+231   ReturnedParamsString = inParams.GetParametersString( "@alpha" );
+232   it = ReturnedParamsString.begin();
+233   if ( *it == "fixed" )
+234   {
+235     ++it;
+236     _alphas = boost::lexical_cast<double>( *it );
+237   }
+238   else
+239   {
+240     std::cerr << "Radcalcer, @alpha not understood";
+241     std::cerr << std::endl;
+242     exit(0);
+243   }
+244 
+245   ReturnedParamsString = inParams.GetParametersString( "@incClassicalDiffusion" );
+246   if ( ReturnedParamsString.front() == "yes" )
+247     _diffexclude = false;
+248   else if ( ReturnedParamsString.front() == "no" )
+249     _diffexclude = true;
+250   else
+251   {
+252     std::cerr << "Radcalcer, @incClassicalDiffusion not understood as yes or no";
+253     std::cerr << std::endl;
+254     exit(0);
+255   }
+256 
+257 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!SetCoord@{SetCoord}}
+\index{SetCoord@{SetCoord}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ void {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord (long {\em dimension}, double {\em value})\hspace{0.3cm}{\tt  [inline]}}\label{classGlvRadiative3_7bf0a167acbea5cd64c7070fb0714af5}
+
+
+Setting x and k Note that setting x requires no recalculation of the q-vectors; setting k does need a little recalculation. Hence, iterating over x for fixed k will be more efficient than iterating over k for fixed x. 
+
+Definition at line 260 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-abovekmax, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-dglvBeta, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-inteferenceFrac, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-k, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-mass2, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-mg2, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-overEn, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-overx, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-x, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetKmax(), overhbarc, and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::qpcalc.
+
+\begin{Code}\begin{verbatim}261 {
+262   // Dimension 1 = k
+263   // Dimension 2 = x
+264 
+265   switch (dimension)
+266   {
+267     case 1:
+268       _k = value;
+269       qpcalc.SetK( _k );
+270       break;
+271 
+272     case 2:
+273       _x = value;
+274       _overx = 1. / _x;
+275       _dglvBeta = _mg2*(1.-_x) + _mass2*_x*_x;
+276       _inteferenceFrac = 0.5*_overx*_overEn*overhbarc;
+277       break;
+278 
+279     default:
+280 
+281       break;
+282   }
+283 
+284   ( _k > GetKmax() ) ? _abovekmax = true : _abovekmax = false;
+285 
+286 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!SetRandoms@{SetRandoms}}
+\index{SetRandoms@{SetRandoms}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ void {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetRandoms (boost::array$<$ double, numOfRandoms $>$ \& {\em randomNumbers})\hspace{0.3cm}{\tt  [inline]}}\label{classGlvRadiative3_e49ec4e38b4da202be6f1636c07503bd}
+
+
+Pass in random number distributed from [0,1), use them to set Q and Theta as necessary. This uses the TqperpGenerator object to convert into [0,qmax), then uses TqperpCalculator to do all necessary calculation for this set of Qs and Thetas 
+
+Definition at line 289 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-en, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-mu, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::\_\-temperature, GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::qpcalc, and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::qpgen.
+
+\begin{Code}\begin{verbatim}290 {
+291   boost::array<double, n> Qs;
+292   boost::array<double, n> Thetas;
+293 
+294   qpgen.SetParameters( _temperature, _en, _mu );
+295   qpgen.GetQsThetas( randoms, Qs, Thetas );
+296   qpcalc.SetQsThetas( Qs, Thetas );
+297 }
+\end{verbatim}
+\end{Code}
+
+
+\index{GlvRadiative3@{GlvRadiative3}!GetAnswer@{GetAnswer}}
+\index{GetAnswer@{GetAnswer}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ void {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetAnswer (std::vector$<$ double $>$ \& {\em answers}) const\hspace{0.3cm}{\tt  [inline]}}\label{classGlvRadiative3_ab8a7ddc9531d0336628fc6ba0ee42a4}
+
+
+The \doxyref{Driver}{p.}{classDriver} calls GetAnswer, to fill a vector of results. Here, this just inlines to call the private function \doxyref{GetdNdxdk()}{p.}{classGlvRadiative3_b2cc7e384f21ea2a73e7d5d0da53ef5b} 
+
+Definition at line 300 of file glvradiative3.h.
+
+References GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk().
+
+\begin{Code}\begin{verbatim}301 {
+302   answers[0] = GetdNdxdk();
+303 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{GlvRadiative3@{GlvRadiative3}!n@{n}}
+\index{n@{n}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ const long {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf n} = numOfRandoms/2\hspace{0.3cm}{\tt  [static, private]}}\label{classGlvRadiative3_57271411b03571187a3d52850c597daa}
+
+
+The order in opacity. 
+
+
+
+Definition at line 69 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Summation().\index{GlvRadiative3@{GlvRadiative3}!qpgen@{qpgen}}
+\index{qpgen@{qpgen}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ TqperpGenerate {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf qpgen}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_672c234a19c28357551867189ba1b674}
+
+
+Takes given uniform random numbers [0,1), gives q\_\-perp vectors (polar coords). 
+
+
+
+Definition at line 72 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetRandoms().\index{GlvRadiative3@{GlvRadiative3}!qpcalc@{qpcalc}}
+\index{qpcalc@{qpcalc}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ TqperpCalculate {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf qpcalc}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_068b85dfeb1f4e5bdba73f715a5e92e0}
+
+
+Takes q\_\-perp vectors, calculates sum q\_\-i.q\_\-j's as necessary. 
+
+
+
+Definition at line 74 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::CdotB(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetRandoms().\index{GlvRadiative3@{GlvRadiative3}!_mass2@{\_\-mass2}}
+\index{_mass2@{\_\-mass2}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-mass2}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_873d93a77c8fb9de27a565d66a5b3f72}
+
+
+
+
+Definition at line 77 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_mg2@{\_\-mg2}}
+\index{_mg2@{\_\-mg2}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-mg2}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_9170dfb3ff2aa463bd45f680b7a2f94a}
+
+
+
+
+Definition at line 78 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_en@{\_\-en}}
+\index{_en@{\_\-en}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-en}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_0ffb4c2344a9b8e0756eb270840e49c7}
+
+
+
+
+Definition at line 79 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetKmax(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetRandoms().\index{GlvRadiative3@{GlvRadiative3}!_overEn@{\_\-overEn}}
+\index{_overEn@{\_\-overEn}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-overEn}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_b7ef58300105bf2d68d55dda3f15adba}
+
+
+
+
+Definition at line 80 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_length@{\_\-length}}
+\index{_length@{\_\-length}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-length}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_b55f4fa5d6a1b8869576a2bd613f2a87}
+
+
+
+
+Definition at line 81 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_cr@{\_\-cr}}
+\index{_cr@{\_\-cr}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-cr}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_2c868d312bf0863c677fff5af6e0ebcd}
+
+
+
+
+Definition at line 82 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_alphas@{\_\-alphas}}
+\index{_alphas@{\_\-alphas}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-alphas}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_1bbde086c82e12ff3e6624018199d82b}
+
+
+
+
+Definition at line 83 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_gluonlambda@{\_\-gluonlambda}}
+\index{_gluonlambda@{\_\-gluonlambda}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-gluonlambda}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_6f4a4b67f66a27c4ed1a60972186e16c}
+
+
+
+
+Definition at line 84 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_temperature@{\_\-temperature}}
+\index{_temperature@{\_\-temperature}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-temperature}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_9ea62756fbb4b412cc3913b0064d7cb4}
+
+
+
+
+Definition at line 85 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetRandoms().\index{GlvRadiative3@{GlvRadiative3}!_mu@{\_\-mu}}
+\index{_mu@{\_\-mu}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-mu}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_820ab1ecbd362382185a8744a52be3cd}
+
+
+
+
+Definition at line 86 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetRandoms().\index{GlvRadiative3@{GlvRadiative3}!_dglvBeta@{\_\-dglvBeta}}
+\index{_dglvBeta@{\_\-dglvBeta}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-dglvBeta}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_79e59619d67184e9fe763fa1bc4947a9}
+
+
+
+
+Definition at line 88 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::CdotB(), GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().\index{GlvRadiative3@{GlvRadiative3}!_inteferenceFrac@{\_\-inteferenceFrac}}
+\index{_inteferenceFrac@{\_\-inteferenceFrac}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-inteferenceFrac}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_3363c3e9629bc2c1a59715c623e9b0e6}
+
+
+
+
+Definition at line 89 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::Interference(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().\index{GlvRadiative3@{GlvRadiative3}!_x@{\_\-x}}
+\index{_x@{\_\-x}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-x}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_216f62058f730c849d889bbbf730fe0c}
+
+
+
+
+Definition at line 90 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetKmax(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().\index{GlvRadiative3@{GlvRadiative3}!_overx@{\_\-overx}}
+\index{_overx@{\_\-overx}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-overx}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_1071160ec22c9104b5fa7b263ac28e0a}
+
+
+
+
+Definition at line 91 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().\index{GlvRadiative3@{GlvRadiative3}!_k@{\_\-k}}
+\index{_k@{\_\-k}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ double {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-k}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_f157d00336d4e4fce5ec48e194a8da3e}
+
+
+
+
+Definition at line 92 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().\index{GlvRadiative3@{GlvRadiative3}!_switchkmax@{\_\-switchkmax}}
+\index{_switchkmax@{\_\-switchkmax}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ long {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-switchkmax}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_7e07011efe2ae56f9967336f828adaa5}
+
+
+
+
+Definition at line 94 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetKmax(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().\index{GlvRadiative3@{GlvRadiative3}!_abovekmax@{\_\-abovekmax}}
+\index{_abovekmax@{\_\-abovekmax}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ bool {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-abovekmax}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_651b6ac387d5e6c45722f0a0a0a0b5f5}
+
+
+
+
+Definition at line 95 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetCoord().\index{GlvRadiative3@{GlvRadiative3}!_diffexclude@{\_\-diffexclude}}
+\index{_diffexclude@{\_\-diffexclude}!GlvRadiative3@{GlvRadiative3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TqperpGenerate, typename TqperpCalculate, std::size\_\-t numOfRandoms$>$ bool {\bf GlvRadiative3}$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::{\bf \_\-diffexclude}\hspace{0.3cm}{\tt  [private]}}\label{classGlvRadiative3_71e7abf4abd302533ddfc5fb499c7772}
+
+
+
+
+Definition at line 97 of file glvradiative3.h.
+
+Referenced by GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::GetdNdxdk(), and GlvRadiative3$<$ TqperpGenerate, TqperpCalculate, numOfRandoms $>$::SetParameters().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv3/{\bf glvradiative3.h}\end{CompactItemize}

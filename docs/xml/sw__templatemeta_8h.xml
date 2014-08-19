@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="sw__templatemeta_8h" kind="file">
+    <compoundname>sw_templatemeta.h</compoundname>
+    <includedby refid="glvradiative3_8h" local="yes">Gyulassy/opacity3/src/glv3/glvradiative3.h</includedby>
+    <includedby refid="qperpcalculator1_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpcalculator1.h</includedby>
+    <includedby refid="qperpcalculator3_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpcalculator3.h</includedby>
+    <includedby refid="qperpgenerator3_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpgenerator3.h</includedby>
+    <invincdepgraph>
+      <node id="499">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1_8h"/>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="497">
+        <label>Gyulassy/opacity3/src/glv3/glvradiative3.h</label>
+        <link refid="glvradiative3_8h"/>
+        <childnode refid="498" relation="include">
+        </childnode>
+      </node>
+      <node id="498">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="496">
+        <label>Gyulassy/opacity3/src/sw_templatemeta.h</label>
+        <link refid="sw_templatemeta.h"/>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="499" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator3.h</label>
+        <link refid="qperpcalculator3_8h"/>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+      </node>
+      <node id="500">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main__qperptest_8cpp"/>
+      </node>
+      <node id="502">
+        <label>Gyulassy/opacity3/src/glv3/qperpgenerator3.h</label>
+        <link refid="qperpgenerator3_8h"/>
+        <childnode refid="498" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structTPower" prot="public">TPower</innerclass>
+    <innerclass refid="structTPower_3_01a_00_010_01_4" prot="public">TPower&lt; a, 0 &gt;</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Interface:<sp/>sw_templatemeta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/>&lt;&gt;,<sp/>(C)<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright:<sp/>See<sp/>COPYING<sp/>file<sp/>that<sp/>comes<sp/>with<sp/>this<sp/>distribution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SW_TEMPLATEMETA_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SW_TEMPLATEMETA_H</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>calculate<sp/>the<sp/>power</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>b&gt;</highlight></codeline>
+<codeline lineno="18" refid="structTPower" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTPower" kindref="compound">TPower</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" kindref="member">value</ref><sp/>=<sp/>a*<ref refid="structTPower" kindref="compound">TPower</ref>&lt;a,<sp/>b-1&gt;<ref refid="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" kindref="member">::value</ref><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>a&gt;</highlight></codeline>
+<codeline lineno="24" refid="structTPower_3_01a_00_010_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTPower" kindref="compound">TPower</ref>&lt;a,<sp/>0&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="structTPower_3_01a_00_010_01_4_1484d0b579efc1b23ba2ea067c2932f9381891824da2f2a168c8b115fa771ed88" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="structTPower_11348f3841022dd67390b6a7c9b47eab8642ed8a18afdf744129f8432f3ed37f8" kindref="member">value</ref><sp/>=<sp/>1<sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/sw_templatemeta.h"/>
+  </compounddef>
+</doxygen>

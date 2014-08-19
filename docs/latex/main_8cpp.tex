@@ -1,0 +1,207 @@
+\section{Gyulassy/opacity3/src/main.cpp File Reference}
+\label{main_8cpp}\index{Gyulassy/opacity3/src/main.cpp@{Gyulassy/opacity3/src/main.cpp}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include \char`\"{}progressbar.h\char`\"{}}\par
+{\tt \#include \char`\"{}timer.h\char`\"{}}\par
+{\tt \#include \char`\"{}driver.h\char`\"{}}\par
+{\tt \#include \char`\"{}glv1/radcalcerwrapper.h\char`\"{}}\par
+{\tt \#include \char`\"{}glv3/glvradiative3.h\char`\"{}}\par
+{\tt \#include \char`\"{}store2d/store.h\char`\"{}}\par
+{\tt \#include \char`\"{}./glv3/qperpcalculator1.h\char`\"{}}\par
+{\tt \#include \char`\"{}./glv3/qperpcalculator3.h\char`\"{}}\par
+{\tt \#include \char`\"{}./glv3/qperpgenerator3.h\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf NO\_\-INPUT}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf GetInput} (std::string \&resume, std::string \&inputFile, std::string \&outputFile, long \&NumberOfIterations)
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{main.cpp@{main.cpp}!NO_INPUT@{NO\_\-INPUT}}
+\index{NO_INPUT@{NO\_\-INPUT}!main.cpp@{main.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define NO\_\-INPUT}\label{main_8cpp_d62650a8615e3aa9191d667f58c439f0}
+
+
+
+
+Definition at line 24 of file main.cpp.
+
+\subsection{Function Documentation}
+\index{main.cpp@{main.cpp}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!main.cpp@{main.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void GetInput (std::string \& {\em resume}, std::string \& {\em inputFile}, std::string \& {\em outputFile}, long \& {\em NumberOfIterations})}\label{main_8cpp_255d3fd88277d4303927db8316098dc7}
+
+
+Get input from the user in order to run a Glv calculation If we have define NO\_\-INPUT above then then the user isn't asked, it just runs with a default set of parameters 
+
+Definition at line 168 of file main.cpp.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}170 {
+171   // Get required input for the Monte Carlo run
+172   // First, ask whether we are resuming the Monte Carlo statistics from a previous run
+173   do
+174   {
+175     std::cout << "Resume from a previous run? (y/n) ";
+176 #ifdef NO_INPUT
+177    resume = "n";
+178    std::cout << resume;
+179 #else
+180     std::cin >> resume;
+181 #endif
+182     std::cout << "\n";
+183   } 
+184   while ( !( resume=="y" || resume=="n" ) );
+185   
+186   // Second, filenames
+187   std::cout << "\nEnter input file and output file\n";
+188   std::cout << "(no spaces in file names, separate two names with a space): ";
+189 #ifdef NO_INPUT
+190   inputFile = "./results/temp.params"; outputFile = "./results/temp.txt";
+191   std::cout << std::endl << inputFile << " " << outputFile;
+192 #else
+193   std::cin >> inputFile >> outputFile;
+194 #endif
+195   std::cout << "\n";
+196   
+197   // Finally (thirdly), how many Monte Carlo iterations do we want?
+198   std::cout << "How many Monte Carlo iterations? ";
+199 #ifdef NO_INPUT
+200   NumberOfIterations = 100000;
+201   std::cout << NumberOfIterations;
+202 #else
+203   std::cin >> NumberOfIterations;
+204 #endif
+205   std::cout << std::endl << std::endl;
+206 }
+\end{verbatim}
+\end{Code}
+
+
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, char $\ast$ {\em argv}[$\,$])}\label{main_8cpp_0ddf1224851353fc92bfbff6f499fa97}
+
+
+
+
+Definition at line 64 of file main.cpp.
+
+References GetInput(), Timer::GetResult(), ProgressBar::PrintFinal(), ProgressBar::PrintPreliminaries(), ProgressBar::PrintProgress(), ProgressBar::SetNow(), Timer::StartTimer(), and Timer::StopTimer().
+
+\begin{Code}\begin{verbatim}65 {
+66   // Sample program doing a Monte Carlo calculation
+67   // We need to choose the dimensionality of the Monte Carlo at COMPILE time
+68   // This is in the NUMRANDOMS macros above
+69   // Note that the calculation engine (eg GLV) may use more than one random number
+70   // per eg order in opacity, so NUMRANDOMS is a multiple of opacity
+71 
+72   std::cout << std::endl;
+73   std::cout << "Monte Carlo: Opacity version 3 by Simon Wicks" << std::endl;
+74   std::cout << "(using " << NUMRANDOMS << " random numbers)." << std::endl << std::endl;
+75 
+76   // The only input needed from the user is:
+77   // 1) whether we are resuming from a previous run,
+78   // 2) the filename of the parameters (+data if resuming) to read in
+79   // 3) the filename to which to write our results
+80   // 4) the number of iterations to do
+81   long NumberOfIterations;
+82   std::string resume = ""; std::string inputFile = ""; std::string outputFile = "";
+83   GetInput( resume, inputFile, outputFile, NumberOfIterations );
+84 
+85   // The templatized nature of the Driver means that a number of different calculations
+86   // can be done just by changing the code here in main.
+87   // A number of examples are given below
+88   // Just get rid of the /* */ around the block
+89 
+90   /*
+91   // Glv calculation using most of the old code ('version 1'), but using a wrapper
+92   // to put it into the new templatized Driver
+93   // GlvCalcer only really does a dq dphi_q integration and throws away an extra
+94   // random number per dimension, hence it uses 3 random number per order in opacity
+95   // ie opacity = NUMRANDOMS/3
+96   // TODO: change this to work again
+97   //Driver<RadCalcerWrapper<9>, Store2D, 9> myDriver;
+98   */
+99 
+100   /*
+101   // Glv calculation, using the new ('version 3') calculation code (GlvRadiative3),
+102   // but using a wrapper around the old ('version 1') QperpCalculator code (QperpCalculator1)
+103   // (which is slower than the newer version, but is a good test to give the same answer)
+104   // GlvRadiative3 does a dq dphi_q integration, hence opacity = NUMRANDOMS/2
+105   Driver<GlvRadiative3
+106     <QperpGenerator3<NUMRANDOMS/2>, QperpCalculator1<NUMRANDOMS/2>, NUMRANDOMS>, 
+107     Store2D, NUMRANDOMS> myDriver;
+108   */
+109   
+110   // Glv calculation using the new calculation code (GlvRadiative3) and the
+111   // new qperpcalculator code (QperpCalculator3)
+112   // GlvRadiative3 does a dq dphi_q integration, hence opacity = NUMRANDOMS/2
+113   Driver<GlvRadiative3
+114     <QperpGenerator3<NUMRANDOMS/2>, QperpCalculator3<NUMRANDOMS/2>, NUMRANDOMS>, 
+115     Store2D, NUMRANDOMS> myDriver;
+116 
+117   /*
+118   // TODO: write a GlvRadiative4 which includes the z integration
+119   */
+120 
+121 
+122   // End of different calculation examples
+123 
+124   // Call the driver to set up itself and all the other objects
+125   // If ok, it'll return 0. If not, then it'll return something else.
+126   int errCode = myDriver.Setup( resume, inputFile );
+127   if ( errCode != 0 )
+128   {
+129     std::cerr << "Error on setting up, code = " << errCode << std::endl;
+130     return EXIT_SUCCESS;
+131   }
+132 
+133   // Everything is ready in the calculation, just set up the final
+134   // bits for the user interface: timer and progress bar
+135   // ProgressBar: The first number of the current point (start = 0),
+136   // the second is the end point, the total number
+137   Timer timer;
+138   ProgressBar progBar(0,NumberOfIterations);
+139   progBar.PrintPreliminaries();
+140   
+141   // And now we run the main loop
+142   timer.StartTimer();
+143   for (long i=0; i<NumberOfIterations; ++i)
+144   {
+145     progBar.SetNow(i);
+146     progBar.PrintProgress();
+147     myDriver.RunOneIteration();
+148   }
+149   progBar.SetNow(NumberOfIterations);
+150   progBar.PrintProgress();
+151   timer.StopTimer();
+152   // And the main loop is done!
+153 
+154   // Tell the driver to save our results to file
+155   myDriver.SaveResults( outputFile );
+156  
+157   // Print to screen a few details of the run
+158   progBar.PrintFinal();
+159   double totTime = timer.GetResult();
+160   std::cout << "Total time = " << totTime << " seconds\n";
+161   std::cout << "Time per iteration = " << totTime/static_cast<double>(NumberOfIterations);
+162   std::cout << "\n";
+163   std::cout << std::endl;
+164 
+165   return EXIT_SUCCESS;
+166 }
+\end{verbatim}
+\end{Code}
+
+

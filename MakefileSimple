@@ -1,0 +1,99 @@
+CC=g++
+CFLAGS=-O2 -c -Wall
+LDFLAGS=
+
+VPATH=src:src/store2d:src/glv1:src/randoms
+
+SRCSTORE=store.cpp statisticsmc.cpp convergencetable.cpp
+SRCGLV1=qperpdist.cpp zcolldist.cpp radcalcer.cpp qperparraynew.cpp Function.cpp
+SRCRANDOM=RandDrand.cpp RandSobol.cpp sobol.cpp
+SRCUTIL=parameters.cpp constants.cpp progressbar.cpp timer.cpp
+SRC=$(SRCSTORE) $(SRCGLV1) $(SRCRANDOM) $(SRCUTIL)
+
+SRCMAIN=main.cpp
+
+OBJSTORE=$(SRCSTORE:.cpp=.o)
+OBJGLV1=$(SRCGLV1:.cpp=.o)
+OBJRANDOM=$(SRCRANDOM:.cpp=.o)
+OBJUTIL=$(SRCUTIL:.cpp=.o)
+OBJ=$(OBJSTORE) $(OBJGLV1) $(OBJRANDOM) $(OBJUTIL)
+
+EXEC1=opacity3-n1
+EXEC2=opacity3-n2
+EXEC3=opacity3-n3
+EXEC4=opacity3-n4
+EXEC5=opacity3-n5
+EXEC6=opacity3-n6
+EXEC7=opacity3-n7
+EXEC8=opacity3-n8
+EXEC9=opacity3-n9
+EXEC10=opacity3-n10
+
+all: $(SRC) $(EXEC1) $(EXEC2) $(EXEC3) $(EXEC4) $(EXEC5) $(EXEC6) $(EXEC7) $(EXEC8) $(EXEC9) $(EXEC10)
+	
+$(EXEC1): $(OBJ) main1.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main1.o -o $@
+
+$(EXEC2): $(OBJ) main2.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main2.o -o $@
+
+$(EXEC3): $(OBJ) main3.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main3.o -o $@
+
+$(EXEC4): $(OBJ) main4.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main4.o -o $@
+
+$(EXEC5): $(OBJ) main5.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main5.o -o $@
+
+$(EXEC6): $(OBJ) main6.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main6.o -o $@
+
+$(EXEC7): $(OBJ) main7.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main7.o -o $@
+
+$(EXEC8): $(OBJ) main8.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main8.o -o $@
+
+$(EXEC9): $(OBJ) main9.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main9.o -o $@
+
+$(EXEC10): $(OBJ) main10.o
+	$(CC) $(LDFLAGS) $(OBJ) build/main10.o -o $@
+
+main1.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main1.o -DOPAC1
+
+main2.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main2.o -DOPAC2
+
+main3.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main3.o -DOPAC3
+
+main4.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main4.o -DOPAC4
+
+main5.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main5.o -DOPAC5
+
+main6.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main6.o -DOPAC6
+
+main7.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main7.o -DOPAC7
+
+main8.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main8.o -DOPAC8
+
+main9.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main9.o -DOPAC9
+
+main10.o: src/main.cpp
+	$(CC) $(CFLAGS) -c src/main.cpp -o build/main10.o -DOPAC10
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+
+clean:
+	rm -rf build opacity3-n* 

@@ -1,0 +1,129 @@
+\section{SwRandoms::RandomBase2 Class Reference}
+\label{classSwRandoms_1_1RandomBase2}\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+{\tt \#include $<$Random3.h$>$}
+
+Inheritance diagram for SwRandoms::RandomBase2::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSwRandoms_1_1RandomBase2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf RandomBase2} (unsigned long Dimensionality\_\-)
+\item 
+unsigned long {\bf GetDimensionality} () const 
+\item 
+virtual {\bf RandomBase2} $\ast$ {\bf clone} () const =0
+\item 
+virtual void {\bf GetUniforms} ({\bf SwArrays::MyArray} \&variates)=0
+\item 
+virtual void {\bf Skip} (unsigned long numberOfPaths)=0
+\item 
+virtual void {\bf SetSeed} (unsigned long Seed)=0
+\item 
+virtual void {\bf Reset} ()=0
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+unsigned long {\bf Dimensionality}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file Random3.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!RandomBase2@{RandomBase2}}
+\index{RandomBase2@{RandomBase2}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SwRandoms::RandomBase2::RandomBase2 (unsigned long {\em Dimensionality\_\-})\hspace{0.3cm}{\tt  [inline]}}\label{classSwRandoms_1_1RandomBase2_dd5e3fc4699b36e56970047463186e51}
+
+
+
+
+Definition at line 12 of file Random3.h.
+
+\begin{Code}\begin{verbatim}12 : Dimensionality( Dimensionality_ ) {};
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!GetDimensionality@{GetDimensionality}}
+\index{GetDimensionality@{GetDimensionality}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long SwRandoms::RandomBase2::GetDimensionality () const\hspace{0.3cm}{\tt  [inline]}}\label{classSwRandoms_1_1RandomBase2_f5da6b70e2ff8646ab461b02db54548a}
+
+
+
+
+Definition at line 26 of file Random3.h.
+
+References Dimensionality.
+
+Referenced by SwRandoms::RandSobol::GetUniforms(), SwRandoms::RandDrand48::GetUniforms(), SwRandoms::RandSobol::Skip(), and SwRandoms::RandDrand48::Skip().
+
+\begin{Code}\begin{verbatim}27 {
+28   return Dimensionality;
+29 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!clone@{clone}}
+\index{clone@{clone}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf RandomBase2}$\ast$ SwRandoms::RandomBase2::clone () const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classSwRandoms_1_1RandomBase2_633ab071ed2eded4784ea5c6faf4a9af}
+
+
+
+
+Implemented in {\bf SwRandoms::RandDrand48} \doxyref{}{p.}{classSwRandoms_1_1RandDrand48_835ce3d71b66d4610a60caa89fc7411c}, and {\bf SwRandoms::RandSobol} \doxyref{}{p.}{classSwRandoms_1_1RandSobol_5abf4953d967d0aed2872a5cf2a2cdb7}.\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!GetUniforms@{GetUniforms}}
+\index{GetUniforms@{GetUniforms}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void SwRandoms::RandomBase2::GetUniforms ({\bf SwArrays::MyArray} \& {\em variates})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classSwRandoms_1_1RandomBase2_ee4b8f64be04c3cea35ea63cc4f9c6d6}
+
+
+
+
+Implemented in {\bf SwRandoms::RandDrand48} \doxyref{}{p.}{classSwRandoms_1_1RandDrand48_9d63751f6824911ebbd943c9391db521}, and {\bf SwRandoms::RandSobol} \doxyref{}{p.}{classSwRandoms_1_1RandSobol_8944be055bd402cc4d437d2b4357f79f}.\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!Skip@{Skip}}
+\index{Skip@{Skip}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void SwRandoms::RandomBase2::Skip (unsigned long {\em numberOfPaths})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classSwRandoms_1_1RandomBase2_8a202b85b9c0f380700922331506f459}
+
+
+
+
+Implemented in {\bf SwRandoms::RandDrand48} \doxyref{}{p.}{classSwRandoms_1_1RandDrand48_332d6fbf16276b20465d973c2e89eb87}, and {\bf SwRandoms::RandSobol} \doxyref{}{p.}{classSwRandoms_1_1RandSobol_68f45c07b374e627a58f84f7e2491167}.\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!SetSeed@{SetSeed}}
+\index{SetSeed@{SetSeed}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void SwRandoms::RandomBase2::SetSeed (unsigned long {\em Seed})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classSwRandoms_1_1RandomBase2_ff006e42b1f514697427cc4578383b5e}
+
+
+
+
+Implemented in {\bf SwRandoms::RandDrand48} \doxyref{}{p.}{classSwRandoms_1_1RandDrand48_9596b643d1915b3f8543bbdff6960105}, and {\bf SwRandoms::RandSobol} \doxyref{}{p.}{classSwRandoms_1_1RandSobol_cbab6c15df9c297d18fa585cfad1b11d}.\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!Reset@{Reset}}
+\index{Reset@{Reset}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void SwRandoms::RandomBase2::Reset ()\hspace{0.3cm}{\tt  [pure virtual]}}\label{classSwRandoms_1_1RandomBase2_54a0497121db4d91e3ff6e2b4cdf380a}
+
+
+
+
+Implemented in {\bf SwRandoms::RandDrand48} \doxyref{}{p.}{classSwRandoms_1_1RandDrand48_d572e124c7bf89a406800ce07618b1bd}, and {\bf SwRandoms::RandSobol} \doxyref{}{p.}{classSwRandoms_1_1RandSobol_e3d1bfbb3fa3bc81a9775c8d9875f22f}.
+
+\subsection{Member Data Documentation}
+\index{SwRandoms::RandomBase2@{SwRandoms::RandomBase2}!Dimensionality@{Dimensionality}}
+\index{Dimensionality@{Dimensionality}!SwRandoms::RandomBase2@{SwRandoms::RandomBase2}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf SwRandoms::RandomBase2::Dimensionality}\hspace{0.3cm}{\tt  [private]}}\label{classSwRandoms_1_1RandomBase2_e07e88e367896cf2eaab51b3f479d52d}
+
+
+
+
+Definition at line 23 of file Random3.h.
+
+Referenced by GetDimensionality().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/randoms/{\bf Random3.h}\end{CompactItemize}

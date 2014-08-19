@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="zcolldist_8cpp" kind="file">
+    <compoundname>zcolldist.cpp</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">algorithm</includes>
+    <includes refid="zcolldist_8h" local="yes">zcolldist.h</includes>
+    <includes refid="parameters_8h" local="yes">../parameters.h</includes>
+    <includes refid="constants_8h" local="yes">../constants.h</includes>
+    <incdepgraph>
+      <node id="208">
+        <label>list</label>
+      </node>
+      <node id="202">
+        <label>valarray</label>
+      </node>
+      <node id="203">
+        <label>Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>cmath</label>
+      </node>
+      <node id="207">
+        <label>string</label>
+      </node>
+      <node id="206">
+        <label>map</label>
+      </node>
+      <node id="200">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="204">
+        <label>../Wrapper.h</label>
+        <link refid="Wrapper_8h"/>
+      </node>
+      <node id="199">
+        <label>vector</label>
+      </node>
+      <node id="205">
+        <label>../parameters.h</label>
+        <link refid="parameters_8h"/>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>iostream</label>
+      </node>
+      <node id="198">
+        <label>zcolldist.h</label>
+        <link refid="zcolldist_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="204" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.cpp</label>
+        <link refid="zcolldist.cpp"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="197">
+        <label>algorithm</label>
+      </node>
+      <node id="209">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="199" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zcolldist_8h" kindref="compound">zcolldist.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../parameters.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../constants.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SwUtils;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" refkind="member"><highlight class="normal"><ref refid="classZposGenerator_11e90862f06141844d8d663502b4c0cdc" kindref="member">ZposGenerator::ZposGenerator</ref>(<sp/><ref refid="classParameters" kindref="compound">Parameters</ref>&amp;<sp/>params_,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>opacity_<sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>:<sp/>mSize(<sp/>opacity_<sp/>),<sp/>mPositions(<sp/>opacity_+1<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>ReturnedParamsDouble;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>std::vector&lt;long&gt;<sp/>ReturnedParamsLong;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>std::list&lt;std::string&gt;<sp/>ReturnedParamsString;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>we<sp/>get<sp/>the<sp/>parameters<sp/>of<sp/>the<sp/>medium</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is:<sp/>1st<sp/>=<sp/>mu,<sp/>2nd<sp/>=<sp/>temperature,<sp/>3rd<sp/>=<sp/>gluon<sp/>mass,<sp/>4th<sp/>=<sp/>gluon<sp/>mean<sp/>free<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Here,<sp/>we<sp/>only<sp/>need<sp/>the<sp/>gluon<sp/>mass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>zDist<sp/>will<sp/>need<sp/>the<sp/>others</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>ReturnedParamsDouble<sp/>=<sp/>params_.<ref refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" kindref="member" tooltip="Get the parameter set, but then convert to a vector of doubles.">GetParametersDouble</ref>(<sp/></highlight><highlight class="stringliteral">&quot;@mediumParams&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" kindref="member">_mu</ref><sp/>=<sp/>ReturnedParamsDouble[0];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" kindref="member">_temp</ref><sp/>=<sp/>ReturnedParamsDouble[1];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_gluonlambda<sp/>=<sp/>ReturnedParamsDouble[3];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>jet<sp/>path<sp/>length<sp/>in<sp/>the<sp/>medium</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>ReturnedParamsDouble<sp/>=<sp/>params_.<ref refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" kindref="member" tooltip="Get the parameter set, but then convert to a vector of doubles.">GetParametersDouble</ref>(<sp/></highlight><highlight class="stringliteral">&quot;@pathLength&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_length<sp/>=<sp/>ReturnedParamsDouble[0];</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_maxlen;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>_maxlen<sp/>=<sp/>_length<sp/>*<sp/>5.;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" kindref="member">_loverlambda</ref><sp/>=<sp/>_length<sp/>/<sp/>_gluonlambda;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/>zmin(1),<sp/>zmax(1),<sp/>param(1);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reference<sp/>function<sp/>=&gt;<sp/>the<sp/>function<sp/>under<sp/>the<sp/>integral</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sample<sp/>function<sp/>=&gt;<sp/>the<sp/>function<sp/>from<sp/>which<sp/>to<sp/>sample<sp/>our<sp/>Monte<sp/>Carlo<sp/>points</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>uniform<sp/>reference<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UniformFunction<sp/>refFn1(<sp/>1<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>param[0]<sp/>=<sp/>0.;<sp/>zmin[0]<sp/>=<sp/>0.;<sp/>zmax[0]<sp/>=<sp/>_length;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>refFn1.SetLimits(<sp/>zmin,<sp/>zmax);<sp/>refFn1.SetParams(<sp/>param<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>exponential<sp/>decay<sp/>reference<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classExpDecayFunction" kindref="compound">ExpDecayFunction</ref><sp/>refFn1(<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>param[0]<sp/>=<sp/>_length<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" kindref="member">mSize</ref>+1);<sp/>zmin[0]<sp/>=<sp/>0.;<sp/>zmax[0]<sp/>=<sp/>_maxlen;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>refFn1.<ref refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" kindref="member">SetLimits</ref>(<sp/>zmin,<sp/>zmax<sp/>);<sp/>refFn1.<ref refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" kindref="member">SetParams</ref>(<sp/>param<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>uniform<sp/>sample<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UniformFunction<sp/>sampFn1(<sp/>1<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>param[0]<sp/>=<sp/>0.;<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>sampFn1.SetParams(<sp/>param<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>exponential<sp/>decay<sp/>sample<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="classExpDecayFunction" kindref="compound">ExpDecayFunction</ref><sp/>sampFn1(<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>param[0]<sp/>=<sp/>_length<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" kindref="member">mSize</ref>+1);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>sampFn1.<ref refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" kindref="member">SetParams</ref>(<sp/>param<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" kindref="member">refFn</ref><sp/>=<sp/>refFn1;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" kindref="member">sampleFn</ref><sp/>=<sp/>sampFn1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" kindref="member">mPositions</ref>[0]<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1167471398a46f21d1013cf97e3606736" kindref="member">ZposGenerator::FindRandomPositions</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>Randoms<sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref><sp/>zmin(1),<sp/>zmax(1),<sp/>zIn(1),<sp/>zOut(1),<sp/>refOut(1),<sp/>sampOut(1);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//_weight<sp/>=<sp/>_loverlambda;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="classZposGenerator_113791204df3f02d883a309b880d11043" kindref="member">_weight</ref><sp/>=<sp/>1.<sp/>/<sp/><ref refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" kindref="member">_factorial</ref>(<sp/><ref refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" kindref="member">mSize</ref><sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" kindref="member">mSize</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//zmin[0]<sp/>=<sp/>mPositions[i];<sp/>zmax[0]<sp/>=<sp/>refFn-&gt;GetXmax(0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>zmin[0]<sp/>=<sp/>0.;<sp/>zmax[0]<sp/>=<sp/><ref refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" kindref="member">refFn</ref>-&gt;GetXmax(0);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" kindref="member">sampleFn</ref>-&gt;SetLimits(<sp/>zmin,<sp/>zmax<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>zIn[0]<sp/>=<sp/>Randoms[i];<sp/><ref refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" kindref="member">sampleFn</ref>-&gt;NormedIntegralInverse(<sp/>zIn,<sp/>zOut<sp/>);<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" kindref="member">mPositions</ref>[i+1]<sp/>=<sp/><ref refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" kindref="member">mPositions</ref>[i]<sp/>+<sp/>zOut[0];<sp/></highlight><highlight class="comment">//mPositions[i+1]<sp/>=<sp/>zOut[0];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classZposGenerator_1f450ae3118a1d07d4983c0e50ad8ea96" kindref="member">refFn</ref>-&gt;function(<sp/>zOut,<sp/>refOut<sp/>);<sp/><ref refid="classZposGenerator_1850f0eb2564b3149d51898e28a9cbc22" kindref="member">sampleFn</ref>-&gt;function(<sp/>zOut,<sp/>sampOut<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classZposGenerator_113791204df3f02d883a309b880d11043" kindref="member">_weight</ref><sp/>*=<sp/><ref refid="classZposGenerator_10c44c0025871a793c11a0459f0db343f" kindref="member">_loverlambda</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classZposGenerator_113791204df3f02d883a309b880d11043" kindref="member">_weight</ref><sp/>*=<sp/>refOut[0]<sp/>/<sp/>sampOut[0];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1cae2647a7b06e0bb71b69b3616bf8a53" kindref="member">ZposGenerator::GetTempsMu2s</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>temps,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>mu2s<sp/>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classZposGenerator_1d5447cbf01884d1309e5641863f928fd" kindref="member">mSize</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>temps[i]<sp/>=<sp/><ref refid="classZposGenerator_161581d2b91282a426764210e1ba8fad1" kindref="member">_temp</ref>;<sp/>mu2s[i]<sp/>=<sp/><ref refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" kindref="member">_mu</ref>*<ref refid="classZposGenerator_1fd43d806cc5d8ab6dd2a422ec40ea585" kindref="member">_mu</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classZposGenerator_1ff9cfd493e73f5d711f755c496c462f0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_1ff9cfd493e73f5d711f755c496c462f0" kindref="member">ZposGenerator::GetDeltaZi</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="95"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>tmp<sp/>=<sp/><ref refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" kindref="member">mPositions</ref>[i]<sp/>-<sp/><ref refid="classZposGenerator_165b7ea3c519779af67e218dfd4b94e86" kindref="member">mPositions</ref>[i-1];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classZposGenerator_14efcf84343b79a423e7dc356fd9d0261" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_14efcf84343b79a423e7dc356fd9d0261" kindref="member">ZposGenerator::GetZweight</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="103"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classZposGenerator_113791204df3f02d883a309b880d11043" kindref="member">_weight</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/zcolldist.cpp"/>
+  </compounddef>
+</doxygen>

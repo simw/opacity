@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classQperpGenerator3" kind="class" prot="public">
+    <compoundname>QperpGenerator3</compoundname>
+    <includes refid="qperpgenerator3_8h" local="no">qperpgenerator3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>n</declname>
+        <defname>n</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QperpGenerator3&lt; n &gt;::qmax</definition>
+        <argsstring></argsstring>
+        <name>qmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="34" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" compoundref="qperpgenerator3_8h" startline="61" endline="92">QperpGenerator3&lt; n &gt;::GetQsThetas</referencedby>
+        <referencedby refid="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" compoundref="qperpgenerator3_8h" startline="53" endline="57">QperpGenerator3&lt; n &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QperpGenerator3&lt; n &gt;::mu2</definition>
+        <argsstring></argsstring>
+        <name>mu2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="35" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" compoundref="qperpgenerator3_8h" startline="61" endline="92">QperpGenerator3&lt; n &gt;::GetQsThetas</referencedby>
+        <referencedby refid="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" compoundref="qperpgenerator3_8h" startline="53" endline="57">QperpGenerator3&lt; n &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" prot="private" static="no" mutable="no">
+        <type>boost::array&lt; double, <ref refid="structTPower" kindref="compound">TPower</ref>&lt; 2, n &gt;::value &gt;</type>
+        <definition>boost::array&lt;double, TPower&lt;2,n&gt;::value&gt; QperpGenerator3&lt; n &gt;::weights</definition>
+        <argsstring></argsstring>
+        <name>weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="36" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classQperpGenerator3_1fee76fe6543f1ca8f42179c52d990f76" compoundref="qperpgenerator3_8h" startline="95" endline="98">QperpGenerator3&lt; n &gt;::GetQsEventWeight</referencedby>
+        <referencedby refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" compoundref="qperpgenerator3_8h" startline="61" endline="92">QperpGenerator3&lt; n &gt;::GetQsThetas</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQperpGenerator3_13aeef790166a41a08d7dc41ee1ec64d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>QperpGenerator3&lt; n &gt;::QperpGenerator3</definition>
+        <argsstring>()</argsstring>
+        <name>QperpGenerator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="38" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpGenerator3&lt; n &gt;::SetParameters</definition>
+        <argsstring>(double temp, double energy, double mu)</argsstring>
+        <name>SetParameters</name>
+        <param>
+          <type>double</type>
+          <declname>temp</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="39" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="53" bodyend="57"/>
+        <references refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" compoundref="qperpgenerator3_8h" startline="35">QperpGenerator3&lt; n &gt;::mu2</references>
+        <references refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" compoundref="qperpgenerator3_8h" startline="34">QperpGenerator3&lt; n &gt;::qmax</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpGenerator3&lt; n &gt;::GetQsThetas</definition>
+        <argsstring>(boost::array&lt; double, 2 *n &gt; &amp;randoms, boost::array&lt; double, n &gt; &amp;Qs, boost::array&lt; double, n &gt; &amp;Thetas)</argsstring>
+        <name>GetQsThetas</name>
+        <param>
+          <type>boost::array&lt; double, 2 *n &gt; &amp;</type>
+          <declname>randoms</declname>
+        </param>
+        <param>
+          <type>boost::array&lt; double, n &gt; &amp;</type>
+          <declname>Qs</declname>
+        </param>
+        <param>
+          <type>boost::array&lt; double, n &gt; &amp;</type>
+          <declname>Thetas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="42" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="61" bodyend="92"/>
+        <references refid="namespaceSwUtils_11b9e53b0f01225242c82fe97e878bd6d" compoundref="constants_8h" startline="43" endline="49">SwUtils::_NumberToBoolArray</references>
+        <references refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" compoundref="qperpgenerator3_8h" startline="35">QperpGenerator3&lt; n &gt;::mu2</references>
+        <references refid="qperpgenerator3_8h_143016d873124d39034edb8cd164794db" compoundref="qperpgenerator3_8h" startline="23">pi</references>
+        <references refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" compoundref="qperpgenerator3_8h" startline="34">QperpGenerator3&lt; n &gt;::qmax</references>
+        <references refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" compoundref="qperpgenerator3_8h" startline="36">QperpGenerator3&lt; n &gt;::weights</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpGenerator3_1fee76fe6543f1ca8f42179c52d990f76" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpGenerator3&lt; n &gt;::GetQsEventWeight</definition>
+        <argsstring>(long zeroes) const </argsstring>
+        <name>GetQsEventWeight</name>
+        <param>
+          <type>long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="43" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="95" bodyend="98"/>
+        <references refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" compoundref="qperpgenerator3_8h" startline="36">QperpGenerator3&lt; n &gt;::weights</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para></para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpgenerator3.h" bodystart="31" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classQperpGenerator3_1fee76fe6543f1ca8f42179c52d990f76" prot="public" virt="non-virtual"><scope>QperpGenerator3</scope><name>GetQsEventWeight</name></member>
+      <member refid="classQperpGenerator3_10258a688d52a150065e00b0013373b6e" prot="public" virt="non-virtual"><scope>QperpGenerator3</scope><name>GetQsThetas</name></member>
+      <member refid="classQperpGenerator3_1f65e5abc92aea7d7b221160bb04953d7" prot="private" virt="non-virtual"><scope>QperpGenerator3</scope><name>mu2</name></member>
+      <member refid="classQperpGenerator3_14a9d6c2d97c851d9d012fda899fb3f86" prot="private" virt="non-virtual"><scope>QperpGenerator3</scope><name>qmax</name></member>
+      <member refid="classQperpGenerator3_13aeef790166a41a08d7dc41ee1ec64d5" prot="public" virt="non-virtual"><scope>QperpGenerator3</scope><name>QperpGenerator3</name></member>
+      <member refid="classQperpGenerator3_1302275d11ca9e11bfbcde1d3e9167d1a" prot="public" virt="non-virtual"><scope>QperpGenerator3</scope><name>SetParameters</name></member>
+      <member refid="classQperpGenerator3_1c915b1095818e4b5d05e890eb02b37e2" prot="private" virt="non-virtual"><scope>QperpGenerator3</scope><name>weights</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

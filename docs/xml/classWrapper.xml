@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classWrapper" kind="class" prot="public">
+    <compoundname>Wrapper</compoundname>
+    <includes refid="Wrapper_8h" local="no">Wrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" prot="private" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* Wrapper&lt; T &gt;::DataPtr</definition>
+        <argsstring></argsstring>
+        <name>DataPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="80" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classWrapper_15e9f52d10a6098286c2a552cf19ac619" compoundref="Wrapper_8h" startline="43" endline="44">Wrapper&lt; StatGathering::StatisticsMC &gt;::GetConstPointer</referencedby>
+        <referencedby refid="classWrapper_1954084dfe67131560f58d85cb1c4190e" compoundref="Wrapper_8h" startline="40" endline="41">Wrapper&lt; StatGathering::StatisticsMC &gt;::GetPointer</referencedby>
+        <referencedby refid="classWrapper_19b083b2466e4e43c516bc8a3e2e47e56" compoundref="Wrapper_8h" startline="59" endline="62">Wrapper&lt; StatGathering::StatisticsMC &gt;::operator *</referencedby>
+        <referencedby refid="classWrapper_1da2ce054a40a86d0a03d9bc339152736" compoundref="Wrapper_8h" startline="69" endline="72">Wrapper&lt; StatGathering::StatisticsMC &gt;::operator-&gt;</referencedby>
+        <referencedby refid="classWrapper_18c19573051f3bbe811393abb3691147c" compoundref="Wrapper_8h" startline="46" endline="57">Wrapper&lt; StatGathering::StatisticsMC &gt;::operator=</referencedby>
+        <referencedby refid="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" compoundref="Wrapper_8h" startline="15" endline="15">Wrapper&lt; StatGathering::StatisticsMC &gt;::Wrapper</referencedby>
+        <referencedby refid="classWrapper_15396fe1ce47468f5ceeec85eb423695d" compoundref="Wrapper_8h" startline="24" endline="28">Wrapper&lt; StatGathering::StatisticsMC &gt;::~Wrapper</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Wrapper&lt; T &gt;::Wrapper</definition>
+        <argsstring>()</argsstring>
+        <name>Wrapper</name>
+        <briefdescription>
+<para>Constructor with no parameters - start the pointer as null and zero. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_175fb68554d62529a071016d297018dea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Wrapper&lt; T &gt;::Wrapper</definition>
+        <argsstring>(const T &amp;inner)</argsstring>
+        <name>Wrapper</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor - create a copy of the other object, using the &apos;clone&apos; function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_15396fe1ce47468f5ceeec85eb423695d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Wrapper&lt; T &gt;::~Wrapper</definition>
+        <argsstring>()</argsstring>
+        <name>~Wrapper</name>
+        <briefdescription>
+<para>Destructor - if the pointer is non-null, then delete the object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="25" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_161fbc2f8719cbbb237bab3c94aef6a53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Wrapper&lt; T &gt;::Wrapper</definition>
+        <argsstring>(const Wrapper&lt; T &gt; &amp;original)</argsstring>
+        <name>Wrapper</name>
+        <param>
+          <type>const <ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; T &gt; &amp;</type>
+          <declname>original</declname>
+        </param>
+        <briefdescription>
+<para>Constructor supplying a &apos;wrapped&apos; object, clone the inner object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_1954084dfe67131560f58d85cb1c4190e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* Wrapper&lt; T &gt;::GetPointer</definition>
+        <argsstring>()</argsstring>
+        <name>GetPointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="41" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_15e9f52d10a6098286c2a552cf19ac619" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T *const</type>
+        <definition>const T* const Wrapper&lt; T &gt;::GetConstPointer</definition>
+        <argsstring>() const </argsstring>
+        <name>GetConstPointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="44" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="43" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_18c19573051f3bbe811393abb3691147c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref> &amp;</type>
+        <definition>Wrapper&amp; Wrapper&lt; T &gt;::operator=</definition>
+        <argsstring>(const Wrapper&lt; T &gt; &amp;original)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; T &gt; &amp;</type>
+          <declname>original</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="47" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="46" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_19b083b2466e4e43c516bc8a3e2e47e56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T&amp; Wrapper&lt; T &gt;::operator *</definition>
+        <argsstring>()</argsstring>
+        <name>operator *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="60" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_14841ac8c58122f1d8479577616f6617a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; Wrapper&lt; T &gt;::operator *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="65" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_1da2ce054a40a86d0a03d9bc339152736" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T *const</type>
+        <definition>const T* const Wrapper&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="70" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classWrapper_144a92ec32cd70089debea7205b2cc0a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* Wrapper&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="75" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="74" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Simon Wicks copying out from Joshi &apos;C++ Design Patterns and Derivatives Pricing&apos; A wrapper class to enable easy construction and assignment of new objects, but without worrying about deleting them when they go out of scope Any classes to be in the &apos;wrapper&apos; must implement the &apos;clone&apos; function </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="102">
+        <label>T</label>
+      </node>
+      <node id="101">
+        <label>Wrapper&lt; T &gt;</label>
+        <link refid="classWrapper"/>
+        <childnode refid="102" relation="usage">
+          <edgelabel>DataPtr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h" line="12" bodyfile="/home/simon/Gyulassy/opacity3/src/Wrapper.h" bodystart="11" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" prot="private" virt="non-virtual"><scope>Wrapper</scope><name>DataPtr</name></member>
+      <member refid="classWrapper_15e9f52d10a6098286c2a552cf19ac619" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>GetConstPointer</name></member>
+      <member refid="classWrapper_1954084dfe67131560f58d85cb1c4190e" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>GetPointer</name></member>
+      <member refid="classWrapper_19b083b2466e4e43c516bc8a3e2e47e56" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>operator *</name></member>
+      <member refid="classWrapper_14841ac8c58122f1d8479577616f6617a" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>operator *</name></member>
+      <member refid="classWrapper_1da2ce054a40a86d0a03d9bc339152736" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>operator-&gt;</name></member>
+      <member refid="classWrapper_144a92ec32cd70089debea7205b2cc0a8" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>operator-&gt;</name></member>
+      <member refid="classWrapper_18c19573051f3bbe811393abb3691147c" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>operator=</name></member>
+      <member refid="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>Wrapper</name></member>
+      <member refid="classWrapper_175fb68554d62529a071016d297018dea" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>Wrapper</name></member>
+      <member refid="classWrapper_161fbc2f8719cbbb237bab3c94aef6a53" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>Wrapper</name></member>
+      <member refid="classWrapper_15396fe1ce47468f5ceeec85eb423695d" prot="public" virt="non-virtual"><scope>Wrapper</scope><name>~Wrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

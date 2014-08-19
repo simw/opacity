@@ -1,0 +1,74 @@
+\section{Gyulassy/opacity3/src/glv1/qperpstore2.h File Reference}
+\label{qperpstore2_8h}\index{Gyulassy/opacity3/src/glv1/qperpstore2.h@{Gyulassy/opacity3/src/glv1/qperpstore2.h}}
+{\tt \#include \char`\"{}boost/multi\_\-array.hpp\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class {\bf QperpStore2}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf SetZ} (long zin\_\-)
+\item 
+void {\bf SetVal} (long x\_\-, long y\_\-, long val\_\-)
+\item 
+double {\bf GetVal} (long x\_\-, long y\_\-)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{qperpstore2.h@{qperpstore2.h}!GetVal@{GetVal}}
+\index{GetVal@{GetVal}!qperpstore2.h@{qperpstore2.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double GetVal (long {\em x\_\-}, long {\em y\_\-})}\label{qperpstore2_8h_be1f66be610bdae78fdcdf045421bd11}
+
+
+
+
+Definition at line 40 of file qperpstore2.h.
+
+References QperpStore2::setZ, and QperpStore2::vals.
+
+\begin{Code}\begin{verbatim}41 {
+42   return vals[x_][y_][setZ];
+43 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperpstore2.h@{qperpstore2.h}!SetVal@{SetVal}}
+\index{SetVal@{SetVal}!qperpstore2.h@{qperpstore2.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SetVal (long {\em x\_\-}, long {\em y\_\-}, long {\em val\_\-})}\label{qperpstore2_8h_b553105dc5e4c85d03275fed3d74b8d5}
+
+
+
+
+Definition at line 35 of file qperpstore2.h.
+
+References QperpStore2::setZ, and QperpStore2::vals.
+
+\begin{Code}\begin{verbatim}36 {
+37   vals[x_][y_][setZ] = val_;
+38 }
+\end{verbatim}
+\end{Code}
+
+
+\index{qperpstore2.h@{qperpstore2.h}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!qperpstore2.h@{qperpstore2.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SetZ (long {\em zin\_\-})}\label{qperpstore2_8h_369d36f2cf516db573e5620b3cbe3a3c}
+
+
+
+
+Definition at line 30 of file qperpstore2.h.
+
+References QperpStore2::setZ.
+
+\begin{Code}\begin{verbatim}31 {
+32   setZ = zin_;
+33 }
+\end{verbatim}
+\end{Code}
+
+

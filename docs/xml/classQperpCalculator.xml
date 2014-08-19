@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classQperpCalculator" kind="class" prot="public">
+    <compoundname>QperpCalculator</compoundname>
+    <includes refid="qperparraynew_8h" local="no">qperparraynew.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classQperpCalculator_1450feb266be13364991fba2b883711f2" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long QperpCalculator::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+<para>n = dimension, order in opacity, number of q&apos;s to calculate with </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="23" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+        <referencedby refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">SetK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long QperpCalculator::twotothen</definition>
+        <argsstring></argsstring>
+        <name>twotothen</name>
+        <briefdescription>
+<para>There are 2^n different permutations of setting each q to zero, pre calculate this. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="25" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+        <referencedby refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">SetK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool QperpCalculator::correlated</definition>
+        <argsstring></argsstring>
+        <name>correlated</name>
+        <briefdescription>
+<para>Are we dealing with a correlated medium? 0 = no, 1 = yes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="28" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" compoundref="qperparraynew_8cpp" startline="204" endline="217">GetSumQiQj</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+        <referencedby refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">SetK</referencedby>
+        <referencedby refid="classQperpCalculator_10ec8c93039d650234ac1d2869e7ef5ec" compoundref="qperparraynew_8cpp" startline="193" endline="202">SetZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_12eadd4a22a9ce50636a382b7e45e4de0" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long QperpCalculator::zin</definition>
+        <argsstring></argsstring>
+        <name>zin</name>
+        <briefdescription>
+<para><ref refid="classStore2D" kindref="compound">Store2D</ref> the z value, ie the zeroes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="31" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_10ec8c93039d650234ac1d2869e7ef5ec" compoundref="qperparraynew_8cpp" startline="193" endline="202">SetZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" prot="protected" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray QperpCalculator::qs</definition>
+        <argsstring></argsstring>
+        <name>qs</name>
+        <briefdescription>
+<para>The magnitudes of the q vectors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="34" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_19dad06b2c1b857059d848c7c3c6099ba" compoundref="qperparraynew_8h" startline="88" endline="91">GetQi</referencedby>
+        <referencedby refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" compoundref="qperparraynew_8cpp" startline="238" endline="244">SetQperps</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_15b6c7450c187157952abdb77f16be332" prot="protected" static="no" mutable="no">
+        <type>MyArray</type>
+        <definition>MyArray QperpCalculator::ths</definition>
+        <argsstring></argsstring>
+        <name>ths</name>
+        <briefdescription>
+<para>The polar angles of the q vectors (this is q_perp, ie effectively only 2D vector). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="36" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1265977b7518bbb896e074a0d54710b47" compoundref="qperparraynew_8h" startline="93" endline="96">GetThi</referencedby>
+        <referencedby refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" compoundref="qperparraynew_8cpp" startline="238" endline="244">SetQperps</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_19e589b4cf203e6289b99e459de6ad665" prot="protected" static="no" mutable="no">
+        <type>array2D</type>
+        <definition>array2D QperpCalculator::qiqj</definition>
+        <argsstring></argsstring>
+        <name>qiqj</name>
+        <briefdescription>
+<para>Array of vector q_i dot q_j. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="39" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" prot="protected" static="no" mutable="no">
+        <type>array3D</type>
+        <definition>array3D QperpCalculator::sumqiqj_itonjton</definition>
+        <argsstring></argsstring>
+        <name>sumqiqj_itonjton</name>
+        <briefdescription>
+<para>Array of q_i.q_j summed from i to n and j to n. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="41" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" compoundref="qperparraynew_8cpp" startline="204" endline="217">GetSumQiQj</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1c17016ee4dcd57344199ca4d8dd43eb2" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QperpCalculator::k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <briefdescription>
+<para>k vector magnitude - the emitted gluon </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="44" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">SetK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_10976c2203a868d6095fd4f7e8d5ce0ca" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double QperpCalculator::thk</definition>
+        <argsstring></argsstring>
+        <name>thk</name>
+        <briefdescription>
+<para>k vector polar angle </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="46" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1eb7a7adbe702a6cd3a94e122fd09178c" prot="protected" static="no" mutable="no">
+        <type>array1D</type>
+        <definition>array1D QperpCalculator::khatqi</definition>
+        <argsstring></argsstring>
+        <name>khatqi</name>
+        <briefdescription>
+<para>Array of khat dot q_i (ie khat is unit vector, independent of k magnitude). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="48" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" prot="protected" static="no" mutable="no">
+        <type>array2D</type>
+        <definition>array2D QperpCalculator::sumkhatqi_iton</definition>
+        <argsstring></argsstring>
+        <name>sumkhatqi_iton</name>
+        <briefdescription>
+<para>Sum of khat.q_i summed from i to n. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="50" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_17165df38a37208799ef9ec17680349bb" prot="protected" static="no" mutable="no">
+        <type>array3D</type>
+        <definition>array3D QperpCalculator::sumkhatqikhatqj_itonjton</definition>
+        <argsstring></argsstring>
+        <name>sumkhatqikhatqj_itonjton</name>
+        <briefdescription>
+<para>Sum of khat.q_i summed from i to n and j to n. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="52" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" compoundref="qperparraynew_8cpp" startline="358" endline="436">CalcQmatrices</referencedby>
+        <referencedby refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+        <referencedby refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">SetK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" prot="protected" static="no" mutable="no">
+        <type>array3D</type>
+        <definition>array3D QperpCalculator::sumkqikqj_itonjton</definition>
+        <argsstring></argsstring>
+        <name>sumkqikqj_itonjton</name>
+        <briefdescription>
+<para>Sum of k.q_i summed from i to n and j to n - ie depdendent on k. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="54" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" compoundref="qperparraynew_8cpp" startline="204" endline="217">GetSumQiQj</referencedby>
+        <referencedby refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" compoundref="qperparraynew_8cpp" startline="163" endline="186">QperpCalculator</referencedby>
+        <referencedby refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" compoundref="qperparraynew_8cpp" startline="219" endline="236">SetK</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QperpCalculator::QperpCalculator</definition>
+        <argsstring>(unsigned long n_, bool correlated_)</argsstring>
+        <name>QperpCalculator</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>n_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>correlated_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor - takes the wanted dimension, number of collisions TODO?: templatize this, make n effectively known, thus making loops more efficient? and whether we&apos;re dealing with a correlated medium </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="61" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="163" bodyend="186"/>
+        <references refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" compoundref="qperparraynew_8h" startline="28">correlated</references>
+        <references refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" compoundref="qperparraynew_8h" startline="23">n</references>
+        <references refid="namespaceSwUtils_13974619c250bd02a70c9cfcd88384223" compoundref="constants_8h" startline="25" endline="32">SwUtils::power</references>
+        <references refid="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" compoundref="qperparraynew_8h" startline="50">sumkhatqi_iton</references>
+        <references refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" compoundref="qperparraynew_8h" startline="52">sumkhatqikhatqj_itonjton</references>
+        <references refid="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" compoundref="qperparraynew_8h" startline="54">sumkqikqj_itonjton</references>
+        <references refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" compoundref="qperparraynew_8h" startline="41">sumqiqj_itonjton</references>
+        <references refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" compoundref="qperparraynew_8h" startline="25">twotothen</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_1e0d39a269d3ad4ac9511f21b2a6897d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>QperpCalculator::~QperpCalculator</definition>
+        <argsstring>()</argsstring>
+        <name>~QperpCalculator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="62" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator::SetQperps</definition>
+        <argsstring>(MyArray &amp;qs_, MyArray &amp;ths_)</argsstring>
+        <name>SetQperps</name>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>qs_</declname>
+        </param>
+        <param>
+          <type>MyArray &amp;</type>
+          <declname>ths_</declname>
+        </param>
+        <briefdescription>
+<para>Set the input array of q-vectors, ths is relative to the fixed direction of k. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="65" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="238" bodyend="244"/>
+        <references refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" compoundref="qperparraynew_8cpp" startline="248" endline="273">CalcQmatrices2</references>
+        <references refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" compoundref="qperparraynew_8h" startline="34">qs</references>
+        <references refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" compoundref="qperparraynew_8h" startline="36">ths</references>
+        <referencedby refid="classQperpGenerator_1d40d18e64ee7f921f82d674818f42ec8" compoundref="qperpdist_8cpp" startline="59" endline="93">QperpGenerator::FindRandomQs</referencedby>
+        <referencedby refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" compoundref="qperpcalculator1_8h" startline="41" endline="50">QperpCalculator1&lt; n &gt;::SetQsThetas</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator::CalcQmatrices</definition>
+        <argsstring>()</argsstring>
+        <name>CalcQmatrices</name>
+        <briefdescription>
+<para>Once the q-perps are set, calculate all the further matrices involving q_i.q_j. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="67" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="358" bodyend="436"/>
+        <references refid="qperparraynew_8cpp_19b9808a1bf16458a7ebdf81287337ec5" compoundref="qperparraynew_8cpp" startline="331" endline="354">_Iterate1DForZeroes</references>
+        <references refid="qperparraynew_8cpp_15e634626e89e347ac7105f3a34a7f065" compoundref="qperparraynew_8cpp" startline="301" endline="329">_Iterate2DForZeroes</references>
+        <references refid="qperparraynew_8cpp_1fc899dbd2fbe818860b4c384c52fb84f" compoundref="qperparraynew_8cpp" startline="293" endline="297">_OuterProduct0D1D</references>
+        <references refid="qperparraynew_8cpp_17d756d821e729c3031739ae9168483e4" compoundref="qperparraynew_8cpp" startline="280" endline="291">_OuterProduct1D1D</references>
+        <references refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" compoundref="qperparraynew_8h" startline="28">correlated</references>
+        <references refid="classQperpCalculator_1eb7a7adbe702a6cd3a94e122fd09178c" compoundref="qperparraynew_8h" startline="48">khatqi</references>
+        <references refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" compoundref="qperparraynew_8h" startline="23">n</references>
+        <references refid="classQperpCalculator_19e589b4cf203e6289b99e459de6ad665" compoundref="qperparraynew_8h" startline="39">qiqj</references>
+        <references refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" compoundref="qperparraynew_8h" startline="34">qs</references>
+        <references refid="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" compoundref="qperparraynew_8h" startline="50">sumkhatqi_iton</references>
+        <references refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" compoundref="qperparraynew_8h" startline="52">sumkhatqikhatqj_itonjton</references>
+        <references refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" compoundref="qperparraynew_8h" startline="41">sumqiqj_itonjton</references>
+        <references refid="classQperpCalculator_10976c2203a868d6095fd4f7e8d5ce0ca" compoundref="qperparraynew_8h" startline="46">thk</references>
+        <references refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" compoundref="qperparraynew_8h" startline="36">ths</references>
+        <references refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" compoundref="qperparraynew_8h" startline="25">twotothen</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator::CalcQmatrices2</definition>
+        <argsstring>()</argsstring>
+        <name>CalcQmatrices2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="68" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="248" bodyend="273"/>
+        <references refid="qperparraynew_8cpp_1aea824af3e9dc625dd755fe24f0492b2" compoundref="qperparraynew_8cpp" startline="147" endline="157">_DotProducts1D</references>
+        <references refid="qperparraynew_8cpp_13b87a5052e73e5de13161681e25cf1fa" compoundref="qperparraynew_8cpp" startline="111" endline="141">_DotProducts2D</references>
+        <references refid="qperparraynew_8cpp_1d834a8fc7dd96237188220f0ed214a38" compoundref="qperparraynew_8cpp" startline="90" endline="106">_Fill2DFrom1D</references>
+        <references refid="qperparraynew_8cpp_16e28f19c83c2c6e49a2672873048fd10" compoundref="qperparraynew_8cpp" startline="75" endline="88">_FillAllRows1D</references>
+        <references refid="qperparraynew_8cpp_1e6e4ce05ca5129920fbf7d9ef0a1e88f" compoundref="qperparraynew_8cpp" startline="66" endline="73">_FillAllRows2DSymmetric</references>
+        <references refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" compoundref="qperparraynew_8h" startline="28">correlated</references>
+        <references refid="classQperpCalculator_1eb7a7adbe702a6cd3a94e122fd09178c" compoundref="qperparraynew_8h" startline="48">khatqi</references>
+        <references refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" compoundref="qperparraynew_8h" startline="23">n</references>
+        <references refid="classQperpCalculator_19e589b4cf203e6289b99e459de6ad665" compoundref="qperparraynew_8h" startline="39">qiqj</references>
+        <references refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" compoundref="qperparraynew_8h" startline="34">qs</references>
+        <references refid="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" compoundref="qperparraynew_8h" startline="50">sumkhatqi_iton</references>
+        <references refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" compoundref="qperparraynew_8h" startline="52">sumkhatqikhatqj_itonjton</references>
+        <references refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" compoundref="qperparraynew_8h" startline="41">sumqiqj_itonjton</references>
+        <references refid="classQperpCalculator_10976c2203a868d6095fd4f7e8d5ce0ca" compoundref="qperparraynew_8h" startline="46">thk</references>
+        <references refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" compoundref="qperparraynew_8h" startline="36">ths</references>
+        <references refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" compoundref="qperparraynew_8h" startline="25">twotothen</references>
+        <referencedby refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" compoundref="qperparraynew_8cpp" startline="238" endline="244">SetQperps</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_192a161cdac53f6242ee1d16245466dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator::CalcKhatMatrices</definition>
+        <argsstring>()</argsstring>
+        <name>CalcKhatMatrices</name>
+        <briefdescription>
+<para>Once the q-perps are set, calculate all the further matrices involving khat.q_i. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator::SetK</definition>
+        <argsstring>(double k_)</argsstring>
+        <name>SetK</name>
+        <param>
+          <type>double</type>
+          <declname>k_</declname>
+        </param>
+        <briefdescription>
+<para>Set the magnitude of the k vector (direction is always in fixed direction). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="73" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="219" bodyend="236"/>
+        <references refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" compoundref="qperparraynew_8h" startline="28">correlated</references>
+        <references refid="classQperpCalculator_1c17016ee4dcd57344199ca4d8dd43eb2" compoundref="qperparraynew_8h" startline="44">k</references>
+        <references refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" compoundref="qperparraynew_8h" startline="23">n</references>
+        <references refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" compoundref="qperparraynew_8h" startline="52">sumkhatqikhatqj_itonjton</references>
+        <references refid="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" compoundref="qperparraynew_8h" startline="54">sumkqikqj_itonjton</references>
+        <references refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" compoundref="qperparraynew_8h" startline="25">twotothen</references>
+        <referencedby refid="classQperpCalculator1_107e6f5eb6dd5e344305c07f1255f4054" compoundref="qperpcalculator1_8h" startline="36" endline="39">QperpCalculator1&lt; n &gt;::SetK</referencedby>
+        <referencedby refid="classQperpGenerator_1895774f8b53108c38336a31acc48f57f" compoundref="qperpdist_8h" startline="80" endline="83">QperpGenerator::SetK</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_10ec8c93039d650234ac1d2869e7ef5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator::SetZ</definition>
+        <argsstring>(unsigned long z_)</argsstring>
+        <name>SetZ</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>z_</declname>
+        </param>
+        <briefdescription>
+<para>Set the z value - ie which &apos;zeroes&apos; value we want. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="76" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="193" bodyend="202"/>
+        <references refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" compoundref="qperparraynew_8h" startline="28">correlated</references>
+        <references refid="classQperpCalculator_12eadd4a22a9ce50636a382b7e45e4de0" compoundref="qperparraynew_8h" startline="31">zin</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_19dad06b2c1b857059d848c7c3c6099ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpCalculator::GetQi</definition>
+        <argsstring>(unsigned long i) const </argsstring>
+        <name>GetQi</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a specific q-vector magnitude. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="78" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="88" bodyend="91"/>
+        <references refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" compoundref="qperparraynew_8h" startline="34">qs</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_1265977b7518bbb896e074a0d54710b47" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpCalculator::GetThi</definition>
+        <argsstring>(unsigned long i) const </argsstring>
+        <name>GetThi</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a specific q-vector polar angle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="80" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="93" bodyend="96"/>
+        <references refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" compoundref="qperparraynew_8h" startline="36">ths</references>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpCalculator::GetSumQiQj</definition>
+        <argsstring>(unsigned long i, unsigned long j, unsigned long zeroes) const </argsstring>
+        <name>GetSumQiQj</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the result - sum of q_i.q_j from i to (n+1), j to (n+1) including k.q_i. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="82" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.cpp" bodystart="204" bodyend="217"/>
+        <references refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" compoundref="qperparraynew_8h" startline="28">correlated</references>
+        <references refid="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" compoundref="qperparraynew_8h" startline="54">sumkqikqj_itonjton</references>
+        <references refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" compoundref="qperparraynew_8h" startline="41">sumqiqj_itonjton</references>
+        <referencedby refid="classQperpGenerator_10ff4530994ec3cbb9ab9c4eb8813a8cd" compoundref="qperpdist_8h" startline="85" endline="88">QperpGenerator::GetSumQiQj</referencedby>
+        <referencedby refid="classQperpCalculator1_13789dabfb5de70d79b7a1cdba1e24959" compoundref="qperpcalculator1_8h" startline="57" endline="60">QperpCalculator1&lt; n &gt;::GetSumQs1k</referencedby>
+        <referencedby refid="classQperpCalculator1_1a5f0139d8b09dc996ee4cd50e456e41d" compoundref="qperpcalculator1_8h" startline="52" endline="55">QperpCalculator1&lt; n &gt;::GetSumQskk</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator_174bfd871c1fe2277315bd375a6a01dc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpCalculator::GetSumQiQj</definition>
+        <argsstring>(unsigned long i_, unsigned long j_) const </argsstring>
+        <name>GetSumQiQj</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>i_</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>j_</declname>
+        </param>
+        <briefdescription>
+<para>Same as above, but use the value of zeroes already given by the SetZ function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class to calculate the necessary sums and products of q and k vectors necessary to calculate an opacity expansion. This automates the expansion of the dot products inside the C&apos;s and B&apos;s in GLV for arbitrary order in opacity, rather than trying to calculate by hand. All sums of q&apos;s from i up to the length n are needed, dotted into a sum from j to n. Further, the result but with one or more of the q&apos;s set to zero (ie a delta function in the integral) is needed. <simplesect kind="author"><para>Simon Wicks &lt;<ulink url="mailto:simon_wicks@yahoo.com">simon_wicks@yahoo.com</ulink>&gt; </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" line="20" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/qperparraynew.h" bodystart="19" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classQperpCalculator_192a161cdac53f6242ee1d16245466dde" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>CalcKhatMatrices</name></member>
+      <member refid="classQperpCalculator_191e6a17cf817e4b361d6bc3187ec2095" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>CalcQmatrices</name></member>
+      <member refid="classQperpCalculator_1b8689c3b3d337993df82dbf0540812cd" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>CalcQmatrices2</name></member>
+      <member refid="classQperpCalculator_1280126db21bf9e1304eeef3f770aed71" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>correlated</name></member>
+      <member refid="classQperpCalculator_19dad06b2c1b857059d848c7c3c6099ba" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>GetQi</name></member>
+      <member refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>GetSumQiQj</name></member>
+      <member refid="classQperpCalculator_174bfd871c1fe2277315bd375a6a01dc9" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>GetSumQiQj</name></member>
+      <member refid="classQperpCalculator_1265977b7518bbb896e074a0d54710b47" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>GetThi</name></member>
+      <member refid="classQperpCalculator_1c17016ee4dcd57344199ca4d8dd43eb2" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>k</name></member>
+      <member refid="classQperpCalculator_1eb7a7adbe702a6cd3a94e122fd09178c" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>khatqi</name></member>
+      <member refid="classQperpCalculator_1450feb266be13364991fba2b883711f2" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>n</name></member>
+      <member refid="classQperpCalculator_19e589b4cf203e6289b99e459de6ad665" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>qiqj</name></member>
+      <member refid="classQperpCalculator_1303da9d3465defdf4db40aa77ad6ecbb" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>QperpCalculator</name></member>
+      <member refid="classQperpCalculator_1a8eaec51683b81cf9ae2517b8adaff1b" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>qs</name></member>
+      <member refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>SetK</name></member>
+      <member refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>SetQperps</name></member>
+      <member refid="classQperpCalculator_10ec8c93039d650234ac1d2869e7ef5ec" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>SetZ</name></member>
+      <member refid="classQperpCalculator_1266de6c0b02f77a34f328b4db867e794" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>sumkhatqi_iton</name></member>
+      <member refid="classQperpCalculator_17165df38a37208799ef9ec17680349bb" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>sumkhatqikhatqj_itonjton</name></member>
+      <member refid="classQperpCalculator_1ff93029d6851593b41ce57b9221a9113" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>sumkqikqj_itonjton</name></member>
+      <member refid="classQperpCalculator_12ff22225aa3702b089674292ddf63cf5" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>sumqiqj_itonjton</name></member>
+      <member refid="classQperpCalculator_10976c2203a868d6095fd4f7e8d5ce0ca" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>thk</name></member>
+      <member refid="classQperpCalculator_15b6c7450c187157952abdb77f16be332" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>ths</name></member>
+      <member refid="classQperpCalculator_1495417f5f60bfda90c642d5f41dd36c0" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>twotothen</name></member>
+      <member refid="classQperpCalculator_12eadd4a22a9ce50636a382b7e45e4de0" prot="protected" virt="non-virtual"><scope>QperpCalculator</scope><name>zin</name></member>
+      <member refid="classQperpCalculator_1e0d39a269d3ad4ac9511f21b2a6897d5" prot="public" virt="non-virtual"><scope>QperpCalculator</scope><name>~QperpCalculator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

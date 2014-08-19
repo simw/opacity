@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classDriver" kind="class" prot="public">
+    <compoundname>Driver</compoundname>
+    <includes refid="driver_8h" local="no">driver.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TcalcEngine</declname>
+        <defname>TcalcEngine</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>Tstore</declname>
+        <defname>Tstore</defname>
+      </param>
+      <param>
+        <type>std::size_t</type>
+        <declname>numOfRandoms</declname>
+        <defname>numOfRandoms</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDriver_1b15978b3b6eedc1c9af063a970eb154a" prot="private" static="no" mutable="no">
+        <type>TcalcEngine</type>
+        <definition>TcalcEngine Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::calculator</definition>
+        <argsstring></argsstring>
+        <name>calculator</name>
+        <briefdescription>
+<para>Supplied template parameter type, to perform the calculation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="51" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" compoundref="driver_8h" startline="178" endline="221">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::RunOneIteration</referencedby>
+        <referencedby refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" compoundref="driver_8h" startline="96" endline="139">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" prot="private" static="no" mutable="no">
+        <type>Tstore</type>
+        <definition>Tstore Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::storage</definition>
+        <argsstring></argsstring>
+        <name>storage</name>
+        <briefdescription>
+<para>Supplied template parameter type, to store the results of the calculation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="53" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" compoundref="driver_8h" startline="178" endline="221">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::RunOneIteration</referencedby>
+        <referencedby refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" compoundref="driver_8h" startline="224" endline="239">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SaveResults</referencedby>
+        <referencedby refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" compoundref="driver_8h" startline="96" endline="139">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" prot="private" static="no" mutable="no">
+        <type><ref refid="classParameters" kindref="compound">Parameters</ref></type>
+        <definition>Parameters Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::myParameters</definition>
+        <argsstring></argsstring>
+        <name>myParameters</name>
+        <briefdescription>
+<para>Object to read runtime parameters from file, supplied to calculation and storage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="55" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" compoundref="driver_8h" startline="224" endline="239">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SaveResults</referencedby>
+        <referencedby refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" compoundref="driver_8h" startline="96" endline="139">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classDriver_14da27b778d9838012125868afd04c1ed" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classSwRandoms_1_1RandomBase2" kindref="compound">SwRandoms::RandomBase2</ref> &gt;</type>
+        <definition>Wrapper&lt;SwRandoms::RandomBase2&gt; Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::randomGenerator</definition>
+        <argsstring></argsstring>
+        <name>randomGenerator</name>
+        <briefdescription>
+<para>Random number generator, on the interval [0,1). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="57" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" compoundref="driver_8h" startline="178" endline="221">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::RunOneIteration</referencedby>
+        <referencedby refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" compoundref="driver_8h" startline="142" endline="175">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDriver_1d18a1349226d25296a188e371debec56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Driver</definition>
+        <argsstring>()</argsstring>
+        <name>Driver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="60" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="77" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classDriver_1322d8366a3a84a1539d1eb37fad8d3a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::~Driver</definition>
+        <argsstring>()</argsstring>
+        <name>~Driver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="61" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</definition>
+        <argsstring>(std::string resume, std::string inputFile)</argsstring>
+        <name>Setup</name>
+        <param>
+          <type>std::string</type>
+          <declname>resume</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>inputFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setup routine - read in runtime parameters, set up all objects as necessary  =&quot;y&quot; to resume from a previous run, =&quot;n&quot; to start a new one  Filename of a) previous run file if resuming (including runtime parameters on the end), or b) runtime parameters file if not resuming </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="67" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="96" bodyend="139"/>
+        <references refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" compoundref="driver_8h" startline="51">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::calculator</references>
+        <references refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" compoundref="parameters_8cpp" startline="190" endline="208">Parameters::CheckForUnaccessedParameters</references>
+        <references refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" compoundref="driver_8h" startline="55">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::myParameters</references>
+        <references refid="classParameters_1a96c497084795f0c0be65c37ff03f162">Parameters::ParseInputFile</references>
+        <references refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" compoundref="driver_8h" startline="142" endline="175">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SetParameters</references>
+        <references refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" compoundref="driver_8h" startline="53">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::storage</references>
+      </memberdef>
+      <memberdef kind="function" id="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SetParameters</definition>
+        <argsstring>(Parameters &amp;myParameters)</argsstring>
+        <name>SetParameters</name>
+        <param>
+          <type><ref refid="classParameters" kindref="compound">Parameters</ref> &amp;</type>
+          <declname>myParameters</declname>
+        </param>
+        <briefdescription>
+<para>Read any runtime parameters for the <ref refid="classDriver" kindref="compound">Driver</ref> object from the <ref refid="classParameters" kindref="compound">Parameters</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="69" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="142" bodyend="175"/>
+        <references refid="classParameters_1aad6541e5440beed7c65ac9062109cfe">Parameters::GetParametersString</references>
+        <references refid="classDriver_14da27b778d9838012125868afd04c1ed" compoundref="driver_8h" startline="57">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::randomGenerator</references>
+        <referencedby refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" compoundref="driver_8h" startline="96" endline="139">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::Setup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::RunOneIteration</definition>
+        <argsstring>()</argsstring>
+        <name>RunOneIteration</name>
+        <briefdescription>
+<para>Run a single iteration of the monte carlo simulation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="71" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="178" bodyend="221"/>
+        <references refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" compoundref="driver_8h" startline="51">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::calculator</references>
+        <references refid="classDriver_14da27b778d9838012125868afd04c1ed" compoundref="driver_8h" startline="57">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::randomGenerator</references>
+        <references refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" compoundref="driver_8h" startline="53">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::storage</references>
+      </memberdef>
+      <memberdef kind="function" id="classDriver_1acef05750c91ea6786f9f1c9b711c765" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::SaveResults</definition>
+        <argsstring>(std::string outputFile)</argsstring>
+        <name>SaveResults</name>
+        <param>
+          <type>std::string</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Save the stored results to a file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="73" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="224" bodyend="239"/>
+        <references refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" compoundref="driver_8h" startline="55">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::myParameters</references>
+        <references refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" compoundref="driver_8h" startline="53">Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;::storage</references>
+        <references refid="classParameters_1b93e874ce1ee81e9586a2435b7d8a3de">Parameters::WriteToFile</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Simon Wicks &lt;<ulink url="mailto:simonw@phys.columbia.edu">simonw@phys.columbia.edu</ulink>&gt; A generic driver for a Monte Carlo calculation At run time, different random number generator can be used: for example pseudorandoms such as standard drand48(); quasirandoms such as <ref refid="namespaceSobol" kindref="compound">Sobol</ref> sequences (the latter can vastly increase the rate of convergence of Monte Carlo integration).</para></simplesect>
+Template parameters: TcalcEngine, Tstore, numOfRandoms TcalcEngine is an object that performs the calculation, with the interface .SetParameters( Parameters inParams ) .SetRandoms( boost::array&lt;numOfRandoms&gt; randomNumbers ) .SetCoord( long coord, double value ) .GetAnswer( std::vector answers ) Tstore is an object in which to keep the results, with the interface .SetParameters( Parameters inParams ) .AddPoint( long dim1, long dim2, std::vector&lt;double&gt; result ) .WriteToFile( std::string filename, bool appendToFile ) numOfRandoms is the number of random numbers to be used in the simulation</para><para>TODO: add the number of dimensions of the result as a template parameter, generalize the iteration over deterministic dimensions to be n-dimensional add this number of deterministic dimensions as a template parameter</para><para>TODO: add multithreading, so that multiple calculation engines can be run in parallel while adding into the same data store </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>TcalcEngine</label>
+      </node>
+      <node id="9">
+        <label>Wrapper&lt; SwRandoms::RandomBase2 &gt;</label>
+        <link refid="classWrapper"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>DataPtr</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Tstore</label>
+      </node>
+      <node id="5">
+        <label>Driver&lt; TcalcEngine, Tstore, numOfRandoms &gt;</label>
+        <link refid="classDriver"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>myParameters</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>calculator</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>storage</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>randomGenerator</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>SwRandoms::RandomBase2</label>
+        <link refid="classSwRandoms_1_1RandomBase2"/>
+      </node>
+      <node id="6">
+        <label>Parameters</label>
+        <link refid="classParameters"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/driver.h" line="48" bodyfile="/home/simon/Gyulassy/opacity3/src/driver.h" bodystart="47" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classDriver_1b15978b3b6eedc1c9af063a970eb154a" prot="private" virt="non-virtual"><scope>Driver</scope><name>calculator</name></member>
+      <member refid="classDriver_1d18a1349226d25296a188e371debec56" prot="public" virt="non-virtual"><scope>Driver</scope><name>Driver</name></member>
+      <member refid="classDriver_1c266e9eee42ebc4e2f39e16c94cec3ca" prot="private" virt="non-virtual"><scope>Driver</scope><name>myParameters</name></member>
+      <member refid="classDriver_14da27b778d9838012125868afd04c1ed" prot="private" virt="non-virtual"><scope>Driver</scope><name>randomGenerator</name></member>
+      <member refid="classDriver_121ae3be3bfc08b9c7c41c4a7e46e7677" prot="public" virt="non-virtual"><scope>Driver</scope><name>RunOneIteration</name></member>
+      <member refid="classDriver_1acef05750c91ea6786f9f1c9b711c765" prot="public" virt="non-virtual"><scope>Driver</scope><name>SaveResults</name></member>
+      <member refid="classDriver_1366cc8aecd5b57886f9443a2cfedf0dc" prot="public" virt="non-virtual"><scope>Driver</scope><name>SetParameters</name></member>
+      <member refid="classDriver_1ddb8501bd4ed2a87dfb62d8ed73015fa" prot="public" virt="non-virtual"><scope>Driver</scope><name>Setup</name></member>
+      <member refid="classDriver_1d52b9b085eb8b034d2548af7d7ea670e" prot="private" virt="non-virtual"><scope>Driver</scope><name>storage</name></member>
+      <member refid="classDriver_1322d8366a3a84a1539d1eb37fad8d3a8" prot="public" virt="non-virtual"><scope>Driver</scope><name>~Driver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

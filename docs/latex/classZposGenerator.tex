@@ -1,0 +1,297 @@
+\section{ZposGenerator Class Reference}
+\label{classZposGenerator}\index{ZposGenerator@{ZposGenerator}}
+{\tt \#include $<$zcolldist.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf ZposGenerator} ({\bf Parameters} \&params\_\-, long opacity\_\-)
+\item 
+void {\bf FindRandomPositions} (MyArray \&Randoms)
+\item 
+void {\bf GetTempsMu2s} (MyArray \&temps, MyArray \&mu2s)
+\item 
+double {\bf GetDeltaZi} (int i) const 
+\item 
+double {\bf GetZweight} () const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+const unsigned long {\bf mSize}
+\item 
+std::vector$<$ double $>$ {\bf mPositions}
+\item 
+double {\bf \_\-loverlambda}
+\item 
+double {\bf \_\-weight}
+\item 
+double {\bf \_\-mu}
+\item 
+double {\bf \_\-temp}
+\item 
+{\bf Wrapper}$<$ {\bf Function} $>$ {\bf refFn}
+\item 
+{\bf Wrapper}$<$ {\bf Function} $>$ {\bf sampleFn}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Generates the z positions, the positions of the collisions along the path length These z positions can be correlated with each other 
+
+Definition at line 17 of file zcolldist.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ZposGenerator@{ZposGenerator}!ZposGenerator@{ZposGenerator}}
+\index{ZposGenerator@{ZposGenerator}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ZposGenerator::ZposGenerator ({\bf Parameters} \& {\em params\_\-}, long {\em opacity\_\-})}\label{classZposGenerator_1e90862f06141844d8d663502b4c0cdc}
+
+
+
+
+Definition at line 11 of file zcolldist.cpp.
+
+References \_\-loverlambda, \_\-mu, \_\-temp, Parameters::GetParametersDouble(), mPositions, mSize, refFn, sampleFn, Function::SetLimits(), and ExpDecayFunction::SetParams().
+
+\begin{Code}\begin{verbatim}12   : mSize( opacity_ ), mPositions( opacity_+1 )
+13 {
+14   std::vector<double> ReturnedParamsDouble;
+15   std::vector<long> ReturnedParamsLong;
+16   std::list<std::string> ReturnedParamsString;
+17 
+18   // First, we get the parameters of the medium
+19   // This is: 1st = mu, 2nd = temperature, 3rd = gluon mass, 4th = gluon mean free path
+20   // Here, we only need the gluon mass
+21   // the zDist will need the others
+22   ReturnedParamsDouble = params_.GetParametersDouble( "@mediumParams" );
+23   _mu = ReturnedParamsDouble[0];
+24   _temp = ReturnedParamsDouble[1];
+25   double _gluonlambda = ReturnedParamsDouble[3];
+26 
+27   // The jet path length in the medium
+28   ReturnedParamsDouble = params_.GetParametersDouble( "@pathLength" );
+29   double _length = ReturnedParamsDouble[0];
+30 
+31   double _maxlen;
+32   _maxlen = _length * 5.;
+33   _loverlambda = _length / _gluonlambda;
+34 
+35   MyArray zmin(1), zmax(1), param(1);
+36 
+37   // Reference function => the function under the integral
+38   // Sample function => the function from which to sample our Monte Carlo points
+39 
+40   // For uniform reference function
+41 //  UniformFunction refFn1( 1 );
+42 //  param[0] = 0.; zmin[0] = 0.; zmax[0] = _length;
+43 //  refFn1.SetLimits( zmin, zmax); refFn1.SetParams( param );
+44 
+45   // For exponential decay reference function
+46   ExpDecayFunction refFn1( 1 );
+47   param[0] = _length / static_cast<double>(mSize+1); zmin[0] = 0.; zmax[0] = _maxlen;
+48   refFn1.SetLimits( zmin, zmax ); refFn1.SetParams( param );
+49 
+50   // For uniform sample function
+51 //  UniformFunction sampFn1( 1 );
+52 //  param[0] = 0.; 
+53 //  sampFn1.SetParams( param );
+54 
+55   // For exponential decay sample function
+56   ExpDecayFunction sampFn1( 1 );
+57   param[0] = _length / static_cast<double>(mSize+1);
+58   sampFn1.SetParams( param );
+59 
+60 
+61   refFn = refFn1;
+62   sampleFn = sampFn1;
+63 
+64   mPositions[0] = 0.;
+65 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{ZposGenerator@{ZposGenerator}!FindRandomPositions@{FindRandomPositions}}
+\index{FindRandomPositions@{FindRandomPositions}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ZposGenerator::FindRandomPositions (MyArray \& {\em Randoms})}\label{classZposGenerator_167471398a46f21d1013cf97e3606736}
+
+
+
+
+Definition at line 67 of file zcolldist.cpp.
+
+References SwUtils::\_\-factorial(), \_\-loverlambda, \_\-weight, mPositions, mSize, refFn, and sampleFn.
+
+Referenced by RadCalcer::DistributeRandoms().
+
+\begin{Code}\begin{verbatim}68 {
+69   MyArray zmin(1), zmax(1), zIn(1), zOut(1), refOut(1), sampOut(1);
+70   //_weight = _loverlambda;
+71   _weight = 1. / _factorial( mSize );
+72   for (unsigned long i=0; i<mSize; ++i)
+73   {
+74     //zmin[0] = mPositions[i]; zmax[0] = refFn->GetXmax(0);
+75     zmin[0] = 0.; zmax[0] = refFn->GetXmax(0);
+76     sampleFn->SetLimits( zmin, zmax );
+77     zIn[0] = Randoms[i]; sampleFn->NormedIntegralInverse( zIn, zOut ); 
+78     mPositions[i+1] = mPositions[i] + zOut[0]; //mPositions[i+1] = zOut[0];
+79     refFn->function( zOut, refOut ); sampleFn->function( zOut, sampOut );
+80     _weight *= _loverlambda;
+81     _weight *= refOut[0] / sampOut[0];
+82   }
+83 
+84 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ZposGenerator@{ZposGenerator}!GetTempsMu2s@{GetTempsMu2s}}
+\index{GetTempsMu2s@{GetTempsMu2s}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void ZposGenerator::GetTempsMu2s (MyArray \& {\em temps}, MyArray \& {\em mu2s})}\label{classZposGenerator_cae2647a7b06e0bb71b69b3616bf8a53}
+
+
+
+
+Definition at line 86 of file zcolldist.cpp.
+
+References \_\-mu, \_\-temp, and mSize.
+
+Referenced by RadCalcer::DistributeRandoms().
+
+\begin{Code}\begin{verbatim}87 {
+88   for (unsigned long i=0; i<mSize; ++i)
+89   {
+90     temps[i] = _temp; mu2s[i] = _mu*_mu;
+91   }
+92 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ZposGenerator@{ZposGenerator}!GetDeltaZi@{GetDeltaZi}}
+\index{GetDeltaZi@{GetDeltaZi}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double ZposGenerator::GetDeltaZi (int {\em i}) const}\label{classZposGenerator_ff9cfd493e73f5d711f755c496c462f0}
+
+
+
+
+Definition at line 94 of file zcolldist.cpp.
+
+References mPositions.
+
+Referenced by RadCalcer::\_\-interference().
+
+\begin{Code}\begin{verbatim}95 {
+96   double tmp;
+97   tmp = mPositions[i] - mPositions[i-1];
+98   
+99   return tmp;
+100 }
+\end{verbatim}
+\end{Code}
+
+
+\index{ZposGenerator@{ZposGenerator}!GetZweight@{GetZweight}}
+\index{GetZweight@{GetZweight}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double ZposGenerator::GetZweight () const}\label{classZposGenerator_4efcf84343b79a423e7dc356fd9d0261}
+
+
+
+
+Definition at line 102 of file zcolldist.cpp.
+
+References \_\-weight.
+
+Referenced by RadCalcer::GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}103 {
+104   return _weight;
+105 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{ZposGenerator@{ZposGenerator}!mSize@{mSize}}
+\index{mSize@{mSize}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const unsigned long {\bf ZposGenerator::mSize}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_d5447cbf01884d1309e5641863f928fd}
+
+
+
+
+Definition at line 20 of file zcolldist.h.
+
+Referenced by FindRandomPositions(), GetTempsMu2s(), and ZposGenerator().\index{ZposGenerator@{ZposGenerator}!mPositions@{mPositions}}
+\index{mPositions@{mPositions}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$double$>$ {\bf ZposGenerator::mPositions}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_65b7ea3c519779af67e218dfd4b94e86}
+
+
+
+
+Definition at line 22 of file zcolldist.h.
+
+Referenced by FindRandomPositions(), GetDeltaZi(), and ZposGenerator().\index{ZposGenerator@{ZposGenerator}!_loverlambda@{\_\-loverlambda}}
+\index{_loverlambda@{\_\-loverlambda}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ZposGenerator::\_\-loverlambda}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_0c44c0025871a793c11a0459f0db343f}
+
+
+
+
+Definition at line 24 of file zcolldist.h.
+
+Referenced by FindRandomPositions(), and ZposGenerator().\index{ZposGenerator@{ZposGenerator}!_weight@{\_\-weight}}
+\index{_weight@{\_\-weight}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ZposGenerator::\_\-weight}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_13791204df3f02d883a309b880d11043}
+
+
+
+
+Definition at line 25 of file zcolldist.h.
+
+Referenced by FindRandomPositions(), and GetZweight().\index{ZposGenerator@{ZposGenerator}!_mu@{\_\-mu}}
+\index{_mu@{\_\-mu}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ZposGenerator::\_\-mu}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_fd43d806cc5d8ab6dd2a422ec40ea585}
+
+
+
+
+Definition at line 27 of file zcolldist.h.
+
+Referenced by GetTempsMu2s(), and ZposGenerator().\index{ZposGenerator@{ZposGenerator}!_temp@{\_\-temp}}
+\index{_temp@{\_\-temp}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf ZposGenerator::\_\-temp}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_61581d2b91282a426764210e1ba8fad1}
+
+
+
+
+Definition at line 28 of file zcolldist.h.
+
+Referenced by GetTempsMu2s(), and ZposGenerator().\index{ZposGenerator@{ZposGenerator}!refFn@{refFn}}
+\index{refFn@{refFn}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Wrapper}$<${\bf Function}$>$ {\bf ZposGenerator::refFn}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_f450ae3118a1d07d4983c0e50ad8ea96}
+
+
+
+
+Definition at line 31 of file zcolldist.h.
+
+Referenced by FindRandomPositions(), and ZposGenerator().\index{ZposGenerator@{ZposGenerator}!sampleFn@{sampleFn}}
+\index{sampleFn@{sampleFn}!ZposGenerator@{ZposGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Wrapper}$<${\bf Function}$>$ {\bf ZposGenerator::sampleFn}\hspace{0.3cm}{\tt  [private]}}\label{classZposGenerator_850f0eb2564b3149d51898e28a9cbc22}
+
+
+
+
+Definition at line 33 of file zcolldist.h.
+
+Referenced by FindRandomPositions(), and ZposGenerator().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf zcolldist.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf zcolldist.cpp}\end{CompactItemize}

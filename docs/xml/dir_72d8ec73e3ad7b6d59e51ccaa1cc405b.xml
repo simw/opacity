@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="dir_72d8ec73e3ad7b6d59e51ccaa1cc405b" kind="dir">
+    <compoundname>Gyulassy/opacity3/src/</compoundname>
+    <innerdir refid="dir_0ed65a904cf03154e4fa84f9591919ea">Gyulassy/opacity3/src/glv1/</innerdir>
+    <innerdir refid="dir_3daa2c6e0ad04490e68d2a34691e6d34">Gyulassy/opacity3/src/glv3/</innerdir>
+    <innerdir refid="dir_e95f67614a15f70b99a6a54d1ffc79da">Gyulassy/opacity3/src/randoms/</innerdir>
+    <innerdir refid="dir_a31747d4e9bd2931d5473a77b5fd2b78">Gyulassy/opacity3/src/store2d/</innerdir>
+    <innerfile refid="Arrays_8h">Arrays.h</innerfile>
+    <innerfile refid="constants_8cpp">constants.cpp</innerfile>
+    <innerfile refid="constants_8h">constants.h</innerfile>
+    <innerfile refid="driver_8h">driver.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="main__qperptest_8cpp">main_qperptest.cpp</innerfile>
+    <innerfile refid="parameters_8cpp">parameters.cpp</innerfile>
+    <innerfile refid="parameters_8h">parameters.h</innerfile>
+    <innerfile refid="progressbar_8cpp">progressbar.cpp</innerfile>
+    <innerfile refid="progressbar_8h">progressbar.h</innerfile>
+    <innerfile refid="simplecalc1_8h">simplecalc1.h</innerfile>
+    <innerfile refid="sw__templatemeta_8h">sw_templatemeta.h</innerfile>
+    <innerfile refid="timer_8cpp">timer.cpp</innerfile>
+    <innerfile refid="timer_8h">timer.h</innerfile>
+    <innerfile refid="Wrapper_8h">Wrapper.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/"/>
+  </compounddef>
+</doxygen>

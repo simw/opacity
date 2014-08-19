@@ -1,0 +1,97 @@
+\section{QperpStore1 Class Reference}
+\label{classQperpStore1}\index{QperpStore1@{QperpStore1}}
+{\tt \#include $<$qperpstore1.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpStore1} (long sizeXY\_\-, long sizeZ\_\-)
+\item 
+{\bf $\sim$QperpStore1} ()
+\item 
+void {\bf SetZ} (long zin\_\-)
+\item 
+void {\bf SetVal1} (long x\_\-, long y\_\-, double val\_\-)
+\item 
+void {\bf SetVal2} (long x\_\-, long y\_\-, double val\_\-)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]\end{Desc}
+
+
+Definition at line 18 of file qperpstore1.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpStore1@{QperpStore1}!QperpStore1@{QperpStore1}}
+\index{QperpStore1@{QperpStore1}!QperpStore1@{QperpStore1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpStore1::QperpStore1 (long {\em sizeXY\_\-}, long {\em sizeZ\_\-})}\label{classQperpStore1_c9a22f6c039b059e62c87c35c85451dd}
+
+
+
+
+Definition at line 45 of file qperpstore1.h.
+
+\begin{Code}\begin{verbatim}46 {
+47   sizeXY = sizeXY_; 
+48   sizeXY2 = sizeXY*sizeXY;
+49   sizeZ = sizeZ_;
+50 
+51   vals = 0;
+52   long totSize = sizeZ * sizeXY2;
+53   vals1 = new double( totSize );
+54   vals2 = new double( totSize );
+55   vals3 = new double( totSize );
+56 
+57   bookmarkZ = 0;
+58 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpStore1@{QperpStore1}!~QperpStore1@{$\sim$QperpStore1}}
+\index{~QperpStore1@{$\sim$QperpStore1}!QperpStore1@{QperpStore1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpStore1::$\sim$QperpStore1 ()}\label{classQperpStore1_1822e487987fc77bf927898616ed6de0}
+
+
+
+
+Definition at line 60 of file qperpstore1.h.
+
+\begin{Code}\begin{verbatim}61 {
+62   delete [] vals1;
+63   vals1 = 0;
+64   delete [] vals2;
+65   vals2 = 0;
+66   delete [] vals3;
+67   vals3 = 0;
+68 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpStore1@{QperpStore1}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!QperpStore1@{QperpStore1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpStore1::SetZ (long {\em zin\_\-})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpStore1_da5a646b78bc7b47e6a426edf6c21d6f}
+
+
+\index{QperpStore1@{QperpStore1}!SetVal1@{SetVal1}}
+\index{SetVal1@{SetVal1}!QperpStore1@{QperpStore1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpStore1::SetVal1 (long {\em x\_\-}, long {\em y\_\-}, double {\em val\_\-})}\label{classQperpStore1_aece9acc309b76ba553094be8c81ddcf}
+
+
+\index{QperpStore1@{QperpStore1}!SetVal2@{SetVal2}}
+\index{SetVal2@{SetVal2}!QperpStore1@{QperpStore1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpStore1::SetVal2 (long {\em x\_\-}, long {\em y\_\-}, double {\em val\_\-})}\label{classQperpStore1_928bb91ea205cb788f13e7da94e202ef}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf qperpstore1.h}\end{CompactItemize}

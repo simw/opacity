@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classRadCalcerWrapper" kind="class" prot="public">
+    <compoundname>RadCalcerWrapper</compoundname>
+    <includes refid="radcalcerwrapper_8h" local="no">radcalcerwrapper.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>numOfRandoms</declname>
+        <defname>numOfRandoms</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" prot="private" static="no" mutable="no">
+        <type><ref refid="classRadCalcer" kindref="compound">RadCalcer</ref> *</type>
+        <definition>RadCalcer* RadCalcerWrapper&lt; numOfRandoms &gt;::radcalc</definition>
+        <argsstring></argsstring>
+        <name>radcalc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="28" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classRadCalcerWrapper_1c07c6df06199a7e65969f9a47ca5e813" compoundref="radcalcerwrapper_8h" startline="72" endline="75">RadCalcerWrapper&lt; numOfRandoms &gt;::GetAnswer</referencedby>
+        <referencedby refid="classRadCalcerWrapper_10ef1a476bcef6bdf397fc6e5f11fe13f" compoundref="radcalcerwrapper_8h" startline="47" endline="65">RadCalcerWrapper&lt; numOfRandoms &gt;::SetCoord</referencedby>
+        <referencedby refid="classRadCalcerWrapper_19ab907c24f56fb67aefdfbe03550171c" compoundref="radcalcerwrapper_8h" startline="41" endline="45">RadCalcerWrapper&lt; numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classRadCalcerWrapper_1fef9ee4382b675b0e0d23d8db820ee72" compoundref="radcalcerwrapper_8h" startline="67" endline="70">RadCalcerWrapper&lt; numOfRandoms &gt;::SetRandoms</referencedby>
+        <referencedby refid="classRadCalcerWrapper_1ab7d609bfbe44c77f650df7d82e977ec" compoundref="radcalcerwrapper_8h" startline="36" endline="39">RadCalcerWrapper&lt; numOfRandoms &gt;::~RadCalcerWrapper</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRadCalcerWrapper_1529946c8f674506ae65fc3d5d7db7539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RadCalcerWrapper&lt; numOfRandoms &gt;::RadCalcerWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>RadCalcerWrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classRadCalcerWrapper_1ab7d609bfbe44c77f650df7d82e977ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RadCalcerWrapper&lt; numOfRandoms &gt;::~RadCalcerWrapper</definition>
+        <argsstring>()</argsstring>
+        <name>~RadCalcerWrapper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="37" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="36" bodyend="39"/>
+        <references refid="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" compoundref="radcalcerwrapper_8h" startline="28">RadCalcerWrapper&lt; numOfRandoms &gt;::radcalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classRadCalcerWrapper_19ab907c24f56fb67aefdfbe03550171c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RadCalcerWrapper&lt; numOfRandoms &gt;::SetParameters</definition>
+        <argsstring>(Parameters &amp;inParams)</argsstring>
+        <name>SetParameters</name>
+        <param>
+          <type><ref refid="classParameters" kindref="compound">Parameters</ref> &amp;</type>
+          <declname>inParams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="42" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="41" bodyend="45"/>
+        <references refid="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" compoundref="radcalcerwrapper_8h" startline="28">RadCalcerWrapper&lt; numOfRandoms &gt;::radcalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classRadCalcerWrapper_10ef1a476bcef6bdf397fc6e5f11fe13f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RadCalcerWrapper&lt; numOfRandoms &gt;::SetCoord</definition>
+        <argsstring>(long dimension, double value)</argsstring>
+        <name>SetCoord</name>
+        <param>
+          <type>long</type>
+          <declname>dimension</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="48" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="47" bodyend="65"/>
+        <references refid="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" compoundref="radcalcerwrapper_8h" startline="28">RadCalcerWrapper&lt; numOfRandoms &gt;::radcalc</references>
+        <references refid="classRadCalcer_149aa8982cec3cc56a881c843a74954e7" compoundref="radcalcer_8cpp" startline="141" endline="146">RadCalcer::SetKonly</references>
+        <references refid="classRadCalcer_119c0def50051ee0a52a2cb311d8a485a" compoundref="radcalcer_8cpp" startline="131" endline="139">RadCalcer::SetXonly</references>
+      </memberdef>
+      <memberdef kind="function" id="classRadCalcerWrapper_1fef9ee4382b675b0e0d23d8db820ee72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RadCalcerWrapper&lt; numOfRandoms &gt;::SetRandoms</definition>
+        <argsstring>(SwArrays::MyArray &amp;randomNumbers)</argsstring>
+        <name>SetRandoms</name>
+        <param>
+          <type><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref> &amp;</type>
+          <declname>randomNumbers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="68" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="67" bodyend="70"/>
+        <references refid="classRadCalcer_1fbd62b63a05b0ee23a4a2fcb26b1ac6c" compoundref="radcalcer_8cpp" startline="106" endline="129">RadCalcer::DistributeRandoms</references>
+        <references refid="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" compoundref="radcalcerwrapper_8h" startline="28">RadCalcerWrapper&lt; numOfRandoms &gt;::radcalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classRadCalcerWrapper_1c07c6df06199a7e65969f9a47ca5e813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RadCalcerWrapper&lt; numOfRandoms &gt;::GetAnswer</definition>
+        <argsstring>(SwArrays::MyArray &amp;answers)</argsstring>
+        <name>GetAnswer</name>
+        <param>
+          <type><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref> &amp;</type>
+          <declname>answers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="73" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="72" bodyend="75"/>
+        <references refid="classRadCalcer_1ccc5f82826c691219a05e4cb277bcc45" compoundref="radcalcer_8cpp" startline="219" endline="370">RadCalcer::GetdNdk2dx</references>
+        <references refid="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" compoundref="radcalcerwrapper_8h" startline="28">RadCalcerWrapper&lt; numOfRandoms &gt;::radcalc</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para></para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="59">
+        <label>Function</label>
+        <link refid="classFunction"/>
+      </node>
+      <node id="56">
+        <label>RadCalcer</label>
+        <link refid="classRadCalcer"/>
+        <childnode refid="57" relation="usage">
+          <edgelabel>qperps</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>zDist</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>QperpGenerator</label>
+        <link refid="classQperpGenerator"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>yukDistFn
+qDistFn
+thDistFn
+uniDistFn</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>qps</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>ZposGenerator</label>
+        <link refid="classZposGenerator"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>refFn
+sampleFn</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>RadCalcerWrapper&lt; numOfRandoms &gt;</label>
+        <link refid="classRadCalcerWrapper"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>radcalc</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>Wrapper&lt; Function &gt;</label>
+        <link refid="classWrapper"/>
+        <childnode refid="59" relation="usage">
+          <edgelabel>DataPtr</edgelabel>
+        </childnode>
+      </node>
+      <node id="60">
+        <label>QperpCalculator</label>
+        <link refid="classQperpCalculator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" line="26" bodyfile="/home/simon/Gyulassy/opacity3/src/glv1/radcalcerwrapper.h" bodystart="25" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classRadCalcerWrapper_1c07c6df06199a7e65969f9a47ca5e813" prot="public" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>GetAnswer</name></member>
+      <member refid="classRadCalcerWrapper_134c16c4a37e0d7c896be0a800d744e62" prot="private" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>radcalc</name></member>
+      <member refid="classRadCalcerWrapper_1529946c8f674506ae65fc3d5d7db7539" prot="public" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>RadCalcerWrapper</name></member>
+      <member refid="classRadCalcerWrapper_10ef1a476bcef6bdf397fc6e5f11fe13f" prot="public" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>SetCoord</name></member>
+      <member refid="classRadCalcerWrapper_19ab907c24f56fb67aefdfbe03550171c" prot="public" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>SetParameters</name></member>
+      <member refid="classRadCalcerWrapper_1fef9ee4382b675b0e0d23d8db820ee72" prot="public" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>SetRandoms</name></member>
+      <member refid="classRadCalcerWrapper_1ab7d609bfbe44c77f650df7d82e977ec" prot="public" virt="non-virtual"><scope>RadCalcerWrapper</scope><name>~RadCalcerWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

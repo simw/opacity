@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="main__qperptest_8cpp" kind="file">
+    <compoundname>main_qperptest.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">boost/array.hpp</includes>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <includes refid="qperpcalculator1_8h" local="yes">./glv3/qperpcalculator1.h</includes>
+    <includes refid="qperpcalculator3_8h" local="yes">./glv3/qperpcalculator3.h</includes>
+    <incdepgraph>
+      <node id="308">
+        <label>valarray</label>
+      </node>
+      <node id="304">
+        <label>./glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1_8h"/>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>string</label>
+      </node>
+      <node id="306">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+      </node>
+      <node id="305">
+        <label>../sw_templatemeta.h</label>
+        <link refid="sw__templatemeta_8h"/>
+      </node>
+      <node id="302">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="303" relation="include">
+        </childnode>
+      </node>
+      <node id="309">
+        <label>../glv1/qperparraynew.h</label>
+        <link refid="qperparraynew_8h"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+      </node>
+      <node id="303">
+        <label>ctime</label>
+      </node>
+      <node id="312">
+        <label>vector</label>
+      </node>
+      <node id="310">
+        <label>./glv3/qperpcalculator3.h</label>
+        <link refid="qperpcalculator3_8h"/>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>iostream</label>
+      </node>
+      <node id="298">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main_qperptest.cpp"/>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+      </node>
+      <node id="301">
+        <label>boost/array.hpp</label>
+      </node>
+      <node id="307">
+        <label>boost/multi_array.hpp</label>
+      </node>
+      <node id="311">
+        <label>../constants.h</label>
+        <link refid="constants_8h"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/main_qperptest.cpp" line="16" bodyfile="/home/simon/Gyulassy/opacity3/src/main_qperptest.cpp" bodystart="15" bodyend="141"/>
+        <references refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" compoundref="timer_8cpp" startline="60" endline="65">Timer::DisplayResult</references>
+        <references refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" compoundref="qperpcalculator3_8h" startline="56" endline="59">QperpCalculator3&lt; n &gt;::GetSumQs1k</references>
+        <references refid="classQperpCalculator1_13789dabfb5de70d79b7a1cdba1e24959" compoundref="qperpcalculator1_8h" startline="57" endline="60">QperpCalculator1&lt; n &gt;::GetSumQs1k</references>
+        <references refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" compoundref="qperpcalculator3_8h" startline="51" endline="54">QperpCalculator3&lt; n &gt;::GetSumQskk</references>
+        <references refid="classQperpCalculator1_1a5f0139d8b09dc996ee4cd50e456e41d" compoundref="qperpcalculator1_8h" startline="52" endline="55">QperpCalculator1&lt; n &gt;::GetSumQskk</references>
+        <references refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" compoundref="qperpcalculator3_8h" startline="70" endline="85">QperpCalculator3&lt; n &gt;::SetK</references>
+        <references refid="classQperpCalculator1_107e6f5eb6dd5e344305c07f1255f4054" compoundref="qperpcalculator1_8h" startline="36" endline="39">QperpCalculator1&lt; n &gt;::SetK</references>
+        <references refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" compoundref="qperpcalculator3_8h" startline="88" endline="116">QperpCalculator3&lt; n &gt;::SetQsThetas</references>
+        <references refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" compoundref="qperpcalculator1_8h" startline="41" endline="50">QperpCalculator1&lt; n &gt;::SetQsThetas</references>
+        <references refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" compoundref="timer_8cpp" startline="38" endline="45">Timer::StartTimer</references>
+        <references refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" compoundref="timer_8cpp" startline="47" endline="58">Timer::StopTimer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;config.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperpcalculator1_8h" kindref="compound">./glv3/qperpcalculator1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qperpcalculator3_8h" kindref="compound">./glv3/qperpcalculator3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CMakeCCompilerId_8c_1e66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;QperpTester&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>4&gt;<sp/>qs;<sp/>qs[0]<sp/>=<sp/>1;<sp/>qs[1]<sp/>=<sp/>2;<sp/>qs[2]<sp/>=<sp/>3;<sp/>qs[3]<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>4&gt;<sp/>ths;<sp/>ths[0]<sp/>=<sp/>0;<sp/>ths[1]<sp/>=<sp/>0;<sp/>ths[2]<sp/>=<sp/>0;<sp/>ths[3]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator1" kindref="compound">QperpCalculator1&lt;4&gt;</ref><sp/>qp1;<sp/><ref refid="classQperpCalculator3" kindref="compound">QperpCalculator3&lt;4&gt;</ref><sp/>qp2;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>qp1.<ref refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" kindref="member">SetQsThetas</ref>(<sp/>qs,<sp/>ths<sp/>);<sp/>qp2.<ref refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" kindref="member">SetQsThetas</ref>(<sp/>qs,<sp/>ths<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>qp1.<ref refid="classQperpCalculator1_107e6f5eb6dd5e344305c07f1255f4054" kindref="member">SetK</ref>(<sp/>1.<sp/>);<sp/>qp2.<ref refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" kindref="member">SetK</ref>(<sp/>1.<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>z=0;<sp/>z&lt;=7;<sp/>++z)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Qskk[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>z<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;=5;<sp/>++i)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>qp1.<ref refid="classQperpCalculator1_1a5f0139d8b09dc996ee4cd50e456e41d" kindref="member">GetSumQskk</ref>(<sp/>i,<sp/>z<sp/>)<sp/>!=<sp/>qp2.<ref refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" kindref="member">GetSumQskk</ref>(<sp/>i,<sp/>z<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(i,z)=(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>z<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;1:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>qp1.<ref refid="classQperpCalculator1_1a5f0139d8b09dc996ee4cd50e456e41d" kindref="member">GetSumQskk</ref>(<sp/>i,<sp/>z<sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>2:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>qp2.<ref refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" kindref="member">GetSumQskk</ref>(<sp/>i,<sp/>z<sp/>)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Qs1k[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>z<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;=5;<sp/>++i)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>qp1.<ref refid="classQperpCalculator1_13789dabfb5de70d79b7a1cdba1e24959" kindref="member">GetSumQs1k</ref>(<sp/>i,<sp/>z<sp/>)<sp/>!=<sp/>qp2.<ref refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" kindref="member">GetSumQs1k</ref>(<sp/>i,<sp/>z<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(i,z)=(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>z<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;1:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>qp1.<ref refid="classQperpCalculator1_13789dabfb5de70d79b7a1cdba1e24959" kindref="member">GetSumQs1k</ref>(<sp/>i,<sp/>z<sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>2:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>qp2.<ref refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" kindref="member">GetSumQs1k</ref>(<sp/>i,<sp/>z<sp/>)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator1" kindref="compound">QperpCalculator1&lt;1&gt;</ref><sp/>qp_v1_1;<sp/><ref refid="classQperpCalculator3" kindref="compound">QperpCalculator3&lt;1&gt;</ref><sp/>qp_v2_1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator1" kindref="compound">QperpCalculator1&lt;10&gt;</ref><sp/>qp_v1_10;<sp/><ref refid="classQperpCalculator3" kindref="compound">QperpCalculator3&lt;10&gt;</ref><sp/>qp_v2_10;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="classTimer" kindref="compound">Timer</ref><sp/>timer;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>num;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>1&gt;<sp/>qs1,<sp/>ths1;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>qs1[0]<sp/>=<sp/>1.;<sp/>ths1[0]<sp/>=<sp/>0.23;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>num<sp/>=<sp/>500000;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Version<sp/>1<sp/>(old):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>num<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>at<sp/>n=1:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" kindref="member">StartTimer</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=num;<sp/>++i)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>qp_v1_1.<ref refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" kindref="member">SetQsThetas</ref>(qs1,<sp/>ths1);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" kindref="member">StopTimer</ref>();<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(1);<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(num);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Version<sp/>2<sp/>(new):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>num<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>at<sp/>n=1:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" kindref="member">StartTimer</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=num;<sp/>++i)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>qp_v2_1.<ref refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" kindref="member">SetQsThetas</ref>(qs1,<sp/>ths1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" kindref="member">StopTimer</ref>();<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(1);<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(num);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>boost::array&lt;double,<sp/>10&gt;<sp/>qs10,<sp/>ths10;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;10;<sp/>++i)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>qs10[i]<sp/>=<sp/>2.;<sp/>ths10[i]<sp/>=<sp/>1.;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>num<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Version<sp/>1<sp/>(old):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>num<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>at<sp/>n=10:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" kindref="member">StartTimer</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=num;<sp/>++i)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>qp_v1_10.<ref refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" kindref="member">SetQsThetas</ref>(qs10,<sp/>ths10);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" kindref="member">StopTimer</ref>();<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(1);<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(num);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Version<sp/>2<sp/>(new):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>num<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>at<sp/>n=10:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" kindref="member">StartTimer</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i!=num;<sp/>++i)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>qp_v2_10.<ref refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" kindref="member">SetQsThetas</ref>(qs10,<sp/>ths10);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>timer.<ref refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" kindref="member">StopTimer</ref>();<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(1);<sp/>timer.<ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">DisplayResult</ref>(num);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"></highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/>long<sp/>NumberOfIterations<sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/>std::string<sp/>resume(&quot;n&quot;);</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/>std::string<sp/>inputFile<sp/>=<sp/>&quot;./temp.params&quot;;</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/>std::string<sp/>outputFile<sp/>=<sp/>&quot;./temp.txt&quot;;</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/>Driver&lt;GlvRadiative1&lt;9&gt;,<sp/>Store2D,<sp/>9&gt;<sp/>myDriver;</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/>//Driver&lt;RadCalcerWrapper&lt;9&gt;,<sp/>Store2D,<sp/>9&gt;<sp/>myDriver;</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/>myDriver.Setup(<sp/>resume,<sp/>inputFile<sp/>);</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"></highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/>Timer<sp/>timer;</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"></highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/>//<sp/>Set<sp/>up<sp/>a<sp/>progress<sp/>bar<sp/>for<sp/>feedback</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/>//<sp/>The<sp/>first<sp/>number<sp/>of<sp/>the<sp/>current<sp/>point<sp/>(start<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/>//<sp/>The<sp/>second<sp/>is<sp/>the<sp/>end<sp/>point,<sp/>the<sp/>total<sp/>number</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/>ProgressBar<sp/>progBar(0,NumberOfIterations);</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/>progBar.PrintPreliminaries();</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/>//<sp/>And<sp/>now<sp/>we<sp/>run<sp/>the<sp/>main<sp/>loop</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/>timer.StartTimer();</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/>for<sp/>(long<sp/>i=0;<sp/>i&lt;NumberOfIterations;<sp/>++i)</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/>progBar.SetNow(i);</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/>progBar.PrintProgress();</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/>myDriver.RunOneIteration();</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/>progBar.SetNow(NumberOfIterations);</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/>progBar.PrintProgress();</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/>timer.StopTimer();</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/>//<sp/>And<sp/>the<sp/>main<sp/>loop<sp/>is<sp/>done!</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"></highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/>myDriver.SaveResults(<sp/>outputFile<sp/>);</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/>//<sp/>Print<sp/>to<sp/>screen<sp/>a<sp/>few<sp/>details<sp/>of<sp/>the<sp/>run</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/>progBar.PrintFinal();</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/>double<sp/>totTime<sp/>=<sp/>timer.GetResult();</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Total<sp/>time<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>totTime<sp/>&lt;&lt;<sp/>&quot;<sp/>seconds\n&quot;;</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Time<sp/>per<sp/>iteration<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>totTime/static_cast&lt;double&gt;(NumberOfIterations);</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;\n&quot;;</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"></highlight></codeline>
+<codeline lineno="138"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/main_qperptest.cpp"/>
+  </compounddef>
+</doxygen>

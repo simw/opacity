@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="parameters_8cpp" kind="file">
+    <compoundname>parameters.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">boost/algorithm/string.hpp</includes>
+    <includes local="no">boost/lexical_cast.hpp</includes>
+    <includes refid="parameters_8h" local="yes">parameters.h</includes>
+    <incdepgraph>
+      <node id="323">
+        <label>list</label>
+      </node>
+      <node id="317">
+        <label>boost/algorithm/string.hpp</label>
+      </node>
+      <node id="318">
+        <label>boost/lexical_cast.hpp</label>
+      </node>
+      <node id="321">
+        <label>string</label>
+      </node>
+      <node id="320">
+        <label>map</label>
+      </node>
+      <node id="316">
+        <label>fstream</label>
+      </node>
+      <node id="314">
+        <label>Gyulassy/opacity3/src/parameters.cpp</label>
+        <link refid="parameters.cpp"/>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>vector</label>
+      </node>
+      <node id="319">
+        <label>parameters.h</label>
+        <link refid="parameters_8h"/>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+      </node>
+      <node id="315">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/algorithm/string.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/lexical_cast.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="parameters_8h" kindref="compound">parameters.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="classParameters_1bf65ea89957e2ca5f712a18aea658744" kindref="member">Parameters::Parameters</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>StringID_<sp/>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>ride<sp/>of<sp/>any<sp/>whitespace<sp/>around<sp/>the<sp/>given<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>boost::trim(<sp/>StringID_<sp/>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="classParameters_15206e134bcec867289e40fbfac16d354" kindref="member" tooltip="The unique ID to identify the settings section in the file.">StringID</ref><sp/>=<sp/>StringID_;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1a96c497084795f0c0be65c37ff03f162" kindref="member">Parameters::ParseInputFile</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>FileName<sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>we<sp/>open<sp/>up<sp/>the<sp/>file,<sp/>check<sp/>its<sp/>existence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>ifstream<sp/>FileIn;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>FileIn.open(<sp/>FileName.c_str(),<sp/>ios::in<sp/>);<sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FileIn.fail()<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Parameters,<sp/>unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>FileName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>reading.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-20;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Each<sp/>line,<sp/>we&apos;ll<sp/>read<sp/>into<sp/>LineReadIn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Each<sp/>line<sp/>of<sp/>settings<sp/>will<sp/>be<sp/>counted<sp/>in<sp/>NumberOfLines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>LineReadIn;<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>NumberOfLines<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>string<sp/>that<sp/>identifies<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>settings<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>BeginString<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>Begin<sp/>settings<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classParameters_15206e134bcec867289e40fbfac16d354" kindref="member" tooltip="The unique ID to identify the settings section in the file.">StringID</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>string<sp/>that<sp/>identifies<sp/>the<sp/>end<sp/>of<sp/>the<sp/>settings<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>EndString<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>End<sp/>setting<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classParameters_15206e134bcec867289e40fbfac16d354" kindref="member" tooltip="The unique ID to identify the settings section in the file.">StringID</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicator<sp/>whether<sp/>we<sp/>have<sp/>found<sp/>the<sp/>settings<sp/>section<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>FoundStart<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>through<sp/>the<sp/>file<sp/>until<sp/>we<sp/>find<sp/>the<sp/>settings<sp/>section</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FileIn.eof()<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Parameters,<sp/>reached<sp/>end<sp/>of<sp/>file<sp/>at<sp/>line<sp/>before<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;finding<sp/>settings<sp/>section:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classParameters_15206e134bcec867289e40fbfac16d354" kindref="member" tooltip="The unique ID to identify the settings section in the file.">StringID</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-21;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>getline(<sp/>FileIn,<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::trim(<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>LineReadIn<sp/>==<sp/>BeginString<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>FoundStart<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>!FoundStart<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>read<sp/>each<sp/>line,<sp/>check<sp/>whether<sp/>it<sp/>begins<sp/>with<sp/>a<sp/>#,<sp/>if<sp/>not<sp/>then<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>pass<sp/>it<sp/>on<sp/>to<sp/>ParseSingleLine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>we<sp/>parse<sp/>each<sp/>line,<sp/>we<sp/>will<sp/>get<sp/>a<sp/>return<sp/>value<sp/>from<sp/>the<sp/>function<sp/>ParseSingleLine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SingleLineReturnValue;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<sp/>FileIn.eof()<sp/>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>getline<sp/>(<sp/>FileIn,<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>trim<sp/>the<sp/>line<sp/>of<sp/>whitespace<sp/>at<sp/>each<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::trim(<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;ve<sp/>found<sp/>the<sp/>ending<sp/>phrase,<sp/>exit<sp/>the<sp/>while<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>LineReadIn<sp/>==<sp/>EndString<sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it&apos;s<sp/>a<sp/>blank<sp/>line,<sp/>or<sp/>starts<sp/>with<sp/>a<sp/>comment<sp/>character<sp/>#,<sp/>skip<sp/>this<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!(LineReadIn.size()<sp/>==<sp/>0<sp/>||<sp/>LineReadIn[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>SingleLineReturnValue<sp/>=<sp/><ref refid="classParameters_1a5cc611f199eccbc05b1908a3d72edd8" kindref="member" tooltip="Helper function for ParseInputFile - does one line supplied as LineString.">ParseSingleLine</ref>(<sp/>LineReadIn<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>SingleLineReturnValue<sp/>!=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;ve<sp/>hit<sp/>an<sp/>error<sp/>in<sp/>the<sp/>ParseSingleLine<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FileIn.close();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SingleLineReturnValue;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++NumberOfLines;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we&apos;re<sp/>done,<sp/>we<sp/>close<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>FileIn.close();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Everything<sp/>has<sp/>worked<sp/>fine.<sp/>Return<sp/>a<sp/>success<sp/>code<sp/>-<sp/>the<sp/>number<sp/>of<sp/>settings<sp/>lines<sp/>parsed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NumberOfLines;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1a5cc611f199eccbc05b1908a3d72edd8" kindref="member" tooltip="Helper function for ParseInputFile - does one line supplied as LineString.">Parameters::ParseSingleLine</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>LineString<sp/>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ParamID;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>list&lt;string&gt;<sp/>ParametersIn;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>boost<sp/>library<sp/>to<sp/>split<sp/>the<sp/>string<sp/>&apos;LineString&apos;<sp/>into<sp/>sections,<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>space<sp/>delimiter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>boost::split(<sp/>ParametersIn,<sp/>LineString,<sp/>boost::is_any_of(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ParametersIn.size()<sp/>&lt;=<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>length<sp/>of<sp/>a<sp/>line<sp/>must<sp/>be<sp/>at<sp/>least<sp/>a<sp/>defining<sp/>token<sp/>and<sp/>a<sp/>parameter<sp/>setting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>value.<sp/>If<sp/>the<sp/>length<sp/>is<sp/>&lt;=1,<sp/>then<sp/>the<sp/>format<sp/>is<sp/>wrong</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Parameters,<sp/>line<sp/>length<sp/>is<sp/>too<sp/>short:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>LineString<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-3;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>element<sp/>is<sp/>the<sp/>ParamID.<sp/>Get<sp/>it<sp/>and<sp/>then<sp/>remove<sp/>it<sp/>from<sp/>the<sp/>Parameters<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>ParamID<sp/>=<sp/>ParametersIn.front();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>ParametersIn.pop_front();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>we<sp/>check<sp/>whether<sp/>we&apos;ve<sp/>already<sp/>used<sp/>this<sp/>parameter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>map&lt;string,<sp/>list&lt;string&gt;<sp/>&gt;::iterator<sp/>i<sp/>=<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.find(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>!=<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.end()<sp/>)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Parameters,<sp/>duplicate<sp/>parameter<sp/>read<sp/>in:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>ParamID<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-4;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>have<sp/>all<sp/>the<sp/>information<sp/>to<sp/>set<sp/>up<sp/>a<sp/>&apos;parameter&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Put<sp/>this<sp/>into<sp/>our<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.insert(<sp/>pair&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,list&lt;string&gt;<sp/>&gt;(<sp/>ParamID,<sp/>ParametersIn<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>.insert(<sp/>pair&lt;string,bool&gt;(<sp/>ParamID,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>is<sp/>ok,<sp/>return<sp/>ok</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">list&lt;string&gt;<sp/><ref refid="classParameters_1aad6541e5440beed7c65ac9062109cfe" kindref="member" tooltip="Get a specific parameter in the map, identified by ParamID.">Parameters::GetParametersString</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ParamID<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>use<sp/>the<sp/>&apos;map&apos;<sp/>structure<sp/>to<sp/>turn<sp/>the<sp/>ParamID<sp/>into<sp/>a<sp/>list<sp/>of<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>map&lt;string,<sp/>list&lt;string&gt;<sp/>&gt;::iterator<sp/>i<sp/>=<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.find(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>can&apos;t<sp/>find<sp/>the<sp/>ParamID<sp/>in<sp/>the<sp/>map,<sp/>then<sp/>we<sp/>return<sp/>an<sp/>error<sp/>code<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>==<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.end()<sp/>)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>list&lt;string&gt;<sp/>EmptyList;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ParamParser,<sp/>cannot<sp/>find<sp/>ParamID<sp/>in<sp/>the<sp/>map:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>ParamID<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EmptyList;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;ve<sp/>found<sp/>it.<sp/>Set<sp/>accessed<sp/>to<sp/>true<sp/>(we<sp/>don&apos;t<sp/>mind<sp/>multiple<sp/>accesses)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>map&lt;string,<sp/>bool&gt;::iterator<sp/>j<sp/>=<sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>.find(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>j-&gt;second<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Ok,<sp/>we&apos;ve<sp/>found<sp/>it,<sp/>now<sp/>we<sp/>get<sp/>the<sp/>list&lt;string&gt;<sp/>from<sp/>the<sp/>iterator<sp/>i,<sp/>and<sp/>return<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(i-&gt;second);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">vector&lt;double&gt;<sp/><ref refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" kindref="member" tooltip="Get the parameter set, but then convert to a vector of doubles.">Parameters::GetParametersDouble</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ParamID<sp/>)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>list&lt;string&gt;<sp/>StringList<sp/>=<sp/><ref refid="classParameters_1aad6541e5440beed7c65ac9062109cfe" kindref="member" tooltip="Get a specific parameter in the map, identified by ParamID.">GetParametersString</ref>(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>vector&lt;double&gt;<sp/>ReturnVector;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ConvertedString;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>list&lt;string&gt;::iterator<sp/>i<sp/>=<sp/>StringList.begin();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>!=<sp/>StringList.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>ConvertedString<sp/>=<sp/>boost::lexical_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(<sp/>*i<sp/>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>ReturnVector.push_back(<sp/>ConvertedString<sp/>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;ve<sp/>found<sp/>it.<sp/>Set<sp/>accessed<sp/>to<sp/>true<sp/>(we<sp/>don&apos;t<sp/>mind<sp/>multiple<sp/>accesses)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>map&lt;string,<sp/>bool&gt;::iterator<sp/>j<sp/>=<sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>.find(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>j-&gt;second<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ReturnVector;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">vector&lt;long&gt;<sp/><ref refid="classParameters_1840169a79f0cdd8217e29b3b25a6552d" kindref="member" tooltip="Get the parameter set, but then convert to a vector of longs.">Parameters::GetParametersLong</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ParamID<sp/>)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>list&lt;string&gt;<sp/>StringList<sp/>=<sp/><ref refid="classParameters_1aad6541e5440beed7c65ac9062109cfe" kindref="member" tooltip="Get a specific parameter in the map, identified by ParamID.">GetParametersString</ref>(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>vector&lt;long&gt;<sp/>ReturnVector;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ConvertedString;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>list&lt;string&gt;::iterator<sp/>i<sp/>=<sp/>StringList.begin();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>!=<sp/>StringList.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>ConvertedString<sp/>=<sp/>boost::lexical_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">&gt;(<sp/>*i<sp/>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>ReturnVector.push_back(<sp/>ConvertedString<sp/>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;ve<sp/>found<sp/>it.<sp/>Set<sp/>accessed<sp/>to<sp/>true<sp/>(we<sp/>don&apos;t<sp/>mind<sp/>multiple<sp/>accesses)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>map&lt;string,<sp/>bool&gt;::iterator<sp/>j<sp/>=<sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>.find(<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>j-&gt;second<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ReturnVector;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" kindref="member">Parameters::CheckForUnaccessedParameters</ref>()</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>unaccessed<sp/>parameters<sp/>have<sp/>we<sp/>found<sp/>so<sp/>far</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ReturnValue<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>iterate<sp/>over<sp/>all<sp/>parameters<sp/>in<sp/>the<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(the<sp/>ParamIDs<sp/>in<sp/>AccessedList<sp/>should<sp/>be<sp/>the<sp/>same<sp/>as<sp/>in<sp/>TheParameters)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>map&lt;string,<sp/>bool&gt;::iterator<sp/>i<sp/>=<sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>.begin();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>!=<sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i-&gt;second<sp/>!=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++ReturnValue;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Unused<sp/>parameter:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>i-&gt;first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ReturnValue;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1b93e874ce1ee81e9586a2435b7d8a3de" kindref="member">Parameters::WriteToFile</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>FileName,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Append<sp/>)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>open<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>std::ofstream<sp/>FileOut;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>Append<sp/>)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>FileOut.open(<sp/>FileName.c_str(),<sp/>ios::app<sp/>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>FileOut.open(<sp/>FileName.c_str(),<sp/>ios::trunc<sp/>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>FileOut.fail()<sp/>)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Parameters,<sp/>unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>FileName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>reading.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-20;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>write<sp/>out<sp/>our<sp/>ID<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>Begin<sp/>settings<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classParameters_15206e134bcec867289e40fbfac16d354" kindref="member" tooltip="The unique ID to identify the settings section in the file.">StringID</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>go<sp/>through<sp/>the<sp/>map<sp/>and<sp/>write<sp/>out<sp/>all<sp/>the<sp/>settings!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>map&lt;string,<sp/>list&lt;string&gt;<sp/>&gt;::const_iterator<sp/>i;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>list&lt;string&gt;::const_iterator<sp/>j;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.begin();<sp/>i<sp/>!=<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>.end();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>we<sp/>have<sp/>the<sp/>ParamID<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/>i-&gt;first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>we<sp/>go<sp/>through<sp/>each<sp/>setting<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>=<sp/>(i-&gt;second).begin();<sp/>j<sp/>!=<sp/>(i-&gt;second).end();<sp/>++j<sp/>)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/>*j<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now,<sp/>write<sp/>out<sp/>our<sp/>ending<sp/>ID<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>FileOut<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>End<sp/>settings<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>StringID<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We&apos;re<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>FileOut.close();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/parameters.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="timer_8cpp" kind="file">
+    <compoundname>timer.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">ctime</includes>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <incdepgraph>
+      <node id="503">
+        <label>Gyulassy/opacity3/src/timer.cpp</label>
+        <link refid="timer.cpp"/>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="506">
+        <label>ctime</label>
+      </node>
+      <node id="505">
+        <label>cstdlib</label>
+      </node>
+      <node id="504">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="timer_8cpp_134aff3bb2874be0f0c92d7e17b7105eb" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double cCpNs</definition>
+        <argsstring></argsstring>
+        <name>cCpNs</name>
+        <initializer> 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.cpp" line="9" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="timer_8cpp_1eca4efb69b4ffbab549132be3a837a8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int nanotime_ia32</definition>
+        <argsstring>(void)</argsstring>
+        <name>nanotime_ia32</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.cpp" line="13" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="timer_8cpp_134aff3bb2874be0f0c92d7e17b7105eb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="timer_8cpp_134aff3bb2874be0f0c92d7e17b7105eb" kindref="member">cCpNs</ref><sp/>=<sp/>1.5;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="timer_8cpp_1eca4efb69b4ffbab549132be3a837a8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="timer_8cpp_1eca4efb69b4ffbab549132be3a837a8f" kindref="member">nanotime_ia32</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>__asm__<sp/>__volatile__(</highlight><highlight class="stringliteral">&quot;rdtsc&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;=A&quot;</highlight><highlight class="normal"><sp/>(val)<sp/>:<sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(val);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classTimer_15f16e8da27d2a5a5242dead46de05d97" refkind="member"><highlight class="normal"><ref refid="classTimer_15f16e8da27d2a5a5242dead46de05d97" kindref="member">Timer::Timer</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>clock_id<sp/>=<sp/>CLOCK_REALTIME;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>tstart.tv_sec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>tstart.tv_nsec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><ref refid="classTimer_1bf54ab5847d8e97c930349d639a1cbee" kindref="member">tstop</ref>.tv_sec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="classTimer_1bf54ab5847d8e97c930349d639a1cbee" kindref="member">tstop</ref>.tv_nsec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="classTimer_101bbd5a781157f6531a4bc9b28756da9" kindref="member">ia32Start</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="classTimer_1894bd5ca4c19e1528a735cfcff05a25d" kindref="member">ia32Stop</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classTimer_114fa469c4c295c5fa6e66a4ad1092146" refkind="member"><highlight class="normal"><ref refid="classTimer_114fa469c4c295c5fa6e66a4ad1092146" kindref="member">Timer::~Timer</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" kindref="member">Timer::StartTimer</ref>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//clock_gettime(clock_id,<sp/>&amp;tstart);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="classTimer_13ae91f3d031faeb8401702ec8ceab51d" kindref="member">clock1</ref><sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//ia32Start<sp/>=<sp/>nanotime_ia32();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" kindref="member">Timer::StopTimer</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//clock_gettime(clock_id,<sp/>&amp;tstop);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//_totDiff<sp/>=<sp/>double(tstop.tv_sec-tstart.tv_sec)<sp/>+<sp/>double(tstop.tv_nsec-tstart.tv_nsec)/1.e9;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//_totDiffNanSecs<sp/>=<sp/>double(tstop.tv_sec-tstart.tv_sec)*1.e9<sp/>+<sp/>double(tstop.tv_nsec-tstart.tv_nsec);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="classTimer_1d29500007a671be2a0dbd230249fa5a9" kindref="member">clock2</ref><sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" kindref="member">clockdiff</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classTimer_1d29500007a671be2a0dbd230249fa5a9" kindref="member">clock2</ref>-<ref refid="classTimer_13ae91f3d031faeb8401702ec8ceab51d" kindref="member">clock1</ref>)/CLOCKS_PER_SEC;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//ia32Stop<sp/>=<sp/>nanotime_ia32();<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//ia32NanoSecs<sp/>=<sp/>int(double(ia32Stop<sp/>-<sp/>ia32Start)/cCpNs);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" kindref="member">Timer::DisplayResult</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>div<sp/>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::cerr<sp/>&lt;&lt;<sp/>&quot;Total<sp/>time:<sp/>&quot;<sp/>&lt;&lt;<sp/>_totDiffNanSecs<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Total<sp/>time:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" kindref="member">clockdiff</ref><sp/>/<sp/>div<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::cerr<sp/>&lt;&lt;<sp/>&quot;Total<sp/>time:<sp/>&quot;<sp/>&lt;&lt;<sp/>(ia32NanoSecs)<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classTimer_14db34f21ca587602a5496e34e061501f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTimer_14db34f21ca587602a5496e34e061501f" kindref="member">Timer::GetResult</ref>(<sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" kindref="member">clockdiff</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/timer.cpp"/>
+  </compounddef>
+</doxygen>

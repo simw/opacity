@@ -1,0 +1,454 @@
+\section{QperpGenerator Class Reference}
+\label{classQperpGenerator}\index{QperpGenerator@{QperpGenerator}}
+{\tt \#include $<$qperpdist.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpGenerator} (unsigned long n\_\-, bool correlated\_\-)
+\begin{CompactList}\small\item\em Constructor: feed in the number of dimensions, and whether the medium is correlated. \item\end{CompactList}\item 
+{\bf $\sim$QperpGenerator} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+void {\bf FindRandomQs} (MyArray \&inForQs, MyArray \&qmins, MyArray \&qmaxs, MyArray \&inForThs, MyArray \&thmins, MyArray \&thmaxs, MyArray \&mu2s)
+\begin{CompactList}\small\item\em Supply random numbers in inForQs, inForThs, generates random qs between qmins and qmaxs, ths between thmins and thmaxs - using the Debye masses from mu2s. \item\end{CompactList}\item 
+void {\bf SetZeroedQs} (unsigned long num)
+\begin{CompactList}\small\item\em Set the combination of zeroed qs from an integer. \item\end{CompactList}\item 
+void {\bf SetK} (double k)
+\begin{CompactList}\small\item\em Set the k value. \item\end{CompactList}\item 
+double {\bf GetSumQiQj} (unsigned long i, unsigned long j) const 
+\begin{CompactList}\small\item\em Get out the SumQiQj - passed straight onto \doxyref{QperpCalculator}{p.}{classQperpCalculator} object. \item\end{CompactList}\item 
+double {\bf GetQeventWeight} () const 
+\begin{CompactList}\small\item\em Get the weight of the event, ie the ratio of the distribtutions from which the qs, ths are generated and the ones in the integrals. \item\end{CompactList}\item 
+bool {\bf IsZeroed} (unsigned long i)
+\begin{CompactList}\small\item\em Ask whether a specific q is zeroed. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+const unsigned long {\bf \_\-dim}
+\begin{CompactList}\small\item\em Number of dimensions of q, theta. \item\end{CompactList}\item 
+{\bf QperpCalculator} {\bf qps}
+\begin{CompactList}\small\item\em The class dealing with the details of the calculation, once filled with qs, thetas. \item\end{CompactList}\item 
+MyArray {\bf \_\-weights}
+\begin{CompactList}\small\item\em The weight of the event compared to the fixed Gyulassy-Wang distribution. \item\end{CompactList}\item 
+double {\bf \_\-totWeight}
+\begin{CompactList}\small\item\em The product of all the weights, ie the event weight. \item\end{CompactList}\item 
+bool {\bf \_\-correlated}
+\begin{CompactList}\small\item\em Whether the medium is correlated. \item\end{CompactList}\item 
+unsigned long {\bf \_\-zeroSet}
+\begin{CompactList}\small\item\em The code for which qs are zeroed - int converts to binary gives which qs are zeroed. \item\end{CompactList}\item 
+unsigned long {\bf \_\-numZeroedQs}
+\begin{CompactList}\small\item\em The total number of zeroed qs. \item\end{CompactList}\item 
+std::vector$<$ bool $>$ {\bf \_\-isZeroed}
+\begin{CompactList}\small\item\em The array of zeroed qs - ie zeroSet in binary form, with 0$<$-$>$1 inverted. \item\end{CompactList}\item 
+bool {\bf \_\-evenZeroes}
+\begin{CompactList}\small\item\em Whether we have an even number of zeroed qs (hence a -1 in the event weight). \item\end{CompactList}\item 
+{\bf Wrapper}$<$ {\bf Function} $>$ {\bf qDistFn}
+\begin{CompactList}\small\item\em The distribution function from which to choose the qs. \item\end{CompactList}\item 
+{\bf Wrapper}$<$ {\bf Function} $>$ {\bf yukDistFn}
+\begin{CompactList}\small\item\em The reference function in the integral - yukawa (ie Gyulassy-Wang). \item\end{CompactList}\item 
+{\bf Wrapper}$<$ {\bf Function} $>$ {\bf thDistFn}
+\begin{CompactList}\small\item\em The distribution function from which to choose the thetas. \item\end{CompactList}\item 
+{\bf Wrapper}$<$ {\bf Function} $>$ {\bf uniDistFn}
+\begin{CompactList}\small\item\em The reference function in the integral - uniform. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file qperpdist.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpGenerator@{QperpGenerator}!QperpGenerator@{QperpGenerator}}
+\index{QperpGenerator@{QperpGenerator}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpGenerator::QperpGenerator (unsigned long {\em n\_\-}, bool {\em correlated\_\-})}\label{classQperpGenerator_00f91d421cea93fd0251ad4112a58662}
+
+
+Constructor: feed in the number of dimensions, and whether the medium is correlated. 
+
+
+
+Definition at line 10 of file qperpdist.cpp.
+
+References \_\-correlated, \_\-dim, \_\-isZeroed, qDistFn, thDistFn, uniDistFn, and yukDistFn.
+
+\begin{Code}\begin{verbatim}11   : _dim( n ), qps( n, correlated_ ), _weights( n ), _isZeroed( n+1 )
+12 {
+13   YukawaFunction yuk( _dim );
+14   UniformFunction uni( _dim );
+15   
+16   qDistFn = yuk;
+17   yukDistFn = yuk;
+18   thDistFn = uni; 
+19   uniDistFn = uni;
+20 
+21   _correlated = correlated_;
+22 
+23   // k is never zeroed
+24   _isZeroed[n] = false;
+25 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator@{QperpGenerator}!~QperpGenerator@{$\sim$QperpGenerator}}
+\index{~QperpGenerator@{$\sim$QperpGenerator}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpGenerator::$\sim$QperpGenerator ()}\label{classQperpGenerator_fad2d91783826777f3b9d5c82804c61e}
+
+
+Destructor. 
+
+
+
+Definition at line 27 of file qperpdist.cpp.
+
+\begin{Code}\begin{verbatim}28 {
+29 
+30 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpGenerator@{QperpGenerator}!FindRandomQs@{FindRandomQs}}
+\index{FindRandomQs@{FindRandomQs}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpGenerator::FindRandomQs (MyArray \& {\em inForQs}, MyArray \& {\em qmins}, MyArray \& {\em qmaxs}, MyArray \& {\em inForThs}, MyArray \& {\em thmins}, MyArray \& {\em thmaxs}, MyArray \& {\em mu2s})}\label{classQperpGenerator_d40d18e64ee7f921f82d674818f42ec8}
+
+
+Supply random numbers in inForQs, inForThs, generates random qs between qmins and qmaxs, ths between thmins and thmaxs - using the Debye masses from mu2s. 
+
+
+
+Definition at line 59 of file qperpdist.cpp.
+
+References \_\-dim, \_\-totWeight, \_\-weights, qDistFn, qps, QperpCalculator::SetQperps(), SetZeroedQs(), thDistFn, uniDistFn, and yukDistFn.
+
+Referenced by RadCalcer::DistributeRandoms().
+
+\begin{Code}\begin{verbatim}62 {
+63   // We have inputs: inForQs, inForThs - randomly distributed numbers between 0,1
+64   // We want to produce Qs, Ths distributed between qmins,qmaxs and thmins,thmaxs
+65   MyArray _qs( _dim ), _ths( _dim );
+66   SetZeroedQs( 0 );
+67 
+68   qDistFn->SetLimits( qmins, qmaxs );
+69   yukDistFn->SetLimits( qmins, qmaxs );
+70   thDistFn->SetLimits( thmins, thmaxs );
+71   uniDistFn->SetLimits( thmins, thmaxs );
+72 
+73   qDistFn->SetParams( mu2s ); 
+74   yukDistFn->SetParams( mu2s );
+75 
+76   qDistFn->NormedIntegralInverse( inForQs, _qs );
+77   thDistFn->NormedIntegralInverse( inForThs, _ths );
+78 
+79   qps.SetQperps( _qs, _ths );
+80 
+81   MyArray tmp1( _dim ), tmp2( _dim ), tmp3( _dim ), tmp4( _dim );
+82   qDistFn->function( _qs, tmp1 );
+83   yukDistFn->function( _qs, tmp2 );
+84   thDistFn->function( _ths, tmp3 );
+85   uniDistFn->function( _ths, tmp4 );
+86 
+87   _totWeight = 1.;
+88   for (unsigned long i=0; i<_dim; ++i)
+89   {
+90     _weights[i] = tmp2[i]/tmp1[i] * tmp4[i]/tmp3[i];
+91     _totWeight *= _weights[i];
+92   }
+93 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator@{QperpGenerator}!SetZeroedQs@{SetZeroedQs}}
+\index{SetZeroedQs@{SetZeroedQs}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpGenerator::SetZeroedQs (unsigned long {\em num})}\label{classQperpGenerator_625dab8d6796160d279fb43d310593e2}
+
+
+Set the combination of zeroed qs from an integer. 
+
+
+
+Definition at line 32 of file qperpdist.cpp.
+
+References \_\-correlated, \_\-dim, \_\-evenZeroes, \_\-isZeroed, SwUtils::\_\-NumberToBoolArray(), \_\-numZeroedQs, and \_\-zeroSet.
+
+Referenced by FindRandomQs(), and RadCalcer::GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}33 {
+34   _zeroSet = num;
+35 
+36   if ( _correlated )
+37   {
+38     _NumberToBoolArray( num, _isZeroed, _dim );
+39 
+40     _numZeroedQs = 0; _evenZeroes = true;
+41     for (unsigned long i=0; i<_dim; ++i) 
+42     {
+43       if (_isZeroed[i])
+44       {   ++_numZeroedQs; _evenZeroes = !_evenZeroes; }
+45     }
+46   }
+47   else
+48   {
+49     for (unsigned long i=0; i<num; ++i)
+50       _isZeroed[i] = 1;
+51     for (unsigned long i=num; i<_dim; ++i)
+52       _isZeroed[i] = 0;
+53 
+54     _numZeroedQs = num;
+55     _evenZeroes = !(num % 2);
+56   }
+57 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator@{QperpGenerator}!SetK@{SetK}}
+\index{SetK@{SetK}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpGenerator::SetK (double {\em k})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator_895774f8b53108c38336a31acc48f57f}
+
+
+Set the k value. 
+
+
+
+Definition at line 80 of file qperpdist.h.
+
+References qps, and QperpCalculator::SetK().
+
+Referenced by RadCalcer::SetKonly().
+
+\begin{Code}\begin{verbatim}81 {
+82   qps.SetK( k );
+83 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator@{QperpGenerator}!GetSumQiQj@{GetSumQiQj}}
+\index{GetSumQiQj@{GetSumQiQj}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpGenerator::GetSumQiQj (unsigned long {\em i}, unsigned long {\em j}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator_0ff4530994ec3cbb9ab9c4eb8813a8cd}
+
+
+Get out the SumQiQj - passed straight onto \doxyref{QperpCalculator}{p.}{classQperpCalculator} object. 
+
+
+
+Definition at line 85 of file qperpdist.h.
+
+References \_\-zeroSet, QperpCalculator::GetSumQiQj(), and qps.
+
+Referenced by RadCalcer::\_\-cdotb(), RadCalcer::\_\-interference(), and RadCalcer::\_\-interferenceExp().
+
+\begin{Code}\begin{verbatim}86 {
+87   return qps.GetSumQiQj( i, j, _zeroSet );
+88 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator@{QperpGenerator}!GetQeventWeight@{GetQeventWeight}}
+\index{GetQeventWeight@{GetQeventWeight}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpGenerator::GetQeventWeight () const}\label{classQperpGenerator_f40e5cf376bc3e80397e2e15f5c499b7}
+
+
+Get the weight of the event, ie the ratio of the distribtutions from which the qs, ths are generated and the ones in the integrals. 
+
+
+
+Definition at line 95 of file qperpdist.cpp.
+
+References \_\-dim, \_\-evenZeroes, \_\-isZeroed, and \_\-weights.
+
+Referenced by RadCalcer::GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}96 {
+97   double tmp = 1.;
+98 
+99   for (unsigned long i=0; i<_dim; i++)
+100   {
+101     if ( !_isZeroed[i] )
+102       tmp *= _weights[i];
+103   }
+104   if ( !_evenZeroes ) tmp = -tmp;
+105   return tmp;
+106 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpGenerator@{QperpGenerator}!IsZeroed@{IsZeroed}}
+\index{IsZeroed@{IsZeroed}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool QperpGenerator::IsZeroed (unsigned long {\em i})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpGenerator_8309ae1765318ca72e16a4b072a889be}
+
+
+Ask whether a specific q is zeroed. 
+
+
+
+Definition at line 75 of file qperpdist.h.
+
+References \_\-isZeroed.
+
+\begin{Code}\begin{verbatim}76 {
+77   return _isZeroed[i];
+78 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{QperpGenerator@{QperpGenerator}!_dim@{\_\-dim}}
+\index{_dim@{\_\-dim}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const unsigned long {\bf QperpGenerator::\_\-dim}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_01f27723035e78b7436c4899603787a0}
+
+
+Number of dimensions of q, theta. 
+
+
+
+Definition at line 22 of file qperpdist.h.
+
+Referenced by FindRandomQs(), GetQeventWeight(), QperpGenerator(), and SetZeroedQs().\index{QperpGenerator@{QperpGenerator}!qps@{qps}}
+\index{qps@{qps}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf QperpCalculator} {\bf QperpGenerator::qps}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_59c5be1eac3a7f43b01a24162eeb5ae0}
+
+
+The class dealing with the details of the calculation, once filled with qs, thetas. 
+
+
+
+Definition at line 24 of file qperpdist.h.
+
+Referenced by FindRandomQs(), GetSumQiQj(), and SetK().\index{QperpGenerator@{QperpGenerator}!_weights@{\_\-weights}}
+\index{_weights@{\_\-weights}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf QperpGenerator::\_\-weights}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_b0fda647da2e8ef295056f588a6bcdbe}
+
+
+The weight of the event compared to the fixed Gyulassy-Wang distribution. 
+
+
+
+Definition at line 26 of file qperpdist.h.
+
+Referenced by FindRandomQs(), and GetQeventWeight().\index{QperpGenerator@{QperpGenerator}!_totWeight@{\_\-totWeight}}
+\index{_totWeight@{\_\-totWeight}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf QperpGenerator::\_\-totWeight}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_1d3977d3561dc95c11458737ecc2aa52}
+
+
+The product of all the weights, ie the event weight. 
+
+
+
+Definition at line 28 of file qperpdist.h.
+
+Referenced by FindRandomQs().\index{QperpGenerator@{QperpGenerator}!_correlated@{\_\-correlated}}
+\index{_correlated@{\_\-correlated}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf QperpGenerator::\_\-correlated}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_ef35e836797c13f96da1c986adfb3c7b}
+
+
+Whether the medium is correlated. 
+
+
+
+Definition at line 31 of file qperpdist.h.
+
+Referenced by QperpGenerator(), and SetZeroedQs().\index{QperpGenerator@{QperpGenerator}!_zeroSet@{\_\-zeroSet}}
+\index{_zeroSet@{\_\-zeroSet}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf QperpGenerator::\_\-zeroSet}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_c34e541812a2f1aec7f1cf6fd540f007}
+
+
+The code for which qs are zeroed - int converts to binary gives which qs are zeroed. 
+
+
+
+Definition at line 34 of file qperpdist.h.
+
+Referenced by GetSumQiQj(), and SetZeroedQs().\index{QperpGenerator@{QperpGenerator}!_numZeroedQs@{\_\-numZeroedQs}}
+\index{_numZeroedQs@{\_\-numZeroedQs}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf QperpGenerator::\_\-numZeroedQs}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_baeef4fe35a600a8ad4413dc0c40ee1b}
+
+
+The total number of zeroed qs. 
+
+
+
+Definition at line 36 of file qperpdist.h.
+
+Referenced by SetZeroedQs().\index{QperpGenerator@{QperpGenerator}!_isZeroed@{\_\-isZeroed}}
+\index{_isZeroed@{\_\-isZeroed}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$bool$>$ {\bf QperpGenerator::\_\-isZeroed}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_22a673f1ed105b1c664e74d99d8679b1}
+
+
+The array of zeroed qs - ie zeroSet in binary form, with 0$<$-$>$1 inverted. 
+
+
+
+Definition at line 38 of file qperpdist.h.
+
+Referenced by GetQeventWeight(), IsZeroed(), QperpGenerator(), and SetZeroedQs().\index{QperpGenerator@{QperpGenerator}!_evenZeroes@{\_\-evenZeroes}}
+\index{_evenZeroes@{\_\-evenZeroes}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf QperpGenerator::\_\-evenZeroes}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_7f09257e99fb8f7487448763107c7343}
+
+
+Whether we have an even number of zeroed qs (hence a -1 in the event weight). 
+
+
+
+Definition at line 40 of file qperpdist.h.
+
+Referenced by GetQeventWeight(), and SetZeroedQs().\index{QperpGenerator@{QperpGenerator}!qDistFn@{qDistFn}}
+\index{qDistFn@{qDistFn}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Wrapper}$<${\bf Function}$>$ {\bf QperpGenerator::qDistFn}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_f35c641a4871fe9270e5d7bcd42875d2}
+
+
+The distribution function from which to choose the qs. 
+
+
+
+Definition at line 43 of file qperpdist.h.
+
+Referenced by FindRandomQs(), and QperpGenerator().\index{QperpGenerator@{QperpGenerator}!yukDistFn@{yukDistFn}}
+\index{yukDistFn@{yukDistFn}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Wrapper}$<${\bf Function}$>$ {\bf QperpGenerator::yukDistFn}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_75d08ac9dd8b2d84ced041397ac41b43}
+
+
+The reference function in the integral - yukawa (ie Gyulassy-Wang). 
+
+
+
+Definition at line 45 of file qperpdist.h.
+
+Referenced by FindRandomQs(), and QperpGenerator().\index{QperpGenerator@{QperpGenerator}!thDistFn@{thDistFn}}
+\index{thDistFn@{thDistFn}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Wrapper}$<${\bf Function}$>$ {\bf QperpGenerator::thDistFn}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_8a155b4b8c59ea36bf1a54ee1c14a892}
+
+
+The distribution function from which to choose the thetas. 
+
+
+
+Definition at line 47 of file qperpdist.h.
+
+Referenced by FindRandomQs(), and QperpGenerator().\index{QperpGenerator@{QperpGenerator}!uniDistFn@{uniDistFn}}
+\index{uniDistFn@{uniDistFn}!QperpGenerator@{QperpGenerator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Wrapper}$<${\bf Function}$>$ {\bf QperpGenerator::uniDistFn}\hspace{0.3cm}{\tt  [private]}}\label{classQperpGenerator_4e60857ecf52fc3574974de2350a5b01}
+
+
+The reference function in the integral - uniform. 
+
+
+
+Definition at line 49 of file qperpdist.h.
+
+Referenced by FindRandomQs(), and QperpGenerator().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf qperpdist.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf qperpdist.cpp}\end{CompactItemize}

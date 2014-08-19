@@ -1,0 +1,256 @@
+\section{Wrapper$<$ T $>$ Class Template Reference}
+\label{classWrapper}\index{Wrapper@{Wrapper}}
+{\tt \#include $<$Wrapper.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Wrapper} ()
+\begin{CompactList}\small\item\em Constructor with no parameters - start the pointer as null and zero. \item\end{CompactList}\item 
+{\bf Wrapper} (const T \&inner)
+\begin{CompactList}\small\item\em Copy constructor - create a copy of the other object, using the 'clone' function. \item\end{CompactList}\item 
+{\bf $\sim$Wrapper} ()
+\begin{CompactList}\small\item\em Destructor - if the pointer is non-null, then delete the object. \item\end{CompactList}\item 
+{\bf Wrapper} (const {\bf Wrapper}$<$ T $>$ \&original)
+\begin{CompactList}\small\item\em Constructor supplying a 'wrapped' object, clone the inner object. \item\end{CompactList}\item 
+T $\ast$ {\bf GetPointer} ()
+\item 
+const T $\ast$const {\bf GetConstPointer} () const 
+\item 
+{\bf Wrapper} \& {\bf operator=} (const {\bf Wrapper}$<$ T $>$ \&original)
+\item 
+T \& {\bf operator $\ast$} ()
+\item 
+const T \& {\bf operator $\ast$} () const 
+\item 
+const T $\ast$const {\bf operator $\rightarrow$ } () const 
+\item 
+T $\ast$ {\bf operator $\rightarrow$ } ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+T $\ast$ {\bf DataPtr}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class Wrapper$<$ T $>$}
+
+\begin{Desc}
+\item[Author:]Simon Wicks copying out from Joshi 'C++ Design Patterns and Derivatives Pricing' A wrapper class to enable easy construction and assignment of new objects, but without worrying about deleting them when they go out of scope Any classes to be in the 'wrapper' must implement the 'clone' function \end{Desc}
+
+
+Definition at line 11 of file Wrapper.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Wrapper@{Wrapper}!Wrapper@{Wrapper}}
+\index{Wrapper@{Wrapper}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Wrapper}$<$ T $>$::{\bf Wrapper} ()\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_747788c9b29a997f4d805ec60e6e16a2}
+
+
+Constructor with no parameters - start the pointer as null and zero. 
+
+
+
+Definition at line 15 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}15 { DataPtr = 0; }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!Wrapper@{Wrapper}}
+\index{Wrapper@{Wrapper}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Wrapper}$<$ T $>$::{\bf Wrapper} (const T \& {\em inner})\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_75fb68554d62529a071016d297018dea}
+
+
+Copy constructor - create a copy of the other object, using the 'clone' function. 
+
+
+
+Definition at line 18 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}19   {
+20     DataPtr = inner.clone();
+21   }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!~Wrapper@{$\sim$Wrapper}}
+\index{~Wrapper@{$\sim$Wrapper}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Wrapper}$<$ T $>$::$\sim${\bf Wrapper} ()\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_5396fe1ce47468f5ceeec85eb423695d}
+
+
+Destructor - if the pointer is non-null, then delete the object. 
+
+
+
+Definition at line 24 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}25   {
+26     if (DataPtr != 0)
+27       delete DataPtr;
+28   }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!Wrapper@{Wrapper}}
+\index{Wrapper@{Wrapper}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Wrapper}$<$ T $>$::{\bf Wrapper} (const {\bf Wrapper}$<$ T $>$ \& {\em original})\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_61fbc2f8719cbbb237bab3c94aef6a53}
+
+
+Constructor supplying a 'wrapped' object, clone the inner object. 
+
+
+
+Definition at line 31 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}32   {
+33     if (original.DataPtr != 0)
+34       DataPtr = original.DataPtr->clone();
+35     else
+36       DataPtr = 0;
+37   }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Wrapper@{Wrapper}!GetPointer@{GetPointer}}
+\index{GetPointer@{GetPointer}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Wrapper}$<$ T $>$::GetPointer ()\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_954084dfe67131560f58d85cb1c4190e}
+
+
+
+
+Definition at line 40 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}41   { return DataPtr; }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!GetConstPointer@{GetConstPointer}}
+\index{GetConstPointer@{GetConstPointer}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T$\ast$ const {\bf Wrapper}$<$ T $>$::GetConstPointer () const\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_5e9f52d10a6098286c2a552cf19ac619}
+
+
+
+
+Definition at line 43 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}44   { return DataPtr; }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!operator=@{operator=}}
+\index{operator=@{operator=}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Wrapper}\& {\bf Wrapper}$<$ T $>$::operator= (const {\bf Wrapper}$<$ T $>$ \& {\em original})\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_8c19573051f3bbe811393abb3691147c}
+
+
+
+
+Definition at line 46 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}47   {
+48     if (this != &original)
+49     {
+50       if (DataPtr != 0)
+51         delete DataPtr;
+52         
+53       DataPtr = (original.DataPtr !=0) ? original.DataPtr->clone() : 0;
+54     }
+55     
+56     return *this;
+57   }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!operator *@{operator $\ast$}}
+\index{operator *@{operator $\ast$}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T\& {\bf Wrapper}$<$ T $>$::operator $\ast$ ()\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_9b083b2466e4e43c516bc8a3e2e47e56}
+
+
+
+
+Definition at line 59 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}60   {
+61     return *DataPtr;
+62   }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!operator *@{operator $\ast$}}
+\index{operator *@{operator $\ast$}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T\& {\bf Wrapper}$<$ T $>$::operator $\ast$ () const\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_4841ac8c58122f1d8479577616f6617a}
+
+
+
+
+Definition at line 64 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}65   {
+66     return *DataPtr;
+67   }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!operator->@{operator-$>$}}
+\index{operator->@{operator-$>$}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ const T$\ast$ const {\bf Wrapper}$<$ T $>$::operator $\rightarrow$  () const\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_da2ce054a40a86d0a03d9bc339152736}
+
+
+
+
+Definition at line 69 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}70   {
+71     return DataPtr;
+72   }
+\end{verbatim}
+\end{Code}
+
+
+\index{Wrapper@{Wrapper}!operator->@{operator-$>$}}
+\index{operator->@{operator-$>$}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Wrapper}$<$ T $>$::operator $\rightarrow$  ()\hspace{0.3cm}{\tt  [inline]}}\label{classWrapper_44a92ec32cd70089debea7205b2cc0a8}
+
+
+
+
+Definition at line 74 of file Wrapper.h.
+
+\begin{Code}\begin{verbatim}75   {
+76     return DataPtr;
+77   }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Wrapper@{Wrapper}!DataPtr@{DataPtr}}
+\index{DataPtr@{DataPtr}!Wrapper@{Wrapper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Wrapper}$<$ T $>$::{\bf DataPtr}\hspace{0.3cm}{\tt  [private]}}\label{classWrapper_fa8d2e17d834993a45bcc1811c5945d8}
+
+
+
+
+Definition at line 80 of file Wrapper.h.
+
+Referenced by Wrapper$<$ StatGathering::StatisticsMC $>$::GetConstPointer(), Wrapper$<$ StatGathering::StatisticsMC $>$::GetPointer(), Wrapper$<$ StatGathering::StatisticsMC $>$::operator $\ast$(), Wrapper$<$ StatGathering::StatisticsMC $>$::operator $\rightarrow$ (), Wrapper$<$ StatGathering::StatisticsMC $>$::operator=(), Wrapper$<$ StatGathering::StatisticsMC $>$::Wrapper(), and Wrapper$<$ StatGathering::StatisticsMC $>$::$\sim$Wrapper().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/{\bf Wrapper.h}\end{CompactItemize}

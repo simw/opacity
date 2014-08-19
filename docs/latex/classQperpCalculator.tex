@@ -1,0 +1,602 @@
+\section{QperpCalculator Class Reference}
+\label{classQperpCalculator}\index{QperpCalculator@{QperpCalculator}}
+{\tt \#include $<$qperparraynew.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpCalculator} (unsigned long n\_\-, bool correlated\_\-)
+\item 
+{\bf $\sim$QperpCalculator} ()
+\item 
+void {\bf SetQperps} (MyArray \&qs\_\-, MyArray \&ths\_\-)
+\begin{CompactList}\small\item\em Set the input array of q-vectors, ths is relative to the fixed direction of k. \item\end{CompactList}\item 
+void {\bf CalcQmatrices} ()
+\begin{CompactList}\small\item\em Once the q-perps are set, calculate all the further matrices involving q\_\-i.q\_\-j. \item\end{CompactList}\item 
+void {\bf CalcQmatrices2} ()
+\item 
+void {\bf CalcKhatMatrices} ()
+\begin{CompactList}\small\item\em Once the q-perps are set, calculate all the further matrices involving khat.q\_\-i. \item\end{CompactList}\item 
+void {\bf SetK} (double k\_\-)
+\begin{CompactList}\small\item\em Set the magnitude of the k vector (direction is always in fixed direction). \item\end{CompactList}\item 
+void {\bf SetZ} (unsigned long z\_\-)
+\begin{CompactList}\small\item\em Set the z value - ie which 'zeroes' value we want. \item\end{CompactList}\item 
+double {\bf GetQi} (unsigned long i) const 
+\begin{CompactList}\small\item\em Retrieve a specific q-vector magnitude. \item\end{CompactList}\item 
+double {\bf GetThi} (unsigned long i) const 
+\begin{CompactList}\small\item\em Retrieve a specific q-vector polar angle. \item\end{CompactList}\item 
+double {\bf GetSumQiQj} (unsigned long i, unsigned long j, unsigned long zeroes) const 
+\begin{CompactList}\small\item\em Retrieve the result - sum of q\_\-i.q\_\-j from i to (n+1), j to (n+1) including k.q\_\-i. \item\end{CompactList}\item 
+double {\bf GetSumQiQj} (unsigned long i\_\-, unsigned long j\_\-) const 
+\begin{CompactList}\small\item\em Same as above, but use the value of zeroes already given by the SetZ function. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+long {\bf n}
+\begin{CompactList}\small\item\em n = dimension, order in opacity, number of q's to calculate with \item\end{CompactList}\item 
+long {\bf twotothen}
+\begin{CompactList}\small\item\em There are 2$^\wedge$n different permutations of setting each q to zero, pre calculate this. \item\end{CompactList}\item 
+bool {\bf correlated}
+\begin{CompactList}\small\item\em Are we dealing with a correlated medium? 0 = no, 1 = yes. \item\end{CompactList}\item 
+long {\bf zin}
+\begin{CompactList}\small\item\em \doxyref{Store2D}{p.}{classStore2D} the z value, ie the zeroes. \item\end{CompactList}\item 
+MyArray {\bf qs}
+\begin{CompactList}\small\item\em The magnitudes of the q vectors. \item\end{CompactList}\item 
+MyArray {\bf ths}
+\begin{CompactList}\small\item\em The polar angles of the q vectors (this is q\_\-perp, ie effectively only 2D vector). \item\end{CompactList}\item 
+array2D {\bf qiqj}
+\begin{CompactList}\small\item\em Array of vector q\_\-i dot q\_\-j. \item\end{CompactList}\item 
+array3D {\bf sumqiqj\_\-itonjton}
+\begin{CompactList}\small\item\em Array of q\_\-i.q\_\-j summed from i to n and j to n. \item\end{CompactList}\item 
+double {\bf k}
+\begin{CompactList}\small\item\em k vector magnitude - the emitted gluon \item\end{CompactList}\item 
+double {\bf thk}
+\begin{CompactList}\small\item\em k vector polar angle \item\end{CompactList}\item 
+array1D {\bf khatqi}
+\begin{CompactList}\small\item\em Array of khat dot q\_\-i (ie khat is unit vector, independent of k magnitude). \item\end{CompactList}\item 
+array2D {\bf sumkhatqi\_\-iton}
+\begin{CompactList}\small\item\em Sum of khat.q\_\-i summed from i to n. \item\end{CompactList}\item 
+array3D {\bf sumkhatqikhatqj\_\-itonjton}
+\begin{CompactList}\small\item\em Sum of khat.q\_\-i summed from i to n and j to n. \item\end{CompactList}\item 
+array3D {\bf sumkqikqj\_\-itonjton}
+\begin{CompactList}\small\item\em Sum of k.q\_\-i summed from i to n and j to n - ie depdendent on k. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A class to calculate the necessary sums and products of q and k vectors necessary to calculate an opacity expansion. This automates the expansion of the dot products inside the C's and B's in GLV for arbitrary order in opacity, rather than trying to calculate by hand. All sums of q's from i up to the length n are needed, dotted into a sum from j to n. Further, the result but with one or more of the q's set to zero (ie a delta function in the integral) is needed. \begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simon\_\-wicks@yahoo.com}$>$ \end{Desc}
+
+
+Definition at line 19 of file qperparraynew.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpCalculator@{QperpCalculator}!QperpCalculator@{QperpCalculator}}
+\index{QperpCalculator@{QperpCalculator}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpCalculator::QperpCalculator (unsigned long {\em n\_\-}, bool {\em correlated\_\-})}\label{classQperpCalculator_303da9d3465defdf4db40aa77ad6ecbb}
+
+
+Constructor - takes the wanted dimension, number of collisions TODO?: templatize this, make n effectively known, thus making loops more efficient? and whether we're dealing with a correlated medium 
+
+Definition at line 163 of file qperparraynew.cpp.
+
+References correlated, n, SwUtils::power(), sumkhatqi\_\-iton, sumkhatqikhatqj\_\-itonjton, sumkqikqj\_\-itonjton, sumqiqj\_\-itonjton, and twotothen.
+
+\begin{Code}\begin{verbatim}164   : n(n_), correlated(correlated_), 
+165     qs( n_ ), ths( n_ ),
+166     qiqj( boost::extents[n_][n_] ),
+167     thk(pi),
+168     khatqi( boost::extents[n_] )
+169 {
+170   twotothen = power(2,n);
+171 
+172   if ( correlated==0 )
+173   {
+174     sumqiqj_itonjton.resize( boost::extents[1][n+1][n+1] );
+175     sumkhatqi_iton.resize( boost::extents[1][n] );
+176     sumkhatqikhatqj_itonjton.resize( boost::extents[1][n+1][n+1] );
+177     sumkqikqj_itonjton.resize( boost::extents[1][n+1][n+1] );
+178   }
+179   else
+180   {
+181     sumqiqj_itonjton.resize( boost::extents[twotothen][n+1][n+1] );
+182     sumkhatqi_iton.resize( boost::extents[twotothen][n] );
+183     sumkhatqikhatqj_itonjton.resize( boost::extents[twotothen][n+1][n+1] );
+184     sumkqikqj_itonjton.resize( boost::extents[twotothen][n+1][n+1] );
+185   }
+186 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!~QperpCalculator@{$\sim$QperpCalculator}}
+\index{~QperpCalculator@{$\sim$QperpCalculator}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}QperpCalculator::$\sim$QperpCalculator ()}\label{classQperpCalculator_e0d39a269d3ad4ac9511f21b2a6897d5}
+
+
+
+
+Definition at line 188 of file qperparraynew.cpp.
+
+\begin{Code}\begin{verbatim}189 {
+190 
+191 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpCalculator@{QperpCalculator}!SetQperps@{SetQperps}}
+\index{SetQperps@{SetQperps}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpCalculator::SetQperps (MyArray \& {\em qs\_\-}, MyArray \& {\em ths\_\-})}\label{classQperpCalculator_5161016f7562736d9de2ddbd71d64c3e}
+
+
+Set the input array of q-vectors, ths is relative to the fixed direction of k. 
+
+
+
+Definition at line 238 of file qperparraynew.cpp.
+
+References CalcQmatrices2(), qs, and ths.
+
+Referenced by QperpGenerator::FindRandomQs(), and QperpCalculator1$<$ n $>$::SetQsThetas().
+
+\begin{Code}\begin{verbatim}239 {
+240   qs = qs_;
+241   ths = ths_;
+242 
+243   CalcQmatrices2();
+244 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!CalcQmatrices@{CalcQmatrices}}
+\index{CalcQmatrices@{CalcQmatrices}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpCalculator::CalcQmatrices ()}\label{classQperpCalculator_91e6a17cf817e4b361d6bc3187ec2095}
+
+
+Once the q-perps are set, calculate all the further matrices involving q\_\-i.q\_\-j. 
+
+
+
+Definition at line 358 of file qperparraynew.cpp.
+
+References \_\-Iterate1DForZeroes(), \_\-Iterate2DForZeroes(), \_\-OuterProduct0D1D(), \_\-OuterProduct1D1D(), correlated, khatqi, n, qiqj, qs, sumkhatqi\_\-iton, sumkhatqikhatqj\_\-itonjton, sumqiqj\_\-itonjton, thk, ths, and twotothen.
+
+\begin{Code}\begin{verbatim}359 {
+360   // Array of q_i.q_j summed from i to n
+361   array2D sumqiqj_iton;
+362   // Array of q_i.q_j summed from j to n
+363   array2D sumqiqj_jton;
+364 
+365   sumqiqj_iton.resize( boost::extents[n][n] );
+366   sumqiqj_jton.resize( boost::extents[n][n] );
+367 
+368   // Here, we pre-calculate all the necessary qi.qj elements and their useful sums
+369 
+370   // First, calculate all qi.qj elements and khat.qi
+371   _OuterProduct1D1D( n, qs, ths, qs, ths, qiqj );
+372   _OuterProduct0D1D( n, 1., thk, qs, ths, khatqi );
+373   
+374   // Now, calculate sumqiqj_jton[i][j] = Sum[ qiqj[i][jj], {jj, j, n} ];
+375   // ie sumqiqj_jton[i][j] = sumqiqj_iton[i][j+1] + qiqj[i][j]
+376   // sumqiqj_iton[i][j] = transpose sumqiqj_jton[i][j] = sumqiqj_jton[j][i]
+377   for (index2D i=0; i!=n; ++i) 
+378   {
+379     sumqiqj_jton[i][n-1] = qiqj[i][n-1];
+380     sumqiqj_iton[n-1][i] = sumqiqj_jton[i][n-1];
+381     for (index2D j=(n-2); j>=0; --j)
+382     {
+383       sumqiqj_jton[i][j] = sumqiqj_jton[i][j+1] + qiqj[i][j];
+384       sumqiqj_iton[j][i] = sumqiqj_jton[i][j];
+385     }
+386   }
+387   
+388   // Now we calculate the final product
+389   
+390   // sumqiqj_itonjton[i][j] = Sum[ sumqiq_jton[ii][j], {ii, i, n} ];
+391   // ie sumqiqj_itonjton[i][j] = sumqiqj_itonjton[i+1][j] + sumqiqj_jton[i][j]
+392   sumqiqj_itonjton[0][n][n] = 0.;
+393   for (long j=0; j<n; ++j) 
+394   {
+395     sumqiqj_itonjton[0][n][j] = 0.;
+396     sumqiqj_itonjton[0][n-1][j] = sumqiqj_jton[n-1][j];
+397     for (long i=(n-2); i>=0; --i)
+398     {
+399       sumqiqj_itonjton[0][i][j] = sumqiqj_itonjton[0][i+1][j] + sumqiqj_jton[i][j];
+400     }
+401   }
+402   
+403   // Now throw in sumkhatqi_iton[i] = Sum[ khatqi[ii], {ii,i,n} ];
+404   // ie sumkhatqi_iton[i] = sumkhatqi_iton[i+1] + khatqi[i]
+405   sumkhatqi_iton[0][n-1] = khatqi[n-1];
+406   for (long i=(n-2); i>=0; --i)
+407   {
+408     sumkhatqi_iton[0][i] = sumkhatqi_iton[0][i+1] + khatqi[i];
+409   }
+410 
+411   if ( correlated )
+412   {
+413     // Now we go through all the possible combinations of zeroed columns and rows
+414     _Iterate2DForZeroes( n, qiqj, sumqiqj_itonjton );
+415     _Iterate1DForZeroes( n, khatqi, sumkhatqi_iton );
+416   }
+417 
+418   // Now calc sumkhatqikhatqj_itonjton
+419   long zmax; correlated ? zmax = twotothen-1 : zmax = 0;
+420   for (long z=0; z<=zmax; ++z)
+421   {
+422     for (long i=0; i<n; ++i)
+423     {
+424       for (long j=0; j<n; ++j)
+425       {
+426         sumkhatqikhatqj_itonjton[z][i][j] = sumkhatqi_iton[z][i] + sumkhatqi_iton[z][j];
+427       }
+428       sumkhatqikhatqj_itonjton[z][i][n] = sumkhatqi_iton[z][i];
+429     }
+430     for (long j=0; j<n; ++j)
+431     {
+432       sumkhatqikhatqj_itonjton[z][n][j] = sumkhatqi_iton[z][j];
+433     }
+434     sumkhatqikhatqj_itonjton[z][n][n] = 0.;
+435   }
+436 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!CalcQmatrices2@{CalcQmatrices2}}
+\index{CalcQmatrices2@{CalcQmatrices2}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpCalculator::CalcQmatrices2 ()}\label{classQperpCalculator_b8689c3b3d337993df82dbf0540812cd}
+
+
+
+
+Definition at line 248 of file qperparraynew.cpp.
+
+References \_\-DotProducts1D(), \_\-DotProducts2D(), \_\-Fill2DFrom1D(), \_\-FillAllRows1D(), \_\-FillAllRows2DSymmetric(), correlated, khatqi, n, qiqj, qs, sumkhatqi\_\-iton, sumkhatqikhatqj\_\-itonjton, sumqiqj\_\-itonjton, thk, ths, and twotothen.
+
+Referenced by SetQperps().
+
+\begin{Code}\begin{verbatim}249 {
+250   // Here, we pre-calculate all the necessary qi.qj elements and their useful sums
+251   // We'll also calculate the angular part of k.qi, but we'll keep the magnitude of k
+252   // generic at the moment. This way, we can iterate over all possible k magnitudes
+253   // for one set of qi.qj's.
+254 
+255   // First, calculate all qi.qj elements. This fills 2D matrix qiqj with qi.qj 
+256   _DotProducts2D( n, qs, ths, qiqj );
+257   // Now calculate k.qi elements for unit vector k. This fills khatqi.
+258   _DotProducts1D( n, 1., thk, qs, ths, khatqi );
+259 
+260   // Will iterate over all sets of zeroed out q's, if we have a correlated medium
+261   long zmax;
+262   correlated ? zmax = twotothen-1 : zmax = 0;
+263 
+264   for (long z=0; z<=zmax; ++z)
+265   {
+266     // Now we want to fill the 2D matrix sumqiqj_itonjton.
+267     _FillAllRows2DSymmetric( n, qiqj, sumqiqj_itonjton, z );
+268     // Finally, filling sumkhatqi_iton matrix
+269     _FillAllRows1D( n, khatqi, sumkhatqi_iton, z );
+270     // Convert the 1D khatqi_iton into a 2D khatqikhatqj ready for adding to qiqj_itonjton
+271     _Fill2DFrom1D( n, sumkhatqi_iton, sumkhatqikhatqj_itonjton, z );
+272   }
+273 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!CalcKhatMatrices@{CalcKhatMatrices}}
+\index{CalcKhatMatrices@{CalcKhatMatrices}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpCalculator::CalcKhatMatrices ()}\label{classQperpCalculator_92a161cdac53f6242ee1d16245466dde}
+
+
+Once the q-perps are set, calculate all the further matrices involving khat.q\_\-i. 
+
+\index{QperpCalculator@{QperpCalculator}!SetK@{SetK}}
+\index{SetK@{SetK}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpCalculator::SetK (double {\em k\_\-})}\label{classQperpCalculator_83253dd333b2c68cfab6b403f1b59024}
+
+
+Set the magnitude of the k vector (direction is always in fixed direction). 
+
+
+
+Definition at line 219 of file qperparraynew.cpp.
+
+References correlated, k, n, sumkhatqikhatqj\_\-itonjton, sumkqikqj\_\-itonjton, and twotothen.
+
+Referenced by QperpCalculator1$<$ n $>$::SetK(), and QperpGenerator::SetK().
+
+\begin{Code}\begin{verbatim}220 {
+221   k = k_; double k2 = k*k;
+222 
+223   long zmax;
+224   correlated ? zmax = twotothen-1 : zmax = 0;
+225   
+226   for( index3D z=0; z<=zmax; ++z )
+227   {
+228     for ( index3D i=0; i<n+1; ++i )
+229     {
+230       for ( index3D j=0; j<n+1; ++j )
+231       {
+232         sumkqikqj_itonjton[z][i][j] = sumkhatqikhatqj_itonjton[z][i][j] * k + k2;
+233       }
+234     }
+235   }
+236 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!SetZ@{SetZ}}
+\index{SetZ@{SetZ}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void QperpCalculator::SetZ (unsigned long {\em z\_\-})}\label{classQperpCalculator_0ec8c93039d650234ac1d2869e7ef5ec}
+
+
+Set the z value - ie which 'zeroes' value we want. 
+
+
+
+Definition at line 193 of file qperparraynew.cpp.
+
+References correlated, and zin.
+
+\begin{Code}\begin{verbatim}194 {
+195   zin = z_;
+196 
+197   if ( correlated )
+198   {
+199 
+200   }
+201 
+202 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!GetQi@{GetQi}}
+\index{GetQi@{GetQi}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpCalculator::GetQi (unsigned long {\em i}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator_9dad06b2c1b857059d848c7c3c6099ba}
+
+
+Retrieve a specific q-vector magnitude. 
+
+
+
+Definition at line 88 of file qperparraynew.h.
+
+References qs.
+
+\begin{Code}\begin{verbatim}89 {
+90   return qs[i];
+91 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!GetThi@{GetThi}}
+\index{GetThi@{GetThi}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpCalculator::GetThi (unsigned long {\em i}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator_265977b7518bbb896e074a0d54710b47}
+
+
+Retrieve a specific q-vector polar angle. 
+
+
+
+Definition at line 93 of file qperparraynew.h.
+
+References ths.
+
+\begin{Code}\begin{verbatim}94 {
+95   return ths[i];
+96 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!GetSumQiQj@{GetSumQiQj}}
+\index{GetSumQiQj@{GetSumQiQj}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpCalculator::GetSumQiQj (unsigned long {\em i}, unsigned long {\em j}, unsigned long {\em zeroes}) const}\label{classQperpCalculator_dcc7f0c758be4911f5599b349d0fe9d1}
+
+
+Retrieve the result - sum of q\_\-i.q\_\-j from i to (n+1), j to (n+1) including k.q\_\-i. 
+
+
+
+Definition at line 204 of file qperparraynew.cpp.
+
+References correlated, sumkqikqj\_\-itonjton, and sumqiqj\_\-itonjton.
+
+Referenced by QperpGenerator::GetSumQiQj(), QperpCalculator1$<$ n $>$::GetSumQs1k(), and QperpCalculator1$<$ n $>$::GetSumQskk().
+
+\begin{Code}\begin{verbatim}205 {
+206   long i = i_-1; long j = j_-1; long z = z_;
+207 
+208   if ( !correlated )
+209   {
+210     if (i < z) i = z_;
+211     if (j < z) j = z_;
+212     z = 0;
+213   }
+214 
+215   boost::array<array3D::index,3> idx = {{z,i,j}};
+216   return ( sumqiqj_itonjton( idx ) + sumkqikqj_itonjton( idx ) );
+217 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator@{QperpCalculator}!GetSumQiQj@{GetSumQiQj}}
+\index{GetSumQiQj@{GetSumQiQj}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double QperpCalculator::GetSumQiQj (unsigned long {\em i\_\-}, unsigned long {\em j\_\-}) const}\label{classQperpCalculator_74bfd871c1fe2277315bd375a6a01dc9}
+
+
+Same as above, but use the value of zeroes already given by the SetZ function. 
+
+
+
+\subsection{Member Data Documentation}
+\index{QperpCalculator@{QperpCalculator}!n@{n}}
+\index{n@{n}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long {\bf QperpCalculator::n}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_450feb266be13364991fba2b883711f2}
+
+
+n = dimension, order in opacity, number of q's to calculate with 
+
+
+
+Definition at line 23 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), QperpCalculator(), and SetK().\index{QperpCalculator@{QperpCalculator}!twotothen@{twotothen}}
+\index{twotothen@{twotothen}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long {\bf QperpCalculator::twotothen}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_495417f5f60bfda90c642d5f41dd36c0}
+
+
+There are 2$^\wedge$n different permutations of setting each q to zero, pre calculate this. 
+
+
+
+Definition at line 25 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), QperpCalculator(), and SetK().\index{QperpCalculator@{QperpCalculator}!correlated@{correlated}}
+\index{correlated@{correlated}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf QperpCalculator::correlated}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_280126db21bf9e1304eeef3f770aed71}
+
+
+Are we dealing with a correlated medium? 0 = no, 1 = yes. 
+
+
+
+Definition at line 28 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), GetSumQiQj(), QperpCalculator(), SetK(), and SetZ().\index{QperpCalculator@{QperpCalculator}!zin@{zin}}
+\index{zin@{zin}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}long {\bf QperpCalculator::zin}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_2eadd4a22a9ce50636a382b7e45e4de0}
+
+
+\doxyref{Store2D}{p.}{classStore2D} the z value, ie the zeroes. 
+
+
+
+Definition at line 31 of file qperparraynew.h.
+
+Referenced by SetZ().\index{QperpCalculator@{QperpCalculator}!qs@{qs}}
+\index{qs@{qs}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf QperpCalculator::qs}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_a8eaec51683b81cf9ae2517b8adaff1b}
+
+
+The magnitudes of the q vectors. 
+
+
+
+Definition at line 34 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), GetQi(), and SetQperps().\index{QperpCalculator@{QperpCalculator}!ths@{ths}}
+\index{ths@{ths}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}MyArray {\bf QperpCalculator::ths}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_5b6c7450c187157952abdb77f16be332}
+
+
+The polar angles of the q vectors (this is q\_\-perp, ie effectively only 2D vector). 
+
+
+
+Definition at line 36 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), GetThi(), and SetQperps().\index{QperpCalculator@{QperpCalculator}!qiqj@{qiqj}}
+\index{qiqj@{qiqj}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}array2D {\bf QperpCalculator::qiqj}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_9e589b4cf203e6289b99e459de6ad665}
+
+
+Array of vector q\_\-i dot q\_\-j. 
+
+
+
+Definition at line 39 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), and CalcQmatrices2().\index{QperpCalculator@{QperpCalculator}!sumqiqj_itonjton@{sumqiqj\_\-itonjton}}
+\index{sumqiqj_itonjton@{sumqiqj\_\-itonjton}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}array3D {\bf QperpCalculator::sumqiqj\_\-itonjton}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_2ff22225aa3702b089674292ddf63cf5}
+
+
+Array of q\_\-i.q\_\-j summed from i to n and j to n. 
+
+
+
+Definition at line 41 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), GetSumQiQj(), and QperpCalculator().\index{QperpCalculator@{QperpCalculator}!k@{k}}
+\index{k@{k}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf QperpCalculator::k}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_c17016ee4dcd57344199ca4d8dd43eb2}
+
+
+k vector magnitude - the emitted gluon 
+
+
+
+Definition at line 44 of file qperparraynew.h.
+
+Referenced by SetK().\index{QperpCalculator@{QperpCalculator}!thk@{thk}}
+\index{thk@{thk}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf QperpCalculator::thk}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_0976c2203a868d6095fd4f7e8d5ce0ca}
+
+
+k vector polar angle 
+
+
+
+Definition at line 46 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), and CalcQmatrices2().\index{QperpCalculator@{QperpCalculator}!khatqi@{khatqi}}
+\index{khatqi@{khatqi}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}array1D {\bf QperpCalculator::khatqi}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_eb7a7adbe702a6cd3a94e122fd09178c}
+
+
+Array of khat dot q\_\-i (ie khat is unit vector, independent of k magnitude). 
+
+
+
+Definition at line 48 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), and CalcQmatrices2().\index{QperpCalculator@{QperpCalculator}!sumkhatqi_iton@{sumkhatqi\_\-iton}}
+\index{sumkhatqi_iton@{sumkhatqi\_\-iton}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}array2D {\bf QperpCalculator::sumkhatqi\_\-iton}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_266de6c0b02f77a34f328b4db867e794}
+
+
+Sum of khat.q\_\-i summed from i to n. 
+
+
+
+Definition at line 50 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), and QperpCalculator().\index{QperpCalculator@{QperpCalculator}!sumkhatqikhatqj_itonjton@{sumkhatqikhatqj\_\-itonjton}}
+\index{sumkhatqikhatqj_itonjton@{sumkhatqikhatqj\_\-itonjton}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}array3D {\bf QperpCalculator::sumkhatqikhatqj\_\-itonjton}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_7165df38a37208799ef9ec17680349bb}
+
+
+Sum of khat.q\_\-i summed from i to n and j to n. 
+
+
+
+Definition at line 52 of file qperparraynew.h.
+
+Referenced by CalcQmatrices(), CalcQmatrices2(), QperpCalculator(), and SetK().\index{QperpCalculator@{QperpCalculator}!sumkqikqj_itonjton@{sumkqikqj\_\-itonjton}}
+\index{sumkqikqj_itonjton@{sumkqikqj\_\-itonjton}!QperpCalculator@{QperpCalculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}array3D {\bf QperpCalculator::sumkqikqj\_\-itonjton}\hspace{0.3cm}{\tt  [protected]}}\label{classQperpCalculator_ff93029d6851593b41ce57b9221a9113}
+
+
+Sum of k.q\_\-i summed from i to n and j to n - ie depdendent on k. 
+
+
+
+Definition at line 54 of file qperparraynew.h.
+
+Referenced by GetSumQiQj(), QperpCalculator(), and SetK().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf qperparraynew.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf qperparraynew.cpp}\end{CompactItemize}

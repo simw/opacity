@@ -1,0 +1,157 @@
+\section{Gyulassy/opacity3/src/main\_\-qperptest.cpp File Reference}
+\label{main__qperptest_8cpp}\index{Gyulassy/opacity3/src/main_qperptest.cpp@{Gyulassy/opacity3/src/main\_\-qperptest.cpp}}
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$boost/array.hpp$>$}\par
+{\tt \#include \char`\"{}timer.h\char`\"{}}\par
+{\tt \#include \char`\"{}./glv3/qperpcalculator1.h\char`\"{}}\par
+{\tt \#include \char`\"{}./glv3/qperpcalculator3.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$argv[$\,$])
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main_qperptest.cpp@{main\_\-qperptest.cpp}!main@{main}}
+\index{main@{main}!main_qperptest.cpp@{main\_\-qperptest.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, char $\ast$ {\em argv}[$\,$])}\label{main__qperptest_8cpp_0ddf1224851353fc92bfbff6f499fa97}
+
+
+
+
+Definition at line 15 of file main\_\-qperptest.cpp.
+
+References Timer::DisplayResult(), QperpCalculator3$<$ n $>$::GetSumQs1k(), QperpCalculator1$<$ n $>$::GetSumQs1k(), QperpCalculator3$<$ n $>$::GetSumQskk(), QperpCalculator1$<$ n $>$::GetSumQskk(), QperpCalculator3$<$ n $>$::SetK(), QperpCalculator1$<$ n $>$::SetK(), QperpCalculator3$<$ n $>$::SetQsThetas(), QperpCalculator1$<$ n $>$::SetQsThetas(), Timer::StartTimer(), and Timer::StopTimer().
+
+\begin{Code}\begin{verbatim}16 {
+17   std::cout << "QperpTester" << std::endl;
+18 
+19   boost::array<double, 4> qs; qs[0] = 1; qs[1] = 2; qs[2] = 3; qs[3] = 4;
+20   boost::array<double, 4> ths; ths[0] = 0; ths[1] = 0; ths[2] = 0; ths[3] = 0;
+21 
+22   QperpCalculator1<4> qp1; QperpCalculator3<4> qp2;
+23   qp1.SetQsThetas( qs, ths ); qp2.SetQsThetas( qs, ths );
+24   qp1.SetK( 1. ); qp2.SetK( 1. );
+25 
+26   for (long z=0; z<=7; ++z)
+27   {
+28     std::cout << "Qskk[" << z << "]" << std::endl;
+29     for (long i=1; i<=5; ++i)
+30     {
+31       if ( qp1.GetSumQskk( i, z ) != qp2.GetSumQskk( i, z ) )
+32       {
+33         std::cout << "(i,z)=(" << i << "," << z << ") ";
+34         std::cout << "1: " << qp1.GetSumQskk( i, z ) << ", 2: " << qp2.GetSumQskk( i, z ) << std::endl;
+35       }
+36     }
+37     std::cout << std::endl;
+38 
+39     std::cout << "Qs1k[" << z << "]" << std::endl;
+40     for (long i=1; i<=5; ++i)
+41     {
+42       if ( qp1.GetSumQs1k( i, z ) != qp2.GetSumQs1k( i, z ) )
+43       {
+44         std::cout << "(i,z)=(" << i << "," << z << ") ";
+45         std::cout << "1: " << qp1.GetSumQs1k( i, z ) << ", 2: " << qp2.GetSumQs1k( i, z ) << std::endl;
+46       }
+47     }
+48     std::cout << std::endl << std::endl;
+49   }
+50 
+51 
+52   QperpCalculator1<1> qp_v1_1; QperpCalculator3<1> qp_v2_1;
+53   QperpCalculator1<10> qp_v1_10; QperpCalculator3<10> qp_v2_10;
+54   Timer timer;
+55   unsigned long num;
+56 
+57   boost::array<double, 1> qs1, ths1;
+58   qs1[0] = 1.; ths1[0] = 0.23;
+59   num = 500000;
+60 
+61   std::cout << "Version 1 (old): " << num << " at n=1: " << std::endl;
+62   timer.StartTimer();
+63   for (unsigned long i=0; i!=num; ++i)
+64     qp_v1_1.SetQsThetas(qs1, ths1);
+65   timer.StopTimer(); timer.DisplayResult(1); timer.DisplayResult(num);
+66   std::cout << std::endl;
+67 
+68   std::cout << "Version 2 (new): " << num << " at n=1: " << std::endl;
+69   timer.StartTimer();
+70   for (unsigned long i=0; i!=num; ++i)
+71     qp_v2_1.SetQsThetas(qs1, ths1);
+72   timer.StopTimer(); timer.DisplayResult(1); timer.DisplayResult(num);
+73   std::cout << std::endl;
+74 
+75   boost::array<double, 10> qs10, ths10;
+76   for (long i=0; i<10; ++i)
+77   {
+78     qs10[i] = 2.; ths10[i] = 1.;
+79   }
+80   num = 100;
+81 
+82   std::cout << "Version 1 (old): " << num << " at n=10: " << std::endl;
+83   timer.StartTimer();
+84   for (unsigned long i=0; i!=num; ++i)
+85     qp_v1_10.SetQsThetas(qs10, ths10);
+86   timer.StopTimer(); timer.DisplayResult(1); timer.DisplayResult(num);
+87   std::cout << std::endl;
+88 
+89   std::cout << "Version 2 (new): " << num << " at n=10: " << std::endl;
+90   timer.StartTimer();
+91   for (unsigned long i=0; i!=num; ++i)
+92     qp_v2_10.SetQsThetas(qs10, ths10);
+93   timer.StopTimer(); timer.DisplayResult(1); timer.DisplayResult(num);
+94   std::cout << std::endl;
+95 
+96 /*
+97 
+98   long NumberOfIterations = 10000;
+99   std::string resume("n");
+100   std::string inputFile = "./temp.params";
+101   std::string outputFile = "./temp.txt";
+102   
+103   Driver<GlvRadiative1<9>, Store2D, 9> myDriver;
+104   //Driver<RadCalcerWrapper<9>, Store2D, 9> myDriver;
+105   myDriver.Setup( resume, inputFile );
+106 
+107   Timer timer;
+108 
+109   // Set up a progress bar for feedback
+110   // The first number of the current point (start = 0)
+111   // The second is the end point, the total number
+112   ProgressBar progBar(0,NumberOfIterations);
+113   progBar.PrintPreliminaries();
+114   
+115   // And now we run the main loop
+116   timer.StartTimer();
+117   for (long i=0; i<NumberOfIterations; ++i)
+118   {
+119     progBar.SetNow(i);
+120     progBar.PrintProgress();
+121     myDriver.RunOneIteration();
+122   }
+123   progBar.SetNow(NumberOfIterations);
+124   progBar.PrintProgress();
+125   timer.StopTimer();
+126   // And the main loop is done!
+127 
+128   myDriver.SaveResults( outputFile );
+129  
+130   // Print to screen a few details of the run
+131   progBar.PrintFinal();
+132   double totTime = timer.GetResult();
+133   std::cout << "Total time = " << totTime << " seconds\n";
+134   std::cout << "Time per iteration = " << totTime/static_cast<double>(NumberOfIterations);
+135   std::cout << "\n";
+136   std::cout << std::endl;
+137 
+138 */
+139 
+140   return EXIT_SUCCESS;
+141 }
+\end{verbatim}
+\end{Code}
+
+

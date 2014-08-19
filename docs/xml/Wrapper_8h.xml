@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="Wrapper_8h" kind="file">
+    <compoundname>Wrapper.h</compoundname>
+    <includedby refid="driver_8h" local="yes">Gyulassy/opacity3/src/driver.h</includedby>
+    <includedby refid="qperpdist_8h" local="yes">Gyulassy/opacity3/src/glv1/qperpdist.h</includedby>
+    <includedby refid="zcolldist_8h" local="yes">Gyulassy/opacity3/src/glv1/zcolldist.h</includedby>
+    <includedby refid="store_8h" local="yes">Gyulassy/opacity3/src/store2d/store.h</includedby>
+    <includedby refid="convergencetable_8h" local="yes">Gyulassy/opacity3/src/store2d/convergencetable.h</includedby>
+    <invincdepgraph>
+      <node id="517">
+        <label>Gyulassy/opacity3/src/driver.h</label>
+        <link refid="driver_8h"/>
+        <childnode refid="518" relation="include">
+        </childnode>
+      </node>
+      <node id="520">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.cpp</label>
+        <link refid="qperpdist_8cpp"/>
+      </node>
+      <node id="519">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.h</label>
+        <link refid="qperpdist_8h"/>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store_8cpp"/>
+      </node>
+      <node id="522">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="529">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.cpp</label>
+        <link refid="convergencetable_8cpp"/>
+      </node>
+      <node id="516">
+        <label>Gyulassy/opacity3/src/Wrapper.h</label>
+        <link refid="Wrapper.h"/>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="524" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="528" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="526">
+        <label>Gyulassy/opacity3/src/store2d/store.h</label>
+        <link refid="store_8h"/>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="527" relation="include">
+        </childnode>
+      </node>
+      <node id="521">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+      </node>
+      <node id="524">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.h</label>
+        <link refid="zcolldist_8h"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+      </node>
+      <node id="525">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.cpp</label>
+        <link refid="zcolldist_8cpp"/>
+      </node>
+      <node id="523">
+        <label>Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="518" relation="include">
+        </childnode>
+      </node>
+      <node id="528">
+        <label>Gyulassy/opacity3/src/store2d/convergencetable.h</label>
+        <link refid="convergencetable_8h"/>
+        <childnode refid="529" relation="include">
+        </childnode>
+        <childnode refid="527" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classWrapper" prot="public">Wrapper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>WRAPPER_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>WRAPPER_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="10"><highlight class="keyword">template</highlight><highlight class="normal">&lt;<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="11" refid="classWrapper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classWrapper" kindref="compound">Wrapper</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" kindref="member" tooltip="Constructor with no parameters - start the pointer as null and zero.">Wrapper</ref>()<sp/>{<sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="classWrapper_175fb68554d62529a071016d297018dea" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" kindref="member" tooltip="Constructor with no parameters - start the pointer as null and zero.">Wrapper</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>inner<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>=<sp/>inner.clone();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="classWrapper_15396fe1ce47468f5ceeec85eb423695d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper_15396fe1ce47468f5ceeec85eb423695d" kindref="member" tooltip="Destructor - if the pointer is non-null, then delete the object.">~Wrapper</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="classWrapper_161fbc2f8719cbbb237bab3c94aef6a53" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper_1747788c9b29a997f4d805ec60e6e16a2" kindref="member" tooltip="Constructor with no parameters - start the pointer as null and zero.">Wrapper</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;T&gt;</ref>&amp;<sp/>original)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(original.<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>=<sp/>original.<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>-&gt;clone();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="classWrapper_1954084dfe67131560f58d85cb1c4190e" refkind="member"><highlight class="normal"><sp/><sp/>T*<sp/><ref refid="classWrapper_1954084dfe67131560f58d85cb1c4190e" kindref="member">GetPointer</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classWrapper_15e9f52d10a6098286c2a552cf19ac619" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classWrapper_15e9f52d10a6098286c2a552cf19ac619" kindref="member">GetConstPointer</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="44"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="classWrapper_18c19573051f3bbe811393abb3691147c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classWrapper" kindref="compound">Wrapper</ref>&amp;<sp/><ref refid="classWrapper_18c19573051f3bbe811393abb3691147c" kindref="member">operator=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classWrapper" kindref="compound">Wrapper&lt;T&gt;</ref>&amp;<sp/>original<sp/>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;original)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>=<sp/>(original.<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref><sp/>!=0)<sp/>?<sp/>original.<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>-&gt;clone()<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="classWrapper_19b083b2466e4e43c516bc8a3e2e47e56" refkind="member"><highlight class="normal"><sp/><sp/>T&amp;<sp/><ref refid="classWrapper_19b083b2466e4e43c516bc8a3e2e47e56" kindref="member">operator*</ref>()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="classWrapper_14841ac8c58122f1d8479577616f6617a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/><ref refid="classWrapper_19b083b2466e4e43c516bc8a3e2e47e56" kindref="member">operator*</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="classWrapper_1da2ce054a40a86d0a03d9bc339152736" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1da2ce054a40a86d0a03d9bc339152736" kindref="member">operator-&gt;</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="70"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="classWrapper_144a92ec32cd70089debea7205b2cc0a8" refkind="member"><highlight class="normal"><sp/><sp/>T*<sp/><ref refid="classWrapper_1da2ce054a40a86d0a03d9bc339152736" kindref="member">operator-&gt;</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80" refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" refkind="member"><highlight class="normal"><sp/><sp/>T*<sp/><ref refid="classWrapper_1fa8d2e17d834993a45bcc1811c5945d8" kindref="member">DataPtr</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/Wrapper.h"/>
+  </compounddef>
+</doxygen>

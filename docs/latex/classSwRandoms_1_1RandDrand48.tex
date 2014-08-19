@@ -1,0 +1,184 @@
+\section{SwRandoms::RandDrand48 Class Reference}
+\label{classSwRandoms_1_1RandDrand48}\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+{\tt \#include $<$RandDrand.h$>$}
+
+Inheritance diagram for SwRandoms::RandDrand48::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSwRandoms_1_1RandDrand48}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf RandDrand48} (unsigned long {\bf Dimensionality}, unsigned long Seed=1)
+\item 
+virtual {\bf RandomBase2} $\ast$ {\bf clone} () const 
+\item 
+virtual void {\bf GetUniforms} ({\bf SwArrays::MyArray} \&variates)
+\item 
+virtual void {\bf Skip} (unsigned long numberOfPaths)
+\item 
+virtual void {\bf SetSeed} (unsigned long Seed)
+\item 
+virtual void {\bf Reset} ()
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+unsigned long {\bf InitialSeed}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file RandDrand.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!RandDrand48@{RandDrand48}}
+\index{RandDrand48@{RandDrand48}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SwRandoms::RandDrand48::RandDrand48 (unsigned long {\em Dimensionality}, unsigned long {\em Seed} = {\tt 1})}\label{classSwRandoms_1_1RandDrand48_6200e7125a190ec6c31116ade72eeeea}
+
+
+
+
+Definition at line 8 of file RandDrand.cpp.
+
+Referenced by clone().
+
+\begin{Code}\begin{verbatim}9   : RandomBase2(Dimensionality), InitialSeed( Seed )
+10 {
+11 
+12 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!clone@{clone}}
+\index{clone@{clone}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf RandomBase2} $\ast$ SwRandoms::RandDrand48::clone () const\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandDrand48_835ce3d71b66d4610a60caa89fc7411c}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_633ab071ed2eded4784ea5c6faf4a9af}.
+
+Definition at line 14 of file RandDrand.cpp.
+
+References RandDrand48().
+
+\begin{Code}\begin{verbatim}15 {
+16   return new RandDrand48( *this );
+17 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!GetUniforms@{GetUniforms}}
+\index{GetUniforms@{GetUniforms}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandDrand48::GetUniforms ({\bf SwArrays::MyArray} \& {\em variates})\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandDrand48_9d63751f6824911ebbd943c9391db521}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_ee4b8f64be04c3cea35ea63cc4f9c6d6}.
+
+Definition at line 19 of file RandDrand.cpp.
+
+References SwRandoms::RandomBase2::GetDimensionality().
+
+Referenced by Skip().
+
+\begin{Code}\begin{verbatim}20 {
+21   for (unsigned long j=0; j<GetDimensionality(); j++)
+22     variates[j] = drand48();
+23 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!Skip@{Skip}}
+\index{Skip@{Skip}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandDrand48::Skip (unsigned long {\em numberOfPaths})\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandDrand48_332d6fbf16276b20465d973c2e89eb87}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_8a202b85b9c0f380700922331506f459}.
+
+Definition at line 25 of file RandDrand.cpp.
+
+References SwRandoms::RandomBase2::GetDimensionality(), and GetUniforms().
+
+\begin{Code}\begin{verbatim}26 {
+27   SwArrays::MyArray tmp( GetDimensionality() );
+28   for (unsigned long j=0; j<numberOfPaths; j++)
+29     GetUniforms(tmp);
+30 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!SetSeed@{SetSeed}}
+\index{SetSeed@{SetSeed}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandDrand48::SetSeed (unsigned long {\em Seed})\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandDrand48_9596b643d1915b3f8543bbdff6960105}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_ff006e42b1f514697427cc4578383b5e}.
+
+Definition at line 32 of file RandDrand.cpp.
+
+References InitialSeed.
+
+\begin{Code}\begin{verbatim}33 {
+34   InitialSeed = Seed;
+35   srand48( Seed );
+36 }
+\end{verbatim}
+\end{Code}
+
+
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!Reset@{Reset}}
+\index{Reset@{Reset}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SwRandoms::RandDrand48::Reset ()\hspace{0.3cm}{\tt  [virtual]}}\label{classSwRandoms_1_1RandDrand48_d572e124c7bf89a406800ce07618b1bd}
+
+
+
+
+Implements {\bf SwRandoms::RandomBase2} \doxyref{}{p.}{classSwRandoms_1_1RandomBase2_54a0497121db4d91e3ff6e2b4cdf380a}.
+
+Definition at line 38 of file RandDrand.cpp.
+
+References InitialSeed.
+
+\begin{Code}\begin{verbatim}39 {
+40   srand48( InitialSeed );
+41 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{SwRandoms::RandDrand48@{SwRandoms::RandDrand48}!InitialSeed@{InitialSeed}}
+\index{InitialSeed@{InitialSeed}!SwRandoms::RandDrand48@{SwRandoms::RandDrand48}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf SwRandoms::RandDrand48::InitialSeed}\hspace{0.3cm}{\tt  [private]}}\label{classSwRandoms_1_1RandDrand48_8447e5c4c6bdd0758f19d3df331960c5}
+
+
+
+
+Definition at line 21 of file RandDrand.h.
+
+Referenced by Reset(), and SetSeed().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/randoms/{\bf RandDrand.h}\item 
+Gyulassy/opacity3/src/randoms/{\bf RandDrand.cpp}\end{CompactItemize}

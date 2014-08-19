@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classTimer" kind="class" prot="public">
+    <compoundname>Timer</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTimer_16d6f0e6b1f075669a0b03cbaa5e26fa6" prot="private" static="no" mutable="no">
+        <type>clockid_t</type>
+        <definition>clockid_t Timer::clock_id</definition>
+        <argsstring></argsstring>
+        <name>clock_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="17" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_1bf54ab5847d8e97c930349d639a1cbee" prot="private" static="no" mutable="no">
+        <type>struct timespec tstart</type>
+        <definition>struct timespec tstart Timer::tstop</definition>
+        <argsstring></argsstring>
+        <name>tstop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classTimer_15f16e8da27d2a5a5242dead46de05d97" compoundref="timer_8cpp" startline="19" endline="30">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_1ff38d0d636d6d1d70c26c81b1b22956b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Timer::_totDiff</definition>
+        <argsstring></argsstring>
+        <name>_totDiff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_1cf7b601e65a944a9fd46df722f445039" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Timer::_totDiffNanSecs</definition>
+        <argsstring></argsstring>
+        <name>_totDiffNanSecs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="20" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_13ae91f3d031faeb8401702ec8ceab51d" prot="private" static="no" mutable="no">
+        <type>clock_t</type>
+        <definition>clock_t Timer::clock1</definition>
+        <argsstring></argsstring>
+        <name>clock1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" compoundref="timer_8cpp" startline="38" endline="45">StartTimer</referencedby>
+        <referencedby refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" compoundref="timer_8cpp" startline="47" endline="58">StopTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_1d29500007a671be2a0dbd230249fa5a9" prot="private" static="no" mutable="no">
+        <type>clock_t</type>
+        <definition>clock_t Timer::clock2</definition>
+        <argsstring></argsstring>
+        <name>clock2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" compoundref="timer_8cpp" startline="47" endline="58">StopTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_15d5b55e5c6ac25294066d1493cba740b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Timer::clockdiff</definition>
+        <argsstring></argsstring>
+        <name>clockdiff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="23" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" compoundref="timer_8cpp" startline="60" endline="65">DisplayResult</referencedby>
+        <referencedby refid="classTimer_14db34f21ca587602a5496e34e061501f" compoundref="timer_8cpp" startline="67" endline="70">GetResult</referencedby>
+        <referencedby refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" compoundref="timer_8cpp" startline="47" endline="58">StopTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_101bbd5a781157f6531a4bc9b28756da9" prot="private" static="no" mutable="no">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int Timer::ia32Start</definition>
+        <argsstring></argsstring>
+        <name>ia32Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="25" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classTimer_15f16e8da27d2a5a5242dead46de05d97" compoundref="timer_8cpp" startline="19" endline="30">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_1894bd5ca4c19e1528a735cfcff05a25d" prot="private" static="no" mutable="no">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int Timer::ia32Stop</definition>
+        <argsstring></argsstring>
+        <name>ia32Stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="26" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classTimer_15f16e8da27d2a5a5242dead46de05d97" compoundref="timer_8cpp" startline="19" endline="30">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTimer_1ffbf82f944c5a2f58548d18f140fe0fc" prot="private" static="no" mutable="no">
+        <type>unsigned long long int</type>
+        <definition>unsigned long long int Timer::ia32NanoSecs</definition>
+        <argsstring></argsstring>
+        <name>ia32NanoSecs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="27" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTimer_149838bb0d401f745ce6756a7fc5882e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer::StartTimer</definition>
+        <argsstring>()</argsstring>
+        <name>StartTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="30" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="38" bodyend="45"/>
+        <references refid="classTimer_13ae91f3d031faeb8401702ec8ceab51d" compoundref="timer_8h" startline="22">clock1</references>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer::StopTimer</definition>
+        <argsstring>()</argsstring>
+        <name>StopTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="31" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="47" bodyend="58"/>
+        <references refid="classTimer_13ae91f3d031faeb8401702ec8ceab51d" compoundref="timer_8h" startline="22">clock1</references>
+        <references refid="classTimer_1d29500007a671be2a0dbd230249fa5a9" compoundref="timer_8h" startline="22">clock2</references>
+        <references refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" compoundref="timer_8h" startline="23">clockdiff</references>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTimer_19791ca9cebd4a28e657d7facecbdb603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Timer::DisplayResult</definition>
+        <argsstring>(double div=1.)</argsstring>
+        <name>DisplayResult</name>
+        <param>
+          <type>double</type>
+          <declname>div</declname>
+          <defval>1.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="32" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="60" bodyend="65"/>
+        <references refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" compoundref="timer_8h" startline="23">clockdiff</references>
+        <referencedby refid="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main__qperptest_8cpp" startline="15" endline="141">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTimer_14db34f21ca587602a5496e34e061501f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Timer::GetResult</definition>
+        <argsstring>()</argsstring>
+        <name>GetResult</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="33" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="67" bodyend="70"/>
+        <references refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" compoundref="timer_8h" startline="23">clockdiff</references>
+        <referencedby refid="main_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="64" endline="166">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classTimer_15f16e8da27d2a5a5242dead46de05d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Timer::Timer</definition>
+        <argsstring>()</argsstring>
+        <name>Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="35" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="19" bodyend="30"/>
+        <references refid="classTimer_101bbd5a781157f6531a4bc9b28756da9" compoundref="timer_8h" startline="25">ia32Start</references>
+        <references refid="classTimer_1894bd5ca4c19e1528a735cfcff05a25d" compoundref="timer_8h" startline="26">ia32Stop</references>
+        <references refid="classTimer_1bf54ab5847d8e97c930349d639a1cbee" compoundref="timer_8h" startline="18">tstop</references>
+      </memberdef>
+      <memberdef kind="function" id="classTimer_114fa469c4c295c5fa6e66a4ad1092146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Timer::~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="36" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Simon Wicks &lt;<ulink url="mailto:simonw@phys.columbia.edu">simonw@phys.columbia.edu</ulink>&gt; A simple class to time events TODO: improve the implementation, make possible different implementations At the moment, there is code for a couple of different ways, but these are commented out or not. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/timer.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/timer.h" bodystart="15" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classTimer_1ff38d0d636d6d1d70c26c81b1b22956b" prot="private" virt="non-virtual"><scope>Timer</scope><name>_totDiff</name></member>
+      <member refid="classTimer_1cf7b601e65a944a9fd46df722f445039" prot="private" virt="non-virtual"><scope>Timer</scope><name>_totDiffNanSecs</name></member>
+      <member refid="classTimer_13ae91f3d031faeb8401702ec8ceab51d" prot="private" virt="non-virtual"><scope>Timer</scope><name>clock1</name></member>
+      <member refid="classTimer_1d29500007a671be2a0dbd230249fa5a9" prot="private" virt="non-virtual"><scope>Timer</scope><name>clock2</name></member>
+      <member refid="classTimer_16d6f0e6b1f075669a0b03cbaa5e26fa6" prot="private" virt="non-virtual"><scope>Timer</scope><name>clock_id</name></member>
+      <member refid="classTimer_15d5b55e5c6ac25294066d1493cba740b" prot="private" virt="non-virtual"><scope>Timer</scope><name>clockdiff</name></member>
+      <member refid="classTimer_19791ca9cebd4a28e657d7facecbdb603" prot="public" virt="non-virtual"><scope>Timer</scope><name>DisplayResult</name></member>
+      <member refid="classTimer_14db34f21ca587602a5496e34e061501f" prot="public" virt="non-virtual"><scope>Timer</scope><name>GetResult</name></member>
+      <member refid="classTimer_1ffbf82f944c5a2f58548d18f140fe0fc" prot="private" virt="non-virtual"><scope>Timer</scope><name>ia32NanoSecs</name></member>
+      <member refid="classTimer_101bbd5a781157f6531a4bc9b28756da9" prot="private" virt="non-virtual"><scope>Timer</scope><name>ia32Start</name></member>
+      <member refid="classTimer_1894bd5ca4c19e1528a735cfcff05a25d" prot="private" virt="non-virtual"><scope>Timer</scope><name>ia32Stop</name></member>
+      <member refid="classTimer_149838bb0d401f745ce6756a7fc5882e3" prot="public" virt="non-virtual"><scope>Timer</scope><name>StartTimer</name></member>
+      <member refid="classTimer_18ebf0e6d027f40f1b419f83f7a1d218a" prot="public" virt="non-virtual"><scope>Timer</scope><name>StopTimer</name></member>
+      <member refid="classTimer_15f16e8da27d2a5a5242dead46de05d97" prot="public" virt="non-virtual"><scope>Timer</scope><name>Timer</name></member>
+      <member refid="classTimer_1bf54ab5847d8e97c930349d639a1cbee" prot="private" virt="non-virtual"><scope>Timer</scope><name>tstop</name></member>
+      <member refid="classTimer_114fa469c4c295c5fa6e66a4ad1092146" prot="public" virt="non-virtual"><scope>Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

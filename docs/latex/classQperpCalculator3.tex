@@ -1,0 +1,232 @@
+\section{QperpCalculator3$<$ n $>$ Class Template Reference}
+\label{classQperpCalculator3}\index{QperpCalculator3@{QperpCalculator3}}
+{\tt \#include $<$qperpcalculator3.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpCalculator3} ()
+\item 
+void {\bf SetK} (double k)
+\item 
+void {\bf SetQsThetas} (boost::array$<$ double, n $>$ Qs, boost::array$<$ double, n $>$ Thetas)
+\item 
+double {\bf GetSumQskk} (long m, long zeroes) const 
+\item 
+double {\bf GetSumQs1k} (long m, long zeroes) const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+boost::array$<$ boost::array$<$ double, n $>$, {\bf TPower}$<$ 2, n $>$::value $>$ {\bf SumQs\_\-1i}
+\begin{CompactList}\small\item\em Array of Sum\_\-(i=1 to n, j = k to n)\_\-Qi Dot Qj. \item\end{CompactList}\item 
+boost::array$<$ boost::array$<$ double, n $>$, {\bf TPower}$<$ 2, n $>$::value $>$ {\bf SumQs\_\-ii}
+\item 
+boost::array$<$ boost::array$<$ double, n $>$, {\bf TPower}$<$ 2, n $>$::value $>$ {\bf SumKhatQ\_\-i}
+\item 
+boost::array$<$ boost::array$<$ double, n+1 $>$, {\bf TPower}$<$ 2, n $>$::value $>$ {\bf SumQsIncK\_\-1i}
+\item 
+boost::array$<$ boost::array$<$ double, n+1 $>$, {\bf TPower}$<$ 2, n $>$::value $>$ {\bf SumQsIncK\_\-ii}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std::size\_\-t n$>$ class QperpCalculator3$<$ n $>$}
+
+\begin{Desc}
+\item[Author:]\end{Desc}
+
+
+Definition at line 34 of file qperpcalculator3.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpCalculator3@{QperpCalculator3}!QperpCalculator3@{QperpCalculator3}}
+\index{QperpCalculator3@{QperpCalculator3}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ {\bf QperpCalculator3}$<$ n $>$::{\bf QperpCalculator3} ()\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator3_e093a25aa0ff255a5ec74cf1b4aac57a}
+
+
+
+
+Definition at line 64 of file qperpcalculator3.h.
+
+\begin{Code}\begin{verbatim}65 {
+66 
+67 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpCalculator3@{QperpCalculator3}!SetK@{SetK}}
+\index{SetK@{SetK}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void {\bf QperpCalculator3}$<$ n $>$::SetK (double {\em k})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator3_df6a2c2d75a811af517cfd68bd3be76a}
+
+
+
+
+Definition at line 70 of file qperpcalculator3.h.
+
+References QperpCalculator3$<$ n $>$::SumKhatQ\_\-i, QperpCalculator3$<$ n $>$::SumQs\_\-1i, QperpCalculator3$<$ n $>$::SumQs\_\-ii, QperpCalculator3$<$ n $>$::SumQsIncK\_\-1i, and QperpCalculator3$<$ n $>$::SumQsIncK\_\-ii.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}71 {
+72   const double k2 = k*k;
+73   boost::array<double, n> sumkq_i;
+74   for ( long z=0; z<TPower<2,n>::value; ++z )
+75   {
+76     for ( std::size_t i=0; i<n; ++i )
+77     {
+78       sumkq_i[i] = k * SumKhatQ_i[z][i];
+79       SumQsIncK_1i[z][i] = SumQs_1i[z][i] + sumkq_i[0] + sumkq_i[i] + k2;
+80       SumQsIncK_ii[z][i] = SumQs_ii[z][i] + 2.*sumkq_i[i] + k2;
+81     }
+82     SumQsIncK_1i[z][n] = sumkq_i[0] + k2;
+83     SumQsIncK_ii[z][n] = k2;
+84   }
+85 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator3@{QperpCalculator3}!SetQsThetas@{SetQsThetas}}
+\index{SetQsThetas@{SetQsThetas}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void {\bf QperpCalculator3}$<$ n $>$::SetQsThetas (boost::array$<$ double, n $>$ {\em Qs}, boost::array$<$ double, n $>$ {\em Thetas})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator3_43a309356a17d0afc9346e34dc217cfe}
+
+
+
+
+Definition at line 88 of file qperpcalculator3.h.
+
+References SwUtils::\_\-TestBitI(), QperpCalculator3$<$ n $>$::SumKhatQ\_\-i, QperpCalculator3$<$ n $>$::SumQs\_\-1i, and QperpCalculator3$<$ n $>$::SumQs\_\-ii.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}90 {
+91   boost::array<double, n> qxs, qys;
+92   _Convert2DPolarToCartesian<n>( Qs, Thetas, qxs, qys );
+93 
+94   boost::array<double, n> sumqxs, sumqys;
+95   bool notZeroed;
+96 
+97   for ( std::size_t z=0; z<TPower<2,n>::value; ++z )
+98   {
+99     notZeroed = !SwUtils::_TestBitI( z, 0 );
+100     sumqxs[n-1] = notZeroed*qxs[n-1]; sumqys[n-1] = notZeroed*qys[n-1];
+101     for ( std::size_t i=1; i<n; ++i )
+102     {
+103       std::size_t ind = n-1-i;
+104       notZeroed = !SwUtils::_TestBitI( z, i );
+105       sumqxs[ind] = sumqxs[ind+1] + notZeroed*qxs[ind];
+106       sumqys[ind] = sumqys[ind+1] + notZeroed*qys[ind];
+107     }
+108 
+109     for ( std::size_t i=0; i<n; ++i )
+110     {
+111       SumQs_1i[z][i] = sumqxs[0]*sumqxs[i] + sumqys[0]*sumqys[i];
+112       SumQs_ii[z][i] = sumqxs[i]*sumqxs[i] + sumqys[i]*sumqys[i];
+113       SumKhatQ_i[z][i] = -sumqxs[i];
+114     }
+115   }
+116 }
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator3@{QperpCalculator3}!GetSumQskk@{GetSumQskk}}
+\index{GetSumQskk@{GetSumQskk}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpCalculator3}$<$ n $>$::GetSumQskk (long {\em m}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator3_f70b86cf138b434ce2be08ad219178ce}
+
+
+
+
+Definition at line 51 of file qperpcalculator3.h.
+
+References QperpCalculator3$<$ n $>$::SumQsIncK\_\-ii.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}52   {
+53     return ( SumQsIncK_ii[zeroes][m-1] );
+54   };
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator3@{QperpCalculator3}!GetSumQs1k@{GetSumQs1k}}
+\index{GetSumQs1k@{GetSumQs1k}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpCalculator3}$<$ n $>$::GetSumQs1k (long {\em m}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator3_91c5081765b9951220aa17eeea8a01cb}
+
+
+
+
+Definition at line 56 of file qperpcalculator3.h.
+
+References QperpCalculator3$<$ n $>$::SumQsIncK\_\-1i.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}57   {
+58     return ( SumQsIncK_1i[zeroes][m-1] );
+59   };
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{QperpCalculator3@{QperpCalculator3}!SumQs_1i@{SumQs\_\-1i}}
+\index{SumQs_1i@{SumQs\_\-1i}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ boost::array$<$boost::array$<$double, n$>$, {\bf TPower}$<$2,n$>$::value$>$ {\bf QperpCalculator3}$<$ n $>$::{\bf SumQs\_\-1i}\hspace{0.3cm}{\tt  [private]}}\label{classQperpCalculator3_290cd6fd1b03b4518870a0dffbed6b47}
+
+
+Array of Sum\_\-(i=1 to n, j = k to n)\_\-Qi Dot Qj. 
+
+
+
+Definition at line 38 of file qperpcalculator3.h.
+
+Referenced by QperpCalculator3$<$ n $>$::SetK(), and QperpCalculator3$<$ n $>$::SetQsThetas().\index{QperpCalculator3@{QperpCalculator3}!SumQs_ii@{SumQs\_\-ii}}
+\index{SumQs_ii@{SumQs\_\-ii}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ boost::array$<$boost::array$<$double, n$>$, {\bf TPower}$<$2,n$>$::value$>$ {\bf QperpCalculator3}$<$ n $>$::{\bf SumQs\_\-ii}\hspace{0.3cm}{\tt  [private]}}\label{classQperpCalculator3_03d47d0fb44f6320ab012840fbacd64a}
+
+
+
+
+Definition at line 39 of file qperpcalculator3.h.
+
+Referenced by QperpCalculator3$<$ n $>$::SetK(), and QperpCalculator3$<$ n $>$::SetQsThetas().\index{QperpCalculator3@{QperpCalculator3}!SumKhatQ_i@{SumKhatQ\_\-i}}
+\index{SumKhatQ_i@{SumKhatQ\_\-i}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ boost::array$<$boost::array$<$double, n$>$, {\bf TPower}$<$2,n$>$::value$>$ {\bf QperpCalculator3}$<$ n $>$::{\bf SumKhatQ\_\-i}\hspace{0.3cm}{\tt  [private]}}\label{classQperpCalculator3_986b83aeb3ebeff3a9deb94c0492151b}
+
+
+
+
+Definition at line 40 of file qperpcalculator3.h.
+
+Referenced by QperpCalculator3$<$ n $>$::SetK(), and QperpCalculator3$<$ n $>$::SetQsThetas().\index{QperpCalculator3@{QperpCalculator3}!SumQsIncK_1i@{SumQsIncK\_\-1i}}
+\index{SumQsIncK_1i@{SumQsIncK\_\-1i}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ boost::array$<$boost::array$<$double, n+1$>$, {\bf TPower}$<$2,n$>$::value$>$ {\bf QperpCalculator3}$<$ n $>$::{\bf SumQsIncK\_\-1i}\hspace{0.3cm}{\tt  [private]}}\label{classQperpCalculator3_3a76e2e7e7b4479f085a0fb7d05155fb}
+
+
+
+
+Definition at line 42 of file qperpcalculator3.h.
+
+Referenced by QperpCalculator3$<$ n $>$::GetSumQs1k(), and QperpCalculator3$<$ n $>$::SetK().\index{QperpCalculator3@{QperpCalculator3}!SumQsIncK_ii@{SumQsIncK\_\-ii}}
+\index{SumQsIncK_ii@{SumQsIncK\_\-ii}!QperpCalculator3@{QperpCalculator3}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ boost::array$<$boost::array$<$double, n+1$>$, {\bf TPower}$<$2,n$>$::value$>$ {\bf QperpCalculator3}$<$ n $>$::{\bf SumQsIncK\_\-ii}\hspace{0.3cm}{\tt  [private]}}\label{classQperpCalculator3_9beff8b0d7110b5050d1606028394beb}
+
+
+
+
+Definition at line 43 of file qperpcalculator3.h.
+
+Referenced by QperpCalculator3$<$ n $>$::GetSumQskk(), and QperpCalculator3$<$ n $>$::SetK().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv3/{\bf qperpcalculator3.h}\end{CompactItemize}

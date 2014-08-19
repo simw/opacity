@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classStatGathering_1_1ConvergenceTable" kind="class" prot="public">
+    <compoundname>StatGathering::ConvergenceTable</compoundname>
+    <basecompoundref refid="classStatGathering_1_1StatisticsMC" prot="public" virt="non-virtual">StatGathering::StatisticsMC</basecompoundref>
+    <includes refid="convergencetable_8h" local="no">convergencetable.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" prot="private" static="no" mutable="no">
+        <type><ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref> &gt;</type>
+        <definition>Wrapper&lt;StatisticsMC&gt; StatGathering::ConvergenceTable::Inner</definition>
+        <argsstring></argsstring>
+        <name>Inner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The &apos;Inner&apos; does the calculating from point to point, then passes up the information to the convergence table when asked - in the function GetResultsFromInner </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="51" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" compoundref="convergencetable_8cpp" startline="42" endline="55">AddOneResult</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" compoundref="convergencetable_8cpp" startline="26" endline="40">GetResultsFromInner</referencedby>
+        <referencedby refid="namespaceStatGathering_1571c4a864b3e5d6ed6047901f8634376" compoundref="convergencetable_8cpp" startline="121" endline="151">StatGathering::operator&lt;&lt;</referencedby>
+        <referencedby refid="namespaceStatGathering_194a944fd3996cb074c86c6334df181fd" compoundref="convergencetable_8cpp" startline="154" endline="184">StatGathering::operator&gt;&gt;</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" compoundref="convergencetable_8cpp" startline="78" endline="86">Reset</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" compoundref="convergencetable_8cpp" startline="88" endline="99">SetResultsSoFar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; StatGathering::ConvergenceTable::ResultsSoFar</definition>
+        <argsstring></argsstring>
+        <name>ResultsSoFar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Our 2D vector of results so far for each power of increment that we have passed, where number is the number of points that contributed (ie increment^n). The specific format of this vector depends on the type of <ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref> used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="56" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" compoundref="convergencetable_8cpp" startline="42" endline="55">AddOneResult</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" compoundref="convergencetable_8cpp" startline="101" endline="117">GetResultsSoFar</referencedby>
+        <referencedby refid="namespaceStatGathering_194a944fd3996cb074c86c6334df181fd" compoundref="convergencetable_8cpp" startline="154" endline="184">StatGathering::operator&gt;&gt;</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" compoundref="convergencetable_8cpp" startline="78" endline="86">Reset</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" compoundref="convergencetable_8cpp" startline="88" endline="99">SetResultsSoFar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long StatGathering::ConvergenceTable::StoppingPoint</definition>
+        <argsstring></argsstring>
+        <name>StoppingPoint</name>
+        <briefdescription>
+<para>The next point at which we need to ask for the results from the inner, and then store them. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="58" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" compoundref="convergencetable_8cpp" startline="42" endline="55">AddOneResult</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" compoundref="convergencetable_8cpp" startline="12" endline="19">ConvergenceTable</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" compoundref="convergencetable_8cpp" startline="101" endline="117">GetResultsSoFar</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" compoundref="convergencetable_8cpp" startline="78" endline="86">Reset</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" compoundref="convergencetable_8cpp" startline="88" endline="99">SetResultsSoFar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long StatGathering::ConvergenceTable::PathsDone</definition>
+        <argsstring></argsstring>
+        <name>PathsDone</name>
+        <briefdescription>
+<para>Number of points evaluated so far (also stored in the &apos;Inner&apos;). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="60" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" compoundref="convergencetable_8cpp" startline="42" endline="55">AddOneResult</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" compoundref="convergencetable_8cpp" startline="26" endline="40">GetResultsFromInner</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" compoundref="convergencetable_8cpp" startline="101" endline="117">GetResultsSoFar</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" compoundref="convergencetable_8cpp" startline="78" endline="86">Reset</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" compoundref="convergencetable_8cpp" startline="88" endline="99">SetResultsSoFar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long StatGathering::ConvergenceTable::Increment</definition>
+        <argsstring></argsstring>
+        <name>Increment</name>
+        <briefdescription>
+<para>The power at which we want to store results (eg at 2,4,8,16 ... or 10,100,1000 ...). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="62" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" compoundref="convergencetable_8cpp" startline="42" endline="55">AddOneResult</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" compoundref="convergencetable_8cpp" startline="12" endline="19">ConvergenceTable</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" compoundref="convergencetable_8cpp" startline="101" endline="117">GetResultsSoFar</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" compoundref="convergencetable_8cpp" startline="78" endline="86">Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long StatGathering::ConvergenceTable::MaxSets</definition>
+        <argsstring></argsstring>
+        <name>MaxSets</name>
+        <briefdescription>
+<para>The maximum number of sets to record to file at the end. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="64" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" compoundref="convergencetable_8cpp" startline="12" endline="19">ConvergenceTable</referencedby>
+        <referencedby refid="namespaceStatGathering_1571c4a864b3e5d6ed6047901f8634376" compoundref="convergencetable_8cpp" startline="121" endline="151">StatGathering::operator&lt;&lt;</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classStatGathering_1_1ConvergenceTable_12d5efbc6918bef1b0bd6d83011daad1e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const ConvergenceTable &amp;conTab)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref> &amp;</type>
+          <declname>conTab</declname>
+        </param>
+        <briefdescription>
+<para>friend to &lt;&lt; so that we can overload the &lt;&lt; operator to output a <ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref> object </para>        </briefdescription>
+        <detaileddescription>
+<para>Outputs the table to the stream in the format: &quot;Mean SD Number&quot; for each of the powers of Increment passed so far, in reverse order (ie the final answer comes first, works down to smaller numbers) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="121" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="friend" id="classStatGathering_1_1ConvergenceTable_124b99d2e5129dc075e2488e32e250b92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, ConvergenceTable &amp;conTab)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref> &amp;</type>
+          <declname>conTab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="19" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="154" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StatGathering::ConvergenceTable::ConvergenceTable</definition>
+        <argsstring>(const Wrapper&lt; StatisticsMC &gt; &amp;Inner_)</argsstring>
+        <name>ConvergenceTable</name>
+        <param>
+          <type>const <ref refid="classWrapper" kindref="compound">Wrapper</ref>&lt; <ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref> &gt; &amp;</type>
+          <declname>Inner_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="22" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="12" bodyend="19"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" compoundref="convergencetable_8h" startline="62">Increment</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" compoundref="convergencetable_8h" startline="64">MaxSets</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" compoundref="convergencetable_8h" startline="58">StoppingPoint</references>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_1739be407fb8c781a3db471d28f25ba78" compoundref="convergencetable_8cpp" startline="21" endline="24">clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_1739be407fb8c781a3db471d28f25ba78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref> *</type>
+        <definition>StatisticsMC * StatGathering::ConvergenceTable::clone</definition>
+        <argsstring>() const </argsstring>
+        <name>clone</name>
+        <reimplements refid="classStatGathering_1_1StatisticsMC_1cfcf6abd6e973c00e5f31a79496233e0">clone</reimplements>
+        <briefdescription>
+<para>clone method, to interface with the &apos;Wrapper&apos; template </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="24" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="21" bodyend="24"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" compoundref="convergencetable_8cpp" startline="12" endline="19">ConvergenceTable</references>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void StatGathering::ConvergenceTable::AddOneResult</definition>
+        <argsstring>(double result)</argsstring>
+        <name>AddOneResult</name>
+        <reimplements refid="classStatGathering_1_1StatisticsMC_1aac13c0a41a374bec47c67afc59a0182">AddOneResult</reimplements>
+        <param>
+          <type>double</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add one result. Passes along that result to the inner, if we have hit &apos;StoppingPoint&apos; then ask for the mean and sd from inner, and store in our array </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="30" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="42" bodyend="55"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" compoundref="convergencetable_8cpp" startline="26" endline="40">GetResultsFromInner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" compoundref="convergencetable_8h" startline="62">Increment</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" compoundref="convergencetable_8h" startline="60">PathsDone</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" compoundref="convergencetable_8h" startline="56">ResultsSoFar</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" compoundref="convergencetable_8h" startline="58">StoppingPoint</references>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void StatGathering::ConvergenceTable::AddOneSetOfResults</definition>
+        <argsstring>(long Number_, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;ResultsSoFar_)</argsstring>
+        <name>AddOneSetOfResults</name>
+        <reimplements refid="classStatGathering_1_1StatisticsMC_13f706f03424b931973415b8723127cad">AddOneSetOfResults</reimplements>
+        <param>
+          <type>long</type>
+          <declname>Number_</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>ResultsSoFar_</declname>
+        </param>
+        <briefdescription>
+<para>Add in a set of results. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="33" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="58" bodyend="76"/>
+        <references refid="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" compoundref="constants_8cpp" startline="7" endline="20">SwUtils::_FindNextPowerOfTwo</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" compoundref="convergencetable_8cpp" startline="26" endline="40">GetResultsFromInner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" compoundref="convergencetable_8h" startline="62">Increment</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" compoundref="convergencetable_8h" startline="60">PathsDone</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" compoundref="convergencetable_8h" startline="56">ResultsSoFar</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" compoundref="convergencetable_8h" startline="58">StoppingPoint</references>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void StatGathering::ConvergenceTable::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <reimplements refid="classStatGathering_1_1StatisticsMC_143259c270bbf6b23620252f11a155812">Reset</reimplements>
+        <briefdescription>
+<para>Reset to an empty table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="36" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="78" bodyend="86"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" compoundref="convergencetable_8h" startline="62">Increment</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" compoundref="convergencetable_8h" startline="60">PathsDone</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" compoundref="convergencetable_8h" startline="56">ResultsSoFar</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" compoundref="convergencetable_8h" startline="58">StoppingPoint</references>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void StatGathering::ConvergenceTable::SetResultsSoFar</definition>
+        <argsstring>(long Number_, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;ResultsSoFar_)</argsstring>
+        <name>SetResultsSoFar</name>
+        <reimplements refid="classStatGathering_1_1StatisticsMC_1b97a4292be61cff81425390f1fbed69c">SetResultsSoFar</reimplements>
+        <param>
+          <type>long</type>
+          <declname>Number_</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>ResultsSoFar_</declname>
+        </param>
+        <briefdescription>
+<para>Pass in the results of a simulation so far, one final set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="39" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="88" bodyend="99"/>
+        <references refid="namespaceSwUtils_126183064bbbb36f547635316aec1dd97" compoundref="constants_8cpp" startline="7" endline="20">SwUtils::_FindNextPowerOfTwo</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" compoundref="convergencetable_8cpp" startline="26" endline="40">GetResultsFromInner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" compoundref="convergencetable_8h" startline="60">PathsDone</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" compoundref="convergencetable_8h" startline="56">ResultsSoFar</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" compoundref="convergencetable_8h" startline="58">StoppingPoint</references>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; double &gt; &gt; StatGathering::ConvergenceTable::GetResultsSoFar</definition>
+        <argsstring>() const </argsstring>
+        <name>GetResultsSoFar</name>
+        <reimplements refid="classStatGathering_1_1StatisticsMC_1ddb9cc20ac28892097e902286c5204bb">GetResultsSoFar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a 2D vector of all our results so far <simplesect kind="return"><para>2D vector, formatted as for Inner, for all the powers of increment passed, and one for where we are now, in ascending order of number </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="44" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="101" bodyend="117"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" compoundref="convergencetable_8cpp" startline="26" endline="40">GetResultsFromInner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" compoundref="convergencetable_8h" startline="62">Increment</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" compoundref="convergencetable_8h" startline="60">PathsDone</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" compoundref="convergencetable_8h" startline="56">ResultsSoFar</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" compoundref="convergencetable_8h" startline="58">StoppingPoint</references>
+        <referencedby refid="namespaceStatGathering_1571c4a864b3e5d6ed6047901f8634376" compoundref="convergencetable_8cpp" startline="121" endline="151">StatGathering::operator&lt;&lt;</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatGathering::ConvergenceTable::GetResultsFromInner</definition>
+        <argsstring>(std::vector&lt; std::vector&lt; double &gt; &gt; &amp;results_) const </argsstring>
+        <name>GetResultsFromInner</name>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>results_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ask the inner for a set of results, add it to the end of results_ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="67" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="26" bodyend="40"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" compoundref="convergencetable_8h" startline="60">PathsDone</references>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" compoundref="convergencetable_8cpp" startline="42" endline="55">AddOneResult</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" compoundref="convergencetable_8cpp" startline="58" endline="76">AddOneSetOfResults</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" compoundref="convergencetable_8cpp" startline="101" endline="117">GetResultsSoFar</referencedby>
+        <referencedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" compoundref="convergencetable_8cpp" startline="88" endline="99">SetResultsSoFar</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>An implementation of a statistics gatherer, that keeps track of the results given in powers of (Increment) It provides the final mean, standard deviation, and also the mean and sd at any power of (Increment) below the final result </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>StatGathering::ConvergenceTable</label>
+        <link refid="classStatGathering_1_1ConvergenceTable"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>StatGathering::StatisticsMC</label>
+        <link refid="classStatGathering_1_1StatisticsMC"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>StatGathering::ConvergenceTable</label>
+        <link refid="classStatGathering_1_1ConvergenceTable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>StatGathering::StatisticsMC</label>
+        <link refid="classStatGathering_1_1StatisticsMC"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="16" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" bodystart="15" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>AddOneResult</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>AddOneSetOfResults</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_1739be407fb8c781a3db471d28f25ba78" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>clone</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_19e6e817e63d3f7aa6f9e8c15fd914337" prot="public" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>ConvergenceTable</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_1be81ff228ef56cf0e81715385bd46527" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>GetResultsFromInner</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>GetResultsSoFar</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_149a83cf3a77bdcb17a2fa7cb46c58e41" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>Increment</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>Inner</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>MaxSets</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_12d5efbc6918bef1b0bd6d83011daad1e" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_124b99d2e5129dc075e2488e32e250b92" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_1ecfb1eeb45ff9c726869a9de5547c4e8" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>PathsDone</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>Reset</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>ResultsSoFar</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>SetResultsSoFar</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_1e5f00cda87f14f55cef6914e26b9ef67" prot="public" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>StatisticsMC</name></member>
+      <member refid="classStatGathering_1_1ConvergenceTable_190012c27fa1734458e737f292600115a" prot="private" virt="non-virtual"><scope>StatGathering::ConvergenceTable</scope><name>StoppingPoint</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_11bd9450c20d37ee3954207df031b3619" prot="public" virt="virtual"><scope>StatGathering::ConvergenceTable</scope><name>~StatisticsMC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

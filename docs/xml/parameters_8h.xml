@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="parameters_8h" kind="file">
+    <compoundname>parameters.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">list</includes>
+    <includedby refid="driver_8h" local="yes">Gyulassy/opacity3/src/driver.h</includedby>
+    <includedby refid="radcalcer_8h" local="yes">Gyulassy/opacity3/src/glv1/radcalcer.h</includedby>
+    <includedby refid="radcalcerwrapper_8h" local="yes">Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</includedby>
+    <includedby refid="zcolldist_8cpp" local="yes">Gyulassy/opacity3/src/glv1/zcolldist.cpp</includedby>
+    <includedby refid="glvradiative3_8h" local="yes">Gyulassy/opacity3/src/glv3/glvradiative3.h</includedby>
+    <includedby refid="parameters_8cpp" local="yes">Gyulassy/opacity3/src/parameters.cpp</includedby>
+    <includedby refid="simplecalc1_8h" local="yes">Gyulassy/opacity3/src/simplecalc1.h</includedby>
+    <includedby refid="store_8cpp" local="yes">Gyulassy/opacity3/src/store2d/store.cpp</includedby>
+    <incdepgraph>
+      <node id="329">
+        <label>list</label>
+      </node>
+      <node id="327">
+        <label>string</label>
+      </node>
+      <node id="326">
+        <label>map</label>
+      </node>
+      <node id="328">
+        <label>vector</label>
+      </node>
+      <node id="325">
+        <label>Gyulassy/opacity3/src/parameters.h</label>
+        <link refid="parameters.h"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="331">
+        <label>Gyulassy/opacity3/src/driver.h</label>
+        <link refid="driver_8h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="339">
+        <label>Gyulassy/opacity3/src/simplecalc1.h</label>
+        <link refid="simplecalc1_8h"/>
+      </node>
+      <node id="340">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store_8cpp"/>
+      </node>
+      <node id="334">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="337">
+        <label>Gyulassy/opacity3/src/glv3/glvradiative3.h</label>
+        <link refid="glvradiative3_8h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="332">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="338">
+        <label>Gyulassy/opacity3/src/parameters.cpp</label>
+        <link refid="parameters_8cpp"/>
+      </node>
+      <node id="330">
+        <label>Gyulassy/opacity3/src/parameters.h</label>
+        <link refid="parameters.h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+      </node>
+      <node id="336">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.cpp</label>
+        <link refid="zcolldist_8cpp"/>
+      </node>
+      <node id="335">
+        <label>Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classParameters" prot="public">Parameters</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PARAMETERS_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PARAMETERS_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classParameters" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classParameters" kindref="compound">Parameters</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classParameters_1bf65ea89957e2ca5f712a18aea658744" kindref="member">Parameters</ref>(<sp/>std::string<sp/>StringID_<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1a96c497084795f0c0be65c37ff03f162" kindref="member">ParseInputFile</ref>(<sp/>std::string<sp/>FileName<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1a5cc611f199eccbc05b1908a3d72edd8" kindref="member" tooltip="Helper function for ParseInputFile - does one line supplied as LineString.">ParseSingleLine</ref>(<sp/>std::string<sp/>LineString<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>std::list&lt;std::string&gt;<sp/><ref refid="classParameters_1aad6541e5440beed7c65ac9062109cfe" kindref="member" tooltip="Get a specific parameter in the map, identified by ParamID.">GetParametersString</ref>(<sp/>std::string<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37" kindref="member" tooltip="Get the parameter set, but then convert to a vector of doubles.">GetParametersDouble</ref>(<sp/>std::string<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>std::vector&lt;long&gt;<sp/><ref refid="classParameters_1840169a79f0cdd8217e29b3b25a6552d" kindref="member" tooltip="Get the parameter set, but then convert to a vector of longs.">GetParametersLong</ref>(<sp/>std::string<sp/>ParamID<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1dd8fd8d11a79eff3d3fa6dd6d088dd27" kindref="member">CheckForUnaccessedParameters</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classParameters_1b93e874ce1ee81e9586a2435b7d8a3de" kindref="member">WriteToFile</ref>(<sp/>std::string<sp/>FileName,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>append<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65" refid="classParameters_15206e134bcec867289e40fbfac16d354" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classParameters_15206e134bcec867289e40fbfac16d354" kindref="member" tooltip="The unique ID to identify the settings section in the file.">StringID</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classParameters_18c15233ec44b657431d68b51f42861c4" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>std::list&lt;std::string&gt;<sp/>&gt;<sp/><ref refid="classParameters_18c15233ec44b657431d68b51f42861c4" kindref="member" tooltip="The map in which to store ParamID, list of parameters.">TheParameters</ref>;</highlight></codeline>
+<codeline lineno="69" refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>bool&gt;<sp/><ref refid="classParameters_1d0fc8c05690cdfd6939a7606786f40f5" kindref="member" tooltip="The map in which to store whether ParamID has been accessed.">AccessedList</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/parameters.h"/>
+  </compounddef>
+</doxygen>

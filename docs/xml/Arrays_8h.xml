@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="Arrays_8h" kind="file">
+    <compoundname>Arrays.h</compoundname>
+    <includes local="yes">boost/multi_array.hpp</includes>
+    <includes local="no">valarray</includes>
+    <includedby refid="Random3_8h" local="yes">Gyulassy/opacity3/src/randoms/Random3.h</includedby>
+    <includedby refid="driver_8h" local="yes">Gyulassy/opacity3/src/driver.h</includedby>
+    <includedby refid="Function_8h" local="yes">Gyulassy/opacity3/src/glv1/Function.h</includedby>
+    <includedby refid="qperparraynew_8h" local="yes">Gyulassy/opacity3/src/glv1/qperparraynew.h</includedby>
+    <includedby refid="qperpdist_8h" local="yes">Gyulassy/opacity3/src/glv1/qperpdist.h</includedby>
+    <includedby refid="radcalcer_8h" local="yes">Gyulassy/opacity3/src/glv1/radcalcer.h</includedby>
+    <includedby refid="zcolldist_8h" local="yes">Gyulassy/opacity3/src/glv1/zcolldist.h</includedby>
+    <includedby refid="radcalcerwrapper_8h" local="yes">Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</includedby>
+    <includedby refid="qperpcalculator1_8h" local="yes">Gyulassy/opacity3/src/glv3/qperpcalculator1.h</includedby>
+    <includedby refid="store_8h" local="yes">Gyulassy/opacity3/src/store2d/store.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>valarray</label>
+      </node>
+      <node id="4">
+        <label>Gyulassy/opacity3/src/Arrays.h</label>
+        <link refid="Arrays.h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>Gyulassy/opacity3/src/driver.h</label>
+        <link refid="driver_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.cpp</label>
+        <link refid="qperpdist_8cpp"/>
+      </node>
+      <node id="25">
+        <label>Gyulassy/opacity3/src/glv1/qperparraynew.cpp</label>
+        <link refid="qperparraynew_8cpp"/>
+      </node>
+      <node id="12">
+        <label>Gyulassy/opacity3/src/randoms/RandDrand.cpp</label>
+        <link refid="RandDrand_8cpp"/>
+      </node>
+      <node id="17">
+        <label>Gyulassy/opacity3/src/glv1/qperpdist.h</label>
+        <link refid="qperpdist_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Gyulassy/opacity3/src/glv1/Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Gyulassy/opacity3/src/store2d/store.cpp</label>
+        <link refid="store_8cpp"/>
+      </node>
+      <node id="14">
+        <label>Gyulassy/opacity3/src/randoms/RandSobol.cpp</label>
+        <link refid="RandSobol_8cpp"/>
+      </node>
+      <node id="20">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.cpp</label>
+        <link refid="radcalcer_8cpp"/>
+      </node>
+      <node id="7">
+        <label>Gyulassy/opacity3/src/Arrays.h</label>
+        <link refid="Arrays.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="24">
+        <label>Gyulassy/opacity3/src/glv1/qperparraynew.h</label>
+        <link refid="qperparraynew_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Gyulassy/opacity3/src/store2d/store.h</label>
+        <link refid="store_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Gyulassy/opacity3/src/randoms/RandSobol.h</label>
+        <link refid="RandSobol_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Gyulassy/opacity3/src/glv1/radcalcer.h</label>
+        <link refid="radcalcer_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.h</label>
+        <link refid="zcolldist_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Gyulassy/opacity3/src/randoms/Random3.h</label>
+        <link refid="Random3_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Gyulassy/opacity3/src/glv1/zcolldist.cpp</label>
+        <link refid="zcolldist_8cpp"/>
+      </node>
+      <node id="27">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main__qperptest_8cpp"/>
+      </node>
+      <node id="21">
+        <label>Gyulassy/opacity3/src/glv1/radcalcerwrapper.h</label>
+        <link refid="radcalcerwrapper_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Gyulassy/opacity3/src/glv1/Function.cpp</label>
+        <link refid="Function_8cpp"/>
+      </node>
+      <node id="11">
+        <label>Gyulassy/opacity3/src/randoms/RandDrand.h</label>
+        <link refid="RandDrand_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceSwArrays">SwArrays</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MYARRAYS_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MYARRAYS_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/multi_array.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;valarray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespaceSwArrays" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SwArrays</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>;</highlight></codeline>
+<codeline lineno="11" refid="namespaceSwArrays_1881ca55341231b8b9ab6eb1e3a000fdb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::valarray&lt;std::valarray&lt;double&gt;<sp/>&gt;<sp/><ref refid="namespaceSwArrays_1881ca55341231b8b9ab6eb1e3a000fdb" kindref="member">MyArray2D</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespaceSwArrays_1a711e1d51bc667c98e69285d33513165" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::multi_array&lt;double,<sp/>1&gt;<sp/><ref refid="namespaceSwArrays_1a711e1d51bc667c98e69285d33513165" kindref="member">array1D</ref>;</highlight></codeline>
+<codeline lineno="14" refid="namespaceSwArrays_14b9e52c6a771e1a70faec52ed9fe1844" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>array1D::index<sp/><ref refid="namespaceSwArrays_14b9e52c6a771e1a70faec52ed9fe1844" kindref="member">index1D</ref>;</highlight></codeline>
+<codeline lineno="15" refid="namespaceSwArrays_12293a5bb6167b46d4664971dffad0f90" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::multi_array&lt;double,<sp/>2&gt;<sp/><ref refid="namespaceSwArrays_12293a5bb6167b46d4664971dffad0f90" kindref="member">array2D</ref>;</highlight></codeline>
+<codeline lineno="16" refid="namespaceSwArrays_1491d8b119a7cdd28afdaa75447460abf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>array2D::index<sp/><ref refid="namespaceSwArrays_1491d8b119a7cdd28afdaa75447460abf" kindref="member">index2D</ref>;</highlight></codeline>
+<codeline lineno="17" refid="namespaceSwArrays_143b0dd0a084045f231ca949f96ba5ea1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::multi_array&lt;double,<sp/>3&gt;<sp/><ref refid="namespaceSwArrays_143b0dd0a084045f231ca949f96ba5ea1" kindref="member">array3D</ref>;</highlight></codeline>
+<codeline lineno="18" refid="namespaceSwArrays_143df59437e7dfa7838e5d23628e245b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>array3D::index<sp/><ref refid="namespaceSwArrays_143df59437e7dfa7838e5d23628e245b8" kindref="member">index3D</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>SwArrays<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h"/>
+  </compounddef>
+</doxygen>

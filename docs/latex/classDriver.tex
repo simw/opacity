@@ -1,0 +1,342 @@
+\section{Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$ Class Template Reference}
+\label{classDriver}\index{Driver@{Driver}}
+{\tt \#include $<$driver.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf Driver} ()
+\item 
+{\bf $\sim$Driver} ()
+\item 
+int {\bf Setup} (std::string resume, std::string inputFile)
+\item 
+void {\bf SetParameters} ({\bf Parameters} \&{\bf myParameters})
+\begin{CompactList}\small\item\em Read any runtime parameters for the \doxyref{Driver}{p.}{classDriver} object from the \doxyref{Parameters}{p.}{classParameters} object. \item\end{CompactList}\item 
+void {\bf RunOneIteration} ()
+\begin{CompactList}\small\item\em Run a single iteration of the monte carlo simulation. \item\end{CompactList}\item 
+void {\bf SaveResults} (std::string outputFile)
+\begin{CompactList}\small\item\em Save the stored results to a file. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+TcalcEngine {\bf calculator}
+\begin{CompactList}\small\item\em Supplied template parameter type, to perform the calculation. \item\end{CompactList}\item 
+Tstore {\bf storage}
+\begin{CompactList}\small\item\em Supplied template parameter type, to store the results of the calculation. \item\end{CompactList}\item 
+{\bf Parameters} {\bf myParameters}
+\begin{CompactList}\small\item\em Object to read runtime parameters from file, supplied to calculation and storage. \item\end{CompactList}\item 
+{\bf Wrapper}$<$ {\bf SwRandoms::RandomBase2} $>$ {\bf randomGenerator}
+\begin{CompactList}\small\item\em Random number generator, on the interval [0,1). \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ class Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$}
+
+\begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simonw@phys.columbia.edu}$>$ A generic driver for a Monte Carlo calculation At run time, different random number generator can be used: for example pseudorandoms such as standard drand48(); quasirandoms such as \doxyref{Sobol}{p.}{namespaceSobol} sequences (the latter can vastly increase the rate of convergence of Monte Carlo integration).\end{Desc}
+Template parameters: TcalcEngine, Tstore, numOfRandoms TcalcEngine is an object that performs the calculation, with the interface .SetParameters( Parameters inParams ) .SetRandoms( boost::array$<$numOfRandoms$>$ randomNumbers ) .SetCoord( long coord, double value ) .GetAnswer( std::vector answers ) Tstore is an object in which to keep the results, with the interface .SetParameters( Parameters inParams ) .AddPoint( long dim1, long dim2, std::vector$<$double$>$ result ) .WriteToFile( std::string filename, bool appendToFile ) numOfRandoms is the number of random numbers to be used in the simulation
+
+TODO: add the number of dimensions of the result as a template parameter, generalize the iteration over deterministic dimensions to be n-dimensional add this number of deterministic dimensions as a template parameter
+
+TODO: add multithreading, so that multiple calculation engines can be run in parallel while adding into the same data store 
+
+Definition at line 47 of file driver.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Driver@{Driver}!Driver@{Driver}}
+\index{Driver@{Driver}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::{\bf Driver} ()\hspace{0.3cm}{\tt  [inline]}}\label{classDriver_d18a1349226d25296a188e371debec56}
+
+
+
+
+Definition at line 77 of file driver.h.
+
+\begin{Code}\begin{verbatim}78   : myParameters( "Opacity3" )
+79 {
+80   // Nothing to do on creation, most setup done by the Setup() function
+81   // so that errors on setup can be understood
+82 
+83   // The only thing is the constructor of myParameters,
+84   // to tell it that the version of this program is Opacity version 3
+85   // TODO: make the 'Opacity3' section describe all necessary parts of the program
+86   // for a compatible read in / out
+87 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Driver@{Driver}!~Driver@{$\sim$Driver}}
+\index{~Driver@{$\sim$Driver}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::$\sim${\bf Driver} ()\hspace{0.3cm}{\tt  [inline]}}\label{classDriver_322d8366a3a84a1539d1eb37fad8d3a8}
+
+
+
+
+Definition at line 90 of file driver.h.
+
+\begin{Code}\begin{verbatim}91 {
+92   // Nothing to do in the destructor
+93 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Driver@{Driver}!Setup@{Setup}}
+\index{Setup@{Setup}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ int {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup (std::string {\em resume}, std::string {\em inputFile})\hspace{0.3cm}{\tt  [inline]}}\label{classDriver_ddb8501bd4ed2a87dfb62d8ed73015fa}
+
+
+Setup routine - read in runtime parameters, set up all objects as necessary  =\char`\"{}y\char`\"{} to resume from a previous run, =\char`\"{}n\char`\"{} to start a new one  Filename of a) previous run file if resuming (including runtime parameters on the end), or b) runtime parameters file if not resuming 
+
+Definition at line 96 of file driver.h.
+
+References Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::calculator, Parameters::CheckForUnaccessedParameters(), Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::myParameters, Parameters::ParseInputFile(), Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::SetParameters(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::storage.
+
+\begin{Code}\begin{verbatim}97 {
+98   // Function to do all necessary run time setup of objects
+99   // TODO: give a meaningful return code, so if this fails the program quits
+100 
+101   // The runtime settings are read in from a file with a specific format
+102   // This format is governed by the 'Parameters' object, see there for specifics
+103 
+104   // First, read in the file into the object
+105   // If we are resuming from a previous run, the parameters have been written to the
+106   // end of the file, and the Parameters objects can find them there
+107   // All the tokens in the file are read into a 'map'
+108   myParameters.ParseInputFile( inputFile );
+109 
+110   // Pass the parameters object to each object in turn
+111   // First, this one, the driver
+112   SetParameters( myParameters );
+113   // Second, the storage object - eg for size of each dimensions, number of points etc 
+114   storage.SetParameters( myParameters );
+115   // Third, the calculation object - eg GLV specific params, mu, temperature etc
+116   calculator.SetParameters( myParameters );
+117 
+118   // If we are resuming from a previous run, we also need to read in the statistics
+119   // from that run into the data store
+120   if ( resume == "y" )
+121     storage.ReadFromFile( inputFile );
+122 
+123   // Finally, check that all the inputs from the parameters file were used at some point
+124   // Otherwise, the user might think that some parameters are being set that really aren't
+125   int allUsed = myParameters.CheckForUnaccessedParameters();
+126   if ( allUsed != 0 )
+127   {
+128     std::cerr << "Driver::Setup - " << allUsed << " unused parameters from input file.\n";
+129     return 1;
+130   }
+131   else
+132   {
+133     std::cout << "All parameters read successfully from " << inputFile << std::endl;
+134   }
+135 
+136   // TODO: change this so that more errors are detected and so more possible to not
+137   // return 0
+138   return 0;
+139 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Driver@{Driver}!SetParameters@{SetParameters}}
+\index{SetParameters@{SetParameters}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ void {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::SetParameters ({\bf Parameters} \& {\em myParameters})\hspace{0.3cm}{\tt  [inline]}}\label{classDriver_366cc8aecd5b57886f9443a2cfedf0dc}
+
+
+Read any runtime parameters for the \doxyref{Driver}{p.}{classDriver} object from the \doxyref{Parameters}{p.}{classParameters} object. 
+
+
+
+Definition at line 142 of file driver.h.
+
+References Parameters::GetParametersString(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::randomGenerator.
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup().
+
+\begin{Code}\begin{verbatim}143 {
+144   // Do specific setup for this driver object
+145   // The only settings necessary are for the random number generator
+146   // TODO: clean up the 'Parameters' object, so this doesn't look so convoluted
+147 
+148   std::list<std::string> ReturnedParamsString;
+149   
+150   // The type of random number generator
+151   // Current options are 'Drand48' and 'Sobol'
+152   ReturnedParamsString.empty();
+153   ReturnedParamsString = MyParameters.GetParametersString( "@RandomNumberGenerator" );
+154   
+155   SwRandoms::RandDrand48 ranDrand48( numOfRandoms );
+156   SwRandoms::RandSobol ranSobol( numOfRandoms );
+157 
+158   if ( ReturnedParamsString.front() == "Drand48" )
+159     randomGenerator = ranDrand48;
+160   else if ( ReturnedParamsString.front() == "Sobol" )
+161     randomGenerator = ranSobol;
+162   else
+163   {
+164     //return -1;
+165   }
+166 
+167   // Now that we have set up the type of generator, we need a seed for the
+168   // generator
+169   // TODO: add this as an option to the Parameters object, including the time(NULL) option
+170   //long seed = time(NULL);
+171   long seed = 2;
+172   randomGenerator->SetSeed( seed );
+173 
+174   //return 0;
+175 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Driver@{Driver}!RunOneIteration@{RunOneIteration}}
+\index{RunOneIteration@{RunOneIteration}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ void {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::RunOneIteration ()\hspace{0.3cm}{\tt  [inline]}}\label{classDriver_21ae3be3bfc08b9c7c41c4a7e46e7677}
+
+
+Run a single iteration of the monte carlo simulation. 
+
+
+
+Definition at line 178 of file driver.h.
+
+References Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::calculator, Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::randomGenerator, and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::storage.
+
+\begin{Code}\begin{verbatim}179 {
+180   // The guts of the Monte Carlo calculation
+181   // For one iteration, we fetch in a set of random numbers,
+182   // (these are supplied as a uniform distribution over [0,1)
+183   // then pass this to the calculation object,
+184   // (which will transform them to the required limits)
+185   // then iterate over all the points in the deterministic dimensions,
+186   // getting the calculation result for each point,
+187   // and passing this result to the data store.
+188   // TODO: generalize the iteration over deterministic dimensions to n-dimensions,
+189   // with n chosen as a template parameter to the driver object
+190 
+191   // First, get the array of random numbers
+192   // TODO: change the interface to the random number generator
+193   // to ask / get a fixed size array using boost::array
+194   // At the moment, the change from a boost::array to a std::vector (MyArray)
+195   // is cumbersome / a hack
+196   boost::array<double, numOfRandoms> randomNumbers;
+197   SwArrays::MyArray randomNumbersTmp( numOfRandoms );
+198   randomGenerator->GetUniforms( randomNumbersTmp );
+199   for ( std::size_t i=0; i<numOfRandoms; ++i )
+200     randomNumbers[i] = randomNumbersTmp[i];
+201 
+202   // Pass the random numbers to the calculator object
+203   calculator.SetRandoms( randomNumbers );
+204 
+205   // Now iterate over the deterministic dimensions,
+206   // setting the new coordinate for each point in each dimension,
+207   // getting the answer and adding it to the data store
+208   // TODO: improve, to have arbitrary number of dimensions
+209   std::vector<double> tmp(1);
+210   for (long dim1=0; dim1<storage.GetLengthDim1(); ++dim1)
+211   {
+212     calculator.SetCoord( 1, storage.GetCoordDim1( dim1 ) );
+213 
+214     for (long dim2=0; dim2<storage.GetLengthDim2(); ++dim2)
+215     {
+216       calculator.SetCoord( 2, storage.GetCoordDim2( dim2 ) );
+217       calculator.GetAnswer( tmp );
+218       storage.AddPoint( dim1, dim2, tmp );
+219     }
+220   }
+221 }
+\end{verbatim}
+\end{Code}
+
+
+\index{Driver@{Driver}!SaveResults@{SaveResults}}
+\index{SaveResults@{SaveResults}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ void {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::SaveResults (std::string {\em outputFile})\hspace{0.3cm}{\tt  [inline]}}\label{classDriver_acef05750c91ea6786f9f1c9b711c765}
+
+
+Save the stored results to a file. 
+
+
+
+Definition at line 224 of file driver.h.
+
+References Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::myParameters, Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::storage, and Parameters::WriteToFile().
+
+\begin{Code}\begin{verbatim}225 {
+226   // Save the results of our simulation to a permanent file
+227   // We need to include the state of both the data store and
+228   // the input runtime parameters
+229 
+230   // First, send the Store2D to file
+231   // The false here => erase any current contents of the file
+232   storage.WriteToFile( outputFile, false );
+233 
+234   // Now delegate to the params class to output the settings to the end of the file
+235   // In this way, we have a record of what the inputs were, and a way to resume and
+236   // add more statistics if wanted.
+237   // The true here => append to file
+238   myParameters.WriteToFile( outputFile, true );
+239 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Driver@{Driver}!calculator@{calculator}}
+\index{calculator@{calculator}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ TcalcEngine {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::{\bf calculator}\hspace{0.3cm}{\tt  [private]}}\label{classDriver_b15978b3b6eedc1c9af063a970eb154a}
+
+
+Supplied template parameter type, to perform the calculation. 
+
+
+
+Definition at line 51 of file driver.h.
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::RunOneIteration(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup().\index{Driver@{Driver}!storage@{storage}}
+\index{storage@{storage}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ Tstore {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::{\bf storage}\hspace{0.3cm}{\tt  [private]}}\label{classDriver_d52b9b085eb8b034d2548af7d7ea670e}
+
+
+Supplied template parameter type, to store the results of the calculation. 
+
+
+
+Definition at line 53 of file driver.h.
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::RunOneIteration(), Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::SaveResults(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup().\index{Driver@{Driver}!myParameters@{myParameters}}
+\index{myParameters@{myParameters}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ {\bf Parameters} {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::{\bf myParameters}\hspace{0.3cm}{\tt  [private]}}\label{classDriver_c266e9eee42ebc4e2f39e16c94cec3ca}
+
+
+Object to read runtime parameters from file, supplied to calculation and storage. 
+
+
+
+Definition at line 55 of file driver.h.
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::SaveResults(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::Setup().\index{Driver@{Driver}!randomGenerator@{randomGenerator}}
+\index{randomGenerator@{randomGenerator}!Driver@{Driver}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TcalcEngine, typename Tstore, std::size\_\-t numOfRandoms$>$ {\bf Wrapper}$<${\bf SwRandoms::RandomBase2}$>$ {\bf Driver}$<$ TcalcEngine, Tstore, numOfRandoms $>$::{\bf randomGenerator}\hspace{0.3cm}{\tt  [private]}}\label{classDriver_4da27b778d9838012125868afd04c1ed}
+
+
+Random number generator, on the interval [0,1). 
+
+
+
+Definition at line 57 of file driver.h.
+
+Referenced by Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::RunOneIteration(), and Driver$<$ TcalcEngine, Tstore, numOfRandoms $>$::SetParameters().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/{\bf driver.h}\end{CompactItemize}

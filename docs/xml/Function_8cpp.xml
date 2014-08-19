@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="Function_8cpp" kind="file">
+    <compoundname>Function.cpp</compoundname>
+    <includes refid="Function_8h" local="yes">Function.h</includes>
+    <incdepgraph>
+      <node id="68">
+        <label>valarray</label>
+      </node>
+      <node id="65">
+        <label>Function.h</label>
+        <link refid="Function_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Gyulassy/opacity3/src/glv1/Function.cpp</label>
+        <link refid="Function.cpp"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Function_8h" kindref="compound">Function.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" refkind="member"><highlight class="normal"><ref refid="classFunction_10bc8fc78c9f9e9b2b646d6c3de75a9b1" kindref="member">Function::Function</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>:<sp/>dim(<sp/>Dimensionality<sp/>),<sp/>xmins(<sp/>Dimensionality<sp/>),<sp/>xmaxs(<sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" refkind="member"><highlight class="normal"><ref refid="classFunction_13b03f7cf0b75d16edebdda1dee1db6fd" kindref="member">Function::~Function</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFunction_1b15faddc7dbbbc25a0bcdc3bc3223684" kindref="member">Function::SetLimits</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xmins_,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xmaxs_<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="classFunction_1804a0abd014760d47a12206f1e9715f2" kindref="member">xmins</ref><sp/>=<sp/>xmins_;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classFunction_1feaa4fbf9516f3a680ec032622586198" kindref="member">xmaxs</ref><sp/>=<sp/>xmaxs_;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classYukawaFunction_1092c7af1e8755547c5354c84d418be7c" refkind="member"><highlight class="normal"><ref refid="classYukawaFunction_1092c7af1e8755547c5354c84d418be7c" kindref="member">YukawaFunction::YukawaFunction</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="classFunction" kindref="compound">Function</ref>(<sp/>Dimensionality<sp/>),<sp/>mu2s(<sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classYukawaFunction_11e07e5116228b911a3008940db1c4f9b" refkind="member"><highlight class="normal"><ref refid="classYukawaFunction_11e07e5116228b911a3008940db1c4f9b" kindref="member">YukawaFunction::~YukawaFunction</ref>()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classYukawaFunction_15f5caf1a5d9ccbbd111a72ce3961395e" refkind="member"><highlight class="normal"><ref refid="classFunction" kindref="compound">Function</ref>*<sp/><ref refid="classYukawaFunction_15f5caf1a5d9ccbbd111a72ce3961395e" kindref="member">YukawaFunction::clone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="34"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classYukawaFunction_1092c7af1e8755547c5354c84d418be7c" kindref="member">YukawaFunction</ref>(<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classYukawaFunction_1e1cfdb6a1024fd9099c9d178bb25e30c" kindref="member">YukawaFunction::function</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>res<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>res[i]<sp/>=<sp/>2.*xs[i]*<ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref>[i]<sp/>/<sp/>pow(<sp/>xs[i]*xs[i]<sp/>+<sp/><ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref>[i],<sp/>2<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classYukawaFunction_16946664b03976629db6fede4c250f363" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classYukawaFunction_16946664b03976629db6fede4c250f363" kindref="member">YukawaFunction::NormedIntegralInverse</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>uniforms,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs<sp/>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>=<sp/>(pow(<ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(i),2)<sp/>+<sp/><ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref>[i])<sp/>*<sp/>(pow(<ref refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" kindref="member">GetXmax</ref>(i),2)<sp/>+<sp/><ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref>[i]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>/=<sp/><ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref>[i]<sp/>+<sp/>pow(<ref refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" kindref="member">GetXmax</ref>(i),2)<sp/>-<sp/>(pow(<ref refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" kindref="member">GetXmax</ref>(i),2)-pow(<ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(i),2))*uniforms[i];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>-=<sp/><ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref>[i];</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>=<sp/>sqrt(xs[i]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classYukawaFunction_115b63ca3d7be01c385940f57641fdfad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classYukawaFunction_115b63ca3d7be01c385940f57641fdfad" kindref="member">YukawaFunction::SetParams</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>mu2s_<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="classYukawaFunction_116023bd3790db880d3001b6430c173d0" kindref="member">mu2s</ref><sp/>=<sp/>mu2s_;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classUniformFunction_125d798ef7cb0a90ccfa50fcdcf9438a3" refkind="member"><highlight class="normal"><ref refid="classUniformFunction_125d798ef7cb0a90ccfa50fcdcf9438a3" kindref="member">UniformFunction::UniformFunction</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="classFunction" kindref="compound">Function</ref>(<sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classUniformFunction_15498bd978cd9441cd3c4e195240f6347" refkind="member"><highlight class="normal"><ref refid="classUniformFunction_15498bd978cd9441cd3c4e195240f6347" kindref="member">UniformFunction::~UniformFunction</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classUniformFunction_19b57843688a438ac030f3abcfb4d07ac" refkind="member"><highlight class="normal"><ref refid="classFunction" kindref="compound">Function</ref>*<sp/><ref refid="classUniformFunction_19b57843688a438ac030f3abcfb4d07ac" kindref="member">UniformFunction::clone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="76"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classUniformFunction_125d798ef7cb0a90ccfa50fcdcf9438a3" kindref="member">UniformFunction</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classUniformFunction_1c7b39b7195838195e1796570e549e67f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUniformFunction_1c7b39b7195838195e1796570e549e67f" kindref="member">UniformFunction::function</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>res<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>res[i]<sp/>=<sp/>1.<sp/>/<sp/><ref refid="classFunction_18009360f13f8b2def90d7fbb30584b58" kindref="member">GetRange</ref>(i);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUniformFunction_1db51f361d9802c90260b584bf590a1a1" kindref="member">UniformFunction::NormedIntegralInverse</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>uniforms,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs<sp/>)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>=<sp/><ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(i)<sp/>+<sp/>uniforms[i]*<ref refid="classFunction_18009360f13f8b2def90d7fbb30584b58" kindref="member">GetRange</ref>(i);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classUniformFunction_1a4666e3a6e7420a5b4c9a15d3677d762" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUniformFunction_1a4666e3a6e7420a5b4c9a15d3677d762" kindref="member">UniformFunction::SetParams</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>maxlens_<sp/>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classUnitStepFunction_1272c40fc075f370eb8e20f0b50c11a4a" refkind="member"><highlight class="normal"><ref refid="classUnitStepFunction_1272c40fc075f370eb8e20f0b50c11a4a" kindref="member">UnitStepFunction::UnitStepFunction</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="classFunction" kindref="compound">Function</ref>(<sp/>Dimensionality<sp/>),<sp/>steps(<sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classUnitStepFunction_11643ca85de9bda43d6a85a17dc2879a0" refkind="member"><highlight class="normal"><ref refid="classUnitStepFunction_11643ca85de9bda43d6a85a17dc2879a0" kindref="member">UnitStepFunction::~UnitStepFunction</ref>()</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classUnitStepFunction_1c9575c66d4b1c47901fbb4d96065f93f" refkind="member"><highlight class="normal"><ref refid="classFunction" kindref="compound">Function</ref>*<sp/><ref refid="classUnitStepFunction_1c9575c66d4b1c47901fbb4d96065f93f" kindref="member">UnitStepFunction::clone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="116"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classUnitStepFunction_1272c40fc075f370eb8e20f0b50c11a4a" kindref="member">UnitStepFunction</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUnitStepFunction_12a0ff6cc70176563ceedfd044e6da9de" kindref="member">UnitStepFunction::function</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>res<sp/>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>&lt;<sp/><ref refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" kindref="member">steps</ref>[i]<sp/><sp/>?<sp/>res[i]<sp/>=<sp/>1.<sp/>/<sp/>(<ref refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" kindref="member">steps</ref>[i]-<ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(i))<sp/><sp/>:<sp/>res[i]<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUnitStepFunction_1c56d83c52d4e17781fb0a43d55051fcb" kindref="member">UnitStepFunction::NormedIntegralInverse</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>uniforms,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs<sp/>)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>=<sp/><ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(i)<sp/>+<sp/>uniforms[i]*<ref refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" kindref="member">steps</ref>[i];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classUnitStepFunction_176fde5d7a6e4ff7958a927298ff0379f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classUnitStepFunction_176fde5d7a6e4ff7958a927298ff0379f" kindref="member">UnitStepFunction::SetParams</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>steps_<sp/>)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="classUnitStepFunction_1d36d3310bf79bd0de69718608b1ae6a0" kindref="member">steps</ref><sp/>=<sp/>steps_;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classExpDecayFunction_14905fdca1777ecc6795372b6a4c88ef5" refkind="member"><highlight class="normal"><ref refid="classExpDecayFunction_14905fdca1777ecc6795372b6a4c88ef5" kindref="member">ExpDecayFunction::ExpDecayFunction</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="classFunction" kindref="compound">Function</ref>(<sp/>Dimensionality<sp/>),<sp/>lambdas(<sp/>Dimensionality<sp/>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classExpDecayFunction_18772fb3b5b7aeb29c294b78b32ffb88b" refkind="member"><highlight class="normal"><ref refid="classExpDecayFunction_18772fb3b5b7aeb29c294b78b32ffb88b" kindref="member">ExpDecayFunction::~ExpDecayFunction</ref>()</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classExpDecayFunction_18186f67946fc433087ac05d397d3a3ff" refkind="member"><highlight class="normal"><ref refid="classFunction" kindref="compound">Function</ref>*<sp/><ref refid="classExpDecayFunction_18186f67946fc433087ac05d397d3a3ff" kindref="member">ExpDecayFunction::clone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="156"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classExpDecayFunction_14905fdca1777ecc6795372b6a4c88ef5" kindref="member">ExpDecayFunction</ref>(<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classExpDecayFunction_10a6016e8146f03897300c728cd408347" kindref="member">ExpDecayFunction::function</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>res<sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>res[0]<sp/>=<sp/>1.<sp/>/<sp/><ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[0]<sp/>*<sp/>exp(<sp/>-((xs[0]-<ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(0))<sp/>/<sp/><ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[0])<sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=1;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>res[i]<sp/>=<sp/>1.<sp/>/<sp/><ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[i]<sp/>*<sp/>exp(<sp/>-(xs[i]<sp/>-<sp/>xs[i-1])<sp/>/<sp/><ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[i]<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classExpDecayFunction_1c9e70e87e699a4342869ab6c90aa5264" kindref="member">ExpDecayFunction::NormedIntegralInverse</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>uniforms,<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>xs<sp/>)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="classFunction_1f97b276352a58200c533ddb1b3542c2d" kindref="member">GetDimensionality</ref>();<sp/>++i)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>=<sp/>(1.-uniforms[i])*exp(-<ref refid="classFunction_1165315e9bf20842dc57425d3d04507cb" kindref="member">GetXmin</ref>(i)/<ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[i])<sp/>+<sp/>uniforms[i]*exp(-<ref refid="classFunction_144b5a0cafa8873fb26e4ce714325b56a" kindref="member">GetXmax</ref>(i)/<ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[i]);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>xs[i]<sp/>=<sp/>-<ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref>[i]<sp/>*<sp/>log(<sp/>xs[i]<sp/>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classExpDecayFunction_1d665a0ac0d156a9f058b1881d40f2f84" kindref="member">ExpDecayFunction::SetParams</ref>(<sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">MyArray</ref>&amp;<sp/>params_<sp/>)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><ref refid="classExpDecayFunction_19a6764a71c0ca67bd8f71f3af6017c40" kindref="member">lambdas</ref><sp/>=<sp/>params_;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv1/Function.cpp"/>
+  </compounddef>
+</doxygen>

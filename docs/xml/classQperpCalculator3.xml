@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classQperpCalculator3" kind="class" prot="public">
+    <compoundname>QperpCalculator3</compoundname>
+    <includes refid="qperpcalculator3_8h" local="no">qperpcalculator3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>n</declname>
+        <defname>n</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" prot="private" static="no" mutable="no">
+        <type>boost::array&lt; boost::array&lt; double, n &gt;, <ref refid="structTPower" kindref="compound">TPower</ref>&lt; 2, n &gt;::value &gt;</type>
+        <definition>boost::array&lt;boost::array&lt;double, n&gt;, TPower&lt;2,n&gt;::value&gt; QperpCalculator3&lt; n &gt;::SumQs_1i</definition>
+        <argsstring></argsstring>
+        <name>SumQs_1i</name>
+        <briefdescription>
+<para>Array of Sum_(i=1 to n, j = k to n)_Qi Dot Qj. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="38" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" compoundref="qperpcalculator3_8h" startline="70" endline="85">QperpCalculator3&lt; n &gt;::SetK</referencedby>
+        <referencedby refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" compoundref="qperpcalculator3_8h" startline="88" endline="116">QperpCalculator3&lt; n &gt;::SetQsThetas</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" prot="private" static="no" mutable="no">
+        <type>boost::array&lt; boost::array&lt; double, n &gt;, <ref refid="structTPower" kindref="compound">TPower</ref>&lt; 2, n &gt;::value &gt;</type>
+        <definition>boost::array&lt;boost::array&lt;double, n&gt;, TPower&lt;2,n&gt;::value&gt; QperpCalculator3&lt; n &gt;::SumQs_ii</definition>
+        <argsstring></argsstring>
+        <name>SumQs_ii</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="39" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" compoundref="qperpcalculator3_8h" startline="70" endline="85">QperpCalculator3&lt; n &gt;::SetK</referencedby>
+        <referencedby refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" compoundref="qperpcalculator3_8h" startline="88" endline="116">QperpCalculator3&lt; n &gt;::SetQsThetas</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" prot="private" static="no" mutable="no">
+        <type>boost::array&lt; boost::array&lt; double, n &gt;, <ref refid="structTPower" kindref="compound">TPower</ref>&lt; 2, n &gt;::value &gt;</type>
+        <definition>boost::array&lt;boost::array&lt;double, n&gt;, TPower&lt;2,n&gt;::value&gt; QperpCalculator3&lt; n &gt;::SumKhatQ_i</definition>
+        <argsstring></argsstring>
+        <name>SumKhatQ_i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="40" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" compoundref="qperpcalculator3_8h" startline="70" endline="85">QperpCalculator3&lt; n &gt;::SetK</referencedby>
+        <referencedby refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" compoundref="qperpcalculator3_8h" startline="88" endline="116">QperpCalculator3&lt; n &gt;::SetQsThetas</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" prot="private" static="no" mutable="no">
+        <type>boost::array&lt; boost::array&lt; double, n+1 &gt;, <ref refid="structTPower" kindref="compound">TPower</ref>&lt; 2, n &gt;::value &gt;</type>
+        <definition>boost::array&lt;boost::array&lt;double, n+1&gt;, TPower&lt;2,n&gt;::value&gt; QperpCalculator3&lt; n &gt;::SumQsIncK_1i</definition>
+        <argsstring></argsstring>
+        <name>SumQsIncK_1i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="42" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" compoundref="qperpcalculator3_8h" startline="56" endline="59">QperpCalculator3&lt; n &gt;::GetSumQs1k</referencedby>
+        <referencedby refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" compoundref="qperpcalculator3_8h" startline="70" endline="85">QperpCalculator3&lt; n &gt;::SetK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" prot="private" static="no" mutable="no">
+        <type>boost::array&lt; boost::array&lt; double, n+1 &gt;, <ref refid="structTPower" kindref="compound">TPower</ref>&lt; 2, n &gt;::value &gt;</type>
+        <definition>boost::array&lt;boost::array&lt;double, n+1&gt;, TPower&lt;2,n&gt;::value&gt; QperpCalculator3&lt; n &gt;::SumQsIncK_ii</definition>
+        <argsstring></argsstring>
+        <name>SumQsIncK_ii</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="43" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" compoundref="qperpcalculator3_8h" startline="51" endline="54">QperpCalculator3&lt; n &gt;::GetSumQskk</referencedby>
+        <referencedby refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" compoundref="qperpcalculator3_8h" startline="70" endline="85">QperpCalculator3&lt; n &gt;::SetK</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQperpCalculator3_1e093a25aa0ff255a5ec74cf1b4aac57a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>QperpCalculator3&lt; n &gt;::QperpCalculator3</definition>
+        <argsstring>()</argsstring>
+        <name>QperpCalculator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="46" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator3&lt; n &gt;::SetK</definition>
+        <argsstring>(double k)</argsstring>
+        <name>SetK</name>
+        <param>
+          <type>double</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="48" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="70" bodyend="85"/>
+        <references refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" compoundref="qperpcalculator3_8h" startline="40">QperpCalculator3&lt; n &gt;::SumKhatQ_i</references>
+        <references refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" compoundref="qperpcalculator3_8h" startline="38">QperpCalculator3&lt; n &gt;::SumQs_1i</references>
+        <references refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" compoundref="qperpcalculator3_8h" startline="39">QperpCalculator3&lt; n &gt;::SumQs_ii</references>
+        <references refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" compoundref="qperpcalculator3_8h" startline="42">QperpCalculator3&lt; n &gt;::SumQsIncK_1i</references>
+        <references refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" compoundref="qperpcalculator3_8h" startline="43">QperpCalculator3&lt; n &gt;::SumQsIncK_ii</references>
+        <referencedby refid="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main__qperptest_8cpp" startline="15" endline="141">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void QperpCalculator3&lt; n &gt;::SetQsThetas</definition>
+        <argsstring>(boost::array&lt; double, n &gt; Qs, boost::array&lt; double, n &gt; Thetas)</argsstring>
+        <name>SetQsThetas</name>
+        <param>
+          <type>boost::array&lt; double, n &gt;</type>
+          <declname>Qs</declname>
+        </param>
+        <param>
+          <type>boost::array&lt; double, n &gt;</type>
+          <declname>Thetas</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="49" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="88" bodyend="116"/>
+        <references refid="namespaceSwUtils_158cbacdf24d6a8eddaae9fbbd58ecf78" compoundref="constants_8h" startline="34" endline="41">SwUtils::_TestBitI</references>
+        <references refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" compoundref="qperpcalculator3_8h" startline="40">QperpCalculator3&lt; n &gt;::SumKhatQ_i</references>
+        <references refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" compoundref="qperpcalculator3_8h" startline="38">QperpCalculator3&lt; n &gt;::SumQs_1i</references>
+        <references refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" compoundref="qperpcalculator3_8h" startline="39">QperpCalculator3&lt; n &gt;::SumQs_ii</references>
+        <referencedby refid="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main__qperptest_8cpp" startline="15" endline="141">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpCalculator3&lt; n &gt;::GetSumQskk</definition>
+        <argsstring>(long m, long zeroes) const </argsstring>
+        <name>GetSumQskk</name>
+        <param>
+          <type>long</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="52" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="51" bodyend="54"/>
+        <references refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" compoundref="qperpcalculator3_8h" startline="43">QperpCalculator3&lt; n &gt;::SumQsIncK_ii</references>
+        <referencedby refid="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main__qperptest_8cpp" startline="15" endline="141">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double QperpCalculator3&lt; n &gt;::GetSumQs1k</definition>
+        <argsstring>(long m, long zeroes) const </argsstring>
+        <name>GetSumQs1k</name>
+        <param>
+          <type>long</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="57" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="56" bodyend="59"/>
+        <references refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" compoundref="qperpcalculator3_8h" startline="42">QperpCalculator3&lt; n &gt;::SumQsIncK_1i</references>
+        <referencedby refid="main__qperptest_8cpp_10ddf1224851353fc92bfbff6f499fa97" compoundref="main__qperptest_8cpp" startline="15" endline="141">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para></para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" line="35" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator3.h" bodystart="34" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classQperpCalculator3_191c5081765b9951220aa17eeea8a01cb" prot="public" virt="non-virtual"><scope>QperpCalculator3</scope><name>GetSumQs1k</name></member>
+      <member refid="classQperpCalculator3_1f70b86cf138b434ce2be08ad219178ce" prot="public" virt="non-virtual"><scope>QperpCalculator3</scope><name>GetSumQskk</name></member>
+      <member refid="classQperpCalculator3_1e093a25aa0ff255a5ec74cf1b4aac57a" prot="public" virt="non-virtual"><scope>QperpCalculator3</scope><name>QperpCalculator3</name></member>
+      <member refid="classQperpCalculator3_1df6a2c2d75a811af517cfd68bd3be76a" prot="public" virt="non-virtual"><scope>QperpCalculator3</scope><name>SetK</name></member>
+      <member refid="classQperpCalculator3_143a309356a17d0afc9346e34dc217cfe" prot="public" virt="non-virtual"><scope>QperpCalculator3</scope><name>SetQsThetas</name></member>
+      <member refid="classQperpCalculator3_1986b83aeb3ebeff3a9deb94c0492151b" prot="private" virt="non-virtual"><scope>QperpCalculator3</scope><name>SumKhatQ_i</name></member>
+      <member refid="classQperpCalculator3_1290cd6fd1b03b4518870a0dffbed6b47" prot="private" virt="non-virtual"><scope>QperpCalculator3</scope><name>SumQs_1i</name></member>
+      <member refid="classQperpCalculator3_103d47d0fb44f6320ab012840fbacd64a" prot="private" virt="non-virtual"><scope>QperpCalculator3</scope><name>SumQs_ii</name></member>
+      <member refid="classQperpCalculator3_13a76e2e7e7b4479f085a0fb7d05155fb" prot="private" virt="non-virtual"><scope>QperpCalculator3</scope><name>SumQsIncK_1i</name></member>
+      <member refid="classQperpCalculator3_19beff8b0d7110b5050d1606028394beb" prot="private" virt="non-virtual"><scope>QperpCalculator3</scope><name>SumQsIncK_ii</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

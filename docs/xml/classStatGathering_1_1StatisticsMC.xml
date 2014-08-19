@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classStatGathering_1_1StatisticsMC" kind="class" prot="public">
+    <compoundname>StatGathering::StatisticsMC</compoundname>
+    <derivedcompoundref refid="classStatGathering_1_1ConvergenceTable" prot="public" virt="non-virtual">StatGathering::ConvergenceTable</derivedcompoundref>
+    <derivedcompoundref refid="classStatGathering_1_1StatisticsMean" prot="public" virt="non-virtual">StatGathering::StatisticsMean</derivedcompoundref>
+    <includes refid="statisticsmc_8h" local="no">statisticsmc.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_1e5f00cda87f14f55cef6914e26b9ef67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StatGathering::StatisticsMC::StatisticsMC</definition>
+        <argsstring>()</argsstring>
+        <name>StatisticsMC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="20" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_11bd9450c20d37ee3954207df031b3619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>virtual</type>
+        <definition>virtual StatGathering::StatisticsMC::~StatisticsMC</definition>
+        <argsstring>()</argsstring>
+        <name>~StatisticsMC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="21" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_1cfcf6abd6e973c00e5f31a79496233e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classStatGathering_1_1StatisticsMC" kindref="compound">StatisticsMC</ref> *</type>
+        <definition>virtual StatisticsMC* StatGathering::StatisticsMC::clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>clone</name>
+        <reimplementedby refid="classStatGathering_1_1StatisticsMean_10afe279f79a7a68922f0ae9d52bb2957">clone</reimplementedby>
+        <reimplementedby refid="classStatGathering_1_1ConvergenceTable_1739be407fb8c781a3db471d28f25ba78">clone</reimplementedby>
+        <briefdescription>
+<para>clone method, to interface with the &apos;Wrapper&apos; template </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_1aac13c0a41a374bec47c67afc59a0182" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void StatGathering::StatisticsMC::AddOneResult</definition>
+        <argsstring>(double result)=0</argsstring>
+        <name>AddOneResult</name>
+        <reimplementedby refid="classStatGathering_1_1StatisticsMean_1a041fcd7d325906ecbc05b7dd60a8245">AddOneResult</reimplementedby>
+        <reimplementedby refid="classStatGathering_1_1ConvergenceTable_18dfcddda38ea9657e1ae4aa6b917ff8b">AddOneResult</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add one result to the mix This is the standard way of adding in another result </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_13f706f03424b931973415b8723127cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void StatGathering::StatisticsMC::AddOneSetOfResults</definition>
+        <argsstring>(long Number, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;ResultsSoFar_)=0</argsstring>
+        <name>AddOneSetOfResults</name>
+        <reimplementedby refid="classStatGathering_1_1StatisticsMean_1a0089d1731c6b33a7749de1ec41e0a8f">AddOneSetOfResults</reimplementedby>
+        <reimplementedby refid="classStatGathering_1_1ConvergenceTable_132d89dcbeedf1846f36319d9b36eafba">AddOneSetOfResults</reimplementedby>
+        <param>
+          <type>long</type>
+          <declname>Number</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>ResultsSoFar_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add many results to the mix This might be from merging two sets of results or similar <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of results to add in </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ResultsSoFar_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 2D vector of doubles, which gives the relevant structure of the results (this structure is not specified in this base class) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_143259c270bbf6b23620252f11a155812" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void StatGathering::StatisticsMC::Reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>Reset</name>
+        <reimplementedby refid="classStatGathering_1_1StatisticsMean_141cc79ed93147ad208d83ae9d3b0c97d">Reset</reimplementedby>
+        <reimplementedby refid="classStatGathering_1_1ConvergenceTable_17bb5a965ab53ca72d501e0d7f694d93b">Reset</reimplementedby>
+        <briefdescription>
+<para>Reset all internal values, start again. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_1b97a4292be61cff81425390f1fbed69c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void StatGathering::StatisticsMC::SetResultsSoFar</definition>
+        <argsstring>(long Number_, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;ResultsSoFar_)=0</argsstring>
+        <name>SetResultsSoFar</name>
+        <reimplementedby refid="classStatGathering_1_1StatisticsMean_19b574a960041288be6bf2892133252e7">SetResultsSoFar</reimplementedby>
+        <reimplementedby refid="classStatGathering_1_1ConvergenceTable_184375f0e4ec9925ae1c0575ac3d15075">SetResultsSoFar</reimplementedby>
+        <param>
+          <type>long</type>
+          <declname>Number_</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>ResultsSoFar_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the results as supplied <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of results so far </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ResultsSoFar_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 2D vector of doubles, which gives the relevant structure of the results (this structure is not specified in this base class) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatGathering_1_1StatisticsMC_1ddb9cc20ac28892097e902286c5204bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>virtual std::vector&lt;std::vector&lt;double&gt; &gt; StatGathering::StatisticsMC::GetResultsSoFar</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetResultsSoFar</name>
+        <reimplementedby refid="classStatGathering_1_1StatisticsMean_19345a3844d530b36af1e10a1e1310f1b">GetResultsSoFar</reimplementedby>
+        <reimplementedby refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819">GetResultsSoFar</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a suitably structured 2D vector of the results so far This base class does not specify the structure to return </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for statistics gatherer for a Monte Carlo integrator based on code from Joshi &apos;C++ Design Patterns and Derivatives Pricing&apos;</para><para>This base class is pure virtual, defines an interface to interact with the statistics gatherer This represents one &apos;point&apos;: each point is filled with a single double, but can return a 2D vector with information about its results. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="77">
+        <label>StatGathering::ConvergenceTable</label>
+        <link refid="classStatGathering_1_1ConvergenceTable"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>StatGathering::StatisticsMean</label>
+        <link refid="classStatGathering_1_1StatisticsMean"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>StatGathering::StatisticsMC</label>
+        <link refid="classStatGathering_1_1StatisticsMC"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.h" bodystart="17" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classStatGathering_1_1StatisticsMC_1aac13c0a41a374bec47c67afc59a0182" prot="public" virt="pure-virtual"><scope>StatGathering::StatisticsMC</scope><name>AddOneResult</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_13f706f03424b931973415b8723127cad" prot="public" virt="pure-virtual"><scope>StatGathering::StatisticsMC</scope><name>AddOneSetOfResults</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_1cfcf6abd6e973c00e5f31a79496233e0" prot="public" virt="pure-virtual"><scope>StatGathering::StatisticsMC</scope><name>clone</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_1ddb9cc20ac28892097e902286c5204bb" prot="public" virt="pure-virtual"><scope>StatGathering::StatisticsMC</scope><name>GetResultsSoFar</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_143259c270bbf6b23620252f11a155812" prot="public" virt="pure-virtual"><scope>StatGathering::StatisticsMC</scope><name>Reset</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_1b97a4292be61cff81425390f1fbed69c" prot="public" virt="pure-virtual"><scope>StatGathering::StatisticsMC</scope><name>SetResultsSoFar</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_1e5f00cda87f14f55cef6914e26b9ef67" prot="public" virt="non-virtual"><scope>StatGathering::StatisticsMC</scope><name>StatisticsMC</name></member>
+      <member refid="classStatGathering_1_1StatisticsMC_11bd9450c20d37ee3954207df031b3619" prot="public" virt="virtual"><scope>StatGathering::StatisticsMC</scope><name>~StatisticsMC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="qperpcalculator1_8h" kind="file">
+    <compoundname>qperpcalculator1.h</compoundname>
+    <includes local="no">boost/array.hpp</includes>
+    <includes refid="sw__templatemeta_8h" local="yes">../sw_templatemeta.h</includes>
+    <includes refid="Arrays_8h" local="yes">../Arrays.h</includes>
+    <includes refid="qperparraynew_8h" local="yes">../glv1/qperparraynew.h</includes>
+    <includedby refid="main_8cpp" local="yes">Gyulassy/opacity3/src/main.cpp</includedby>
+    <includedby refid="main__qperptest_8cpp" local="yes">Gyulassy/opacity3/src/main_qperptest.cpp</includedby>
+    <incdepgraph>
+      <node id="242">
+        <label>valarray</label>
+      </node>
+      <node id="237">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1.h"/>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>../Arrays.h</label>
+        <link refid="Arrays_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>../sw_templatemeta.h</label>
+        <link refid="sw__templatemeta_8h"/>
+      </node>
+      <node id="243">
+        <label>../glv1/qperparraynew.h</label>
+        <link refid="qperparraynew_8h"/>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>boost/array.hpp</label>
+      </node>
+      <node id="241">
+        <label>boost/multi_array.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="244">
+        <label>Gyulassy/opacity3/src/glv3/qperpcalculator1.h</label>
+        <link refid="qperpcalculator1.h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>Gyulassy/opacity3/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="246">
+        <label>Gyulassy/opacity3/src/main_qperptest.cpp</label>
+        <link refid="main__qperptest_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classQperpCalculator1" prot="public">QperpCalculator1</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>Interface:<sp/>qperpcalculator1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>A<sp/>wrapper<sp/>to<sp/>use<sp/>the<sp/>old<sp/>version<sp/>of<sp/>QperpCalculator<sp/>in<sp/>the<sp/>new<sp/>GlvRadiative3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Simon<sp/>Wicks<sp/>&lt;simonw@phys.columbia.edu&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>QPERPCALCULATOR1_H</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>QPERPCALCULATOR1_H</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/array.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../sw_templatemeta.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Arrays.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../glv1/qperparraynew.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n&gt;</highlight></codeline>
+<codeline lineno="26" refid="classQperpCalculator1" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classQperpCalculator1" kindref="compound">QperpCalculator1</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator" kindref="compound">QperpCalculator</ref><sp/><ref refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" kindref="member">qperps</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classQperpCalculator1_162d4c288d896be6c8d6ee03f4b122665" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classQperpCalculator1_162d4c288d896be6c8d6ee03f4b122665" kindref="member">QperpCalculator1</ref>()<sp/>:<sp/><ref refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" kindref="member">qperps</ref>(<sp/>n,<sp/>true<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classQperpCalculator1_107e6f5eb6dd5e344305c07f1255f4054" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator1_107e6f5eb6dd5e344305c07f1255f4054" kindref="member">SetK</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>k<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" kindref="member">qperps</ref>.<ref refid="classQperpCalculator_183253dd333b2c68cfab6b403f1b59024" kindref="member" tooltip="Set the magnitude of the k vector (direction is always in fixed direction).">SetK</ref>(<sp/>k<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator1_19684f8695883289e81e64987bdd0ee86" kindref="member">SetQsThetas</ref>(<sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Qs,<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::array&lt;double,<sp/>n&gt;&amp;<sp/>Thetas<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" kindref="member">SwArrays::MyArray</ref><sp/>qs1(n),<sp/>thetas1(n);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>std::size_t<sp/>i=0;<sp/>i&lt;n;<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>qs1[i]<sp/>=<sp/>Qs[i];<sp/>thetas1[i]<sp/>=<sp/>Thetas[i];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" kindref="member">qperps</ref>.<ref refid="classQperpCalculator_15161016f7562736d9de2ddbd71d64c3e" kindref="member" tooltip="Set the input array of q-vectors, ths is relative to the fixed direction of k.">SetQperps</ref>(<sp/>qs1,<sp/>thetas1<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classQperpCalculator1_1a5f0139d8b09dc996ee4cd50e456e41d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator1_1a5f0139d8b09dc996ee4cd50e456e41d" kindref="member">GetSumQskk</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="53"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" kindref="member">qperps</ref>.<ref refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" kindref="member" tooltip="Retrieve the result - sum of q_i.q_j from i to (n+1), j to (n+1) including k.q_i...">GetSumQiQj</ref>(<sp/>m,<sp/>m,<sp/>zeroes<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classQperpCalculator1_13789dabfb5de70d79b7a1cdba1e24959" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator1_13789dabfb5de70d79b7a1cdba1e24959" kindref="member">GetSumQs1k</ref>(<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>zeroes<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="58"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classQperpCalculator1_15d184d6ef996ea0a07359ffd6680fead" kindref="member">qperps</ref>.<ref refid="classQperpCalculator_1dcc7f0c758be4911f5599b349d0fe9d1" kindref="member" tooltip="Retrieve the result - sum of q_i.q_j from i to (n+1), j to (n+1) including k.q_i...">GetSumQiQj</ref>(<sp/>1,<sp/>m,<sp/>zeroes<sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/qperpcalculator1.h"/>
+  </compounddef>
+</doxygen>

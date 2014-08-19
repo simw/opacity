@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="namespaceStatGathering" kind="namespace">
+    <compoundname>StatGathering</compoundname>
+    <innerclass refid="classStatGathering_1_1ConvergenceTable" prot="public">StatGathering::ConvergenceTable</innerclass>
+    <innerclass refid="classStatGathering_1_1StatisticsMC" prot="public">StatGathering::StatisticsMC</innerclass>
+    <innerclass refid="classStatGathering_1_1StatisticsMean" prot="public">StatGathering::StatisticsMean</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceStatGathering_1571c4a864b3e5d6ed6047901f8634376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; StatGathering::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const ConvergenceTable &amp;conTab)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref> &amp;</type>
+          <declname>conTab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outputs the table to the stream in the format: &quot;Mean SD Number&quot; for each of the powers of Increment passed so far, in reverse order (ie the final answer comes first, works down to smaller numbers) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" line="122" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="121" bodyend="151"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_16cd7612fa109159ae022555ae84e5819" compoundref="convergencetable_8cpp" startline="101" endline="117">StatGathering::ConvergenceTable::GetResultsSoFar</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">StatGathering::ConvergenceTable::Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1ef826049ffb2f090e32ce4fc9ef938d6" compoundref="convergencetable_8h" startline="64">StatGathering::ConvergenceTable::MaxSets</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceStatGathering_194a944fd3996cb074c86c6334df181fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; StatGathering::operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, ConvergenceTable &amp;conTab)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref> &amp;</type>
+          <declname>conTab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" line="155" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" bodystart="154" bodyend="184"/>
+        <references refid="classStatGathering_1_1ConvergenceTable_1b99be7bacbf89cba47df756ed0d812ed" compoundref="convergencetable_8h" startline="51">StatGathering::ConvergenceTable::Inner</references>
+        <references refid="classStatGathering_1_1ConvergenceTable_1dcdd069c71f99f821810c271b59f637d" compoundref="convergencetable_8h" startline="56">StatGathering::ConvergenceTable::ResultsSoFar</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceStatGathering_1551658550a1c595b051a8879320c5f6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; StatGathering::operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, const ConvergenceTable &amp;conTab)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStatGathering_1_1ConvergenceTable" kindref="compound">ConvergenceTable</ref> &amp;</type>
+          <declname>conTab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.h" line="76"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceStatGathering_1633e5a7991e58ca433da34b4cd49ecd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; StatGathering::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const StatisticsMean &amp;stats)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classStatGathering_1_1StatisticsMean" kindref="compound">StatisticsMean</ref> &amp;</type>
+          <declname>stats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.cpp" line="74" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.cpp" bodystart="73" bodyend="82"/>
+        <references refid="classStatGathering_1_1StatisticsMean_19345a3844d530b36af1e10a1e1310f1b" compoundref="statisticsmc_8cpp" startline="55" endline="66">StatGathering::StatisticsMean::GetResultsSoFar</references>
+        <references refid="classStatGathering_1_1StatisticsMean_1dfb3e5a70ffbfd8cd7c9e7f1ccb28205" compoundref="statisticsmc_8h" startline="103">StatGathering::StatisticsMean::PathsDone</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceStatGathering_1b23aa5d15b648487f59543f3963cb3af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; StatGathering::operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, StatisticsMean &amp;stats)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classStatGathering_1_1StatisticsMean" kindref="compound">StatisticsMean</ref> &amp;</type>
+          <declname>stats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.cpp" line="85" bodyfile="/home/simon/Gyulassy/opacity3/src/store2d/statisticsmc.cpp" bodystart="84" bodyend="100"/>
+        <references refid="classStatGathering_1_1StatisticsMean_19b574a960041288be6bf2892133252e7" compoundref="statisticsmc_8cpp" startline="48" endline="53">StatGathering::StatisticsMean::SetResultsSoFar</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/store2d/convergencetable.cpp" line="8"/>
+  </compounddef>
+</doxygen>

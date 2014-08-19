@@ -1,0 +1,38 @@
+\section{Gyulassy/opacity3/src/glv3/qperpcalculator3.h File Reference}
+\label{qperpcalculator3_8h}\index{Gyulassy/opacity3/src/glv3/qperpcalculator3.h@{Gyulassy/opacity3/src/glv3/qperpcalculator3.h}}
+{\tt \#include \char`\"{}../sw\_\-templatemeta.h\char`\"{}}\par
+{\tt \#include \char`\"{}../constants.h\char`\"{}}\par
+{\tt \#include $<$boost/array.hpp$>$}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class {\bf QperpCalculator3$<$ n $>$}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\footnotesize template$<$std::size\_\-t n$>$ }\\void {\bf \_\-Convert2DPolarToCartesian} (boost::array$<$ double, n $>$ \&qs, boost::array$<$ double, n $>$ \&thetas, boost::array$<$ double, n $>$ \&qxs, boost::array$<$ double, n $>$ \&qys)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{qperpcalculator3.h@{qperpcalculator3.h}!_Convert2DPolarToCartesian@{\_\-Convert2DPolarToCartesian}}
+\index{_Convert2DPolarToCartesian@{\_\-Convert2DPolarToCartesian}!qperpcalculator3.h@{qperpcalculator3.h}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void \_\-Convert2DPolarToCartesian (boost::array$<$ double, n $>$ \& {\em qs}, boost::array$<$ double, n $>$ \& {\em thetas}, boost::array$<$ double, n $>$ \& {\em qxs}, boost::array$<$ double, n $>$ \& {\em qys})\hspace{0.3cm}{\tt  [inline]}}\label{qperpcalculator3_8h_38b5c4a624794a33b769d0bb04732f4b}
+
+
+
+
+Definition at line 20 of file qperpcalculator3.h.
+
+\begin{Code}\begin{verbatim}22 {
+23   for ( std::size_t i=0; i<n; ++i )
+24   {
+25     qxs[i] = qs[i] * cos( thetas[i] );
+26     qys[i] = qs[i] * sin( thetas[i] );
+27   }
+28 }
+\end{verbatim}
+\end{Code}
+
+

@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="classGlvRadiative3" kind="class" prot="public">
+    <compoundname>GlvRadiative3</compoundname>
+    <includes refid="glvradiative3_8h" local="no">glvradiative3.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TqperpGenerate</declname>
+        <defname>TqperpGenerate</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TqperpCalculate</declname>
+        <defname>TqperpCalculate</defname>
+      </param>
+      <param>
+        <type>std::size_t</type>
+        <declname>numOfRandoms</declname>
+        <defname>numOfRandoms</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classGlvRadiative3_157271411b03571187a3d52850c597daa" prot="private" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <initializer> numOfRandoms/2</initializer>
+        <briefdescription>
+<para>The order in opacity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="69" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" compoundref="glvradiative3_8h" startline="334" endline="377">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classGlvRadiative3_1ba2f10c5132695a0202bc7cf15bf5dd5" compoundref="glvradiative3_8h" startline="393" endline="401">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Summation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGlvRadiative3_1672c234a19c28357551867189ba1b674" prot="private" static="no" mutable="no">
+        <type>TqperpGenerate</type>
+        <definition>TqperpGenerate GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpgen</definition>
+        <argsstring></argsstring>
+        <name>qpgen</name>
+        <briefdescription>
+<para>Takes given uniform random numbers [0,1), gives q_perp vectors (polar coords). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="72" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" compoundref="glvradiative3_8h" startline="289" endline="297">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1068b85dfeb1f4e5bdba73f715a5e92e0" prot="private" static="no" mutable="no">
+        <type>TqperpCalculate</type>
+        <definition>TqperpCalculate GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpcalc</definition>
+        <argsstring></argsstring>
+        <name>qpcalc</name>
+        <briefdescription>
+<para>Takes q_perp vectors, calculates sum q_i.q_j&apos;s as necessary. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="74" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1df51b9aa368c70ca9bd499d3626dd915" compoundref="glvradiative3_8h" startline="380" endline="390">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::CdotB</referencedby>
+        <referencedby refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" compoundref="glvradiative3_8h" startline="334" endline="377">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+        <referencedby refid="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" compoundref="glvradiative3_8h" startline="289" endline="297">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1873d93a77c8fb9de27a565d66a5b3f72" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mass2</definition>
+        <argsstring></argsstring>
+        <name>_mass2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="77" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_19170dfb3ff2aa463bd45f680b7a2f94a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mg2</definition>
+        <argsstring></argsstring>
+        <name>_mg2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="78" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_10ffb4c2344a9b8e0756eb270840e49c7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_en</definition>
+        <argsstring></argsstring>
+        <name>_en</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="79" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1301c98d47b7989549718874cf54c4cd8" compoundref="glvradiative3_8h" startline="306" endline="331">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetKmax</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" compoundref="glvradiative3_8h" startline="289" endline="297">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1b7ef58300105bf2d68d55dda3f15adba" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_overEn</definition>
+        <argsstring></argsstring>
+        <name>_overEn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="80" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1b55f4fa5d6a1b8869576a2bd613f2a87" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_length</definition>
+        <argsstring></argsstring>
+        <name>_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="81" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" compoundref="glvradiative3_8h" startline="334" endline="377">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_12c868d312bf0863c677fff5af6e0ebcd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_cr</definition>
+        <argsstring></argsstring>
+        <name>_cr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="82" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_11bbde086c82e12ff3e6624018199d82b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_alphas</definition>
+        <argsstring></argsstring>
+        <name>_alphas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="83" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_16f4a4b67f66a27c4ed1a60972186e16c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_gluonlambda</definition>
+        <argsstring></argsstring>
+        <name>_gluonlambda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="84" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_19ea62756fbb4b412cc3913b0064d7cb4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_temperature</definition>
+        <argsstring></argsstring>
+        <name>_temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="85" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" compoundref="glvradiative3_8h" startline="289" endline="297">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1820ab1ecbd362382185a8744a52be3cd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mu</definition>
+        <argsstring></argsstring>
+        <name>_mu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="86" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+        <referencedby refid="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" compoundref="glvradiative3_8h" startline="289" endline="297">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetRandoms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_179e59619d67184e9fe763fa1bc4947a9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_dglvBeta</definition>
+        <argsstring></argsstring>
+        <name>_dglvBeta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="88" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1df51b9aa368c70ca9bd499d3626dd915" compoundref="glvradiative3_8h" startline="380" endline="390">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::CdotB</referencedby>
+        <referencedby refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" compoundref="glvradiative3_8h" startline="334" endline="377">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_13363c3e9629bc2c1a59715c623e9b0e6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_inteferenceFrac</definition>
+        <argsstring></argsstring>
+        <name>_inteferenceFrac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="89" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" compoundref="glvradiative3_8h" startline="334" endline="377">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1216f62058f730c849d889bbbf730fe0c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_x</definition>
+        <argsstring></argsstring>
+        <name>_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="90" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1301c98d47b7989549718874cf54c4cd8" compoundref="glvradiative3_8h" startline="306" endline="331">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetKmax</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_11071160ec22c9104b5fa7b263ac28e0a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_overx</definition>
+        <argsstring></argsstring>
+        <name>_overx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="91" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1f157d00336d4e4fce5ec48e194a8da3e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_k</definition>
+        <argsstring></argsstring>
+        <name>_k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="92" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_17e07011efe2ae56f9967336f828adaa5" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_switchkmax</definition>
+        <argsstring></argsstring>
+        <name>_switchkmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="94" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1301c98d47b7989549718874cf54c4cd8" compoundref="glvradiative3_8h" startline="306" endline="331">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetKmax</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_1651b6ac387d5e6c45722f0a0a0a0b5f5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_abovekmax</definition>
+        <argsstring></argsstring>
+        <name>_abovekmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="95" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classGlvRadiative3_171e7abf4abd302533ddfc5fb499c7772" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_diffexclude</definition>
+        <argsstring></argsstring>
+        <name>_diffexclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="97" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+        <referencedby refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" compoundref="glvradiative3_8h" startline="152" endline="257">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGlvRadiative3_1301c98d47b7989549718874cf54c4cd8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetKmax</definition>
+        <argsstring>() const </argsstring>
+        <name>GetKmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>As the GLV calculation only strictly applies for x&lt;&lt;1 and collinear, eikonal radiation, a rough kinematic cutoff has to be applied to the k integration. The Monte Carlo might not know about this when supplying (x,k) pairs, so we need to simply return 0 for these. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="104" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="306" bodyend="331"/>
+        <references refid="classGlvRadiative3_10ffb4c2344a9b8e0756eb270840e49c7" compoundref="glvradiative3_8h" startline="79">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_en</references>
+        <references refid="classGlvRadiative3_17e07011efe2ae56f9967336f828adaa5" compoundref="glvradiative3_8h" startline="94">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_switchkmax</references>
+        <references refid="classGlvRadiative3_1216f62058f730c849d889bbbf730fe0c" compoundref="glvradiative3_8h" startline="90">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_x</references>
+        <referencedby refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" compoundref="glvradiative3_8h" startline="260" endline="286">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</definition>
+        <argsstring>(long m, long zeroes) const </argsstring>
+        <name>Interference</name>
+        <param>
+          <type>long</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An interference term. In the correlated case, this is a bunch of cosines. But in this special case when the scatters are &apos;uncorrelated&apos; and distributed exp(-L/lambda), this gives a simpler form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="109" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="334" bodyend="377"/>
+        <references refid="classGlvRadiative3_179e59619d67184e9fe763fa1bc4947a9" compoundref="glvradiative3_8h" startline="88">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_dglvBeta</references>
+        <references refid="classGlvRadiative3_13363c3e9629bc2c1a59715c623e9b0e6" compoundref="glvradiative3_8h" startline="89">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_inteferenceFrac</references>
+        <references refid="classGlvRadiative3_1b55f4fa5d6a1b8869576a2bd613f2a87" compoundref="glvradiative3_8h" startline="81">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_length</references>
+        <references refid="classGlvRadiative3_157271411b03571187a3d52850c597daa" compoundref="glvradiative3_8h" startline="69">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::n</references>
+        <references refid="classGlvRadiative3_1068b85dfeb1f4e5bdba73f715a5e92e0" compoundref="glvradiative3_8h" startline="74">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpcalc</references>
+        <referencedby refid="classGlvRadiative3_1ba2f10c5132695a0202bc7cf15bf5dd5" compoundref="glvradiative3_8h" startline="393" endline="401">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Summation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_1df51b9aa368c70ca9bd499d3626dd915" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::CdotB</definition>
+        <argsstring>(long m, long zeroes) const </argsstring>
+        <name>CdotB</name>
+        <param>
+          <type>long</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+<para>The GLV CdotB. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="111" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="380" bodyend="390"/>
+        <references refid="classGlvRadiative3_179e59619d67184e9fe763fa1bc4947a9" compoundref="glvradiative3_8h" startline="88">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_dglvBeta</references>
+        <references refid="classGlvRadiative3_1068b85dfeb1f4e5bdba73f715a5e92e0" compoundref="glvradiative3_8h" startline="74">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpcalc</references>
+        <referencedby refid="classGlvRadiative3_1ba2f10c5132695a0202bc7cf15bf5dd5" compoundref="glvradiative3_8h" startline="393" endline="401">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Summation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_1ba2f10c5132695a0202bc7cf15bf5dd5" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Summation</definition>
+        <argsstring>(long mmin, long zeroes) const </argsstring>
+        <name>Summation</name>
+        <param>
+          <type>long</type>
+          <declname>mmin</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>zeroes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls interference*cdotb multiple times, summing over all m values from mmin to n. The choice of mmin depends on whether we want to include the classical diffusion terms (which don&apos;t contribute to dN/dx, but do alter the shape of dN/dxdk). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="116" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="393" bodyend="401"/>
+        <references refid="classGlvRadiative3_1df51b9aa368c70ca9bd499d3626dd915" compoundref="glvradiative3_8h" startline="380" endline="390">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::CdotB</references>
+        <references refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" compoundref="glvradiative3_8h" startline="334" endline="377">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Interference</references>
+        <references refid="classGlvRadiative3_157271411b03571187a3d52850c597daa" compoundref="glvradiative3_8h" startline="69">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::n</references>
+        <referencedby refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</definition>
+        <argsstring>() const </argsstring>
+        <name>GetdNdxdk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The ultimate aim of this object - returning dN/dxdk Note that x and k are set in the &apos;SetCoord&apos; function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="120" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="404" bodyend="426"/>
+        <references refid="classGlvRadiative3_1651b6ac387d5e6c45722f0a0a0a0b5f5" compoundref="glvradiative3_8h" startline="95">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_abovekmax</references>
+        <references refid="classGlvRadiative3_11bbde086c82e12ff3e6624018199d82b" compoundref="glvradiative3_8h" startline="83">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_alphas</references>
+        <references refid="classGlvRadiative3_12c868d312bf0863c677fff5af6e0ebcd" compoundref="glvradiative3_8h" startline="82">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_cr</references>
+        <references refid="classGlvRadiative3_171e7abf4abd302533ddfc5fb499c7772" compoundref="glvradiative3_8h" startline="97">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_diffexclude</references>
+        <references refid="namespaceSwUtils_13bf3423904e7b04ce19649b33bb7de77" compoundref="constants_8h" startline="14" endline="20">SwUtils::_factorial</references>
+        <references refid="classGlvRadiative3_16f4a4b67f66a27c4ed1a60972186e16c" compoundref="glvradiative3_8h" startline="84">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_gluonlambda</references>
+        <references refid="classGlvRadiative3_1f157d00336d4e4fce5ec48e194a8da3e" compoundref="glvradiative3_8h" startline="92">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_k</references>
+        <references refid="classGlvRadiative3_1b55f4fa5d6a1b8869576a2bd613f2a87" compoundref="glvradiative3_8h" startline="81">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_length</references>
+        <references refid="classGlvRadiative3_11071160ec22c9104b5fa7b263ac28e0a" compoundref="glvradiative3_8h" startline="91">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_overx</references>
+        <references refid="classGlvRadiative3_157271411b03571187a3d52850c597daa" compoundref="glvradiative3_8h" startline="69">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::n</references>
+        <references refid="glvradiative3_8h_1587fa85cc7ff0281ea1864c928c36cd5" compoundref="glvradiative3_8h" startline="25">overpi</references>
+        <references refid="classGlvRadiative3_1672c234a19c28357551867189ba1b674" compoundref="glvradiative3_8h" startline="72">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpgen</references>
+        <references refid="classGlvRadiative3_1ba2f10c5132695a0202bc7cf15bf5dd5" compoundref="glvradiative3_8h" startline="393" endline="401">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::Summation</references>
+        <referencedby refid="classGlvRadiative3_1ab8a7ddc9531d0336628fc6ba0ee42a4" compoundref="glvradiative3_8h" startline="300" endline="303">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetAnswer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGlvRadiative3_1ad9f095ab2cd3e6eae96af8f4a26fd2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GlvRadiative3</definition>
+        <argsstring>()</argsstring>
+        <name>GlvRadiative3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="123" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="145" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetParameters</definition>
+        <argsstring>(Parameters &amp;inParams)</argsstring>
+        <name>SetParameters</name>
+        <param>
+          <type><ref refid="classParameters" kindref="compound">Parameters</ref> &amp;</type>
+          <declname>inParams</declname>
+        </param>
+        <briefdescription>
+<para>Getting all the parameters for GLV from the input file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="126" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="152" bodyend="257"/>
+        <references refid="classGlvRadiative3_11bbde086c82e12ff3e6624018199d82b" compoundref="glvradiative3_8h" startline="83">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_alphas</references>
+        <references refid="classGlvRadiative3_12c868d312bf0863c677fff5af6e0ebcd" compoundref="glvradiative3_8h" startline="82">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_cr</references>
+        <references refid="classGlvRadiative3_171e7abf4abd302533ddfc5fb499c7772" compoundref="glvradiative3_8h" startline="97">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_diffexclude</references>
+        <references refid="classGlvRadiative3_10ffb4c2344a9b8e0756eb270840e49c7" compoundref="glvradiative3_8h" startline="79">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_en</references>
+        <references refid="classGlvRadiative3_16f4a4b67f66a27c4ed1a60972186e16c" compoundref="glvradiative3_8h" startline="84">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_gluonlambda</references>
+        <references refid="classGlvRadiative3_1b55f4fa5d6a1b8869576a2bd613f2a87" compoundref="glvradiative3_8h" startline="81">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_length</references>
+        <references refid="classGlvRadiative3_1873d93a77c8fb9de27a565d66a5b3f72" compoundref="glvradiative3_8h" startline="77">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mass2</references>
+        <references refid="classGlvRadiative3_19170dfb3ff2aa463bd45f680b7a2f94a" compoundref="glvradiative3_8h" startline="78">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mg2</references>
+        <references refid="classGlvRadiative3_1820ab1ecbd362382185a8744a52be3cd" compoundref="glvradiative3_8h" startline="86">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mu</references>
+        <references refid="classGlvRadiative3_1b7ef58300105bf2d68d55dda3f15adba" compoundref="glvradiative3_8h" startline="80">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_overEn</references>
+        <references refid="classGlvRadiative3_17e07011efe2ae56f9967336f828adaa5" compoundref="glvradiative3_8h" startline="94">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_switchkmax</references>
+        <references refid="classGlvRadiative3_19ea62756fbb4b412cc3913b0064d7cb4" compoundref="glvradiative3_8h" startline="85">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_temperature</references>
+        <references refid="classParameters_1ff7eee6fabcdbdc7908b595814537f37">Parameters::GetParametersDouble</references>
+        <references refid="classParameters_1840169a79f0cdd8217e29b3b25a6552d">Parameters::GetParametersLong</references>
+        <references refid="classParameters_1aad6541e5440beed7c65ac9062109cfe">Parameters::GetParametersString</references>
+        <references refid="classGlvRadiative3_157271411b03571187a3d52850c597daa" compoundref="glvradiative3_8h" startline="69">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::n</references>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetCoord</definition>
+        <argsstring>(long dimension, double value)</argsstring>
+        <name>SetCoord</name>
+        <param>
+          <type>long</type>
+          <declname>dimension</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setting x and k Note that setting x requires no recalculation of the q-vectors; setting k does need a little recalculation. Hence, iterating over x for fixed k will be more efficient than iterating over k for fixed x. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="132" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="260" bodyend="286"/>
+        <references refid="classGlvRadiative3_1651b6ac387d5e6c45722f0a0a0a0b5f5" compoundref="glvradiative3_8h" startline="95">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_abovekmax</references>
+        <references refid="classGlvRadiative3_179e59619d67184e9fe763fa1bc4947a9" compoundref="glvradiative3_8h" startline="88">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_dglvBeta</references>
+        <references refid="classGlvRadiative3_13363c3e9629bc2c1a59715c623e9b0e6" compoundref="glvradiative3_8h" startline="89">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_inteferenceFrac</references>
+        <references refid="classGlvRadiative3_1f157d00336d4e4fce5ec48e194a8da3e" compoundref="glvradiative3_8h" startline="92">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_k</references>
+        <references refid="classGlvRadiative3_1873d93a77c8fb9de27a565d66a5b3f72" compoundref="glvradiative3_8h" startline="77">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mass2</references>
+        <references refid="classGlvRadiative3_19170dfb3ff2aa463bd45f680b7a2f94a" compoundref="glvradiative3_8h" startline="78">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mg2</references>
+        <references refid="classGlvRadiative3_1b7ef58300105bf2d68d55dda3f15adba" compoundref="glvradiative3_8h" startline="80">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_overEn</references>
+        <references refid="classGlvRadiative3_11071160ec22c9104b5fa7b263ac28e0a" compoundref="glvradiative3_8h" startline="91">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_overx</references>
+        <references refid="classGlvRadiative3_1216f62058f730c849d889bbbf730fe0c" compoundref="glvradiative3_8h" startline="90">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_x</references>
+        <references refid="classGlvRadiative3_1301c98d47b7989549718874cf54c4cd8" compoundref="glvradiative3_8h" startline="306" endline="331">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetKmax</references>
+        <references refid="glvradiative3_8h_1212b6393a6fc6ddd24cb0f65432e7292" compoundref="glvradiative3_8h" startline="24">overhbarc</references>
+        <references refid="classGlvRadiative3_1068b85dfeb1f4e5bdba73f715a5e92e0" compoundref="glvradiative3_8h" startline="74">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpcalc</references>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::SetRandoms</definition>
+        <argsstring>(boost::array&lt; double, numOfRandoms &gt; &amp;randomNumbers)</argsstring>
+        <name>SetRandoms</name>
+        <param>
+          <type>boost::array&lt; double, numOfRandoms &gt; &amp;</type>
+          <declname>randomNumbers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pass in random number distributed from [0,1), use them to set Q and Theta as necessary. This uses the TqperpGenerator object to convert into [0,qmax), then uses TqperpCalculator to do all necessary calculation for this set of Qs and Thetas </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="137" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="289" bodyend="297"/>
+        <references refid="classGlvRadiative3_10ffb4c2344a9b8e0756eb270840e49c7" compoundref="glvradiative3_8h" startline="79">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_en</references>
+        <references refid="classGlvRadiative3_1820ab1ecbd362382185a8744a52be3cd" compoundref="glvradiative3_8h" startline="86">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_mu</references>
+        <references refid="classGlvRadiative3_19ea62756fbb4b412cc3913b0064d7cb4" compoundref="glvradiative3_8h" startline="85">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::_temperature</references>
+        <references refid="classGlvRadiative3_1068b85dfeb1f4e5bdba73f715a5e92e0" compoundref="glvradiative3_8h" startline="74">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpcalc</references>
+        <references refid="classGlvRadiative3_1672c234a19c28357551867189ba1b674" compoundref="glvradiative3_8h" startline="72">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::qpgen</references>
+      </memberdef>
+      <memberdef kind="function" id="classGlvRadiative3_1ab8a7ddc9531d0336628fc6ba0ee42a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetAnswer</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;answers) const </argsstring>
+        <name>GetAnswer</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>answers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="classDriver" kindref="compound">Driver</ref> calls GetAnswer, to fill a vector of results. Here, this just inlines to call the private function <ref refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" kindref="member">GetdNdxdk()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="141" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="300" bodyend="303"/>
+        <references refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" compoundref="glvradiative3_8h" startline="404" endline="426">GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;::GetdNdxdk</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Simon Wicks &lt;<ulink url="mailto:simonw@phys.columbia.edu">simonw@phys.columbia.edu</ulink>&gt; Radiative energy loss from Gyulassy-Levai-Vitev, to multiple orders in opacity This object fits into the interface of &apos;Driver&apos;. It calculates the result for GLV multiple orders in opacity, with the restrictions: 1) fixed temperature medium 2) uncorrelated scattering, with exponential decay distribution between them</para></simplesect>
+In order to allow for testing different various different methods of calculating the necessary q_perp vectors and their necessary dot products, this class is templatized to allow the dropping in at compile time of different classes to do these tasks.</para><para>Template parameters: TqperpGenerate: takes uniform random numbers supplied, converts them into numbers distributed from 0 to q_max, with a &apos;weight&apos; given to correspond to the Gyulassy-Wang collision distribution (or other). The produced randoms can be uniformly distributed from 0 to q_max with Yukawa weights, or Yukawa weighted from 0 to q_max with a weight of 1, or some other choice. This object has the interface: .SetParameters( temperature, jet energy, debye mu ) .GetQsThetas( boost::array&lt;double, numOfRandoms&gt;&amp; randoms, boost::array&lt;double, n&gt;&amp; Qs, boost::array&lt;double, n&gt;&amp; Thetas ) .GetQsEventWeight( long i )</para><para>TqperpCalculate: takes the 2D q_perp vectors in polar coords, finds all necessary dot products needed for the GLV calculation. This has the interface: .SetK( double k ) .SetQsThetas( boost::array&lt;double, n&gt;&amp; Qs, boost::array&lt;double, n&gt;&amp; Thetas ) double .GetSumQskk( long k, long zeroes ) double .GetSumQs1k( long k, long zeroes )</para><para>numOfRandoms: the number of random numbers needed to produce the result (note that the order in opacity is not numOfRandoms, it&apos;s given by n - defined below) </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="23">
+        <label>TqperpGenerate</label>
+      </node>
+      <node id="24">
+        <label>TqperpCalculate</label>
+      </node>
+      <node id="22">
+        <label>GlvRadiative3&lt; TqperpGenerate, TqperpCalculate, numOfRandoms &gt;</label>
+        <link refid="classGlvRadiative3"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>qpgen</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>qpcalc</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" line="65" bodyfile="/home/simon/Gyulassy/opacity3/src/glv3/glvradiative3.h" bodystart="64" bodyend="142"/>
+    <listofallmembers>
+      <member refid="classGlvRadiative3_1651b6ac387d5e6c45722f0a0a0a0b5f5" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_abovekmax</name></member>
+      <member refid="classGlvRadiative3_11bbde086c82e12ff3e6624018199d82b" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_alphas</name></member>
+      <member refid="classGlvRadiative3_12c868d312bf0863c677fff5af6e0ebcd" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_cr</name></member>
+      <member refid="classGlvRadiative3_179e59619d67184e9fe763fa1bc4947a9" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_dglvBeta</name></member>
+      <member refid="classGlvRadiative3_171e7abf4abd302533ddfc5fb499c7772" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_diffexclude</name></member>
+      <member refid="classGlvRadiative3_10ffb4c2344a9b8e0756eb270840e49c7" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_en</name></member>
+      <member refid="classGlvRadiative3_16f4a4b67f66a27c4ed1a60972186e16c" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_gluonlambda</name></member>
+      <member refid="classGlvRadiative3_13363c3e9629bc2c1a59715c623e9b0e6" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_inteferenceFrac</name></member>
+      <member refid="classGlvRadiative3_1f157d00336d4e4fce5ec48e194a8da3e" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_k</name></member>
+      <member refid="classGlvRadiative3_1b55f4fa5d6a1b8869576a2bd613f2a87" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_length</name></member>
+      <member refid="classGlvRadiative3_1873d93a77c8fb9de27a565d66a5b3f72" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_mass2</name></member>
+      <member refid="classGlvRadiative3_19170dfb3ff2aa463bd45f680b7a2f94a" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_mg2</name></member>
+      <member refid="classGlvRadiative3_1820ab1ecbd362382185a8744a52be3cd" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_mu</name></member>
+      <member refid="classGlvRadiative3_1b7ef58300105bf2d68d55dda3f15adba" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_overEn</name></member>
+      <member refid="classGlvRadiative3_11071160ec22c9104b5fa7b263ac28e0a" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_overx</name></member>
+      <member refid="classGlvRadiative3_17e07011efe2ae56f9967336f828adaa5" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_switchkmax</name></member>
+      <member refid="classGlvRadiative3_19ea62756fbb4b412cc3913b0064d7cb4" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_temperature</name></member>
+      <member refid="classGlvRadiative3_1216f62058f730c849d889bbbf730fe0c" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>_x</name></member>
+      <member refid="classGlvRadiative3_1df51b9aa368c70ca9bd499d3626dd915" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>CdotB</name></member>
+      <member refid="classGlvRadiative3_1ab8a7ddc9531d0336628fc6ba0ee42a4" prot="public" virt="non-virtual"><scope>GlvRadiative3</scope><name>GetAnswer</name></member>
+      <member refid="classGlvRadiative3_1b2cc7e384f21ea2a73e7d5d0da53ef5b" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>GetdNdxdk</name></member>
+      <member refid="classGlvRadiative3_1301c98d47b7989549718874cf54c4cd8" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>GetKmax</name></member>
+      <member refid="classGlvRadiative3_1ad9f095ab2cd3e6eae96af8f4a26fd2b" prot="public" virt="non-virtual"><scope>GlvRadiative3</scope><name>GlvRadiative3</name></member>
+      <member refid="classGlvRadiative3_1207048cfa0d9458af7d1547e5c7c25b7" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>Interference</name></member>
+      <member refid="classGlvRadiative3_157271411b03571187a3d52850c597daa" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>n</name></member>
+      <member refid="classGlvRadiative3_1068b85dfeb1f4e5bdba73f715a5e92e0" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>qpcalc</name></member>
+      <member refid="classGlvRadiative3_1672c234a19c28357551867189ba1b674" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>qpgen</name></member>
+      <member refid="classGlvRadiative3_17bf0a167acbea5cd64c7070fb0714af5" prot="public" virt="non-virtual"><scope>GlvRadiative3</scope><name>SetCoord</name></member>
+      <member refid="classGlvRadiative3_14580df54010ce57c315d0b275b92cc49" prot="public" virt="non-virtual"><scope>GlvRadiative3</scope><name>SetParameters</name></member>
+      <member refid="classGlvRadiative3_1e49ec4e38b4da202be6f1636c07503bd" prot="public" virt="non-virtual"><scope>GlvRadiative3</scope><name>SetRandoms</name></member>
+      <member refid="classGlvRadiative3_1ba2f10c5132695a0202bc7cf15bf5dd5" prot="private" virt="non-virtual"><scope>GlvRadiative3</scope><name>Summation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

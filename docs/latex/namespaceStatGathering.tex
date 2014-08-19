@@ -1,0 +1,179 @@
+\section{StatGathering Namespace Reference}
+\label{namespaceStatGathering}\index{StatGathering@{StatGathering}}
+
+
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class {\bf ConvergenceTable}
+\item 
+class {\bf StatisticsMC}
+\item 
+class {\bf StatisticsMean}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+std::ostream \& {\bf operator$<$$<$} (std::ostream \&out, const {\bf ConvergenceTable} \&conTab)
+\item 
+std::istream \& {\bf operator$>$$>$} (std::istream \&in, {\bf ConvergenceTable} \&conTab)
+\item 
+std::istream \& {\bf operator$>$$>$} (std::istream \&in, const {\bf ConvergenceTable} \&conTab)
+\item 
+std::ostream \& {\bf operator$<$$<$} (std::ostream \&out, const {\bf StatisticsMean} \&stats)
+\item 
+std::istream \& {\bf operator$>$$>$} (std::istream \&in, {\bf StatisticsMean} \&stats)
+\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{StatGathering@{StatGathering}!operator<<@{operator$<$$<$}}
+\index{operator<<@{operator$<$$<$}!StatGathering@{StatGathering}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& StatGathering::operator$<$$<$ (std::ostream \& {\em out}, const StatisticsMean \& {\em stats})}\label{namespaceStatGathering_633e5a7991e58ca433da34b4cd49ecd2}
+
+
+
+
+Definition at line 73 of file statisticsmc.cpp.
+
+References StatGathering::StatisticsMean::GetResultsSoFar(), and StatGathering::StatisticsMean::PathsDone.
+
+\begin{Code}\begin{verbatim}74 {
+75   std::vector<std::vector<double> > theResults = stats.GetResultsSoFar();
+76   double mean = theResults[0][0];
+77   double sd = theResults[0][1];
+78 
+79   out << mean << " " << sd << " " << stats.PathsDone;
+80 
+81   return ( out );
+82 }
+\end{verbatim}
+\end{Code}
+
+
+\index{StatGathering@{StatGathering}!operator<<@{operator$<$$<$}}
+\index{operator<<@{operator$<$$<$}!StatGathering@{StatGathering}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::ostream \& StatGathering::operator$<$$<$ (std::ostream \& {\em out}, const ConvergenceTable \& {\em conTab})}\label{namespaceStatGathering_571c4a864b3e5d6ed6047901f8634376}
+
+
+Outputs the table to the stream in the format: \char`\"{}Mean SD Number\char`\"{} for each of the powers of Increment passed so far, in reverse order (ie the final answer comes first, works down to smaller numbers) 
+
+Definition at line 121 of file convergencetable.cpp.
+
+References StatGathering::ConvergenceTable::GetResultsSoFar(), StatGathering::ConvergenceTable::Inner, and StatGathering::ConvergenceTable::MaxSets.
+
+\begin{Code}\begin{verbatim}122 {
+123   // First, send the Inner to the stream
+124   out << *( static_cast<const StatisticsMean*> ( conTab.Inner.GetConstPointer() ) );
+125 
+126   // Now, send the convergence table to the stream
+127   // One entry of this will duplicate the current state of the inner.
+128   // First, a separator
+129   out << " ,";
+130 
+131   // Get all the results from the convergence table
+132   std::vector<std::vector<double> > thisResult( conTab.GetResultsSoFar() );
+133   // What is the length of the array of results?
+134   long len = thisResult.size();
+135   // How many results are we going to write to the file?
+136   long imax; ( len > conTab.MaxSets ) ? imax = conTab.MaxSets : imax = len;
+137   
+138   // Now, print them to the stream
+139   out << " " << imax;
+140 
+141   long jmax;
+142   for ( long i=len-imax; i<len; ++i )
+143   {
+144     jmax = thisResult[i].size();
+145     out << " " << jmax;
+146     for ( long j=0; j<jmax; ++j )
+147       out << " " << thisResult[i][j];
+148   }
+149 
+150   return ( out );
+151 }
+\end{verbatim}
+\end{Code}
+
+
+\index{StatGathering@{StatGathering}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!StatGathering@{StatGathering}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::istream\& StatGathering::operator$>$$>$ (std::istream \& {\em in}, StatisticsMean \& {\em stats})}\label{namespaceStatGathering_b23aa5d15b648487f59543f3963cb3af}
+
+
+
+
+Definition at line 84 of file statisticsmc.cpp.
+
+References StatGathering::StatisticsMean::SetResultsSoFar().
+
+\begin{Code}\begin{verbatim}85 {
+86   std::vector<std::vector<double> > theResults( 1 );
+87   theResults[0].resize(2);
+88   unsigned long pathsDone;
+89 
+90   double mean;
+91   double sd;
+92 
+93   in >> mean >> sd >> pathsDone;
+94   theResults[0][0] = mean;
+95   theResults[0][1] = sd;
+96 
+97   stats.SetResultsSoFar( pathsDone, theResults );
+98  
+99   return ( in );
+100 }
+\end{verbatim}
+\end{Code}
+
+
+\index{StatGathering@{StatGathering}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!StatGathering@{StatGathering}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::istream\& StatGathering::operator$>$$>$ (std::istream \& {\em in}, const ConvergenceTable \& {\em conTab})}\label{namespaceStatGathering_551658550a1c595b051a8879320c5f6a}
+
+
+\index{StatGathering@{StatGathering}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!StatGathering@{StatGathering}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::istream\& StatGathering::operator$>$$>$ (std::istream \& {\em in}, ConvergenceTable \& {\em conTab})}\label{namespaceStatGathering_94a944fd3996cb074c86c6334df181fd}
+
+
+
+
+Definition at line 154 of file convergencetable.cpp.
+
+References StatGathering::ConvergenceTable::Inner, and StatGathering::ConvergenceTable::ResultsSoFar.
+
+\begin{Code}\begin{verbatim}155 {
+156   // First, read in the Inner
+157   in >> *( static_cast<StatisticsMean*> ( conTab.Inner.GetPointer() ) );
+158 
+159   // Now, restore the state of the convergence table
+160   // First, the separator
+161   std::string strTmp;
+162   in >> strTmp;
+163 
+164   std::vector<std::vector<double> > theResults;
+165   long len;
+166 
+167   // First, get the number of results that the convergence table is holding
+168   in >> len;
+169   theResults.resize( len );
+170 
+171   long jmax;
+172   // Now, iterate through each set
+173   for ( long i=0; i<len; ++i )
+174   {
+175     in >> jmax;
+176     theResults[i].resize( jmax );
+177     for ( long j=0; j<jmax; ++j )
+178       in >> theResults[i][j];
+179   }
+180 
+181   conTab.ResultsSoFar = theResults;
+182 
+183   return ( in );
+184 }
+\end{verbatim}
+\end{Code}
+
+

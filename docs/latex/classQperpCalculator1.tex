@@ -1,0 +1,156 @@
+\section{QperpCalculator1$<$ n $>$ Class Template Reference}
+\label{classQperpCalculator1}\index{QperpCalculator1@{QperpCalculator1}}
+{\tt \#include $<$qperpcalculator1.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf QperpCalculator1} ()
+\item 
+void {\bf SetK} (double k)
+\item 
+void {\bf SetQsThetas} (boost::array$<$ double, n $>$ \&Qs, boost::array$<$ double, n $>$ \&Thetas)
+\item 
+double {\bf GetSumQskk} (long m, long zeroes) const 
+\item 
+double {\bf GetSumQs1k} (long m, long zeroes) const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+{\bf QperpCalculator} {\bf qperps}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std::size\_\-t n$>$ class QperpCalculator1$<$ n $>$}
+
+\begin{Desc}
+\item[Author:]Simon Wicks $<${\tt simonw@phys.columbia.edu}$>$ A wrapper around the \doxyref{QperpCalculator}{p.}{classQperpCalculator} from the old version, version1, to use in the newer \doxyref{GlvRadiative3}{p.}{classGlvRadiative3} template calcaluation The interface necessary for \doxyref{GlvRadiative3}{p.}{classGlvRadiative3} is converted into the relevant calls for the old code. In this way, the old, tested qperpcalculator can be used in the newer code, to compare to results for any newer versions. \end{Desc}
+
+
+Definition at line 26 of file qperpcalculator1.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{QperpCalculator1@{QperpCalculator1}!QperpCalculator1@{QperpCalculator1}}
+\index{QperpCalculator1@{QperpCalculator1}!QperpCalculator1@{QperpCalculator1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ {\bf QperpCalculator1}$<$ n $>$::{\bf QperpCalculator1} ()\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator1_62d4c288d896be6c8d6ee03f4b122665}
+
+
+
+
+Definition at line 31 of file qperpcalculator1.h.
+
+\begin{Code}\begin{verbatim}31                      : qperps( n, true )
+32   {
+33 
+34   };
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{QperpCalculator1@{QperpCalculator1}!SetK@{SetK}}
+\index{SetK@{SetK}!QperpCalculator1@{QperpCalculator1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void {\bf QperpCalculator1}$<$ n $>$::SetK (double {\em k})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator1_07e6f5eb6dd5e344305c07f1255f4054}
+
+
+
+
+Definition at line 36 of file qperpcalculator1.h.
+
+References QperpCalculator1$<$ n $>$::qperps, and QperpCalculator::SetK().
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}37   {
+38     qperps.SetK( k );
+39   };
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator1@{QperpCalculator1}!SetQsThetas@{SetQsThetas}}
+\index{SetQsThetas@{SetQsThetas}!QperpCalculator1@{QperpCalculator1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ void {\bf QperpCalculator1}$<$ n $>$::SetQsThetas (boost::array$<$ double, n $>$ \& {\em Qs}, boost::array$<$ double, n $>$ \& {\em Thetas})\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator1_9684f8695883289e81e64987bdd0ee86}
+
+
+
+
+Definition at line 41 of file qperpcalculator1.h.
+
+References QperpCalculator1$<$ n $>$::qperps, and QperpCalculator::SetQperps().
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}43   {
+44     SwArrays::MyArray qs1(n), thetas1(n);
+45     for ( std::size_t i=0; i<n; ++i )
+46     {
+47       qs1[i] = Qs[i]; thetas1[i] = Thetas[i];
+48     }
+49     qperps.SetQperps( qs1, thetas1 );
+50   };
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator1@{QperpCalculator1}!GetSumQskk@{GetSumQskk}}
+\index{GetSumQskk@{GetSumQskk}!QperpCalculator1@{QperpCalculator1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpCalculator1}$<$ n $>$::GetSumQskk (long {\em m}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator1_a5f0139d8b09dc996ee4cd50e456e41d}
+
+
+
+
+Definition at line 52 of file qperpcalculator1.h.
+
+References QperpCalculator::GetSumQiQj(), and QperpCalculator1$<$ n $>$::qperps.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}53   {
+54     return qperps.GetSumQiQj( m, m, zeroes );
+55   };
+\end{verbatim}
+\end{Code}
+
+
+\index{QperpCalculator1@{QperpCalculator1}!GetSumQs1k@{GetSumQs1k}}
+\index{GetSumQs1k@{GetSumQs1k}!QperpCalculator1@{QperpCalculator1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ double {\bf QperpCalculator1}$<$ n $>$::GetSumQs1k (long {\em m}, long {\em zeroes}) const\hspace{0.3cm}{\tt  [inline]}}\label{classQperpCalculator1_3789dabfb5de70d79b7a1cdba1e24959}
+
+
+
+
+Definition at line 57 of file qperpcalculator1.h.
+
+References QperpCalculator::GetSumQiQj(), and QperpCalculator1$<$ n $>$::qperps.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}58   {
+59     return qperps.GetSumQiQj( 1, m, zeroes );
+60   };
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{QperpCalculator1@{QperpCalculator1}!qperps@{qperps}}
+\index{qperps@{qperps}!QperpCalculator1@{QperpCalculator1}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$std::size\_\-t n$>$ {\bf QperpCalculator} {\bf QperpCalculator1}$<$ n $>$::{\bf qperps}\hspace{0.3cm}{\tt  [private]}}\label{classQperpCalculator1_5d184d6ef996ea0a07359ffd6680fead}
+
+
+
+
+Definition at line 29 of file qperpcalculator1.h.
+
+Referenced by QperpCalculator1$<$ n $>$::GetSumQs1k(), QperpCalculator1$<$ n $>$::GetSumQskk(), QperpCalculator1$<$ n $>$::SetK(), and QperpCalculator1$<$ n $>$::SetQsThetas().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv3/{\bf qperpcalculator1.h}\end{CompactItemize}

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.3">
+  <compounddef id="namespaceSwArrays" kind="namespace">
+    <compoundname>SwArrays</compoundname>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceSwArrays_1817a6066415ba9925ccc7d7574a4845b" prot="public" static="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>typedef std::vector&lt;double&gt; SwArrays::MyArray</definition>
+        <argsstring></argsstring>
+        <name>MyArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="10" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_1881ca55341231b8b9ab6eb1e3a000fdb" prot="public" static="no">
+        <type>std::valarray&lt; std::valarray&lt; double &gt; &gt;</type>
+        <definition>typedef std::valarray&lt;std::valarray&lt;double&gt; &gt; SwArrays::MyArray2D</definition>
+        <argsstring></argsstring>
+        <name>MyArray2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="11" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_1a711e1d51bc667c98e69285d33513165" prot="public" static="no">
+        <type>boost::multi_array&lt; double, 1 &gt;</type>
+        <definition>typedef boost::multi_array&lt;double, 1&gt; SwArrays::array1D</definition>
+        <argsstring></argsstring>
+        <name>array1D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="13" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_14b9e52c6a771e1a70faec52ed9fe1844" prot="public" static="no">
+        <type>array1D::index</type>
+        <definition>typedef array1D::index SwArrays::index1D</definition>
+        <argsstring></argsstring>
+        <name>index1D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="14" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_12293a5bb6167b46d4664971dffad0f90" prot="public" static="no">
+        <type>boost::multi_array&lt; double, 2 &gt;</type>
+        <definition>typedef boost::multi_array&lt;double, 2&gt; SwArrays::array2D</definition>
+        <argsstring></argsstring>
+        <name>array2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="15" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_1491d8b119a7cdd28afdaa75447460abf" prot="public" static="no">
+        <type>array2D::index</type>
+        <definition>typedef array2D::index SwArrays::index2D</definition>
+        <argsstring></argsstring>
+        <name>index2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="16" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_143b0dd0a084045f231ca949f96ba5ea1" prot="public" static="no">
+        <type>boost::multi_array&lt; double, 3 &gt;</type>
+        <definition>typedef boost::multi_array&lt;double, 3&gt; SwArrays::array3D</definition>
+        <argsstring></argsstring>
+        <name>array3D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="17" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceSwArrays_143df59437e7dfa7838e5d23628e245b8" prot="public" static="no">
+        <type>array3D::index</type>
+        <definition>typedef array3D::index SwArrays::index3D</definition>
+        <argsstring></argsstring>
+        <name>index3D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="18" bodyfile="/home/simon/Gyulassy/opacity3/src/Arrays.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/simon/Gyulassy/opacity3/src/Arrays.h" line="8"/>
+  </compounddef>
+</doxygen>

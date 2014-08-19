@@ -1,0 +1,788 @@
+\section{RadCalcer Class Reference}
+\label{classRadCalcer}\index{RadCalcer@{RadCalcer}}
+{\tt \#include $<$radcalcer.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf RadCalcer} ({\bf Parameters} \&params\_\-, long opacity\_\-, bool correlated\_\-)
+\item 
+{\bf $\sim$RadCalcer} ()
+\item 
+void {\bf DistributeRandoms} (MyArray \&Randoms)
+\item 
+void {\bf SetXonly} (double x)
+\item 
+void {\bf SetKonly} (double k)
+\item 
+double {\bf Getkmax} () const 
+\item 
+void {\bf GetdNdk2dx} (MyArray \&results)
+\end{CompactItemize}
+\subsection*{Private Member Functions}
+\begin{CompactItemize}
+\item 
+double {\bf \_\-interference} (unsigned long m) const 
+\item 
+double {\bf \_\-interferenceExp} (unsigned long m) const 
+\item 
+double {\bf \_\-cdotb} (unsigned long m) const 
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+{\bf ZposGenerator} {\bf zDist}
+\item 
+{\bf QperpGenerator} {\bf qperps}
+\item 
+const long {\bf n}
+\item 
+double {\bf \_\-x}
+\item 
+double {\bf \_\-overx}
+\item 
+double {\bf \_\-k}
+\item 
+double {\bf \_\-en}
+\item 
+double {\bf \_\-mass}
+\item 
+double {\bf \_\-cr}
+\item 
+double {\bf \_\-temp}
+\item 
+double {\bf \_\-mg}
+\item 
+double {\bf \_\-lambda}
+\item 
+double {\bf \_\-length}
+\item 
+double {\bf \_\-alphas}
+\item 
+unsigned long {\bf \_\-switchkmax}
+\item 
+double {\bf \_\-dglv}
+\item 
+double {\bf \_\-frac}
+\item 
+bool {\bf \_\-correlated}
+\item 
+bool {\bf \_\-diffexclude}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file radcalcer.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{RadCalcer@{RadCalcer}!RadCalcer@{RadCalcer}}
+\index{RadCalcer@{RadCalcer}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}RadCalcer::RadCalcer ({\bf Parameters} \& {\em params\_\-}, long {\em opacity\_\-}, bool {\em correlated\_\-})}\label{classRadCalcer_e287ad55adcf2d34ac95c6d339337e42}
+
+
+
+
+Definition at line 11 of file radcalcer.cpp.
+
+References \_\-alphas, \_\-correlated, \_\-cr, \_\-diffexclude, \_\-en, \_\-length, \_\-mass, \_\-mg, \_\-switchkmax, Parameters::GetParametersDouble(), Parameters::GetParametersLong(), and Parameters::GetParametersString().
+
+\begin{Code}\begin{verbatim}12   : zDist( params_, opacity_ ), qperps( opacity_, correlated_ ), n( opacity_ )
+13 {
+14   std::vector<double> ReturnedParamsDouble;
+15   std::vector<long> ReturnedParamsLong;
+16   std::list<std::string> ReturnedParamsString;
+17   std::list<std::string>::iterator it;
+18 
+19   // First, we get the parameters of the medium
+20   // This is: 1st = mu, 2nd = temperature, 3rd = gluon mass, 4th = gluon mean free path
+21   // Here, we only need the gluon mass
+22   // the zDist will need the others
+23   ReturnedParamsDouble = params_.GetParametersDouble( "@mediumParams" );
+24   _mg = ReturnedParamsDouble[2];
+25 
+26   // Next, get the jet flavour
+27   ReturnedParamsString = params_.GetParametersString( "@jetFlavour" );
+28   std::string jetFlavour = ReturnedParamsString.front();
+29   if ( jetFlavour == "Gluon" )
+30   {
+31     _cr = 3.; _mass = _mg;
+32   }
+33   else if ( jetFlavour == "Light" )
+34   {
+35     _cr = 4./3.; _mass = _mg / sqrt(2);
+36   }
+37   else if ( jetFlavour == "Charm" )
+38   {
+39     _cr = 4./3.; _mass = 1.2;
+40   }
+41   else if ( jetFlavour == "Bottom" )
+42   {
+43     _cr = 4./3.; _mass = 4.75;
+44   }
+45   else
+46   {
+47     std::cerr << "@jetFlavour not understood" << std::endl;
+48     exit(0);
+49   }
+50 
+51   // Now, check whether also specifying a jet mass
+52   ReturnedParamsDouble = params_.GetParametersDouble( "@jetMassDirect" );
+53   if ( ReturnedParamsDouble.size() > 0 )
+54     _mass = ReturnedParamsDouble[0];
+55   
+56   // Now, the momentum, to give the jet energy
+57   ReturnedParamsDouble = params_.GetParametersDouble( "@jetMomentum" );
+58   double jetMomentum = ReturnedParamsDouble[0];
+59   // Now calculate and set energy, and mass
+60   _en = sqrt( _mass*_mass + jetMomentum*jetMomentum );
+61 
+62   // The jet path length in the medium
+63   ReturnedParamsDouble = params_.GetParametersDouble( "@pathLength" );
+64   _length = ReturnedParamsDouble[0];
+65 
+66   // The setting on the k max
+67   ReturnedParamsLong = params_.GetParametersLong( "@limitSet" );
+68   _switchkmax = ReturnedParamsLong[0];
+69 
+70   // The strong coupling, alpha_s
+71   ReturnedParamsString = params_.GetParametersString( "@alpha" );
+72   it = ReturnedParamsString.begin();
+73   if ( *it == "fixed" )
+74   {
+75     ++it;
+76     _alphas = boost::lexical_cast<double>( *it );
+77   }
+78   else
+79   {
+80     std::cerr << "Radcalcer, @alpha not understood";
+81     std::cerr << std::endl;
+82     exit(0);
+83   }
+84 
+85   ReturnedParamsString = params_.GetParametersString( "@incClassicalDiffusion" );
+86   if ( ReturnedParamsString.front() == "yes" )
+87     _diffexclude = false;
+88   else if ( ReturnedParamsString.front() == "no" )
+89     _diffexclude = true;
+90   else
+91   {
+92     std::cerr << "Radcalcer, @incClassicalDiffusion not understood as yes or no";
+93     std::cerr << std::endl;
+94     exit(0);
+95   }
+96 
+97 
+98   _correlated = correlated_;
+99 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!~RadCalcer@{$\sim$RadCalcer}}
+\index{~RadCalcer@{$\sim$RadCalcer}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}RadCalcer::$\sim$RadCalcer ()}\label{classRadCalcer_74df4f3bd387f06932e3b677ba2a84bb}
+
+
+
+
+Definition at line 101 of file radcalcer.cpp.
+
+\begin{Code}\begin{verbatim}102 {
+103 
+104 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{RadCalcer@{RadCalcer}!_interference@{\_\-interference}}
+\index{_interference@{\_\-interference}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double RadCalcer::\_\-interference (unsigned long {\em m}) const\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_bd6b5fab0ce714f55b1d11776c02ba4d}
+
+
+
+
+Definition at line 148 of file radcalcer.cpp.
+
+References \_\-dglv, \_\-frac, ZposGenerator::GetDeltaZi(), QperpGenerator::GetSumQiQj(), qperps, and zDist.
+
+\begin{Code}\begin{verbatim}149 {
+150   double term1 = 0.;
+151   double term2 = 0.;
+152 
+153   for (unsigned long k=2; k<=m; k++)
+154   {
+155     term1 += (qperps.GetSumQiQj( k, k )+_dglv) * zDist.GetDeltaZi( k );
+156   }
+157   term2 = term1 + (qperps.GetSumQiQj( 1, 1 )+_dglv) * zDist.GetDeltaZi( 1 );
+158 
+159   double tmp = cos(term1*_frac) - cos(term2*_frac);
+160 
+161   return tmp;
+162 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!_interferenceExp@{\_\-interferenceExp}}
+\index{_interferenceExp@{\_\-interferenceExp}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double RadCalcer::\_\-interferenceExp (unsigned long {\em m}) const\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_6f89500579873100e9d69a79b5738c4b}
+
+
+
+
+Definition at line 164 of file radcalcer.cpp.
+
+References \_\-dglv, \_\-frac, \_\-length, QperpGenerator::GetSumQiQj(), n, and qperps.
+
+Referenced by GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}165 {
+166   double result1, result2;
+167   double omknLen;
+168 
+169   //double realpart = 1.; double imagpart = 0.;
+170 
+171   /*for ( unsigned long k=2; k<=m; ++k )
+172   {
+173     omknLen = (qperps.GetSumQiQj( k, k )+_dglv)*_frac * _length / static_cast<double>(n+1);
+174     realpart = realpart*1. - imagpart*omknLen;
+175     imagpart = imagpart*1. + realpart*omknLen;
+176   }
+177 
+178   result1 = realpart / (realpart*realpart + imagpart*imagpart);
+179 
+180   omknLen = (qperps.GetSumQiQj( 1, 1 )+_dglv)*_frac * _length / static_cast<double>(n+1);
+181   realpart = realpart*1. - imagpart*omknLen;
+182   imagpart = imagpart*1. + realpart*omknLen;
+183 
+184   result2 = realpart / (realpart*realpart + imagpart*imagpart);*/
+185 
+186   std::complex<double> den = std::complex<double>(1.,0.);
+187   double qpkk;
+188   for ( unsigned long k=2; k<=m; ++k ) 
+189   {
+190     qpkk = qperps.GetSumQiQj( k, k );
+191     omknLen = (qpkk+_dglv)*_frac * _length / static_cast<double>(n+1);
+192     den *= std::complex<double>( 1., omknLen );
+193   }
+194   
+195   result1 = den.real() / ( pow(den.real(),2) + pow(den.imag(),2) );
+196   
+197   qpkk = qperps.GetSumQiQj( 1, 1 );
+198   omknLen = (qpkk+_dglv)*_frac * _length / static_cast<double>(n+1);
+199   den *= std::complex<double>( 1., omknLen );
+200   
+201   result2 = den.real() / ( pow(den.real(),2) + pow(den.imag(),2) );
+202   
+203   return ( result1 - result2 );
+204 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!_cdotb@{\_\-cdotb}}
+\index{_cdotb@{\_\-cdotb}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double RadCalcer::\_\-cdotb (unsigned long {\em m}) const\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_9d1b2bef2d32ed924de8a5bd0aaf748f}
+
+
+
+
+Definition at line 206 of file radcalcer.cpp.
+
+References \_\-dglv, QperpGenerator::GetSumQiQj(), and qperps.
+
+Referenced by GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}207 {
+208   double qs11 = qperps.GetSumQiQj( 1, 1 );
+209   double qsmp1mp1 = qperps.GetSumQiQj( m+1, m+1 );
+210   double qsmm = qperps.GetSumQiQj( m, m );
+211 
+212   double qs1m = qperps.GetSumQiQj( 1, m );
+213   double qs1mp1 = qperps.GetSumQiQj( 1, m+1 );
+214 
+215   double tmp = ( qs1mp1/(qsmp1mp1+_dglv) - qs1m/(qsmm+_dglv) ) / (qs11+_dglv);
+216   return tmp;
+217 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!DistributeRandoms@{DistributeRandoms}}
+\index{DistributeRandoms@{DistributeRandoms}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RadCalcer::DistributeRandoms (MyArray \& {\em Randoms})}\label{classRadCalcer_fbd62b63a05b0ee23a4a2fcb26b1ac6c}
+
+
+
+
+Definition at line 106 of file radcalcer.cpp.
+
+References \_\-en, ZposGenerator::FindRandomPositions(), QperpGenerator::FindRandomQs(), ZposGenerator::GetTempsMu2s(), n, pi, qperps, and zDist.
+
+Referenced by RadCalcerWrapper$<$ numOfRandoms $>$::SetRandoms().
+
+\begin{Code}\begin{verbatim}107 {
+108   MyArray inZs( n );
+109   MyArray inQs( n ), inThs( n ), temps( n ), mu2s( n );
+110   MyArray qmins( 0., n ), qmaxs( n ), thmins( 0., n ), thmaxs( 2.*pi, n );
+111 
+112   // First, get an array of uniform random inputs for z positions
+113   for (long i=0; i<n; ++i)
+114     inZs[i] = Randoms[i];
+115 
+116   zDist.FindRandomPositions( inZs );
+117   zDist.GetTempsMu2s( temps, mu2s );
+118   
+119   // Now get an array of uniform random inputs for qs,thetas
+120   // and calculate qmaxs from medium params
+121   for (long i=0; i<n; ++i)
+122   {
+123     inQs[i] = Randoms[i + n];
+124     inThs[i] = Randoms[i + 2*n];
+125     qmaxs[i] = sqrt(6.*temps[i]*_en);
+126   }
+127   
+128   qperps.FindRandomQs( inQs, qmins, qmaxs, inThs, thmins, thmaxs, mu2s );
+129 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!SetXonly@{SetXonly}}
+\index{SetXonly@{SetXonly}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RadCalcer::SetXonly (double {\em x})}\label{classRadCalcer_19c0def50051ee0a52a2cb311d8a485a}
+
+
+
+
+Definition at line 131 of file radcalcer.cpp.
+
+References \_\-dglv, \_\-en, \_\-frac, \_\-mass, \_\-mg, \_\-overx, \_\-x, and SwUtils::hbarc.
+
+Referenced by RadCalcerWrapper$<$ numOfRandoms $>$::SetCoord().
+
+\begin{Code}\begin{verbatim}132 {
+133   _x = x;
+134   _overx = 1./x;
+135 
+136   _dglv = _mg*_mg*(1.-_x) + _mass*_mass*_x*_x;
+137   // DeltaZi is in fm, _en is in GeV => need factor hbarc
+138   _frac = 1. / (2. * _x * _en * hbarc);
+139 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!SetKonly@{SetKonly}}
+\index{SetKonly@{SetKonly}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RadCalcer::SetKonly (double {\em k})}\label{classRadCalcer_49aa8982cec3cc56a881c843a74954e7}
+
+
+
+
+Definition at line 141 of file radcalcer.cpp.
+
+References \_\-k, qperps, and QperpGenerator::SetK().
+
+Referenced by RadCalcerWrapper$<$ numOfRandoms $>$::SetCoord().
+
+\begin{Code}\begin{verbatim}142 {
+143   //k = 1.2;
+144   qperps.SetK( k );
+145   _k = k;
+146 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!Getkmax@{Getkmax}}
+\index{Getkmax@{Getkmax}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double RadCalcer::Getkmax () const\hspace{0.3cm}{\tt  [inline]}}\label{classRadCalcer_2491363d38e009c91908bd78998acfbb}
+
+
+
+
+Definition at line 60 of file radcalcer.h.
+
+References \_\-en, \_\-switchkmax, and \_\-x.
+
+Referenced by GetdNdk2dx().
+
+\begin{Code}\begin{verbatim}61 {
+62   double kmax;
+63   switch (_switchkmax)
+64   {
+65     case 1:
+66       // Ivan's first version of k_max
+67       kmax = _x*_en;
+68     break;
+69 
+70     case 2:
+71       // Another version from Ivan's code
+72       _x <= 0.5 ? kmax = _x*_en : kmax = (1.-_x)*_en;
+73     break;
+74 
+75     case 3:
+76       // Magdalena's favourite version of k_max
+77       kmax = 2.*_x*(1.-_x)*_en;
+78     break;
+79 
+80     default:
+81       kmax = -1.;
+82       break;
+83   }
+84   return kmax;
+85 }
+\end{verbatim}
+\end{Code}
+
+
+\index{RadCalcer@{RadCalcer}!GetdNdk2dx@{GetdNdk2dx}}
+\index{GetdNdk2dx@{GetdNdk2dx}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void RadCalcer::GetdNdk2dx (MyArray \& {\em results})}\label{classRadCalcer_ccc5f82826c691219a05e4cb277bcc45}
+
+
+
+
+Definition at line 219 of file radcalcer.cpp.
+
+References \_\-alphas, \_\-cdotb(), SwUtils::\_\-Combinatoric(), \_\-correlated, \_\-cr, \_\-diffexclude, \_\-interferenceExp(), \_\-k, \_\-overx, Getkmax(), QperpGenerator::GetQeventWeight(), ZposGenerator::GetZweight(), n, overpi, SwUtils::power(), qperps, QperpGenerator::SetZeroedQs(), and zDist.
+
+Referenced by RadCalcerWrapper$<$ numOfRandoms $>$::GetAnswer().
+
+\begin{Code}\begin{verbatim}220 {
+221   // Ok, we're going to calculate dNdxdk, and fill the array 'results' with the answer
+222   // results[n-1] = the full answer, the others are just intermediate stages
+223 
+224   // What recording scheme are we going by?
+225   // If we set _maxOpac = n here, it will record the full summation, plus n subsets
+226   // If we set _maxOpac = 2^n, it will record all possible subsets
+227   //long _maxOpac = n;
+228   //long _maxOpac = power(2,n);
+229   long _maxOpac = 1;
+230 
+231   // If we are out of bounds of the k integral, we just return zero for all the whole result array
+232   if ( _k >= Getkmax() )
+233   {
+234     for (long i=0; i<_maxOpac; ++i)
+235       results[i] = 0.;
+236     return;
+237   }
+238 
+239   // Our intermediate stages, and our final result: result
+240   double msum, qweight, zweight, coeff, result;
+241   // Reset to zero, will add on terms to this
+242   result = 0.;
+243 
+244   // If the medium is correlated, then we need to iterate over all the permutations
+245   // of the delta functions under the integral.
+246   // If the medium is uncorrelated, we only need to count the delta functions, not 
+247   // evaluate separately from each. In this way, we save a whole lot of calculation
+248   // for the uncorrelated medium.
+249   // We go from 0<z<2^n to 0<z<n. Oooh, orders of magnitude performance enhancement!  
+250 
+251   if ( _correlated )
+252   {
+253     // Iterate over all terms in series from the products with the delta function subtracted off
+254     // Method: count from 1 up to 2^n, the binary representation of that number - of length n -
+255     // Gives a unique set of zeroed q's. If the binary digit = 1, then that q is zeroed out
+256     long imin = 0;
+257     long imax = power(2,n);
+258     // opac is to do with what we're putting in the results matrix
+259     // We will increase it as we go along. Wow, what an explanation.
+260     // long opac = 1;
+261 
+262     // results[n-1] = 0.;
+263     for (long i=imax-2; i>=imin; --i)
+264     {
+265       // Set the zeroed Qs for this term
+266       qperps.SetZeroedQs( i );
+267     
+268       // Sum over all the c dot b terms
+269       msum = 0.;
+270       // What m value do we start at?
+271       unsigned long mmin;
+272       // If we want to only look at the quantum source term, exclude the classical
+273       // diffusion terms, then we start at n. If we want all of it, then we start at 1.
+274       _diffexclude ? mmin = n : mmin = 1;
+275 
+276       // This sum is defined in GLV II.
+277       for (long m=mmin; m<=n; ++m)
+278       {
+279         // If we are in an uncorrelated medium, then we do the z integrals analytically
+280         // and sum up the resulting Lorentzians. If not, then we have to do the full sum.
+281 
+282         //msum += -2.*_cdotb( m ) * _interference( m );
+283         msum += -2.*_cdotb( m ) * _interferenceExp( m);
+284       }
+285 
+286       // Get the q weight - we have generated random q values, but we allow
+287       // for generating from a different distribution, and then moving a coefficient
+288       // into the answer. See reweighted Monte-Carlo integration.
+289       qweight = qperps.GetQeventWeight();
+290       // Same for the z weight. Remember that we might not even be evaluating a z integral here.
+291       zweight = zDist.GetZweight();
+292 
+293       // Now add what we have to what we had from the previous z values
+294       result += qweight * zweight * msum;
+295 
+296       // If we are at a power of 2, put the result into our result matrix
+297       //if ( i == imax-power(2,opac) )
+298       //{
+299       //  (n-opac)%2 == 0 ? results[opac-1] = result : results[opac-1] = -result;
+300       //  ++opac;
+301       //}
+302     }
+303     results[0] = result;
+304     // We have left out a few coeffs that are the same for all evaluations.
+305     // Now multiply through by them.
+306     coeff = _k * _overx * overpi  *  _cr*_alphas*2.;
+307     for (long i=0; i!=_maxOpac; ++i)
+308     {
+309       results[i] *= coeff;
+310     }
+311     // And we're done!
+312   }
+313   else
+314   {
+315     // We have a correlated medium. We have n separate contributions (as opposed to the 2^n for
+316     // the correlated medium). In this case, z will represent how many zeroed q's we have.
+317     long zmin = 0;
+318     long zmax = n;
+319     long combin;
+320 
+321     // Now iterate over the possible zeroed out q's
+322     for (long z=zmax-1; z>=zmin; --z)
+323     {
+324       // The combinatoric factor. How many combinations? = n C z
+325       combin = _Combinatoric( n, z );
+326       
+327       // Set the zeroed Qs for this term
+328       qperps.SetZeroedQs( z );
+329 
+330       // Sum over all the c dot b terms
+331       msum = 0.;
+332       // What m value do we start at?
+333       unsigned long mmin;
+334       // If we want to only look at the quantum source term, exclude the classical
+335       // diffusion terms, then we start at n. If we want all of it, then we start at 1.
+336       _diffexclude ? mmin = n : mmin = 1;
+337 
+338       // This sum is defined in GLV II.
+339       for (long m=mmin; m<=n; ++m)
+340       {
+341         // If we are in an uncorrelated medium, then we do the z integrals analytically
+342         // and sum up the resulting Lorentzians. If not, then we have to do the full sum.
+343 
+344         //msum += -2.*_cdotb( m ) * _interference( m );
+345         msum += -2.*_cdotb( m ) * _interferenceExp( m );
+346       }
+347 
+348       // Get the q weight - we have generated random q values, but we allow
+349       // for generating from a different distribution, and then moving a coefficient
+350       // into the answer. See reweighted Monte-Carlo integration.
+351       qweight = qperps.GetQeventWeight();
+352       // Same for the z weight. Remember that we might not even be evaluating a z integral here.
+353       zweight = zDist.GetZweight();
+354 
+355       // Now add what we have to what we had from the previous z values
+356       result += qweight * zweight * msum;
+357 
+358       results[n-1-z] = result;
+359     }
+360     
+361     // We have left out a few coeffs that are the same for all evaluations.
+362     // Now multiply through by them.
+363     coeff = _k * _overx * overpi  *  _cr*_alphas*2.;
+364     for (long i=0; i!=_maxOpac; ++i)
+365     {
+366       results[i] *= coeff;
+367     }
+368     // And we're done!
+369   }
+370 }
+\end{verbatim}
+\end{Code}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{RadCalcer@{RadCalcer}!zDist@{zDist}}
+\index{zDist@{zDist}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf ZposGenerator} {\bf RadCalcer::zDist}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_82e85452c812ca6fb30ed6dbddb8b31c}
+
+
+
+
+Definition at line 14 of file radcalcer.h.
+
+Referenced by \_\-interference(), DistributeRandoms(), and GetdNdk2dx().\index{RadCalcer@{RadCalcer}!qperps@{qperps}}
+\index{qperps@{qperps}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf QperpGenerator} {\bf RadCalcer::qperps}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_4bb0d69b33f9a4cf59c72a53419be16e}
+
+
+
+
+Definition at line 15 of file radcalcer.h.
+
+Referenced by \_\-cdotb(), \_\-interference(), \_\-interferenceExp(), DistributeRandoms(), GetdNdk2dx(), and SetKonly().\index{RadCalcer@{RadCalcer}!n@{n}}
+\index{n@{n}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const long {\bf RadCalcer::n}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_2ef2f781f70d8bc4f21c6dfa8bf164bf}
+
+
+
+
+Definition at line 17 of file radcalcer.h.
+
+Referenced by \_\-interferenceExp(), DistributeRandoms(), and GetdNdk2dx().\index{RadCalcer@{RadCalcer}!_x@{\_\-x}}
+\index{_x@{\_\-x}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-x}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_5e9cb8adf3bdf67e854e101aea092a73}
+
+
+
+
+Definition at line 19 of file radcalcer.h.
+
+Referenced by Getkmax(), and SetXonly().\index{RadCalcer@{RadCalcer}!_overx@{\_\-overx}}
+\index{_overx@{\_\-overx}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-overx}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_e84a98b07e5919fe1591a86967a46bad}
+
+
+
+
+Definition at line 20 of file radcalcer.h.
+
+Referenced by GetdNdk2dx(), and SetXonly().\index{RadCalcer@{RadCalcer}!_k@{\_\-k}}
+\index{_k@{\_\-k}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-k}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_00c8fe44b15d733ae45a55fb3c5efbcb}
+
+
+
+
+Definition at line 21 of file radcalcer.h.
+
+Referenced by GetdNdk2dx(), and SetKonly().\index{RadCalcer@{RadCalcer}!_en@{\_\-en}}
+\index{_en@{\_\-en}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-en}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_d815420ad92951fce8c20a4f86d6c236}
+
+
+
+
+Definition at line 23 of file radcalcer.h.
+
+Referenced by DistributeRandoms(), Getkmax(), RadCalcer(), and SetXonly().\index{RadCalcer@{RadCalcer}!_mass@{\_\-mass}}
+\index{_mass@{\_\-mass}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-mass}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_8b21a8e4e8314996883334d9ce95d78b}
+
+
+
+
+Definition at line 24 of file radcalcer.h.
+
+Referenced by RadCalcer(), and SetXonly().\index{RadCalcer@{RadCalcer}!_cr@{\_\-cr}}
+\index{_cr@{\_\-cr}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-cr}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_2401e88eb63c0b7525ab0bb9b1dff389}
+
+
+
+
+Definition at line 25 of file radcalcer.h.
+
+Referenced by GetdNdk2dx(), and RadCalcer().\index{RadCalcer@{RadCalcer}!_temp@{\_\-temp}}
+\index{_temp@{\_\-temp}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-temp}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_9c8bc38ebea12dbb996071560b28f9eb}
+
+
+
+
+Definition at line 27 of file radcalcer.h.\index{RadCalcer@{RadCalcer}!_mg@{\_\-mg}}
+\index{_mg@{\_\-mg}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-mg}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_8bbc6f788e02386e6799aa6658700ba1}
+
+
+
+
+Definition at line 28 of file radcalcer.h.
+
+Referenced by RadCalcer(), and SetXonly().\index{RadCalcer@{RadCalcer}!_lambda@{\_\-lambda}}
+\index{_lambda@{\_\-lambda}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-lambda}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_0b268abba738ac390e83f14cdc641e34}
+
+
+
+
+Definition at line 29 of file radcalcer.h.\index{RadCalcer@{RadCalcer}!_length@{\_\-length}}
+\index{_length@{\_\-length}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-length}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_635c673009cc00a1dceaa5e24a48b90c}
+
+
+
+
+Definition at line 30 of file radcalcer.h.
+
+Referenced by \_\-interferenceExp(), and RadCalcer().\index{RadCalcer@{RadCalcer}!_alphas@{\_\-alphas}}
+\index{_alphas@{\_\-alphas}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-alphas}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_9f5300f48831979c9e3ded4590f436cd}
+
+
+
+
+Definition at line 32 of file radcalcer.h.
+
+Referenced by GetdNdk2dx(), and RadCalcer().\index{RadCalcer@{RadCalcer}!_switchkmax@{\_\-switchkmax}}
+\index{_switchkmax@{\_\-switchkmax}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf RadCalcer::\_\-switchkmax}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_f1ff30d453eb9d66719563097494fdad}
+
+
+
+
+Definition at line 34 of file radcalcer.h.
+
+Referenced by Getkmax(), and RadCalcer().\index{RadCalcer@{RadCalcer}!_dglv@{\_\-dglv}}
+\index{_dglv@{\_\-dglv}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-dglv}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_2dcf1fb0c50fa384f6b59055feaa4113}
+
+
+
+
+Definition at line 36 of file radcalcer.h.
+
+Referenced by \_\-cdotb(), \_\-interference(), \_\-interferenceExp(), and SetXonly().\index{RadCalcer@{RadCalcer}!_frac@{\_\-frac}}
+\index{_frac@{\_\-frac}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf RadCalcer::\_\-frac}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_3d123970055fd9730243b0d4a4295ab5}
+
+
+
+
+Definition at line 37 of file radcalcer.h.
+
+Referenced by \_\-interference(), \_\-interferenceExp(), and SetXonly().\index{RadCalcer@{RadCalcer}!_correlated@{\_\-correlated}}
+\index{_correlated@{\_\-correlated}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf RadCalcer::\_\-correlated}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_3a2345f90a0d88ee72e25ebb1b558167}
+
+
+
+
+Definition at line 39 of file radcalcer.h.
+
+Referenced by GetdNdk2dx(), and RadCalcer().\index{RadCalcer@{RadCalcer}!_diffexclude@{\_\-diffexclude}}
+\index{_diffexclude@{\_\-diffexclude}!RadCalcer@{RadCalcer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool {\bf RadCalcer::\_\-diffexclude}\hspace{0.3cm}{\tt  [private]}}\label{classRadCalcer_8a346eab1c34a2283bbb3e94eea5ed23}
+
+
+
+
+Definition at line 40 of file radcalcer.h.
+
+Referenced by GetdNdk2dx(), and RadCalcer().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Gyulassy/opacity3/src/glv1/{\bf radcalcer.h}\item 
+Gyulassy/opacity3/src/glv1/{\bf radcalcer.cpp}\end{CompactItemize}
