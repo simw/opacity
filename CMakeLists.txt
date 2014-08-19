@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 2.6)
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 
 #add definitions, compiler switches, etc.
-# ADD_DEFINITIONS(-Wall -O2)
-ADD_DEFINITIONS(-Wall -g)
+ADD_DEFINITIONS(-Wall -O2)
+# ADD_DEFINITIONS(-Wall -g)
 
 ADD_LIBRARY(libStore2d src/store2d/store.cpp src/store2d/statisticsmc.cpp src/store2d/convergencetable.cpp)
 ADD_LIBRARY(libGlvOld src/glv1/qperpdist.cpp src/glv1/zcolldist.cpp src/glv1/radcalcer.cpp src/glv1/qperparraynew.cpp src/glv1/Function.cpp)
